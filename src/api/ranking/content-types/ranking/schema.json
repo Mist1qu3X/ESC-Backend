@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rankings",
+  "info": {
+    "singularName": "ranking",
+    "pluralName": "rankings",
+    "displayName": "Ranking"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "position": {
+      "type": "integer"
+    },
+    "athleteName": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "points": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}

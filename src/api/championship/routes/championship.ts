@@ -1,0 +1,7 @@
+/**
+ * championship router
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreRouter('api::championship.championship');

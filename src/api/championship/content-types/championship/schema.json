@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "championships",
+  "info": {
+    "singularName": "championship",
+    "pluralName": "championships",
+    "displayName": "Championship"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "location": {
+      "type": "string"
+    },
+    "dateRange": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "theme": {
+      "type": "string"
+    },
+    "countdownLabel": {
+      "type": "string"
+    }
+  }
+}
