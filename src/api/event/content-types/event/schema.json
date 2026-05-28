@@ -25,6 +25,44 @@
     },
     "date": {
       "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "type": {
+      "type": "string"
+    },
+    "discipline": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "documents": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "liveStreamUrl": {
+      "type": "string"
     }
   }
 }
