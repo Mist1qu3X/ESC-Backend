@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "federations",
+  "info": {
+    "singularName": "federation",
+    "pluralName": "federations",
+    "displayName": "Federation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "since": {
+      "type": "string"
+    },
+    "flag": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "region": {
+      "type": "enumeration",
+      "enum": [
+        "W.EUROPE",
+        "SCANDINAVIA",
+        "C.EUROPE",
+        "E.EUROPE",
+        "S.EUROPE",
+        "CAUCASUS"
+      ]
+    }
+  }
+}

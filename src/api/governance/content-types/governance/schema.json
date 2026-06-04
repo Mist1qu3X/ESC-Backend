@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "governances",
+  "info": {
+    "singularName": "governance",
+    "pluralName": "governances",
+    "displayName": "Governance"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "legislative",
+        "executive",
+        "technical",
+        "development",
+        "athletes",
+        "judges"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "members": {
+      "type": "json"
+    }
+  }
+}

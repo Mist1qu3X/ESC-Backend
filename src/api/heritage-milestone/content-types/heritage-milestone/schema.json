@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "heritage_milestones",
+  "info": {
+    "singularName": "heritage-milestone",
+    "pluralName": "heritage-milestones",
+    "displayName": "Heritage-milestone"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "year": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}

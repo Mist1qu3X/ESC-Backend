@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_pages",
+  "info": {
+    "singularName": "about-page",
+    "pluralName": "about-pages",
+    "displayName": "About-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle1": {
+      "type": "string"
+    },
+    "heroTitle2": {
+      "type": "string"
+    },
+    "heroSubtitle": {
+      "type": "string"
+    },
+    "missionTitle": {
+      "type": "string"
+    },
+    "missionText1": {
+      "type": "text"
+    },
+    "missionText2": {
+      "type": "text"
+    },
+    "missionImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "statsMembers": {
+      "type": "string"
+    },
+    "statsLabelMembers": {
+      "type": "string"
+    },
+    "statsNations": {
+      "type": "string"
+    },
+    "statsLabelNations": {
+      "type": "string"
+    },
+    "statsEvents": {
+      "type": "string"
+    },
+    "statsLabelEvents": {
+      "type": "string"
+    },
+    "statsYears": {
+      "type": "string"
+    },
+    "statsLabelYears": {
+      "type": "string"
+    },
+    "heritageTitle": {
+      "type": "string"
+    },
+    "heritageSubtitle": {
+      "type": "string"
+    },
+    "heritageText": {
+      "type": "text"
+    }
+  }
+}

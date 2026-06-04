@@ -440,6 +440,53 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAboutPageAboutPage extends Struct.CollectionTypeSchema {
+  collectionName: 'about_pages';
+  info: {
+    displayName: 'About-page';
+    pluralName: 'about-pages';
+    singularName: 'about-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heritageSubtitle: Schema.Attribute.String;
+    heritageText: Schema.Attribute.Text;
+    heritageTitle: Schema.Attribute.String;
+    heroSubtitle: Schema.Attribute.String;
+    heroTitle1: Schema.Attribute.String;
+    heroTitle2: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-page.about-page'
+    > &
+      Schema.Attribute.Private;
+    missionImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    missionText1: Schema.Attribute.Text;
+    missionText2: Schema.Attribute.Text;
+    missionTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    statsEvents: Schema.Attribute.String;
+    statsLabelEvents: Schema.Attribute.String;
+    statsLabelMembers: Schema.Attribute.String;
+    statsLabelNations: Schema.Attribute.String;
+    statsLabelYears: Schema.Attribute.String;
+    statsMembers: Schema.Attribute.String;
+    statsNations: Schema.Attribute.String;
+    statsYears: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiChampionshipChampionship
   extends Struct.CollectionTypeSchema {
   collectionName: 'championships';
@@ -538,6 +585,184 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     statusEvent: Schema.Attribute.String;
     type: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFederationFederation extends Struct.CollectionTypeSchema {
+  collectionName: 'federations';
+  info: {
+    displayName: 'Federation';
+    pluralName: 'federations';
+    singularName: 'federation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    code: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::federation.federation'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    region: Schema.Attribute.Enumeration<
+      [
+        'W.EUROPE',
+        'SCANDINAVIA',
+        'C.EUROPE',
+        'E.EUROPE',
+        'S.EUROPE',
+        'CAUCASUS',
+      ]
+    >;
+    since: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiGovernanceGovernance extends Struct.CollectionTypeSchema {
+  collectionName: 'governances';
+  info: {
+    displayName: 'Governance';
+    pluralName: 'governances';
+    singularName: 'governance';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::governance.governance'
+    > &
+      Schema.Attribute.Private;
+    members: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<
+      [
+        'legislative',
+        'executive',
+        'technical',
+        'development',
+        'athletes',
+        'judges',
+      ]
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHeritageMilestoneHeritageMilestone
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'heritage_milestones';
+  info: {
+    displayName: 'Heritage-milestone';
+    pluralName: 'heritage-milestones';
+    singularName: 'heritage-milestone';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::heritage-milestone.heritage-milestone'
+    > &
+      Schema.Attribute.Private;
+    order: Schema.Attribute.Integer;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    year: Schema.Attribute.String;
+  };
+}
+
+export interface ApiHeritageHeritage extends Struct.CollectionTypeSchema {
+  collectionName: 'heritages';
+  info: {
+    displayName: 'Heritage';
+    pluralName: 'heritages';
+    singularName: 'heritage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::heritage.heritage'
+    > &
+      Schema.Attribute.Private;
+    milestones: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    subtitle: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiLeaderLeader extends Struct.CollectionTypeSchema {
+  collectionName: 'leaders';
+  info: {
+    displayName: 'Leader';
+    pluralName: 'leaders';
+    singularName: 'leader';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    country: Schema.Attribute.String;
+    countryCode: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    initials: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::leader.leader'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    order: Schema.Attribute.Integer;
+    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    role: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1175,9 +1400,15 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::championship.championship': ApiChampionshipChampionship;
       'api::doc.doc': ApiDocDoc;
       'api::event.event': ApiEventEvent;
+      'api::federation.federation': ApiFederationFederation;
+      'api::governance.governance': ApiGovernanceGovernance;
+      'api::heritage-milestone.heritage-milestone': ApiHeritageMilestoneHeritageMilestone;
+      'api::heritage.heritage': ApiHeritageHeritage;
+      'api::leader.leader': ApiLeaderLeader;
       'api::news.news': ApiNewsNews;
       'api::ranking.ranking': ApiRankingRanking;
       'api::spotlight.spotlight': ApiSpotlightSpotlight;
