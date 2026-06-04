@@ -653,7 +653,9 @@ export interface ApiGovernanceGovernance extends Struct.CollectionTypeSchema {
       'api::governance.governance'
     > &
       Schema.Attribute.Private;
-    members: Schema.Attribute.JSON;
+    members: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    order: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;

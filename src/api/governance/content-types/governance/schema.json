@@ -31,8 +31,14 @@
     "description": {
       "type": "text"
     },
+    "name": {
+      "type": "string"
+    },
     "members": {
-      "type": "json"
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }
