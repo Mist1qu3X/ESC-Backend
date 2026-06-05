@@ -25,6 +25,12 @@
     },
     "category": {
       "type": "string"
+    },
+    "events": {
+      "type": "string"
+    },
+    "best": {
+      "type": "string"
     }
   }
 }

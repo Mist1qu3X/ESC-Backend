@@ -826,11 +826,13 @@ export interface ApiRankingRanking extends Struct.CollectionTypeSchema {
   };
   attributes: {
     athleteName: Schema.Attribute.String;
+    best: Schema.Attribute.String;
     category: Schema.Attribute.String;
     country: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    events: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -840,6 +842,80 @@ export interface ApiRankingRanking extends Struct.CollectionTypeSchema {
     points: Schema.Attribute.String;
     position: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiRecordRecord extends Struct.CollectionTypeSchema {
+  collectionName: 'records';
+  info: {
+    displayName: 'Record';
+    pluralName: 'records';
+    singularName: 'record';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    athleteName: Schema.Attribute.String;
+    country: Schema.Attribute.String;
+    countryFlag: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    discipline: Schema.Attribute.String;
+    eventName: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::record.record'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    score: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<['World', 'european']>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiResultResult extends Struct.CollectionTypeSchema {
+  collectionName: 'results';
+  info: {
+    displayName: 'Result';
+    pluralName: 'results';
+    singularName: 'result';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    athleteName: Schema.Attribute.String;
+    category: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    discipline: Schema.Attribute.String;
+    eventDate: Schema.Attribute.Date;
+    eventName: Schema.Attribute.String;
+    federation: Schema.Attribute.String;
+    federationCode: Schema.Attribute.String;
+    finalScore: Schema.Attribute.String;
+    flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::result.result'
+    > &
+      Schema.Attribute.Private;
+    location: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    qualScore: Schema.Attribute.String;
+    rank: Schema.Attribute.Integer;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1427,6 +1503,8 @@ declare module '@strapi/strapi' {
       'api::leader.leader': ApiLeaderLeader;
       'api::news.news': ApiNewsNews;
       'api::ranking.ranking': ApiRankingRanking;
+      'api::record.record': ApiRecordRecord;
+      'api::result.result': ApiResultResult;
       'api::spotlight.spotlight': ApiSpotlightSpotlight;
       'api::video.video': ApiVideoVideo;
       'plugin::content-releases.release': PluginContentReleasesRelease;
