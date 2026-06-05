@@ -534,10 +534,24 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    category: Schema.Attribute.Enumeration<
+      [
+        'Official Documents',
+        'Rules',
+        'Assemblies',
+        'Sustainability',
+        'Newsletters',
+        'Courses',
+      ]
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.Text;
+    downloadCount: Schema.Attribute.Integer;
     file: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    fileSize: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::doc.doc'> &
       Schema.Attribute.Private;

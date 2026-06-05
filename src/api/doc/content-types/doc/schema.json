@@ -29,6 +29,29 @@
         "videos",
         "audios"
       ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "fileSize": {
+      "type": "string"
+    },
+    "downloadCount": {
+      "type": "integer"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Official Documents",
+        "Rules",
+        "Assemblies",
+        "Sustainability",
+        "Newsletters",
+        "Courses"
+      ]
     }
   }
 }
