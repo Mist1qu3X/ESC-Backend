@@ -617,9 +617,12 @@ export interface ApiFederationFederation extends Struct.CollectionTypeSchema {
   };
   attributes: {
     code: Schema.Attribute.String;
+    country: Schema.Attribute.String;
+    countryCode: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
     flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -628,6 +631,8 @@ export interface ApiFederationFederation extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    president: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     region: Schema.Attribute.Enumeration<
       [
