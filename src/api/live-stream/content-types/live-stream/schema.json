@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "live_streams",
+  "info": {
+    "singularName": "live-stream",
+    "pluralName": "live-streams",
+    "displayName": "Live-stream"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "eventName": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "youtube,",
+        "twitch,",
+        "facebook"
+      ]
+    },
+    "url": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "streamStatus": {
+      "type": "enumeration",
+      "enum": [
+        "live,",
+        "upcoming,",
+        "offline"
+      ]
+    },
+    "views": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "isMain": {
+      "type": "boolean"
+    }
+  }
+}

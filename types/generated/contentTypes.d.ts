@@ -790,6 +790,44 @@ export interface ApiLeaderLeader extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
+  collectionName: 'live_streams';
+  info: {
+    displayName: 'Live-stream';
+    pluralName: 'live-streams';
+    singularName: 'live-stream';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    duration: Schema.Attribute.String;
+    eventName: Schema.Attribute.String;
+    isMain: Schema.Attribute.Boolean;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::live-stream.live-stream'
+    > &
+      Schema.Attribute.Private;
+    platform: Schema.Attribute.Enumeration<['youtube,', 'twitch,', 'facebook']>;
+    publishedAt: Schema.Attribute.DateTime;
+    streamStatus: Schema.Attribute.Enumeration<
+      ['live,', 'upcoming,', 'offline']
+    >;
+    thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    url: Schema.Attribute.String;
+    views: Schema.Attribute.String;
+  };
+}
+
 export interface ApiNewsNews extends Struct.CollectionTypeSchema {
   collectionName: 'news_items';
   info: {
@@ -1506,6 +1544,7 @@ declare module '@strapi/strapi' {
       'api::heritage-milestone.heritage-milestone': ApiHeritageMilestoneHeritageMilestone;
       'api::heritage.heritage': ApiHeritageHeritage;
       'api::leader.leader': ApiLeaderLeader;
+      'api::live-stream.live-stream': ApiLiveStreamLiveStream;
       'api::news.news': ApiNewsNews;
       'api::ranking.ranking': ApiRankingRanking;
       'api::record.record': ApiRecordRecord;
