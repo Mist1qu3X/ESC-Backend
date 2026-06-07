@@ -32,6 +32,9 @@
     },
     "videoUrl": {
       "type": "string"
+    },
+    "duration": {
+      "type": "string"
     }
   }
 }

@@ -32,6 +32,24 @@
         "videos",
         "audios"
       ]
+    },
+    "slug": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "author": {
+      "type": "string"
+    },
+    "readTime": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "string"
     }
   }
 }

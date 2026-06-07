@@ -854,11 +854,9 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
       'api::live-stream.live-stream'
     > &
       Schema.Attribute.Private;
-    platform: Schema.Attribute.Enumeration<['youtube,', 'twitch,', 'facebook']>;
+    platform: Schema.Attribute.Enumeration<['youtube', 'twitch', 'facebook']>;
     publishedAt: Schema.Attribute.DateTime;
-    streamStatus: Schema.Attribute.Enumeration<
-      ['live,', 'upcoming,', 'offline']
-    >;
+    streamStatus: Schema.Attribute.Enumeration<['live', 'upcoming', 'offline']>;
     thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -880,6 +878,8 @@ export interface ApiNewsNews extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    author: Schema.Attribute.String;
+    content: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -890,6 +890,10 @@ export interface ApiNewsNews extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::news.news'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    readTime: Schema.Attribute.String;
+    slug: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    tags: Schema.Attribute.String;
     theme: Schema.Attribute.String;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -1052,6 +1056,7 @@ export interface ApiVideoVideo extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    duration: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::video.video'> &
       Schema.Attribute.Private;

@@ -20,8 +20,8 @@
     "platform": {
       "type": "enumeration",
       "enum": [
-        "youtube,",
-        "twitch,",
+        "youtube",
+        "twitch",
         "facebook"
       ]
     },
@@ -41,8 +41,8 @@
     "streamStatus": {
       "type": "enumeration",
       "enum": [
-        "live,",
-        "upcoming,",
+        "live",
+        "upcoming",
         "offline"
       ]
     },
