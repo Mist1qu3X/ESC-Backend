@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "committee_members",
+  "info": {
+    "singularName": "committee-member",
+    "pluralName": "committee-members",
+    "displayName": "Committee-member"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "countryCode": {
+      "type": "string"
+    },
+    "initials": {
+      "type": "string"
+    },
+    "committee": {
+      "type": "enumeration",
+      "enum": [
+        "Technical Committee",
+        "Development Committee",
+        "Athletes Committee",
+        "Judges Committee"
+      ]
+    }
+  }
+}

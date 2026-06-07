@@ -523,6 +523,47 @@ export interface ApiChampionshipChampionship
   };
 }
 
+export interface ApiCommitteeMemberCommitteeMember
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'committee_members';
+  info: {
+    displayName: 'Committee-member';
+    pluralName: 'committee-members';
+    singularName: 'committee-member';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    committee: Schema.Attribute.Enumeration<
+      [
+        'Technical Committee',
+        'Development Committee',
+        'Athletes Committee',
+        'Judges Committee',
+      ]
+    >;
+    country: Schema.Attribute.String;
+    countryCode: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    initials: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::committee-member.committee-member'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    role: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiDocDoc extends Struct.CollectionTypeSchema {
   collectionName: 'docs';
   info: {
@@ -1537,6 +1578,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::championship.championship': ApiChampionshipChampionship;
+      'api::committee-member.committee-member': ApiCommitteeMemberCommitteeMember;
       'api::doc.doc': ApiDocDoc;
       'api::event.event': ApiEventEvent;
       'api::federation.federation': ApiFederationFederation;
