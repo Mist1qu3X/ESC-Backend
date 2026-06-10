@@ -10,9 +10,10 @@ RUN apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev nasm
 WORKDIR /opt/app
 
 COPY package.json package-lock.json ./
-RUN npm ci
-# В репозитории нет драйвера PostgreSQL — доустанавливаем
-RUN npm install pg@8.13.1
+# Используем npm install, а не npm ci: в репозитории package-lock.json
+# рассинхронизирован с package.json (zod/picomatch), и npm ci на этом падает.
+# Этой же командой доустанавливаем драйвер PostgreSQL (pg), которого нет в зависимостях.
+RUN npm install --no-audit --no-fund pg@8.13.1
 
 COPY . .
 
