@@ -1,0 +1,5 @@
+/**
+ * governance service
+ */
+
+export default () => ({});

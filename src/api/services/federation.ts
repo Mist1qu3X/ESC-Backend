@@ -1,0 +1,5 @@
+/**
+ * federation service
+ */
+
+export default () => ({});

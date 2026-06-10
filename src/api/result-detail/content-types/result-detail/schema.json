@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "result_details",
+  "info": {
+    "singularName": "result-detail",
+    "pluralName": "result-details",
+    "displayName": "Result Detail",
+    "description": "Competition results and shot details"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "position": {
+      "type": "integer",
+      "required": true
+    },
+    "athleteName": {
+      "type": "string",
+      "required": true
+    },
+    "federationCode": {
+      "type": "string",
+      "required": true
+    },
+    "total": {
+      "type": "string",
+      "required": true
+    },
+    "inner10s": {
+      "type": "string"
+    },
+    "discipline": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": ["ALL", "MEN", "WOMEN"],
+      "required": true,
+      "default": "ALL"
+    },
+    "shots": {
+      "type": "json"
+    },
+    "flag": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

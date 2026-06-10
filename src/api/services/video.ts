@@ -1,0 +1,5 @@
+/**
+ * video service
+ */
+
+export default () => ({});

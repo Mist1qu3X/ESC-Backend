@@ -4,7 +4,8 @@
   "info": {
     "singularName": "leader",
     "pluralName": "leaders",
-    "displayName": "Leader"
+    "displayName": "Leader",
+    "description": "Executive committee members and leadership"
   },
   "options": {
     "draftAndPublish": true
@@ -12,21 +13,31 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "role": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "country": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "countryCode": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "initials": {
       "type": "string"
     },
-    "photo": {
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "flag": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -36,8 +47,16 @@
         "audios"
       ]
     },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "order": {
-      "type": "integer"
+      "type": "integer",
+      "default": 0
     }
   }
 }

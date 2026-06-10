@@ -1,0 +1,5 @@
+/**
+ * leader service
+ */
+
+export default () => ({});

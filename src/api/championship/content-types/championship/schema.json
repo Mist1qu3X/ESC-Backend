@@ -4,7 +4,8 @@
   "info": {
     "singularName": "championship",
     "pluralName": "championships",
-    "displayName": "Championship"
+    "displayName": "Championship",
+    "description": "Main championship event displayed on homepage"
   },
   "options": {
     "draftAndPublish": true
@@ -12,28 +13,53 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "text"
+      "type": "text",
+      "required": true,
+      "default": "EUROPEAN\nCHAMPIONSHIP\n10M AIR\nWEAPONS"
     },
-    "location": {
-      "type": "string"
-    },
-    "dateRange": {
-      "type": "string"
-    },
-    "startDate": {
-      "type": "date"
-    },
-    "subtitle": {
-      "type": "string"
-    },
-    "city": {
-      "type": "string"
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
     },
     "theme": {
-      "type": "string"
+      "type": "string",
+      "default": "WHAT'S ON"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "10m Air Weapons"
+    },
+    "city": {
+      "type": "string",
+      "default": "Osijek"
+    },
+    "location": {
+      "type": "string",
+      "default": "Osijek, Croatia"
+    },
+    "dateRange": {
+      "type": "string",
+      "default": "JUNE 15-21, 2026"
+    },
+    "startDate": {
+      "type": "datetime",
+      "required": true,
+      "default": "2026-06-15T00:00:00Z"
     },
     "countdownLabel": {
-      "type": "string"
+      "type": "string",
+      "default": "COUNTDOWN TO EVENT"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "description": {
+      "type": "text",
+      "default": "The premier shooting championship in Europe featuring the best athletes from 47 nations."
     }
   }
 }

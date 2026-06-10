@@ -1,0 +1,5 @@
+/**
+ * championship service
+ */
+
+export default () => ({});

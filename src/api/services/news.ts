@@ -1,0 +1,5 @@
+/**
+ * news service
+ */
+
+export default () => ({});

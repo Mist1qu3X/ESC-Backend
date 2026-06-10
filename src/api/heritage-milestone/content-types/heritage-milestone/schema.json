@@ -4,7 +4,8 @@
   "info": {
     "singularName": "heritage-milestone",
     "pluralName": "heritage-milestones",
-    "displayName": "Heritage-milestone"
+    "displayName": "Heritage Milestone",
+    "description": "Historical milestones"
   },
   "options": {
     "draftAndPublish": true
@@ -12,13 +13,16 @@
   "pluginOptions": {},
   "attributes": {
     "year": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "order": {
-      "type": "integer"
+      "type": "integer",
+      "default": 0
     }
   }
 }

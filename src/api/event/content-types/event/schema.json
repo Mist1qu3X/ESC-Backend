@@ -4,7 +4,8 @@
   "info": {
     "singularName": "event",
     "pluralName": "events",
-    "displayName": "Event"
+    "displayName": "Event",
+    "description": "Competitions and events calendar"
   },
   "options": {
     "draftAndPublish": true
@@ -12,57 +13,75 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["championship", "education", "workshop"],
+      "required": true,
+      "default": "championship"
+    },
+    "statusEvent": {
+      "type": "enumeration",
+      "enum": ["UPCOMING", "FINISHED"],
+      "required": true,
+      "default": "UPCOMING"
+    },
+    "category": {
+      "type": "string",
+      "default": "SENIOR"
     },
     "month": {
       "type": "string"
     },
-    "location": {
-      "type": "string"
-    },
-    "statusEvent": {
-      "type": "string"
-    },
     "date": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "endDate": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
-    "type": {
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "venue": {
       "type": "string"
-    },
-    "discipline": {
-      "type": "string"
-    },
-    "category": {
-      "type": "string"
-    },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
     },
     "description": {
       "type": "text"
     },
-    "documents": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "athletes": {
+      "type": "string",
+      "default": "480+"
     },
-    "liveStreamUrl": {
-      "type": "string"
+    "nations": {
+      "type": "string",
+      "default": "38"
+    },
+    "disciplines": {
+      "type": "text"
+    },
+    "contactEmail": {
+      "type": "email",
+      "default": "technical@esc-shooting.eu"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "venueImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
     }
   }
 }

@@ -1,0 +1,5 @@
+/**
+ * doc service
+ */
+
+export default () => ({});

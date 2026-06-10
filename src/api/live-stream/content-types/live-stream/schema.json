@@ -4,7 +4,8 @@
   "info": {
     "singularName": "live-stream",
     "pluralName": "live-streams",
-    "displayName": "Live-stream"
+    "displayName": "Live Stream",
+    "description": "Live streaming platforms and events"
   },
   "options": {
     "draftAndPublish": true
@@ -12,48 +13,43 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "eventName": {
       "type": "string"
     },
     "platform": {
       "type": "enumeration",
-      "enum": [
-        "youtube",
-        "twitch",
-        "facebook"
-      ]
+      "enum": ["youtube", "twitch", "facebook"],
+      "required": true
     },
     "url": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "thumbnail": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images"]
     },
     "streamStatus": {
       "type": "enumeration",
-      "enum": [
-        "live",
-        "upcoming",
-        "offline"
-      ]
+      "enum": ["live", "upcoming"],
+      "required": true,
+      "default": "upcoming"
     },
     "views": {
-      "type": "string"
+      "type": "string",
+      "default": "0"
     },
     "duration": {
-      "type": "string"
+      "type": "string",
+      "default": "0:00"
     },
     "isMain": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     }
   }
 }

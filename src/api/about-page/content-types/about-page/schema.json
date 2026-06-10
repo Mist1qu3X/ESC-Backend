@@ -4,7 +4,8 @@
   "info": {
     "singularName": "about-page",
     "pluralName": "about-pages",
-    "displayName": "About-page"
+    "displayName": "About Page",
+    "description": "Main about us page content for ESC website"
   },
   "options": {
     "draftAndPublish": true
@@ -12,65 +13,80 @@
   "pluginOptions": {},
   "attributes": {
     "heroTitle1": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "default": "WHO WE"
     },
     "heroTitle2": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "default": "ARE"
     },
     "heroSubtitle": {
-      "type": "string"
+      "type": "string",
+      "default": "ABOUT ESC"
     },
     "missionTitle": {
-      "type": "string"
+      "type": "string",
+      "default": "OUR MISSION"
     },
     "missionText1": {
-      "type": "text"
+      "type": "text",
+      "default": "The European Shooting Confederation (ESC) is the governing body for Olympic shooting sports in Europe."
     },
     "missionText2": {
-      "type": "text"
+      "type": "text",
+      "default": "We are committed to developing and promoting shooting sports across all 47 member federations."
     },
     "missionImage": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "required": false,
+      "allowedTypes": ["images"]
     },
     "statsMembers": {
-      "type": "string"
+      "type": "string",
+      "default": "47"
     },
     "statsLabelMembers": {
-      "type": "string"
+      "type": "string",
+      "default": "MEMBER FEDERATIONS"
     },
     "statsNations": {
-      "type": "string"
+      "type": "string",
+      "default": "38"
     },
     "statsLabelNations": {
-      "type": "string"
+      "type": "string",
+      "default": "NATIONS"
     },
     "statsEvents": {
-      "type": "string"
+      "type": "string",
+      "default": "25+"
     },
     "statsLabelEvents": {
-      "type": "string"
+      "type": "string",
+      "default": "EVENTS YEARLY"
     },
     "statsYears": {
-      "type": "string"
+      "type": "string",
+      "default": "50+"
     },
     "statsLabelYears": {
-      "type": "string"
+      "type": "string",
+      "default": "YEARS OF EXCELLENCE"
     },
     "heritageTitle": {
-      "type": "string"
+      "type": "string",
+      "default": "OUR HERITAGE"
     },
     "heritageSubtitle": {
-      "type": "string"
+      "type": "string",
+      "default": "HISTORY"
     },
     "heritageText": {
-      "type": "text"
+      "type": "text",
+      "default": "Since 1969, ESC has been at the forefront of shooting sports development in Europe."
     }
   }
 }

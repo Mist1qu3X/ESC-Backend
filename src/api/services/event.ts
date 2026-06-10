@@ -1,0 +1,5 @@
+/**
+ * event service
+ */
+
+export default () => ({});

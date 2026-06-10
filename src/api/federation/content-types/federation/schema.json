@@ -4,7 +4,8 @@
   "info": {
     "singularName": "federation",
     "pluralName": "federations",
-    "displayName": "Federation"
+    "displayName": "Federation",
+    "description": "Member federations directory"
   },
   "options": {
     "draftAndPublish": true
@@ -12,10 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "code": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "since": {
       "type": "string"
@@ -23,23 +26,12 @@
     "flag": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images"]
     },
     "region": {
       "type": "enumeration",
-      "enum": [
-        "W.EUROPE",
-        "SCANDINAVIA",
-        "C.EUROPE",
-        "E.EUROPE",
-        "S.EUROPE",
-        "CAUCASUS"
-      ]
+      "enum": ["W.EUROPE", "SCANDINAVIA", "C.EUROPE", "E.EUROPE", "S.EUROPE", "CAUCASUS"],
+      "required": true
     },
     "president": {
       "type": "string"
@@ -51,10 +43,12 @@
       "type": "string"
     },
     "country": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "countryCode": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

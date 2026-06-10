@@ -443,7 +443,8 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiAboutPageAboutPage extends Struct.CollectionTypeSchema {
   collectionName: 'about_pages';
   info: {
-    displayName: 'About-page';
+    description: 'Main about us page content for ESC website';
+    displayName: 'About Page';
     pluralName: 'about-pages';
     singularName: 'about-page';
   };
@@ -454,33 +455,46 @@ export interface ApiAboutPageAboutPage extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    heritageSubtitle: Schema.Attribute.String;
-    heritageText: Schema.Attribute.Text;
-    heritageTitle: Schema.Attribute.String;
-    heroSubtitle: Schema.Attribute.String;
-    heroTitle1: Schema.Attribute.String;
-    heroTitle2: Schema.Attribute.String;
+    heritageSubtitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'HISTORY'>;
+    heritageText: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Since 1969, ESC has been at the forefront of shooting sports development in Europe.'>;
+    heritageTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'OUR HERITAGE'>;
+    heroSubtitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'ABOUT ESC'>;
+    heroTitle1: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'WHO WE'>;
+    heroTitle2: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'ARE'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::about-page.about-page'
     > &
       Schema.Attribute.Private;
-    missionImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    missionText1: Schema.Attribute.Text;
-    missionText2: Schema.Attribute.Text;
-    missionTitle: Schema.Attribute.String;
+    missionImage: Schema.Attribute.Media<'images'>;
+    missionText1: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'The European Shooting Confederation (ESC) is the governing body for Olympic shooting sports in Europe.'>;
+    missionText2: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'We are committed to developing and promoting shooting sports across all 47 member federations.'>;
+    missionTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'OUR MISSION'>;
     publishedAt: Schema.Attribute.DateTime;
-    statsEvents: Schema.Attribute.String;
-    statsLabelEvents: Schema.Attribute.String;
-    statsLabelMembers: Schema.Attribute.String;
-    statsLabelNations: Schema.Attribute.String;
-    statsLabelYears: Schema.Attribute.String;
-    statsMembers: Schema.Attribute.String;
-    statsNations: Schema.Attribute.String;
-    statsYears: Schema.Attribute.String;
+    statsEvents: Schema.Attribute.String & Schema.Attribute.DefaultTo<'25+'>;
+    statsLabelEvents: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'EVENTS YEARLY'>;
+    statsLabelMembers: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'MEMBER FEDERATIONS'>;
+    statsLabelNations: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'NATIONS'>;
+    statsLabelYears: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'YEARS OF EXCELLENCE'>;
+    statsMembers: Schema.Attribute.String & Schema.Attribute.DefaultTo<'47'>;
+    statsNations: Schema.Attribute.String & Schema.Attribute.DefaultTo<'38'>;
+    statsYears: Schema.Attribute.String & Schema.Attribute.DefaultTo<'50+'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -491,6 +505,7 @@ export interface ApiChampionshipChampionship
   extends Struct.CollectionTypeSchema {
   collectionName: 'championships';
   info: {
+    description: 'Main championship event displayed on homepage';
     displayName: 'Championship';
     pluralName: 'championships';
     singularName: 'championship';
@@ -499,24 +514,36 @@ export interface ApiChampionshipChampionship
     draftAndPublish: true;
   };
   attributes: {
-    city: Schema.Attribute.String;
-    countdownLabel: Schema.Attribute.String;
+    city: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Osijek'>;
+    countdownLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'COUNTDOWN TO EVENT'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    dateRange: Schema.Attribute.String;
+    dateRange: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'JUNE 15-21, 2026'>;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'The premier shooting championship in Europe featuring the best athletes from 47 nations.'>;
+    image: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::championship.championship'
     > &
       Schema.Attribute.Private;
-    location: Schema.Attribute.String;
+    location: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Osijek, Croatia'>;
     publishedAt: Schema.Attribute.DateTime;
-    startDate: Schema.Attribute.Date;
-    subtitle: Schema.Attribute.String;
-    theme: Schema.Attribute.String;
-    title: Schema.Attribute.Text;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    startDate: Schema.Attribute.DateTime &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'2026-06-15T00:00:00Z'>;
+    subtitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'10m Air Weapons'>;
+    theme: Schema.Attribute.String & Schema.Attribute.DefaultTo<"WHAT'S ON">;
+    title: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'EUROPEAN\nCHAMPIONSHIP\n10M AIR\nWEAPONS'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -527,7 +554,8 @@ export interface ApiCommitteeMemberCommitteeMember
   extends Struct.CollectionTypeSchema {
   collectionName: 'committee_members';
   info: {
-    displayName: 'Committee-member';
+    description: 'Members of various ESC committees';
+    displayName: 'Committee Member';
     pluralName: 'committee-members';
     singularName: 'committee-member';
   };
@@ -541,13 +569,19 @@ export interface ApiCommitteeMemberCommitteeMember
         'Development Committee',
         'Athletes Committee',
         'Judges Committee',
+        'Medical Committee',
+        'Legal Committee',
       ]
-    >;
-    country: Schema.Attribute.String;
-    countryCode: Schema.Attribute.String;
+    > &
+      Schema.Attribute.Required;
+    country: Schema.Attribute.String & Schema.Attribute.Required;
+    countryCode: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<'images'>;
     initials: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -555,9 +589,11 @@ export interface ApiCommitteeMemberCommitteeMember
       'api::committee-member.committee-member'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    role: Schema.Attribute.String;
+    role: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -567,7 +603,8 @@ export interface ApiCommitteeMemberCommitteeMember
 export interface ApiDocDoc extends Struct.CollectionTypeSchema {
   collectionName: 'docs';
   info: {
-    displayName: 'Doc';
+    description: 'Documents library';
+    displayName: 'Document';
     pluralName: 'docs';
     singularName: 'doc';
   };
@@ -577,6 +614,7 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
   attributes: {
     category: Schema.Attribute.Enumeration<
       [
+        'All Documents',
         'Official Documents',
         'Rules',
         'Assemblies',
@@ -588,27 +626,41 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    date: Schema.Attribute.Date;
+    date: Schema.Attribute.Date & Schema.Attribute.Required;
     description: Schema.Attribute.Text;
-    downloadCount: Schema.Attribute.Integer;
-    file: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    fileSize: Schema.Attribute.String;
+    downloadCount: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    file: Schema.Attribute.Media<'files'> & Schema.Attribute.Required;
+    fileSize: Schema.Attribute.String & Schema.Attribute.DefaultTo<'1.0 MB'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::doc.doc'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    theme: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'title'>;
+    theme: Schema.Attribute.Enumeration<
+      [
+        'Official Documents',
+        'Rules',
+        'Assemblies',
+        'Sustainability',
+        'Newsletters',
+        'Courses',
+        'PRESS RELEASES',
+        'RELEASES',
+      ]
+    > &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    version: Schema.Attribute.String;
+    version: Schema.Attribute.String & Schema.Attribute.DefaultTo<'v1.0'>;
   };
 }
 
 export interface ApiEventEvent extends Struct.CollectionTypeSchema {
   collectionName: 'events';
   info: {
+    description: 'Competitions and events calendar';
     displayName: 'Event';
     pluralName: 'events';
     singularName: 'event';
@@ -617,38 +669,47 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    category: Schema.Attribute.String;
+    athletes: Schema.Attribute.String & Schema.Attribute.DefaultTo<'480+'>;
+    category: Schema.Attribute.String & Schema.Attribute.DefaultTo<'SENIOR'>;
+    contactEmail: Schema.Attribute.Email &
+      Schema.Attribute.DefaultTo<'technical@esc-shooting.eu'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    date: Schema.Attribute.Date;
+    date: Schema.Attribute.Date & Schema.Attribute.Required;
     description: Schema.Attribute.Text;
-    discipline: Schema.Attribute.String;
-    documents: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    endDate: Schema.Attribute.Date;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    liveStreamUrl: Schema.Attribute.String;
+    disciplines: Schema.Attribute.Text;
+    endDate: Schema.Attribute.Date & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::event.event'> &
       Schema.Attribute.Private;
-    location: Schema.Attribute.String;
+    location: Schema.Attribute.String & Schema.Attribute.Required;
     month: Schema.Attribute.String;
-    name: Schema.Attribute.String;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    nations: Schema.Attribute.String & Schema.Attribute.DefaultTo<'38'>;
     publishedAt: Schema.Attribute.DateTime;
-    statusEvent: Schema.Attribute.String;
-    type: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
+    statusEvent: Schema.Attribute.Enumeration<['UPCOMING', 'FINISHED']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'UPCOMING'>;
+    type: Schema.Attribute.Enumeration<
+      ['championship', 'education', 'workshop']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'championship'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    venue: Schema.Attribute.String;
+    venueImage: Schema.Attribute.Media<'images'>;
   };
 }
 
 export interface ApiFederationFederation extends Struct.CollectionTypeSchema {
   collectionName: 'federations';
   info: {
+    description: 'Member federations directory';
     displayName: 'Federation';
     pluralName: 'federations';
     singularName: 'federation';
@@ -657,21 +718,21 @@ export interface ApiFederationFederation extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    code: Schema.Attribute.String;
-    country: Schema.Attribute.String;
-    countryCode: Schema.Attribute.String;
+    code: Schema.Attribute.String & Schema.Attribute.Required;
+    country: Schema.Attribute.String & Schema.Attribute.Required;
+    countryCode: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     email: Schema.Attribute.Email;
-    flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    flag: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::federation.federation'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
     phone: Schema.Attribute.String;
     president: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
@@ -684,7 +745,8 @@ export interface ApiFederationFederation extends Struct.CollectionTypeSchema {
         'S.EUROPE',
         'CAUCASUS',
       ]
-    >;
+    > &
+      Schema.Attribute.Required;
     since: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -695,6 +757,7 @@ export interface ApiFederationFederation extends Struct.CollectionTypeSchema {
 export interface ApiGovernanceGovernance extends Struct.CollectionTypeSchema {
   collectionName: 'governances';
   info: {
+    description: 'Legislative and executive bodies';
     displayName: 'Governance';
     pluralName: 'governances';
     singularName: 'governance';
@@ -714,21 +777,11 @@ export interface ApiGovernanceGovernance extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     members: Schema.Attribute.String;
-    name: Schema.Attribute.String;
-    order: Schema.Attribute.Integer;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
-    subtitle: Schema.Attribute.String;
-    title: Schema.Attribute.String;
-    type: Schema.Attribute.Enumeration<
-      [
-        'legislative',
-        'executive',
-        'technical',
-        'development',
-        'athletes',
-        'judges',
-      ]
-    >;
+    type: Schema.Attribute.Enumeration<['legislative', 'executive']> &
+      Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -739,7 +792,8 @@ export interface ApiHeritageMilestoneHeritageMilestone
   extends Struct.CollectionTypeSchema {
   collectionName: 'heritage_milestones';
   info: {
-    displayName: 'Heritage-milestone';
+    description: 'Historical milestones';
+    displayName: 'Heritage Milestone';
     pluralName: 'heritage-milestones';
     singularName: 'heritage-milestone';
   };
@@ -750,56 +804,26 @@ export interface ApiHeritageMilestoneHeritageMilestone
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.String;
+    description: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::heritage-milestone.heritage-milestone'
     > &
       Schema.Attribute.Private;
-    order: Schema.Attribute.Integer;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    year: Schema.Attribute.String;
-  };
-}
-
-export interface ApiHeritageHeritage extends Struct.CollectionTypeSchema {
-  collectionName: 'heritages';
-  info: {
-    displayName: 'Heritage';
-    pluralName: 'heritages';
-    singularName: 'heritage';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::heritage.heritage'
-    > &
-      Schema.Attribute.Private;
-    milestones: Schema.Attribute.JSON;
-    publishedAt: Schema.Attribute.DateTime;
-    subtitle: Schema.Attribute.String;
-    text: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
+    year: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
 export interface ApiLeaderLeader extends Struct.CollectionTypeSchema {
   collectionName: 'leaders';
   info: {
+    description: 'Executive committee members and leadership';
     displayName: 'Leader';
     pluralName: 'leaders';
     singularName: 'leader';
@@ -808,11 +832,14 @@ export interface ApiLeaderLeader extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    country: Schema.Attribute.String;
-    countryCode: Schema.Attribute.String;
+    country: Schema.Attribute.String & Schema.Attribute.Required;
+    countryCode: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<'images'>;
     initials: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -820,11 +847,11 @@ export interface ApiLeaderLeader extends Struct.CollectionTypeSchema {
       'api::leader.leader'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
-    order: Schema.Attribute.Integer;
-    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    role: Schema.Attribute.String;
+    role: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -834,7 +861,8 @@ export interface ApiLeaderLeader extends Struct.CollectionTypeSchema {
 export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
   collectionName: 'live_streams';
   info: {
-    displayName: 'Live-stream';
+    description: 'Live streaming platforms and events';
+    displayName: 'Live Stream';
     pluralName: 'live-streams';
     singularName: 'live-stream';
   };
@@ -845,90 +873,116 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    duration: Schema.Attribute.String;
+    duration: Schema.Attribute.String & Schema.Attribute.DefaultTo<'0:00'>;
     eventName: Schema.Attribute.String;
-    isMain: Schema.Attribute.Boolean;
+    isMain: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::live-stream.live-stream'
     > &
       Schema.Attribute.Private;
-    platform: Schema.Attribute.Enumeration<['youtube', 'twitch', 'facebook']>;
+    platform: Schema.Attribute.Enumeration<['youtube', 'twitch', 'facebook']> &
+      Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    streamStatus: Schema.Attribute.Enumeration<['live', 'upcoming', 'offline']>;
-    thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    title: Schema.Attribute.String;
+    streamStatus: Schema.Attribute.Enumeration<['live', 'upcoming']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'upcoming'>;
+    thumbnail: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    url: Schema.Attribute.String;
-    views: Schema.Attribute.String;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+    views: Schema.Attribute.String & Schema.Attribute.DefaultTo<'0'>;
   };
 }
 
-export interface ApiNewsNews extends Struct.CollectionTypeSchema {
+export interface ApiNewsItemNewsItem extends Struct.CollectionTypeSchema {
   collectionName: 'news_items';
   info: {
-    displayName: 'News';
+    description: 'News articles and press releases';
+    displayName: 'News Item';
     pluralName: 'news-items';
-    singularName: 'news';
+    singularName: 'news-item';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    author: Schema.Attribute.String;
-    content: Schema.Attribute.Text;
+    author: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'ESC Communications'>;
+    content: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    date: Schema.Attribute.Date;
+    date: Schema.Attribute.Date & Schema.Attribute.Required;
     description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::news.news'> &
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::news-item.news-item'
+    > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    readTime: Schema.Attribute.String;
-    slug: Schema.Attribute.String;
+    readTime: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'4 min read'>;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     subtitle: Schema.Attribute.String;
     tags: Schema.Attribute.String;
-    theme: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    theme: Schema.Attribute.Enumeration<
+      [
+        'NEWS',
+        'FEATURES',
+        'INTERVIEWS',
+        'PRESS',
+        'RELEASES',
+        'CHAMPIONSHIP',
+        'EDUCATION',
+      ]
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'NEWS'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
   };
 }
 
-export interface ApiRankingRanking extends Struct.CollectionTypeSchema {
-  collectionName: 'rankings';
+export interface ApiRankingDetailRankingDetail
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'ranking_details';
   info: {
-    displayName: 'Ranking';
-    pluralName: 'rankings';
-    singularName: 'ranking';
+    description: 'Athlete rankings and points';
+    displayName: 'Ranking Detail';
+    pluralName: 'ranking-details';
+    singularName: 'ranking-detail';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    athleteName: Schema.Attribute.String;
+    athleteName: Schema.Attribute.String & Schema.Attribute.Required;
     best: Schema.Attribute.String;
-    category: Schema.Attribute.String;
-    country: Schema.Attribute.String;
+    category: Schema.Attribute.Enumeration<['ALL', 'MEN', 'WOMEN']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'ALL'>;
+    country: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     events: Schema.Attribute.String;
+    flag: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::ranking.ranking'
+      'api::ranking-detail.ranking-detail'
     > &
       Schema.Attribute.Private;
-    points: Schema.Attribute.String;
-    position: Schema.Attribute.Integer;
+    points: Schema.Attribute.String & Schema.Attribute.Required;
+    position: Schema.Attribute.Integer & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -936,86 +990,54 @@ export interface ApiRankingRanking extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiRecordRecord extends Struct.CollectionTypeSchema {
-  collectionName: 'records';
+export interface ApiResultDetailResultDetail
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'result_details';
   info: {
-    displayName: 'Record';
-    pluralName: 'records';
-    singularName: 'record';
+    description: 'Competition results and shot details';
+    displayName: 'Result Detail';
+    pluralName: 'result-details';
+    singularName: 'result-detail';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    athleteName: Schema.Attribute.String;
-    country: Schema.Attribute.String;
-    countryFlag: Schema.Attribute.String;
+    athleteName: Schema.Attribute.String & Schema.Attribute.Required;
+    category: Schema.Attribute.Enumeration<['ALL', 'MEN', 'WOMEN']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'ALL'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    date: Schema.Attribute.Date;
-    discipline: Schema.Attribute.String;
-    eventName: Schema.Attribute.String;
+    discipline: Schema.Attribute.String & Schema.Attribute.Required;
+    federationCode: Schema.Attribute.String & Schema.Attribute.Required;
+    flag: Schema.Attribute.Media<'images'>;
+    inner10s: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::record.record'
+      'api::result-detail.result-detail'
     > &
       Schema.Attribute.Private;
+    position: Schema.Attribute.Integer & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    score: Schema.Attribute.String;
-    type: Schema.Attribute.Enumeration<['World', 'european']>;
+    shots: Schema.Attribute.JSON;
+    total: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
   };
 }
 
-export interface ApiResultResult extends Struct.CollectionTypeSchema {
-  collectionName: 'results';
-  info: {
-    displayName: 'Result';
-    pluralName: 'results';
-    singularName: 'result';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    athleteName: Schema.Attribute.String;
-    category: Schema.Attribute.String;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    discipline: Schema.Attribute.String;
-    eventDate: Schema.Attribute.Date;
-    eventName: Schema.Attribute.String;
-    federation: Schema.Attribute.String;
-    federationCode: Schema.Attribute.String;
-    finalScore: Schema.Attribute.String;
-    flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::result.result'
-    > &
-      Schema.Attribute.Private;
-    location: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    qualScore: Schema.Attribute.String;
-    rank: Schema.Attribute.Integer;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiSpotlightSpotlight extends Struct.CollectionTypeSchema {
+export interface ApiSpotlightItemSpotlightItem
+  extends Struct.CollectionTypeSchema {
   collectionName: 'spotlights';
   info: {
-    displayName: 'Spotlight-item';
-    pluralName: 'spotlights';
-    singularName: 'spotlight';
+    description: 'Featured content on media page';
+    displayName: 'Spotlight Item';
+    pluralName: 'spotlight-items';
+    singularName: 'spotlight-item';
   };
   options: {
     draftAndPublish: true;
@@ -1024,16 +1046,18 @@ export interface ApiSpotlightSpotlight extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::spotlight.spotlight'
+      'api::spotlight-item.spotlight-item'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     theme: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1043,6 +1067,7 @@ export interface ApiSpotlightSpotlight extends Struct.CollectionTypeSchema {
 export interface ApiVideoVideo extends Struct.CollectionTypeSchema {
   collectionName: 'videos';
   info: {
+    description: 'Video gallery';
     displayName: 'Video';
     pluralName: 'videos';
     singularName: 'video';
@@ -1056,17 +1081,18 @@ export interface ApiVideoVideo extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
-    duration: Schema.Attribute.String;
+    duration: Schema.Attribute.String & Schema.Attribute.DefaultTo<'0:00'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::video.video'> &
       Schema.Attribute.Private;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
-    thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    title: Schema.Attribute.String;
+    thumbnail: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    videoUrl: Schema.Attribute.String;
+    videoUrl: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -1589,14 +1615,12 @@ declare module '@strapi/strapi' {
       'api::federation.federation': ApiFederationFederation;
       'api::governance.governance': ApiGovernanceGovernance;
       'api::heritage-milestone.heritage-milestone': ApiHeritageMilestoneHeritageMilestone;
-      'api::heritage.heritage': ApiHeritageHeritage;
       'api::leader.leader': ApiLeaderLeader;
       'api::live-stream.live-stream': ApiLiveStreamLiveStream;
-      'api::news.news': ApiNewsNews;
-      'api::ranking.ranking': ApiRankingRanking;
-      'api::record.record': ApiRecordRecord;
-      'api::result.result': ApiResultResult;
-      'api::spotlight.spotlight': ApiSpotlightSpotlight;
+      'api::news-item.news-item': ApiNewsItemNewsItem;
+      'api::ranking-detail.ranking-detail': ApiRankingDetailRankingDetail;
+      'api::result-detail.result-detail': ApiResultDetailResultDetail;
+      'api::spotlight-item.spotlight-item': ApiSpotlightItemSpotlightItem;
       'api::video.video': ApiVideoVideo;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

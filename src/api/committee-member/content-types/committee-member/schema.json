@@ -4,7 +4,8 @@
   "info": {
     "singularName": "committee-member",
     "pluralName": "committee-members",
-    "displayName": "Committee-member"
+    "displayName": "Committee Member",
+    "description": "Members of various ESC committees"
   },
   "options": {
     "draftAndPublish": true
@@ -12,27 +13,62 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "role": {
-      "type": "string"
-    },
-    "country": {
-      "type": "string"
-    },
-    "countryCode": {
-      "type": "string"
-    },
-    "initials": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "committee": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "Technical Committee",
         "Development Committee",
         "Athletes Committee",
-        "Judges Committee"
+        "Judges Committee",
+        "Medical Committee",
+        "Legal Committee"
+      ]
+    },
+    "initials": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "countryCode": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "flag": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
       ]
     }
   }

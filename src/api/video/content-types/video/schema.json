@@ -4,7 +4,8 @@
   "info": {
     "singularName": "video",
     "pluralName": "videos",
-    "displayName": "Video"
+    "displayName": "Video",
+    "description": "Video gallery"
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "category": {
       "type": "string"
@@ -23,18 +25,19 @@
     "thumbnail": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images"]
     },
     "videoUrl": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "duration": {
-      "type": "string"
+      "type": "string",
+      "default": "0:00"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
     }
   }
 }

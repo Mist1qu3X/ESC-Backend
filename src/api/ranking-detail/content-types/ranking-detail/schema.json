@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ranking_details",
+  "info": {
+    "singularName": "ranking-detail",
+    "pluralName": "ranking-details",
+    "displayName": "Ranking Detail",
+    "description": "Athlete rankings and points"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "position": {
+      "type": "integer",
+      "required": true
+    },
+    "athleteName": {
+      "type": "string",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "points": {
+      "type": "string",
+      "required": true
+    },
+    "events": {
+      "type": "string"
+    },
+    "best": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": ["ALL", "MEN", "WOMEN"],
+      "required": true,
+      "default": "ALL"
+    },
+    "flag": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
