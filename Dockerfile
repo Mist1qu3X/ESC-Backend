@@ -18,6 +18,7 @@ RUN npm install --no-audit --no-fund pg@8.13.1
 COPY . .
 
 ENV NODE_ENV=production
+ENV NODE_OPTIONS=--max-old-space-size=4096
 RUN npm run build
 
 # ---------- runtime stage ----------
