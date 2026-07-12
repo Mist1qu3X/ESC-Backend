@@ -990,6 +990,42 @@ export interface ApiRankingDetailRankingDetail
   };
 }
 
+export interface ApiRecordRecord extends Struct.CollectionTypeSchema {
+  collectionName: 'records';
+  info: {
+    displayName: 'Record';
+    pluralName: 'records';
+    singularName: 'record';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    athleteName: Schema.Attribute.String;
+    category: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    discipline: Schema.Attribute.String;
+    federationCode: Schema.Attribute.String;
+    flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::record.record'
+    > &
+      Schema.Attribute.Private;
+    location: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    record: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<['WR', 'ER', 'OR']>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiResultDetailResultDetail
   extends Struct.CollectionTypeSchema {
   collectionName: 'result_details';
@@ -1619,6 +1655,7 @@ declare module '@strapi/strapi' {
       'api::live-stream.live-stream': ApiLiveStreamLiveStream;
       'api::news-item.news-item': ApiNewsItemNewsItem;
       'api::ranking-detail.ranking-detail': ApiRankingDetailRankingDetail;
+      'api::record.record': ApiRecordRecord;
       'api::result-detail.result-detail': ApiResultDetailResultDetail;
       'api::spotlight-item.spotlight-item': ApiSpotlightItemSpotlightItem;
       'api::video.video': ApiVideoVideo;
