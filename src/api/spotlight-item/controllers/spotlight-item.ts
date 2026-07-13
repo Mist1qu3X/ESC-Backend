@@ -1,11 +1,19 @@
-'use strict';
+/**
+ * spotlight-item controller
+ *
+ * Возвращает "голый" массив (контракт фронтенда), но через штатный core-контроллер,
+ * поэтому вывод санитайзится (не утекают password/resetPasswordToken админа из createdBy/updatedBy)
+ * и соблюдаются пагинация и лимиты из config/api.ts.
+ */
+import { factories } from '@strapi/strapi';
 
-module.exports = {
+export default factories.createCoreController('api::spotlight-item.spotlight-item', () => ({
   async find(ctx) {
-    return await strapi.entityService.findMany('api::spotlight-item.spotlight-item', ctx.query);
+    const { data } = await super.find(ctx);
+    return data;
   },
   async findOne(ctx) {
-    const { id } = ctx.params;
-    return await strapi.entityService.findOne('api::spotlight-item.spotlight-item', id, ctx.query);
-  }
-};
+    const { data } = await super.findOne(ctx);
+    return data;
+  },
+}));

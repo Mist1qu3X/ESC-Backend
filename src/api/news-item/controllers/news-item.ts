@@ -1,11 +1,21 @@
-'use strict';
+/**
+ * news-item controller
+ *
+ * Возвращает "голый" массив (контракт фронтенда), но через штатный core-контроллер,
+ * поэтому вывод санитайзится (не утекают password/resetPasswordToken админа из createdBy/updatedBy)
+ * и соблюдаются пагинация и лимиты из config/api.ts. Раньше find/findOne отдавали сырой
+ * результат entityService с ctx.query, что приводило к утечке хешей паролей и выдаче всех
+ * записей независимо от пагинации.
+ */
+import { factories } from '@strapi/strapi';
 
-module.exports = {
+export default factories.createCoreController('api::news-item.news-item', () => ({
   async find(ctx) {
-    return await strapi.entityService.findMany('api::news-item.news-item', ctx.query);
+    const { data } = await super.find(ctx);
+    return data;
   },
   async findOne(ctx) {
-    const { id } = ctx.params;
-    return await strapi.entityService.findOne('api::news-item.news-item', id, ctx.query);
-  }
-};
+    const { data } = await super.findOne(ctx);
+    return data;
+  },
+}));
