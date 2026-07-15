@@ -1,3 +1,7 @@
-'use strict';
+/**
+ * spotlight-item service
+ */
 
-module.exports = {};
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreService('api::spotlight-item.spotlight-item');

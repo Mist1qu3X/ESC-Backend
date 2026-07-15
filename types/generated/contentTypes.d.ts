@@ -657,6 +657,43 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiEscPlatformEscPlatform extends Struct.CollectionTypeSchema {
+  collectionName: 'esc_platforms';
+  info: {
+    description: 'ESC PLATFORM block (GET CLOSER TO THE ACTION) on homepage';
+    displayName: 'ESC Platform';
+    pluralName: 'esc-platforms';
+    singularName: 'esc-platform';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    buttonLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'ENTRY SYSTEM'>;
+    buttonLink: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'/documents'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::esc-platform.esc-platform'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    text: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Access live results, rankings, and event documents all in one place.'>;
+    theme: Schema.Attribute.String & Schema.Attribute.DefaultTo<'ESC PLATFORM'>;
+    title: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'GET CLOSER\nTO THE ACTION'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEventEvent extends Struct.CollectionTypeSchema {
   collectionName: 'events';
   info: {
@@ -951,6 +988,40 @@ export interface ApiNewsItemNewsItem extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPartnerPartner extends Struct.CollectionTypeSchema {
+  collectionName: 'partners';
+  info: {
+    description: 'Partners and sponsors shown in the homepage marquee';
+    displayName: 'Partner';
+    pluralName: 'partners';
+    singularName: 'partner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::partner.partner'
+    > &
+      Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images'>;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    type: Schema.Attribute.Enumeration<['partner', 'sponsor']> &
+      Schema.Attribute.DefaultTo<'partner'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface ApiRankingDetailRankingDetail
   extends Struct.CollectionTypeSchema {
   collectionName: 'ranking_details';
@@ -1063,6 +1134,38 @@ export interface ApiResultDetailResultDetail
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSocialLinkSocialLink extends Struct.CollectionTypeSchema {
+  collectionName: 'social_links';
+  info: {
+    description: 'FOLLOW ESC social network links in the footer';
+    displayName: 'Social Link';
+    pluralName: 'social-links';
+    singularName: 'social-link';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    icon: Schema.Attribute.Media<'images'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::social-link.social-link'
+    > &
+      Schema.Attribute.Private;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    platform: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -1647,6 +1750,7 @@ declare module '@strapi/strapi' {
       'api::championship.championship': ApiChampionshipChampionship;
       'api::committee-member.committee-member': ApiCommitteeMemberCommitteeMember;
       'api::doc.doc': ApiDocDoc;
+      'api::esc-platform.esc-platform': ApiEscPlatformEscPlatform;
       'api::event.event': ApiEventEvent;
       'api::federation.federation': ApiFederationFederation;
       'api::governance.governance': ApiGovernanceGovernance;
@@ -1654,9 +1758,11 @@ declare module '@strapi/strapi' {
       'api::leader.leader': ApiLeaderLeader;
       'api::live-stream.live-stream': ApiLiveStreamLiveStream;
       'api::news-item.news-item': ApiNewsItemNewsItem;
+      'api::partner.partner': ApiPartnerPartner;
       'api::ranking-detail.ranking-detail': ApiRankingDetailRankingDetail;
       'api::record.record': ApiRecordRecord;
       'api::result-detail.result-detail': ApiResultDetailResultDetail;
+      'api::social-link.social-link': ApiSocialLinkSocialLink;
       'api::spotlight-item.spotlight-item': ApiSpotlightItemSpotlightItem;
       'api::video.video': ApiVideoVideo;
       'plugin::content-releases.release': PluginContentReleasesRelease;

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "esc_platforms",
+  "info": {
+    "singularName": "esc-platform",
+    "pluralName": "esc-platforms",
+    "displayName": "ESC Platform",
+    "description": "ESC PLATFORM block (GET CLOSER TO THE ACTION) on homepage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "theme": {
+      "type": "string",
+      "default": "ESC PLATFORM"
+    },
+    "title": {
+      "type": "text",
+      "default": "GET CLOSER\nTO THE ACTION"
+    },
+    "text": {
+      "type": "text",
+      "default": "Access live results, rankings, and event documents all in one place."
+    },
+    "buttonLabel": {
+      "type": "string",
+      "default": "ENTRY SYSTEM"
+    },
+    "buttonLink": {
+      "type": "string",
+      "default": "/documents"
+    }
+  }
+}
