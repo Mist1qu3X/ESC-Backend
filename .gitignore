@@ -46,6 +46,7 @@ $RECYCLE.BIN/
 *.rar
 *.tar
 *.zip
+*.enc
 *.com
 *.class
 *.dll
