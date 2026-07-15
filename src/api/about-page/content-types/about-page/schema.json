@@ -26,6 +26,12 @@
       "type": "string",
       "default": "ABOUT ESC"
     },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
     "missionTitle": {
       "type": "string",
       "default": "OUR MISSION"

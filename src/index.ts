@@ -6,6 +6,7 @@ const PUBLIC_READ_APIS = [
   'api::esc-platform.esc-platform',
   'api::partner.partner',
   'api::social-link.social-link',
+  'api::core-value.core-value',
 ];
 
 async function enablePublicRead(strapi: Core.Strapi) {

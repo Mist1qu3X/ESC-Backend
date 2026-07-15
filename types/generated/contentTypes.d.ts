@@ -461,6 +461,7 @@ export interface ApiAboutPageAboutPage extends Struct.CollectionTypeSchema {
       Schema.Attribute.DefaultTo<'Since 1969, ESC has been at the forefront of shooting sports development in Europe.'>;
     heritageTitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'OUR HERITAGE'>;
+    heroImage: Schema.Attribute.Media<'images'>;
     heroSubtitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'ABOUT ESC'>;
     heroTitle1: Schema.Attribute.String &
@@ -594,6 +595,40 @@ export interface ApiCommitteeMemberCommitteeMember
     phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     role: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCoreValueCoreValue extends Struct.CollectionTypeSchema {
+  collectionName: 'core_values';
+  info: {
+    description: 'CORE VALUES cards on the About Us page';
+    displayName: 'Core Value';
+    pluralName: 'core-values';
+    singularName: 'core-value';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    iconKey: Schema.Attribute.Enumeration<['target', 'shield', 'globe']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'target'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::core-value.core-value'
+    > &
+      Schema.Attribute.Private;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    text: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -850,6 +885,7 @@ export interface ApiHeritageMilestoneHeritageMilestone
       Schema.Attribute.Private;
     order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1749,6 +1785,7 @@ declare module '@strapi/strapi' {
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::championship.championship': ApiChampionshipChampionship;
       'api::committee-member.committee-member': ApiCommitteeMemberCommitteeMember;
+      'api::core-value.core-value': ApiCoreValueCoreValue;
       'api::doc.doc': ApiDocDoc;
       'api::esc-platform.esc-platform': ApiEscPlatformEscPlatform;
       'api::event.event': ApiEventEvent;
