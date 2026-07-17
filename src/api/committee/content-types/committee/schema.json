@@ -19,6 +19,14 @@
     "description": {
       "type": "text"
     },
+    "membersCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "membersStatus": {
+      "type": "string",
+      "default": "members"
+    },
     "order": {
       "type": "integer",
       "default": 0
