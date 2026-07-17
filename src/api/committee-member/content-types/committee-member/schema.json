@@ -21,16 +21,10 @@
       "required": true
     },
     "committee": {
-      "type": "enumeration",
-      "required": true,
-      "enum": [
-        "Technical Committee",
-        "Development Committee",
-        "Athletes Committee",
-        "Judges Committee",
-        "Medical Committee",
-        "Legal Committee"
-      ]
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::committee.committee",
+      "inversedBy": "members"
     },
     "initials": {
       "type": "string"

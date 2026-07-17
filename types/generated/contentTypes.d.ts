@@ -564,17 +564,10 @@ export interface ApiCommitteeMemberCommitteeMember
     draftAndPublish: true;
   };
   attributes: {
-    committee: Schema.Attribute.Enumeration<
-      [
-        'Technical Committee',
-        'Development Committee',
-        'Athletes Committee',
-        'Judges Committee',
-        'Medical Committee',
-        'Legal Committee',
-      ]
-    > &
-      Schema.Attribute.Required;
+    committee: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::committee.committee'
+    >;
     country: Schema.Attribute.String & Schema.Attribute.Required;
     countryCode: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
@@ -595,6 +588,41 @@ export interface ApiCommitteeMemberCommitteeMember
     phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     role: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCommitteeCommittee extends Struct.CollectionTypeSchema {
+  collectionName: 'committees';
+  info: {
+    description: 'ESC committees (name is editable, drives the Governance section)';
+    displayName: 'Committee';
+    pluralName: 'committees';
+    singularName: 'committee';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::committee.committee'
+    > &
+      Schema.Attribute.Private;
+    members: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::committee-member.committee-member'
+    >;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1785,6 +1813,7 @@ declare module '@strapi/strapi' {
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::championship.championship': ApiChampionshipChampionship;
       'api::committee-member.committee-member': ApiCommitteeMemberCommitteeMember;
+      'api::committee.committee': ApiCommitteeCommittee;
       'api::core-value.core-value': ApiCoreValueCoreValue;
       'api::doc.doc': ApiDocDoc;
       'api::esc-platform.esc-platform': ApiEscPlatformEscPlatform;

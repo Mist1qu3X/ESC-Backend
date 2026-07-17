@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "committees",
+  "info": {
+    "singularName": "committee",
+    "pluralName": "committees",
+    "displayName": "Committee",
+    "description": "ESC committees (name is editable, drives the Governance section)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "members": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::committee-member.committee-member",
+      "mappedBy": "committee"
+    }
+  }
+}
