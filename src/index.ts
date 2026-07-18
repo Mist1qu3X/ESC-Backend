@@ -8,6 +8,7 @@ const PUBLIC_READ_APIS = [
   'api::social-link.social-link',
   'api::core-value.core-value',
   'api::committee.committee',
+  'api::record.record',
 ];
 
 // Исходные названия комитетов — создаются один раз, если коллекция Committee пуста.
