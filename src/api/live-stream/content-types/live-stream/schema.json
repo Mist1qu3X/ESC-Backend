@@ -21,7 +21,7 @@
     },
     "platform": {
       "type": "enumeration",
-      "enum": ["youtube", "twitch", "facebook"],
+      "enum": ["youtube", "facebook"],
       "required": true
     },
     "url": {

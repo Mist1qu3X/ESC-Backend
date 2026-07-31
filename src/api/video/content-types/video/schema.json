@@ -28,8 +28,15 @@
       "allowedTypes": ["images"]
     },
     "videoUrl": {
-      "type": "string",
-      "required": true
+      "type": "string"
+    },
+    "videoFile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["videos"]
+    },
+    "date": {
+      "type": "date"
     },
     "duration": {
       "type": "string",

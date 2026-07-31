@@ -620,6 +620,9 @@ export interface ApiCommitteeCommittee extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::committee-member.committee-member'
     >;
+    membersCount: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    membersStatus: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'members'>;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
@@ -675,6 +678,7 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    attachments: Schema.Attribute.Component<'document.attachment', true>;
     category: Schema.Attribute.Enumeration<
       [
         'All Documents',
@@ -692,7 +696,7 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
     date: Schema.Attribute.Date & Schema.Attribute.Required;
     description: Schema.Attribute.Text;
     downloadCount: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    file: Schema.Attribute.Media<'files'> & Schema.Attribute.Required;
+    file: Schema.Attribute.Media<'files'>;
     fileSize: Schema.Attribute.String & Schema.Attribute.DefaultTo<'1.0 MB'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::doc.doc'> &
@@ -983,7 +987,7 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
       'api::live-stream.live-stream'
     > &
       Schema.Attribute.Private;
-    platform: Schema.Attribute.Enumeration<['youtube', 'twitch', 'facebook']> &
+    platform: Schema.Attribute.Enumeration<['youtube', 'facebook']> &
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     streamStatus: Schema.Attribute.Enumeration<['live', 'upcoming']> &
@@ -1086,6 +1090,37 @@ export interface ApiPartnerPartner extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPhotoPhoto extends Struct.CollectionTypeSchema {
+  collectionName: 'photos';
+  info: {
+    description: 'Photo albums for the Media gallery';
+    displayName: 'Photo';
+    pluralName: 'photos';
+    singularName: 'photo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    images: Schema.Attribute.Media<'images', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::photo.photo'> &
+      Schema.Attribute.Private;
+    photoCount: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiRankingDetailRankingDetail
   extends Struct.CollectionTypeSchema {
   collectionName: 'ranking_details';
@@ -1108,6 +1143,7 @@ export interface ApiRankingDetailRankingDetail
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    discipline: Schema.Attribute.String;
     events: Schema.Attribute.String;
     flag: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1283,6 +1319,7 @@ export interface ApiVideoVideo extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
     description: Schema.Attribute.Text;
     duration: Schema.Attribute.String & Schema.Attribute.DefaultTo<'0:00'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1295,7 +1332,8 @@ export interface ApiVideoVideo extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    videoUrl: Schema.Attribute.String & Schema.Attribute.Required;
+    videoFile: Schema.Attribute.Media<'videos'>;
+    videoUrl: Schema.Attribute.String;
   };
 }
 
@@ -1825,6 +1863,7 @@ declare module '@strapi/strapi' {
       'api::live-stream.live-stream': ApiLiveStreamLiveStream;
       'api::news-item.news-item': ApiNewsItemNewsItem;
       'api::partner.partner': ApiPartnerPartner;
+      'api::photo.photo': ApiPhotoPhoto;
       'api::ranking-detail.ranking-detail': ApiRankingDetailRankingDetail;
       'api::record.record': ApiRecordRecord;
       'api::result-detail.result-detail': ApiResultDetailResultDetail;

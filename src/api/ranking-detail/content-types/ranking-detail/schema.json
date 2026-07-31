@@ -40,6 +40,9 @@
       "required": true,
       "default": "ALL"
     },
+    "discipline": {
+      "type": "string"
+    },
     "flag": {
       "type": "media",
       "multiple": false,

@@ -60,7 +60,6 @@
     "file": {
       "type": "media",
       "multiple": false,
-      "required": true,
       "allowedTypes": [
         "files"
       ]
@@ -72,6 +71,11 @@
     "downloadCount": {
       "type": "integer",
       "default": 0
+    },
+    "attachments": {
+      "type": "component",
+      "repeatable": true,
+      "component": "document.attachment"
     }
   }
 }
