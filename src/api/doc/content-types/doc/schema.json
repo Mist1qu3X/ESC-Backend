@@ -21,18 +21,8 @@
       "targetField": "title"
     },
     "theme": {
-      "type": "enumeration",
-      "required": true,
-      "enum": [
-        "Official Documents",
-        "Rules",
-        "Assemblies",
-        "Sustainability",
-        "Newsletters",
-        "Courses",
-        "PRESS RELEASES",
-        "RELEASES"
-      ]
+      "type": "string",
+      "required": true
     },
     "category": {
       "type": "enumeration",

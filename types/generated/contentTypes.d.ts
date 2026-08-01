@@ -703,19 +703,7 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
-    theme: Schema.Attribute.Enumeration<
-      [
-        'Official Documents',
-        'Rules',
-        'Assemblies',
-        'Sustainability',
-        'Newsletters',
-        'Courses',
-        'PRESS RELEASES',
-        'RELEASES',
-      ]
-    > &
-      Schema.Attribute.Required;
+    theme: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1000,6 +988,37 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     url: Schema.Attribute.String & Schema.Attribute.Required;
     views: Schema.Attribute.String & Schema.Attribute.DefaultTo<'0'>;
+  };
+}
+
+export interface ApiMemberStatMemberStat extends Struct.CollectionTypeSchema {
+  collectionName: 'member_stats';
+  info: {
+    description: 'Stats shown in the Member Federations header';
+    displayName: 'Member Stat';
+    pluralName: 'member-stats';
+    singularName: 'member-stat';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::member-stat.member-stat'
+    > &
+      Schema.Attribute.Private;
+    number: Schema.Attribute.String & Schema.Attribute.Required;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1861,6 +1880,7 @@ declare module '@strapi/strapi' {
       'api::heritage-milestone.heritage-milestone': ApiHeritageMilestoneHeritageMilestone;
       'api::leader.leader': ApiLeaderLeader;
       'api::live-stream.live-stream': ApiLiveStreamLiveStream;
+      'api::member-stat.member-stat': ApiMemberStatMemberStat;
       'api::news-item.news-item': ApiNewsItemNewsItem;
       'api::partner.partner': ApiPartnerPartner;
       'api::photo.photo': ApiPhotoPhoto;
