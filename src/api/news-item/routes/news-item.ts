@@ -1,18 +1,7 @@
-'use strict';
+/**
+ * news-item router
+ */
 
-module.exports = {
-  routes: [
-    {
-      method: 'GET',
-      path: '/news-items',
-      handler: 'news-item.find',
-      config: { policies: [] }
-    },
-    {
-      method: 'GET',
-      path: '/news-items/:id',
-      handler: 'news-item.findOne',
-      config: { policies: [] }
-    }
-  ]
-};
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreRouter('api::news-item.news-item');
