@@ -12,6 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "eventSlug": {
+      "type": "string"
+    },
     "title": {
       "type": "string",
       "required": true
