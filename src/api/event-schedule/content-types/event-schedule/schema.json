@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_schedules",
+  "info": {
+    "singularName": "event-schedule",
+    "pluralName": "event-schedules",
+    "displayName": "Event Schedule",
+    "description": "Schedule rows for an event's ALL EVENTS table"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eventSlug": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "time": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "stage": {
+      "type": "string",
+      "default": "Qualification"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
