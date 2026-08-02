@@ -782,6 +782,45 @@ export interface ApiEventCategoryEventCategory
   };
 }
 
+export interface ApiEventResultEventResult extends Struct.CollectionTypeSchema {
+  collectionName: 'event_results';
+  info: {
+    description: 'Results grouped per event: pick the event, then add leader rows';
+    displayName: 'Event Result';
+    pluralName: 'event-results';
+    singularName: 'event-result';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<
+      ['ALL', 'MEN', 'WOMEN', 'JUNIOR MEN', 'JUNIOR WOMEN', 'MIXED']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'ALL'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    discipline: Schema.Attribute.String & Schema.Attribute.Required;
+    event: Schema.Attribute.Relation<'manyToOne', 'api::event.event'>;
+    leaders: Schema.Attribute.Component<'results.leader', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::event-result.event-result'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    stage: Schema.Attribute.Enumeration<
+      ['Final', 'Qualification', 'Ranking Match', 'Medal Match']
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEventScheduleEventSchedule
   extends Struct.CollectionTypeSchema {
   collectionName: 'event_schedules';
@@ -1947,6 +1986,7 @@ declare module '@strapi/strapi' {
       'api::doc.doc': ApiDocDoc;
       'api::esc-platform.esc-platform': ApiEscPlatformEscPlatform;
       'api::event-category.event-category': ApiEventCategoryEventCategory;
+      'api::event-result.event-result': ApiEventResultEventResult;
       'api::event-schedule.event-schedule': ApiEventScheduleEventSchedule;
       'api::event.event': ApiEventEvent;
       'api::federation.federation': ApiFederationFederation;
