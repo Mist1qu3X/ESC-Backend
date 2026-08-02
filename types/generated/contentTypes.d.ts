@@ -696,6 +696,7 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
     date: Schema.Attribute.Date & Schema.Attribute.Required;
     description: Schema.Attribute.Text;
     downloadCount: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    eventSlug: Schema.Attribute.String;
     file: Schema.Attribute.Media<'files'>;
     fileSize: Schema.Attribute.String & Schema.Attribute.DefaultTo<'1.0 MB'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -743,6 +744,38 @@ export interface ApiEscPlatformEscPlatform extends Struct.CollectionTypeSchema {
     theme: Schema.Attribute.String & Schema.Attribute.DefaultTo<'ESC PLATFORM'>;
     title: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<'GET CLOSER\nTO THE ACTION'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEventCategoryEventCategory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'event_categories';
+  info: {
+    description: 'Calendar filter tabs (label + which event types they cover)';
+    displayName: 'Event Category';
+    pluralName: 'event-categories';
+    singularName: 'event-category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::event-category.event-category'
+    > &
+      Schema.Attribute.Private;
+    matchTypes: Schema.Attribute.Text;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1004,6 +1037,7 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     duration: Schema.Attribute.String & Schema.Attribute.DefaultTo<'0:00'>;
     eventName: Schema.Attribute.String;
+    eventSlug: Schema.Attribute.String;
     isMain: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -1161,6 +1195,7 @@ export interface ApiPhotoPhoto extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     date: Schema.Attribute.Date;
+    eventSlug: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     images: Schema.Attribute.Media<'images', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1911,6 +1946,7 @@ declare module '@strapi/strapi' {
       'api::core-value.core-value': ApiCoreValueCoreValue;
       'api::doc.doc': ApiDocDoc;
       'api::esc-platform.esc-platform': ApiEscPlatformEscPlatform;
+      'api::event-category.event-category': ApiEventCategoryEventCategory;
       'api::event-schedule.event-schedule': ApiEventScheduleEventSchedule;
       'api::event.event': ApiEventEvent;
       'api::federation.federation': ApiFederationFederation;
