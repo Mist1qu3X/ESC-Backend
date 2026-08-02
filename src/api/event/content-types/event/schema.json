@@ -82,6 +82,12 @@
       "type": "media",
       "multiple": false,
       "allowedTypes": ["images"]
+    },
+    "eventResults": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event-result.event-result",
+      "mappedBy": "event"
     }
   }
 }

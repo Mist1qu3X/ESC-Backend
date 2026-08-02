@@ -15,7 +15,8 @@
     "event": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::event.event"
+      "target": "api::event.event",
+      "inversedBy": "eventResults"
     },
     "discipline": {
       "type": "string",
