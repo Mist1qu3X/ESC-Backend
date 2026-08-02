@@ -30,12 +30,10 @@
       "type": "string"
     },
     "country": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "countryCode": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "email": {
       "type": "email"

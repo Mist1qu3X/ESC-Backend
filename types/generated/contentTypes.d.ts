@@ -568,8 +568,8 @@ export interface ApiCommitteeMemberCommitteeMember
       'manyToOne',
       'api::committee.committee'
     >;
-    country: Schema.Attribute.String & Schema.Attribute.Required;
-    countryCode: Schema.Attribute.String & Schema.Attribute.Required;
+    country: Schema.Attribute.String;
+    countryCode: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1033,8 +1033,8 @@ export interface ApiLeaderLeader extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    country: Schema.Attribute.String & Schema.Attribute.Required;
-    countryCode: Schema.Attribute.String & Schema.Attribute.Required;
+    country: Schema.Attribute.String;
+    countryCode: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

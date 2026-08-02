@@ -21,12 +21,10 @@
       "required": true
     },
     "country": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "countryCode": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "initials": {
       "type": "string"
