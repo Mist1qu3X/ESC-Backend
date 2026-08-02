@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_categories",
+  "info": {
+    "singularName": "event-category",
+    "pluralName": "event-categories",
+    "displayName": "Event Category",
+    "description": "Calendar filter tabs (label + which event types they cover)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "matchTypes": {
+      "type": "text",
+      "description": "Comma-separated event.type values this tab includes, e.g. championship,cup,league"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
