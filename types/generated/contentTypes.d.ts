@@ -918,6 +918,7 @@ export interface ApiFederationFederation extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    assemblyFlag: Schema.Attribute.Media<'images'>;
     code: Schema.Attribute.String & Schema.Attribute.Required;
     country: Schema.Attribute.String & Schema.Attribute.Required;
     countryCode: Schema.Attribute.String & Schema.Attribute.Required;

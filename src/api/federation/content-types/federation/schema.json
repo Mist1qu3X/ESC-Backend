@@ -28,6 +28,11 @@
       "multiple": false,
       "allowedTypes": ["images"]
     },
+    "assemblyFlag": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
     "region": {
       "type": "enumeration",
       "enum": ["W.EUROPE", "SCANDINAVIA", "C.EUROPE", "E.EUROPE", "S.EUROPE", "CAUCASUS"],
