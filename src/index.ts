@@ -11,6 +11,12 @@ const PUBLIC_READ_APIS = [
   'api::record.record',
 ];
 
+// Content-types, чей create должен быть открыт для роли Public (публичные формы).
+// Права в БД не переезжают с локали на прод — выдаём их кодом при каждом старте.
+const PUBLIC_CREATE_APIS = [
+  'api::contact-message.contact-message',
+];
+
 // Исходные названия комитетов — создаются один раз, если коллекция Committee пуста.
 // После сида названия можно свободно переименовывать в админке.
 const DEFAULT_COMMITTEES = [
@@ -63,6 +69,28 @@ async function enablePublicRead(strapi: Core.Strapi) {
   }
 }
 
+async function enablePublicCreate(strapi: Core.Strapi) {
+  const publicRole = await strapi
+    .query('plugin::users-permissions.role')
+    .findOne({ where: { type: 'public' } });
+
+  if (!publicRole) return;
+
+  for (const uid of PUBLIC_CREATE_APIS) {
+    const permAction = `${uid}.create`;
+    const existing = await strapi
+      .query('plugin::users-permissions.permission')
+      .findOne({ where: { action: permAction, role: publicRole.id } });
+
+    if (!existing) {
+      await strapi.query('plugin::users-permissions.permission').create({
+        data: { action: permAction, role: publicRole.id },
+      });
+      strapi.log.info(`[bootstrap] Public create enabled: ${permAction}`);
+    }
+  }
+}
+
 export default {
   /**
    * An asynchronous register function that runs before
@@ -81,6 +109,7 @@ export default {
    */
   async bootstrap({ strapi }: { strapi: Core.Strapi }) {
     await enablePublicRead(strapi);
+    await enablePublicCreate(strapi);
     await seedCommittees(strapi);
   },
 };

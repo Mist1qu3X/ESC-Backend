@@ -17,30 +17,10 @@ export interface DocumentAttachment extends Struct.ComponentSchema {
   };
 }
 
-export interface ResultsLeader extends Struct.ComponentSchema {
-  collectionName: 'components_results_leaders';
-  info: {
-    description: 'One row in an event result table';
-    displayName: 'Leader';
-    icon: 'trophy';
-  };
-  attributes: {
-    athleteName: Schema.Attribute.String & Schema.Attribute.Required;
-    federationCode: Schema.Attribute.String;
-    flag: Schema.Attribute.Media<'images'>;
-    inner10s: Schema.Attribute.String;
-    note: Schema.Attribute.String;
-    position: Schema.Attribute.Integer & Schema.Attribute.Required;
-    shots: Schema.Attribute.JSON;
-    total: Schema.Attribute.String;
-  };
-}
-
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'document.attachment': DocumentAttachment;
-      'results.leader': ResultsLeader;
     }
   }
 }

@@ -632,6 +632,48 @@ export interface ApiCommitteeCommittee extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiContactMessageContactMessage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'contact_messages';
+  info: {
+    description: 'Submissions from the site contact / enquiry form';
+    displayName: 'Contact Message';
+    pluralName: 'contact-messages';
+    singularName: 'contact-message';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    handled: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-message.contact-message'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 5000;
+      }>;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    source: Schema.Attribute.String & Schema.Attribute.DefaultTo<'contact'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCoreValueCoreValue extends Struct.CollectionTypeSchema {
   collectionName: 'core_values';
   info: {
@@ -744,77 +786,6 @@ export interface ApiEscPlatformEscPlatform extends Struct.CollectionTypeSchema {
     theme: Schema.Attribute.String & Schema.Attribute.DefaultTo<'ESC PLATFORM'>;
     title: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<'GET CLOSER\nTO THE ACTION'>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiEventCategoryEventCategory
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'event_categories';
-  info: {
-    description: 'Calendar filter tabs (label + which event types they cover)';
-    displayName: 'Event Category';
-    pluralName: 'event-categories';
-    singularName: 'event-category';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    label: Schema.Attribute.String & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::event-category.event-category'
-    > &
-      Schema.Attribute.Private;
-    matchTypes: Schema.Attribute.Text;
-    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiEventResultEventResult extends Struct.CollectionTypeSchema {
-  collectionName: 'event_results';
-  info: {
-    description: 'Results grouped per event: pick the event, then add leader rows';
-    displayName: 'Event Result';
-    pluralName: 'event-results';
-    singularName: 'event-result';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    category: Schema.Attribute.Enumeration<
-      ['ALL', 'MEN', 'WOMEN', 'JUNIOR MEN', 'JUNIOR WOMEN', 'MIXED']
-    > &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'ALL'>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    discipline: Schema.Attribute.String & Schema.Attribute.Required;
-    event: Schema.Attribute.Relation<'manyToOne', 'api::event.event'>;
-    leaders: Schema.Attribute.Component<'results.leader', true>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::event-result.event-result'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    stage: Schema.Attribute.Enumeration<
-      ['Final', 'Qualification', 'Ranking Match', 'Medal Match']
-    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1092,7 +1063,7 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'upcoming'>;
     thumbnail: Schema.Attribute.Media<'images'>;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1983,11 +1954,10 @@ declare module '@strapi/strapi' {
       'api::championship.championship': ApiChampionshipChampionship;
       'api::committee-member.committee-member': ApiCommitteeMemberCommitteeMember;
       'api::committee.committee': ApiCommitteeCommittee;
+      'api::contact-message.contact-message': ApiContactMessageContactMessage;
       'api::core-value.core-value': ApiCoreValueCoreValue;
       'api::doc.doc': ApiDocDoc;
       'api::esc-platform.esc-platform': ApiEscPlatformEscPlatform;
-      'api::event-category.event-category': ApiEventCategoryEventCategory;
-      'api::event-result.event-result': ApiEventResultEventResult;
       'api::event-schedule.event-schedule': ApiEventScheduleEventSchedule;
       'api::event.event': ApiEventEvent;
       'api::federation.federation': ApiFederationFederation;
