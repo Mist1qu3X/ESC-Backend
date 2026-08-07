@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_messages",
+  "info": {
+    "singularName": "contact-message",
+    "pluralName": "contact-messages",
+    "displayName": "Contact Message",
+    "description": "Submissions from the site contact / enquiry form"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 200
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "message": {
+      "type": "text",
+      "required": true,
+      "maxLength": 5000
+    },
+    "source": {
+      "type": "string",
+      "default": "contact"
+    },
+    "handled": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

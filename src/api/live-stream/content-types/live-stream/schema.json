@@ -16,8 +16,7 @@
       "type": "string"
     },
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "eventName": {
       "type": "string"
