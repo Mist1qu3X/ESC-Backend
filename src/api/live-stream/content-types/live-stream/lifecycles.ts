@@ -1,58 +1,38 @@
 /**
  * live-stream lifecycles
  *
- * Auto-pull the broadcast title from YouTube (oEmbed, no API key) when the admin
- * leaves `title` blank. oEmbed returns the video's real title for a known video
- * id; server-side fetch = no CORS. Failures are swallowed so a save never breaks.
+ * Instant fill of blank title / eventName from YouTube when a record is saved.
+ * Ongoing refresh (every 3 min, authoritative) is handled by the cron task in
+ * config/server.ts. All YouTube logic lives in the live-stream service.
  */
-
-// videoId из разных форм YouTube-ссылки (watch / youtu.be / live / embed / shorts)
-function ytId(url: string): string | null {
-  const m = String(url || '').match(
-    /(?:youtube\.com\/(?:watch\?v=|live\/|embed\/|shorts\/)|youtu\.be\/)([\w-]{11})/
-  );
-  return m ? m[1] : null;
-}
-
-async function fetchYouTubeTitle(url: string): Promise<string | null> {
-  const id = ytId(url);
-  if (!id) return null; // канал без конкретного видео — oEmbed не поможет, оставляем ручной title
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 5000);
-  try {
-    const endpoint =
-      'https://www.youtube.com/oembed?url=' +
-      encodeURIComponent('https://www.youtube.com/watch?v=' + id) +
-      '&format=json';
-    const res = await fetch(endpoint, { signal: controller.signal });
-    if (!res.ok) return null;
-    const data: any = await res.json();
-    return typeof data?.title === 'string' && data.title.trim() ? data.title.trim() : null;
-  } catch {
-    return null;
-  } finally {
-    clearTimeout(timer);
-  }
-}
 
 const isBlank = (v: unknown) => !String(v ?? '').trim();
 
+async function fill(data: any, treatAbsentAsBlank: boolean) {
+  if (!data?.url) return;
+  if (data.autoSync === false) return; // ручная фиксация — не трогаем title/eventName
+  const strapi = (globalThis as any).strapi;
+  const svc = strapi.service('api::live-stream.live-stream');
+  if (!svc.ytId(data.url)) return; // канал без конкретного видео — нечего резолвить
+
+  // create: отсутствующее поле = пустое (заполняем). update: заполняем только явно очищенное,
+  // чтобы не затирать ручное значение при правке других полей.
+  const wants = (k: string) => (treatAbsentAsBlank ? isBlank(data[k]) : k in data && isBlank(data[k]));
+
+  const needTitle = wants('title');
+  const needEvent = wants('eventName');
+  if (!needTitle && !needEvent) return;
+
+  const meta = await svc.fetchMeta(data.url);
+  if (needTitle && meta.title) data.title = meta.title;
+  if (needEvent && meta.eventName) data.eventName = meta.eventName;
+}
+
 export default {
   async beforeCreate(event: any) {
-    const data = event?.params?.data;
-    if (data?.url && isBlank(data.title)) {
-      const title = await fetchYouTubeTitle(data.url);
-      if (title) data.title = title;
-    }
+    await fill(event?.params?.data, true);
   },
-
-  // On update `data` holds only changed fields. Auto-fill when a url is (re)set
-  // and the title is explicitly left blank in this same payload.
   async beforeUpdate(event: any) {
-    const data = event?.params?.data;
-    if (data?.url && 'title' in data && isBlank(data.title)) {
-      const title = await fetchYouTubeTitle(data.url);
-      if (title) data.title = title;
-    }
+    await fill(event?.params?.data, false);
   },
 };

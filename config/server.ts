@@ -6,6 +6,22 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Server =>
   app: {
     keys: env.array('APP_KEYS'),
   },
+  cron: {
+    enabled: true,
+    tasks: {
+      // Каждые 3 минуты подтягиваем title + eventName трансляций из YouTube.
+      'live-stream-youtube-sync': {
+        task: async ({ strapi }: { strapi: Core.Strapi }) => {
+          try {
+            await strapi.service('api::live-stream.live-stream').syncFromYouTube();
+          } catch (e) {
+            strapi.log.error(`[cron] live-stream sync failed: ${(e as Error).message}`);
+          }
+        },
+        options: { rule: '*/3 * * * *' },
+      },
+    },
+  },
 });
 
 export default config;
