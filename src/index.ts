@@ -46,15 +46,44 @@ async function seedCommittees(strapi: Core.Strapi) {
 }
 
 async function enablePublicRead(strapi: Core.Strapi) {
-  const publicRole = await strapi
-    .query('plugin::users-permissions.role')
-    .findOne({ where: { type: 'public' } });
+  try {
+    const publicRole = await strapi
+      .query('plugin::users-permissions.role')
+      .findOne({ where: { type: 'public' } });
 
-  if (!publicRole) return;
+    if (!publicRole) return;
 
-  for (const uid of PUBLIC_READ_APIS) {
-    for (const action of ['find', 'findOne']) {
-      const permAction = `${uid}.${action}`;
+    for (const uid of PUBLIC_READ_APIS) {
+      for (const action of ['find', 'findOne']) {
+        const permAction = `${uid}.${action}`;
+        const existing = await strapi
+          .query('plugin::users-permissions.permission')
+          .findOne({ where: { action: permAction, role: publicRole.id } });
+
+        if (!existing) {
+          await strapi.query('plugin::users-permissions.permission').create({
+            data: { action: permAction, role: publicRole.id },
+          });
+          strapi.log.info(`[bootstrap] Public read enabled: ${permAction}`);
+        }
+      }
+    }
+  } catch (e) {
+    // Никогда не роняем старт приложения из-за выдачи прав.
+    strapi.log.error(`[bootstrap] enablePublicRead failed: ${(e as Error).message}`);
+  }
+}
+
+async function enablePublicCreate(strapi: Core.Strapi) {
+  try {
+    const publicRole = await strapi
+      .query('plugin::users-permissions.role')
+      .findOne({ where: { type: 'public' } });
+
+    if (!publicRole) return;
+
+    for (const uid of PUBLIC_CREATE_APIS) {
+      const permAction = `${uid}.create`;
       const existing = await strapi
         .query('plugin::users-permissions.permission')
         .findOne({ where: { action: permAction, role: publicRole.id } });
@@ -63,31 +92,28 @@ async function enablePublicRead(strapi: Core.Strapi) {
         await strapi.query('plugin::users-permissions.permission').create({
           data: { action: permAction, role: publicRole.id },
         });
-        strapi.log.info(`[bootstrap] Public read enabled: ${permAction}`);
+        strapi.log.info(`[bootstrap] Public create enabled: ${permAction}`);
       }
     }
+  } catch (e) {
+    // Никогда не роняем старт приложения из-за выдачи прав.
+    strapi.log.error(`[bootstrap] enablePublicCreate failed: ${(e as Error).message}`);
   }
 }
 
-async function enablePublicCreate(strapi: Core.Strapi) {
-  const publicRole = await strapi
-    .query('plugin::users-permissions.role')
-    .findOne({ where: { type: 'public' } });
-
-  if (!publicRole) return;
-
-  for (const uid of PUBLIC_CREATE_APIS) {
-    const permAction = `${uid}.create`;
-    const existing = await strapi
-      .query('plugin::users-permissions.permission')
-      .findOne({ where: { action: permAction, role: publicRole.id } });
-
-    if (!existing) {
-      await strapi.query('plugin::users-permissions.permission').create({
-        data: { action: permAction, role: publicRole.id },
-      });
-      strapi.log.info(`[bootstrap] Public create enabled: ${permAction}`);
-    }
+// Существующие live-stream (созданные до появления autoSync) имеют autoSync=null.
+// Проставляем true, чтобы чекбокс в админке отражал реальность (запись синкается),
+// и Save без изменения чекбокса случайно не зафиксировал запись как false.
+async function backfillAutoSync(strapi: Core.Strapi) {
+  try {
+    const affected = await strapi.db.query('api::live-stream.live-stream').updateMany({
+      where: { autoSync: { $null: true } },
+      data: { autoSync: true },
+    });
+    const count = (affected as any)?.count ?? 0;
+    if (count) strapi.log.info(`[bootstrap] autoSync backfilled on ${count} live-stream row(s)`);
+  } catch (e) {
+    strapi.log.error(`[bootstrap] backfillAutoSync failed: ${(e as Error).message}`);
   }
 }
 
@@ -110,6 +136,7 @@ export default {
   async bootstrap({ strapi }: { strapi: Core.Strapi }) {
     await enablePublicRead(strapi);
     await enablePublicCreate(strapi);
+    await backfillAutoSync(strapi);
     await seedCommittees(strapi);
   },
 };

@@ -1043,6 +1043,7 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    autoSync: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
