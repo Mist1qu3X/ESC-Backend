@@ -858,6 +858,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String & Schema.Attribute.Required;
     nations: Schema.Attribute.String & Schema.Attribute.DefaultTo<'38'>;
     publishedAt: Schema.Attribute.DateTime;
+    schedule: Schema.Attribute.Component<'event.schedule-row', true>;
     slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
     statusEvent: Schema.Attribute.Enumeration<['UPCOMING', 'FINISHED']> &
       Schema.Attribute.Required &

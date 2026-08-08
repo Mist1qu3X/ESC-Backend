@@ -17,10 +17,28 @@ export interface DocumentAttachment extends Struct.ComponentSchema {
   };
 }
 
+export interface EventScheduleRow extends Struct.ComponentSchema {
+  collectionName: 'components_event_schedule_rows';
+  info: {
+    description: "A single row in an event's schedule (ALL EVENTS table)";
+    displayName: 'Schedule Row';
+    icon: 'calendar';
+  };
+  attributes: {
+    date: Schema.Attribute.Date & Schema.Attribute.Required;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    stage: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Qualification'>;
+    time: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'document.attachment': DocumentAttachment;
+      'event.schedule-row': EventScheduleRow;
     }
   }
 }
