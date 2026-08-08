@@ -842,8 +842,6 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
   attributes: {
     athletes: Schema.Attribute.String & Schema.Attribute.DefaultTo<'480+'>;
     category: Schema.Attribute.String & Schema.Attribute.DefaultTo<'SENIOR'>;
-    contactEmail: Schema.Attribute.Email &
-      Schema.Attribute.DefaultTo<'technical@esc-shooting.eu'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -872,8 +870,6 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    venue: Schema.Attribute.String;
-    venueImage: Schema.Attribute.Media<'images'>;
   };
 }
 
@@ -919,7 +915,6 @@ export interface ApiFederationFederation extends Struct.CollectionTypeSchema {
       ]
     > &
       Schema.Attribute.Required;
-    since: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1044,14 +1039,12 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    autoSync: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     duration: Schema.Attribute.String & Schema.Attribute.DefaultTo<'0:00'>;
     eventName: Schema.Attribute.String;
     eventSlug: Schema.Attribute.String;
-    isMain: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1070,7 +1063,6 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     url: Schema.Attribute.String & Schema.Attribute.Required;
-    views: Schema.Attribute.String & Schema.Attribute.DefaultTo<'0'>;
   };
 }
 
