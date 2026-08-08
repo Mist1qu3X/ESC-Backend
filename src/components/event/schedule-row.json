@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_event_schedule_rows",
+  "info": {
+    "displayName": "Schedule Row",
+    "description": "A single row in an event's schedule (ALL EVENTS table)",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "time": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "stage": {
+      "type": "string",
+      "default": "Qualification"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

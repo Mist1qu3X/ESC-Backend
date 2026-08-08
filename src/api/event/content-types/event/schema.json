@@ -70,6 +70,11 @@
       "type": "media",
       "multiple": false,
       "allowedTypes": ["images"]
+    },
+    "schedule": {
+      "type": "component",
+      "repeatable": true,
+      "component": "event.schedule-row"
     }
   }
 }
