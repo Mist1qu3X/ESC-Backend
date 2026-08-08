@@ -1365,40 +1365,6 @@ export interface ApiSocialLinkSocialLink extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiSpotlightItemSpotlightItem
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'spotlights';
-  info: {
-    description: 'Featured content on media page';
-    displayName: 'Spotlight Item';
-    pluralName: 'spotlight-items';
-    singularName: 'spotlight-item';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images'>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::spotlight-item.spotlight-item'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    theme: Schema.Attribute.String;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiVideoVideo extends Struct.CollectionTypeSchema {
   collectionName: 'videos';
   info: {
@@ -1967,7 +1933,6 @@ declare module '@strapi/strapi' {
       'api::record.record': ApiRecordRecord;
       'api::result-detail.result-detail': ApiResultDetailResultDetail;
       'api::social-link.social-link': ApiSocialLinkSocialLink;
-      'api::spotlight-item.spotlight-item': ApiSpotlightItemSpotlightItem;
       'api::video.video': ApiVideoVideo;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
