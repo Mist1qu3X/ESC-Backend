@@ -457,11 +457,8 @@ export interface ApiAboutPageAboutPage extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     heritageSubtitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'HISTORY'>;
-    heritageText: Schema.Attribute.Text &
-      Schema.Attribute.DefaultTo<'Since 1969, ESC has been at the forefront of shooting sports development in Europe.'>;
     heritageTitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'OUR HERITAGE'>;
-    heroImage: Schema.Attribute.Media<'images'>;
     heroSubtitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'ABOUT ESC'>;
     heroTitle1: Schema.Attribute.String &
@@ -946,7 +943,6 @@ export interface ApiHeritageMilestoneHeritageMilestone
       Schema.Attribute.Private;
     order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
