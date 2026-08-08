@@ -54,6 +54,9 @@
     "countryCode": {
       "type": "string",
       "required": true
+    },
+    "website": {
+      "type": "string"
     }
   }
 }
