@@ -1224,6 +1224,45 @@ export interface ApiPhotoPhoto extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPresidiumMemberPresidiumMember
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'presidium_members';
+  info: {
+    description: 'Presidium members (executive body, excluding top leadership)';
+    displayName: 'Presidium Member';
+    pluralName: 'presidium-members';
+    singularName: 'presidium-member';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    country: Schema.Attribute.String;
+    countryCode: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<'images'>;
+    initials: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::presidium-member.presidium-member'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    role: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiRankingDetailRankingDetail
   extends Struct.CollectionTypeSchema {
   collectionName: 'ranking_details';
@@ -1971,6 +2010,7 @@ declare module '@strapi/strapi' {
       'api::news-item.news-item': ApiNewsItemNewsItem;
       'api::partner.partner': ApiPartnerPartner;
       'api::photo.photo': ApiPhotoPhoto;
+      'api::presidium-member.presidium-member': ApiPresidiumMemberPresidiumMember;
       'api::ranking-detail.ranking-detail': ApiRankingDetailRankingDetail;
       'api::record.record': ApiRecordRecord;
       'api::result-detail.result-detail': ApiResultDetailResultDetail;
