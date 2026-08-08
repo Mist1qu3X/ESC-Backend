@@ -792,42 +792,6 @@ export interface ApiEscPlatformEscPlatform extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiEventScheduleEventSchedule
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'event_schedules';
-  info: {
-    description: "Schedule rows for an event's ALL EVENTS table";
-    displayName: 'Event Schedule';
-    pluralName: 'event-schedules';
-    singularName: 'event-schedule';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    date: Schema.Attribute.Date & Schema.Attribute.Required;
-    eventSlug: Schema.Attribute.String & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::event-schedule.event-schedule'
-    > &
-      Schema.Attribute.Private;
-    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    publishedAt: Schema.Attribute.DateTime;
-    stage: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'Qualification'>;
-    time: Schema.Attribute.String;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiEventEvent extends Struct.CollectionTypeSchema {
   collectionName: 'events';
   info: {
@@ -1992,7 +1956,6 @@ declare module '@strapi/strapi' {
       'api::core-value.core-value': ApiCoreValueCoreValue;
       'api::doc.doc': ApiDocDoc;
       'api::esc-platform.esc-platform': ApiEscPlatformEscPlatform;
-      'api::event-schedule.event-schedule': ApiEventScheduleEventSchedule;
       'api::event.event': ApiEventEvent;
       'api::federation.federation': ApiFederationFederation;
       'api::governance.governance': ApiGovernanceGovernance;
