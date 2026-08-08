@@ -18,8 +18,7 @@
       "default": "EUROPEAN\nCHAMPIONSHIP\n10M AIR\nWEAPONS"
     },
     "slug": {
-      "type": "uid",
-      "targetField": "title",
+      "type": "string",
       "required": true
     },
     "theme": {

@@ -535,7 +535,7 @@ export interface ApiChampionshipChampionship
     location: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Osijek, Croatia'>;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    slug: Schema.Attribute.String & Schema.Attribute.Required;
     startDate: Schema.Attribute.DateTime &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'2026-06-15T00:00:00Z'>;
