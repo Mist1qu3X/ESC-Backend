@@ -26,12 +26,6 @@
       "type": "string",
       "default": "ABOUT ESC"
     },
-    "heroImage": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images"]
-    },
     "missionTitle": {
       "type": "string",
       "default": "OUR MISSION"
@@ -89,10 +83,6 @@
     "heritageSubtitle": {
       "type": "string",
       "default": "HISTORY"
-    },
-    "heritageText": {
-      "type": "text",
-      "default": "Since 1969, ESC has been at the forefront of shooting sports development in Europe."
     }
   }
 }
