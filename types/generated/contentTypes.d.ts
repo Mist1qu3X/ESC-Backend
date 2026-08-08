@@ -1010,7 +1010,6 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    duration: Schema.Attribute.String & Schema.Attribute.DefaultTo<'0:00'>;
     eventName: Schema.Attribute.String;
     eventSlug: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1022,9 +1021,6 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
     platform: Schema.Attribute.Enumeration<['youtube', 'facebook']> &
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    streamStatus: Schema.Attribute.Enumeration<['live', 'upcoming']> &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'upcoming'>;
     thumbnail: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
