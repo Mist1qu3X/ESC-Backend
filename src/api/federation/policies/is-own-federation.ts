@@ -1,9 +1,9 @@
 /**
  * `is-own-federation` policy.
  *
- * Разрешает изменение федерации только тому пользователю, чья связь `federation`
- * указывает на эту же запись. Реализует row-level права для роли «Federation admin»
- * (в Strapi CE нативных row-level прав нет). Вешается на action `update` роутера федераций.
+ * Разрешает изменение федерации только пользователю, назначенному её `manager`.
+ * Реализует row-level права для роли «Federation admin» (в Strapi CE нативных
+ * row-level прав нет). Вешается на action `update` роутера федераций.
  */
 
 export default async (policyContext, config, { strapi }) => {
@@ -13,10 +13,10 @@ export default async (policyContext, config, { strapi }) => {
   const targetDocumentId = policyContext.params?.id; // в Strapi 5 :id === documentId
   if (!targetDocumentId) return false;
 
-  const me = await strapi.documents('plugin::users-permissions.user').findOne({
-    documentId: user.documentId,
-    populate: { federation: true },
+  const fed = await strapi.documents('api::federation.federation').findOne({
+    documentId: targetDocumentId,
+    populate: { manager: true },
   });
 
-  return Boolean(me?.federation && me.federation.documentId === targetDocumentId);
+  return Boolean(fed?.manager && fed.manager.id === user.id);
 };
