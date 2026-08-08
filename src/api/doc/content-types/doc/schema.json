@@ -65,6 +65,10 @@
       "type": "integer",
       "default": 0
     },
+    "pinned": {
+      "type": "boolean",
+      "default": false
+    },
     "attachments": {
       "type": "component",
       "repeatable": true,
