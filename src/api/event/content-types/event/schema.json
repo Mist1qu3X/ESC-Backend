@@ -52,9 +52,6 @@
       "type": "string",
       "required": true
     },
-    "venue": {
-      "type": "string"
-    },
     "description": {
       "type": "text"
     },
@@ -69,16 +66,7 @@
     "disciplines": {
       "type": "text"
     },
-    "contactEmail": {
-      "type": "email",
-      "default": "technical@esc-shooting.eu"
-    },
     "image": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": ["images"]
-    },
-    "venueImage": {
       "type": "media",
       "multiple": false,
       "allowedTypes": ["images"]

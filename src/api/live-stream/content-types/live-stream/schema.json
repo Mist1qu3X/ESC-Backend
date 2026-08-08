@@ -41,21 +41,9 @@
       "required": true,
       "default": "upcoming"
     },
-    "views": {
-      "type": "string",
-      "default": "0"
-    },
     "duration": {
       "type": "string",
       "default": "0:00"
-    },
-    "isMain": {
-      "type": "boolean",
-      "default": false
-    },
-    "autoSync": {
-      "type": "boolean",
-      "default": true
     }
   }
 }
