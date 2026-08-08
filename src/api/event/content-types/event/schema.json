@@ -75,6 +75,11 @@
       "type": "component",
       "repeatable": true,
       "component": "event.schedule-row"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

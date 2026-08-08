@@ -34,11 +34,26 @@ export interface EventScheduleRow extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSeo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_seos';
+  info: {
+    description: 'Editable SEO meta (title, description, OG image) for a page';
+    displayName: 'SEO';
+    icon: 'search';
+  };
+  attributes: {
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    ogImage: Schema.Attribute.Media<'images'>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'document.attachment': DocumentAttachment;
       'event.schedule-row': EventScheduleRow;
+      'shared.seo': SharedSeo;
     }
   }
 }

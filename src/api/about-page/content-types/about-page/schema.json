@@ -83,6 +83,11 @@
     "heritageSubtitle": {
       "type": "string",
       "default": "HISTORY"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

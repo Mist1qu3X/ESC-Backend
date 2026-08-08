@@ -481,6 +481,7 @@ export interface ApiAboutPageAboutPage extends Struct.CollectionTypeSchema {
     missionTitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'OUR MISSION'>;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     statsEvents: Schema.Attribute.String & Schema.Attribute.DefaultTo<'25+'>;
     statsLabelEvents: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'EVENTS YEARLY'>;
@@ -820,6 +821,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     nations: Schema.Attribute.String & Schema.Attribute.DefaultTo<'38'>;
     publishedAt: Schema.Attribute.DateTime;
     schedule: Schema.Attribute.Component<'event.schedule-row', true>;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
     statusEvent: Schema.Attribute.Enumeration<['UPCOMING', 'FINISHED']> &
       Schema.Attribute.Required &
@@ -1088,6 +1090,7 @@ export interface ApiNewsItemNewsItem extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     readTime: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'4 min read'>;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     subtitle: Schema.Attribute.String;
     tags: Schema.Attribute.String;
