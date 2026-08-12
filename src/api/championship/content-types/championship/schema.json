@@ -46,6 +46,14 @@
       "required": true,
       "default": "2026-06-15T00:00:00Z"
     },
+    "endDate": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["SCHEDULED", "POSTPONED", "CANCELLED"],
+      "default": "SCHEDULED"
+    },
     "countdownLabel": {
       "type": "string",
       "default": "COUNTDOWN TO EVENT"
