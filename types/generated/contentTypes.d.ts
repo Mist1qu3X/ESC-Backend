@@ -523,6 +523,7 @@ export interface ApiChampionshipChampionship
       Schema.Attribute.DefaultTo<'JUNE 15-21, 2026'>;
     description: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<'The premier shooting championship in Europe featuring the best athletes from 47 nations.'>;
+    endDate: Schema.Attribute.DateTime;
     image: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -537,6 +538,10 @@ export interface ApiChampionshipChampionship
     startDate: Schema.Attribute.DateTime &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'2026-06-15T00:00:00Z'>;
+    status: Schema.Attribute.Enumeration<
+      ['SCHEDULED', 'POSTPONED', 'CANCELLED']
+    > &
+      Schema.Attribute.DefaultTo<'SCHEDULED'>;
     subtitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'10m Air Weapons'>;
     theme: Schema.Attribute.String & Schema.Attribute.DefaultTo<"WHAT'S ON">;
