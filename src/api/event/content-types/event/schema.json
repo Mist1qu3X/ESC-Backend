@@ -33,6 +33,20 @@
       "required": true,
       "default": "UPCOMING"
     },
+    "status": {
+      "type": "enumeration",
+      "enum": ["SCHEDULED", "POSTPONED", "CANCELLED"],
+      "default": "SCHEDULED"
+    },
+    "registration": {
+      "type": "enumeration",
+      "enum": ["NONE", "OPEN", "CLOSED"],
+      "default": "NONE"
+    },
+    "resultsPending": {
+      "type": "boolean",
+      "default": false
+    },
     "category": {
       "type": "string",
       "default": "SENIOR"
