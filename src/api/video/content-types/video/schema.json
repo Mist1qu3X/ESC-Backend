@@ -45,10 +45,6 @@
     "order": {
       "type": "integer",
       "default": 0
-    },
-    "featured": {
-      "type": "boolean",
-      "default": false
     }
   }
 }

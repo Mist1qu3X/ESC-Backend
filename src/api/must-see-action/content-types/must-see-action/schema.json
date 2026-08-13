@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "must_see_actions",
+  "info": {
+    "singularName": "must-see-action",
+    "pluralName": "must-see-actions",
+    "displayName": "Must-See Action",
+    "description": "Videos shown in the homepage MUST-SEE ACTION block"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "video": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::video.video"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
