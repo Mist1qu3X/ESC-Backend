@@ -1074,6 +1074,37 @@ export interface ApiMemberStatMemberStat extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiMustSeeActionMustSeeAction
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'must_see_actions';
+  info: {
+    description: 'Videos shown in the homepage MUST-SEE ACTION block';
+    displayName: 'Must-See Action';
+    pluralName: 'must-see-actions';
+    singularName: 'must-see-action';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::must-see-action.must-see-action'
+    > &
+      Schema.Attribute.Private;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    video: Schema.Attribute.Relation<'oneToOne', 'api::video.video'>;
+  };
+}
+
 export interface ApiNewsItemNewsItem extends Struct.CollectionTypeSchema {
   collectionName: 'news_items';
   info: {
@@ -1942,6 +1973,7 @@ declare module '@strapi/strapi' {
       'api::leader.leader': ApiLeaderLeader;
       'api::live-stream.live-stream': ApiLiveStreamLiveStream;
       'api::member-stat.member-stat': ApiMemberStatMemberStat;
+      'api::must-see-action.must-see-action': ApiMustSeeActionMustSeeAction;
       'api::news-item.news-item': ApiNewsItemNewsItem;
       'api::partner.partner': ApiPartnerPartner;
       'api::photo.photo': ApiPhotoPhoto;
