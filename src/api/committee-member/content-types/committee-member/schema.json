@@ -35,12 +35,6 @@
     "countryCode": {
       "type": "string"
     },
-    "email": {
-      "type": "email"
-    },
-    "phone": {
-      "type": "string"
-    },
     "image": {
       "type": "media",
       "multiple": false,

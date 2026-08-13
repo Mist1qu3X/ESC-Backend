@@ -521,8 +521,6 @@ export interface ApiChampionshipChampionship
       Schema.Attribute.Private;
     dateRange: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'JUNE 15-21, 2026'>;
-    description: Schema.Attribute.Text &
-      Schema.Attribute.DefaultTo<'The premier shooting championship in Europe featuring the best athletes from 47 nations.'>;
     endDate: Schema.Attribute.DateTime;
     headline: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images'>;
@@ -539,10 +537,6 @@ export interface ApiChampionshipChampionship
     startDate: Schema.Attribute.DateTime &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'2026-06-15T00:00:00Z'>;
-    status: Schema.Attribute.Enumeration<
-      ['SCHEDULED', 'POSTPONED', 'CANCELLED']
-    > &
-      Schema.Attribute.DefaultTo<'SCHEDULED'>;
     subtitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'10m Air Weapons'>;
     theme: Schema.Attribute.String & Schema.Attribute.DefaultTo<"WHAT'S ON">;
@@ -577,7 +571,6 @@ export interface ApiCommitteeMemberCommitteeMember
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    email: Schema.Attribute.Email;
     flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     image: Schema.Attribute.Media<'images'>;
     initials: Schema.Attribute.String;
@@ -589,7 +582,6 @@ export interface ApiCommitteeMemberCommitteeMember
       Schema.Attribute.Private;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     role: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -977,13 +969,9 @@ export interface ApiLeaderLeader extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    country: Schema.Attribute.String;
-    countryCode: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    email: Schema.Attribute.Email;
-    flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     image: Schema.Attribute.Media<'images'>;
     initials: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -994,7 +982,6 @@ export interface ApiLeaderLeader extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     role: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -1019,7 +1006,6 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     eventName: Schema.Attribute.String;
-    eventSlug: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1233,13 +1219,10 @@ export interface ApiPresidiumMemberPresidiumMember
     draftAndPublish: true;
   };
   attributes: {
-    country: Schema.Attribute.String;
-    countryCode: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     email: Schema.Attribute.Email;
-    flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     image: Schema.Attribute.Media<'images'>;
     initials: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
