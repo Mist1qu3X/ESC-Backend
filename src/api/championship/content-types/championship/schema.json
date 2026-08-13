@@ -17,6 +17,9 @@
       "required": true,
       "default": "EUROPEAN\nCHAMPIONSHIP\n10M AIR\nWEAPONS"
     },
+    "headline": {
+      "type": "text"
+    },
     "slug": {
       "type": "string",
       "required": true
@@ -51,8 +54,7 @@
     },
     "status": {
       "type": "enumeration",
-      "enum": ["SCHEDULED", "POSTPONED", "CANCELLED"],
-      "default": "SCHEDULED"
+      "enum": ["SCHEDULED", "POSTPONED", "CANCELLED"]
     },
     "countdownLabel": {
       "type": "string",
