@@ -54,7 +54,8 @@
     },
     "status": {
       "type": "enumeration",
-      "enum": ["SCHEDULED", "POSTPONED", "CANCELLED"]
+      "enum": ["SCHEDULED", "POSTPONED", "CANCELLED"],
+      "default": "SCHEDULED"
     },
     "countdownLabel": {
       "type": "string",
