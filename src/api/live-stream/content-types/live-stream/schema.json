@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "eventSlug": {
-      "type": "string"
-    },
     "title": {
       "type": "string"
     },

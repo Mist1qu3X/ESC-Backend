@@ -20,30 +20,8 @@
       "type": "string",
       "required": true
     },
-    "country": {
-      "type": "string"
-    },
-    "countryCode": {
-      "type": "string"
-    },
     "initials": {
       "type": "string"
-    },
-    "email": {
-      "type": "email"
-    },
-    "phone": {
-      "type": "string"
-    },
-    "flag": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
     },
     "image": {
       "type": "media",

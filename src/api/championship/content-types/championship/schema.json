@@ -52,11 +52,6 @@
     "endDate": {
       "type": "datetime"
     },
-    "status": {
-      "type": "enumeration",
-      "enum": ["SCHEDULED", "POSTPONED", "CANCELLED"],
-      "default": "SCHEDULED"
-    },
     "countdownLabel": {
       "type": "string",
       "default": "COUNTDOWN TO EVENT"
@@ -66,10 +61,6 @@
       "multiple": false,
       "required": false,
       "allowedTypes": ["images"]
-    },
-    "description": {
-      "type": "text",
-      "default": "The premier shooting championship in Europe featuring the best athletes from 47 nations."
     }
   }
 }
