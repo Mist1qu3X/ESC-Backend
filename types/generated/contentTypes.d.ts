@@ -541,7 +541,8 @@ export interface ApiChampionshipChampionship
       Schema.Attribute.DefaultTo<'2026-06-15T00:00:00Z'>;
     status: Schema.Attribute.Enumeration<
       ['SCHEDULED', 'POSTPONED', 'CANCELLED']
-    >;
+    > &
+      Schema.Attribute.DefaultTo<'SCHEDULED'>;
     subtitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'10m Air Weapons'>;
     theme: Schema.Attribute.String & Schema.Attribute.DefaultTo<"WHAT'S ON">;
