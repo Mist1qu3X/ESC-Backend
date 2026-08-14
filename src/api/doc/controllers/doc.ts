@@ -24,4 +24,12 @@ export default factories.createCoreController('api::doc.doc', ({ strapi }) => ({
     }
     ctx.body = { downloadCount: count };
   },
+
+  // Зеркалирование библиотеки документов с официального сайта. Тело: { docs:[...], dryRun? }.
+  // Защищено admin API-токеном (передаётся в заголовке Authorization).
+  async syncOfficial(ctx) {
+    const body = (ctx.request?.body as any) || {};
+    const result = await strapi.service('api::doc.doc').syncOfficialDocs(body);
+    ctx.body = result;
+  },
 }));
