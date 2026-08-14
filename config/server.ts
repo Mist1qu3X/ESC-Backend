@@ -20,6 +20,17 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Server =>
         },
         options: { rule: '*/3 * * * *' },
       },
+      // Раз в сутки подтягиваем результаты европейских соревнований из SIUS.
+      'sius-results-sync': {
+        task: async ({ strapi }: { strapi: Core.Strapi }) => {
+          try {
+            await strapi.service('api::result-detail.result-detail').syncFromSius();
+          } catch (e) {
+            strapi.log.error(`[cron] SIUS results sync failed: ${(e as Error).message}`);
+          }
+        },
+        options: { rule: '0 4 * * *' },
+      },
     },
   },
 });

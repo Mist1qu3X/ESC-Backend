@@ -1359,6 +1359,7 @@ export interface ApiResultDetailResultDetail
       Schema.Attribute.Private;
     discipline: Schema.Attribute.String & Schema.Attribute.Required;
     eventSlug: Schema.Attribute.String;
+    externalId: Schema.Attribute.String;
     federationCode: Schema.Attribute.String & Schema.Attribute.Required;
     flag: Schema.Attribute.Media<'images'>;
     inner10s: Schema.Attribute.String;
