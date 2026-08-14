@@ -33,13 +33,15 @@ async function uploadFromUrl(strapi: any, f: InFile): Promise<number | null> {
     return null;
   }
   const buf = Buffer.from(await res.arrayBuffer());
-  const safe = f.filename.replace(/[^\w.\-]+/g, '_');
+  // Санитизация имени: убираем разделители путей и спецсимволы (S3/Strapi их отвергают, напр. "U16/U18").
+  const cleanName = f.filename.replace(/[\/\\:*?"<>|]+/g, '-').replace(/\s+/g, ' ').trim() || 'file';
+  const safe = cleanName.replace(/[^\w.\-]+/g, '_');
   const tmp = path.join(os.tmpdir(), `escdoc_${Date.now()}_${hash(f.url)}_${safe}`);
   fs.writeFileSync(tmp, buf);
   try {
     const uploaded = await strapi.plugin('upload').service('upload').upload({
       data: {},
-      files: { filepath: tmp, originalFilename: f.filename, mimetype: f.mime, size: buf.length },
+      files: { filepath: tmp, originalFilename: cleanName, mimetype: f.mime, size: buf.length },
     });
     return uploaded?.[0]?.id ?? null;
   } finally {
