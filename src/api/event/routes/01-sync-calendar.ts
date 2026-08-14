@@ -11,5 +11,11 @@ export default {
       handler: 'event.syncCalendar',
       config: { policies: [] },
     },
+    {
+      method: 'POST',
+      path: '/events/sync-event-docs',
+      handler: 'event.syncEventDocs',
+      config: { policies: [] },
+    },
   ],
 };

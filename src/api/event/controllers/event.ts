@@ -12,4 +12,11 @@ export default factories.createCoreController('api::event.event', ({ strapi }) =
     const result = await strapi.service('api::event.event').syncCalendar(body);
     ctx.body = result;
   },
+
+  // Импорт документов событий (секция DOCUMENTS карточки) в event.documents. Тело: { maxEvents?, dryRun?, onlyMissing? }.
+  async syncEventDocs(ctx) {
+    const body = (ctx.request?.body as any) || {};
+    const result = await strapi.service('api::event.event').syncEventDocs(body);
+    ctx.body = result;
+  },
 }));
