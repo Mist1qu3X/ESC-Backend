@@ -8,7 +8,7 @@
     "description": "Competition results and shot details"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

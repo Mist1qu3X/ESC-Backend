@@ -1347,7 +1347,7 @@ export interface ApiResultDetailResultDetail
     singularName: 'result-detail';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     athleteName: Schema.Attribute.String & Schema.Attribute.Required;
