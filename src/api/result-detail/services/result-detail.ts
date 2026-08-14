@@ -154,7 +154,7 @@ export default factories.createCoreService('api::result-detail.result-detail', (
               } else {
                 await strapi.db
                   .query('api::result-detail.result-detail')
-                  .create({ data: { ...data, publishedAt: new Date() } });
+                  .create({ data });
                 created++;
               }
             } catch (e) {
