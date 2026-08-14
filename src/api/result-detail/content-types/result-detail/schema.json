@@ -12,6 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "externalId": {
+      "type": "string"
+    },
     "eventSlug": {
       "type": "string"
     },
