@@ -840,10 +840,10 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'UPCOMING'>;
     type: Schema.Attribute.Enumeration<
-      ['championship', 'education', 'workshop']
+      ['competition', 'education', 'meeting']
     > &
       Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'championship'>;
+      Schema.Attribute.DefaultTo<'competition'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
