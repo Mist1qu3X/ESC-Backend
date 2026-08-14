@@ -31,6 +31,19 @@
     "buttonLink": {
       "type": "string",
       "default": "/documents"
+    },
+    "rankingDiscipline": {
+      "type": "enumeration",
+      "enum": [
+        "Air Rifle 10m",
+        "Air Pistol 10m",
+        "Pistol 25m",
+        "Rapid Fire Pistol 25m",
+        "Rifle 3 Position 50m",
+        "Skeet",
+        "Trap"
+      ],
+      "default": "Air Rifle 10m"
     }
   }
 }
