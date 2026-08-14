@@ -23,9 +23,9 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": ["championship", "education", "workshop"],
+      "enum": ["competition", "education", "meeting"],
       "required": true,
-      "default": "championship"
+      "default": "competition"
     },
     "statusEvent": {
       "type": "enumeration",
