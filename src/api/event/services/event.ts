@@ -48,11 +48,16 @@ function parseEventDocs(htmlText: string): { url: string; filename: string; labe
   if (!m) return [];
   const out: any[] = [];
   for (const row of m[1].split('<tr>').slice(1)) {
-    const a = row.match(/<a href='(\/storage\/[^']+)'[^>]*class='i'[^>]*download='([^']*)'[^>]*>([\s\S]*?)<\/a>/);
+    // Ссылка-ярлык: <a href='URL' class='i' ...><span class='pdf'></span>LABEL</a> (без download-атрибута).
+    const a = row.match(/<a href='(\/storage\/[^']+)'[^>]*class='i'[^>]*>([\s\S]*?)<\/a>/);
     if (!a) continue;
-    const label = a[3].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#039;/g, "'").trim();
+    const url = a[1];
+    const label = a[2].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#039;/g, "'").trim();
+    // Имя файла — из кнопки Download (download='...').
+    const dl = row.match(/download='([^']*)'/);
+    const filename = dl ? dl[1].replace(/&amp;/g, '&') : `${label || 'file'}.pdf`;
     const sz = row.match(/file_size'>([^<]+)</);
-    out.push({ url: a[1], filename: a[2].replace(/&amp;/g, '&'), label, size: sz ? sz[1].trim() : '' });
+    out.push({ url, filename, label: label || filename, size: sz ? sz[1].trim() : '' });
   }
   return out;
 }
@@ -175,10 +180,16 @@ export default factories.createCoreService(UID, ({ strapi }) => ({
 
   // Импорт документов события (секция DOCUMENTS карточки) в repeatable-компонент event.documents.
   // Резюмируемо: onlyMissing (по умолч.) пропускает события, где документы уже есть. Батчами maxEvents.
-  async syncEventDocs(opts: { dryRun?: boolean; maxEvents?: number; onlyMissing?: boolean } = {}) {
+  async syncEventDocs(opts: { dryRun?: boolean; maxEvents?: number; onlyMissing?: boolean; reset?: boolean } = {}) {
     const dryRun = !!opts.dryRun;
     const maxEvents = opts.maxEvents ?? 30;
     const onlyMissing = opts.onlyMissing !== false;
+
+    // Сброс флага обработки (после исправления парсера) — чтобы прогнать заново.
+    if (opts.reset) {
+      const r = await strapi.db.query(UID).updateMany({ where: {}, data: { docsChecked: false } });
+      strapi.log.info(`[event-docs] reset docsChecked on ${r?.count ?? 0} rows`);
+    }
 
     // авторитетные slug'и из sitemap (для точного URL карточки)
     const sm = await sget(`${SITE}/sitemap.xml/calendar_events`);
