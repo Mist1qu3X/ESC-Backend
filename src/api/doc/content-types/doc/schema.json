@@ -12,6 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "externalId": {
+      "type": "string"
+    },
     "eventSlug": {
       "type": "string"
     },
@@ -39,8 +42,10 @@
         "European Youth League",
         "European Cup 25m",
         "European Cup 300m",
+        "ESC Air Cup",
         "European Games",
-        "European Youth Olympic Festival"
+        "European Youth Olympic Festival",
+        "Olympic Games"
       ]
     },
     "version": {

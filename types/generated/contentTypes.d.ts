@@ -724,6 +724,7 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
     description: Schema.Attribute.Text;
     downloadCount: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     eventSlug: Schema.Attribute.String;
+    externalId: Schema.Attribute.String;
     file: Schema.Attribute.Media<'files'>;
     fileSize: Schema.Attribute.String & Schema.Attribute.DefaultTo<'1.0 MB'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -746,8 +747,10 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
         'European Youth League',
         'European Cup 25m',
         'European Cup 300m',
+        'ESC Air Cup',
         'European Games',
         'European Youth Olympic Festival',
+        'Olympic Games',
       ]
     > &
       Schema.Attribute.Required;
