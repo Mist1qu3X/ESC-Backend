@@ -24,19 +24,23 @@
       "targetField": "title"
     },
     "theme": {
-      "type": "string",
-      "required": true
-    },
-    "category": {
       "type": "enumeration",
+      "required": true,
       "enum": [
-        "All Documents",
         "Official Documents",
-        "Rules",
         "Assemblies",
         "Sustainability",
-        "Newsletters",
-        "Courses"
+        "Courses",
+        "PRESS RELEASES",
+        "Records",
+        "Competitions",
+        "European Championships",
+        "European Champions League",
+        "European Youth League",
+        "European Cup 25m",
+        "European Cup 300m",
+        "European Games",
+        "European Youth Olympic Festival"
       ]
     },
     "version": {
