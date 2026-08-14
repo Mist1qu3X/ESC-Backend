@@ -48,35 +48,51 @@ const toInt = (s: any): number | null => {
 };
 const normName = (s = ''): string => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
-// Подбор нашего Event по названию + дате (окно 45 дней). null если нет уверенного совпадения.
+// Только явно европейские ESC-соревнования (SIUS содержит и мировые World Cup / нац. первенства — их не берём).
+const EU_RE = /european|champions league|european cup|european games|youth league|eyof|\besc\b/i;
+const MATCH_STOP = new Set(['the', 'and', 'for', 'of', 'final', 'round', 'stage', 'part']);
+
+// Строгий подбор нашего Event: соревнование должно быть европейским, даты в пределах 14 дней
+// (то же событие), и минимум 3 значимых слова названия должны совпасть. Иначе null — без совпадения.
 function matchEvent(events: any[], compName: string, compDate: string): any | null {
+  if (!EU_RE.test(compName)) return null;
   const cn = normName(compName);
-  const stop = new Set(['european', 'championship', 'championships', 'cup', 'esc', 'final', 'the', 'and', 'for']);
-  const tokens = cn.split(' ').filter((w) => w.length > 2 && !stop.has(w) && !/^\d{4}$/.test(w));
+  const tokens = cn.split(' ').filter((w) => w.length > 2 && !MATCH_STOP.has(w) && !/^\d{4}$/.test(w));
   const cTime = compDate ? new Date(compDate).getTime() : null;
+  if (!cTime) return null;
   let best: any = null;
   let bestScore = 0;
   for (const e of events) {
+    if (!e.date) continue;
+    const diff = Math.abs(new Date(e.date).getTime() - cTime) / 86400000;
+    if (diff > 14) continue;
     const en = normName(e.name || '');
-    let score = tokens.filter((tk) => en.includes(tk)).length;
-    if (score === 0) continue;
-    if (cTime && e.date) {
-      const diff = Math.abs(new Date(e.date).getTime() - cTime) / 86400000;
-      if (diff > 45) continue;
-      score += 2 - Math.min(2, diff / 30);
-    }
+    const hit = tokens.filter((tk) => en.includes(tk)).length;
+    if (hit < 3) continue;
+    const score = hit + (2 - Math.min(2, diff / 7));
     if (score > bestScore) {
       bestScore = score;
       best = e;
     }
   }
-  return bestScore >= 2 ? best : null;
+  return best;
 }
 
 export default factories.createCoreService('api::result-detail.result-detail', ({ strapi }) => ({
-  async syncFromSius(opts: { nameFilter?: string; maxCompetitions?: number } = {}) {
+  async syncFromSius(opts: { nameFilter?: string; maxCompetitions?: number; purge?: boolean } = {}) {
     const nameFilter = opts.nameFilter ?? '';
     const maxComps = opts.maxCompetitions ?? 200;
+
+    // Полная переиндексация: удалить все ранее импортированные из SIUS строки, чтобы не оставались
+    // результаты от ложных совпадений старого матчера.
+    let purged = 0;
+    if (opts.purge) {
+      const del = await strapi.db
+        .query('api::result-detail.result-detail')
+        .deleteMany({ where: { externalId: { $startsWith: 'sius:' } } });
+      purged = del?.count ?? 0;
+      strapi.log.info(`[sius] purged ${purged} existing rows before re-import`);
+    }
 
     const events: any[] = await strapi.db
       .query('api::event.event')
@@ -165,7 +181,7 @@ export default factories.createCoreService('api::result-detail.result-detail', (
       }
     }
 
-    const summary = { competitions: comps.length, matched, unmatched: unmatched.length, rows, created, updated };
+    const summary = { competitions: comps.length, matched, unmatched: unmatched.length, rows, created, updated, purged };
     strapi.log.info(`[sius] results sync: ${JSON.stringify(summary)}`);
     if (unmatched.length) strapi.log.info(`[sius] unmatched competitions: ${unmatched.slice(0, 20).join(' | ')}`);
     return { ...summary, unmatchedList: unmatched };
