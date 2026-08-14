@@ -4,6 +4,12 @@
 export default {
   routes: [
     {
+      method: 'GET',
+      path: '/federations/mine',
+      handler: 'federation.mine',
+      config: { policies: [] },
+    },
+    {
       method: 'POST',
       path: '/federations/:id/flag',
       handler: 'federation.uploadFlag',
