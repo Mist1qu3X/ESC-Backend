@@ -75,8 +75,8 @@ function matchEvent(events: any[], compName: string, compDate: string): any | nu
 
 export default factories.createCoreService('api::result-detail.result-detail', ({ strapi }) => ({
   async syncFromSius(opts: { nameFilter?: string; maxCompetitions?: number } = {}) {
-    const nameFilter = opts.nameFilter ?? 'European';
-    const maxComps = opts.maxCompetitions ?? 40;
+    const nameFilter = opts.nameFilter ?? '';
+    const maxComps = opts.maxCompetitions ?? 200;
 
     const events: any[] = await strapi.db
       .query('api::event.event')
