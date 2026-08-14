@@ -8,9 +8,54 @@
  * (по числовому id в конце slug). Вызов: POST /api/events/sync-calendar.
  */
 import { factories } from '@strapi/strapi';
+import fs from 'fs';
+import os from 'os';
+import path from 'path';
 
 const SITE = 'https://esc-shooting.org';
 const UID = 'api::event.event';
+
+const EXT_MIME: Record<string, string> = {
+  pdf: 'application/pdf',
+  xlsx: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  xls: 'application/vnd.ms-excel',
+  docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  doc: 'application/msword',
+  zip: 'application/zip',
+  pptx: 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+};
+const mimeOf = (fn: string) => EXT_MIME[(fn.split('.').pop() || '').toLowerCase()] || 'application/octet-stream';
+const hashStr = (s: string) => { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return Math.abs(h).toString(36); };
+
+async function uploadUrl(strapi: any, url: string, filename: string): Promise<number | null> {
+  const res = await fetch(SITE + url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  if (!res.ok) return null;
+  const buf = Buffer.from(await res.arrayBuffer());
+  const clean = filename.replace(/[\/\\:*?"<>|]+/g, '-').replace(/\s+/g, ' ').trim() || 'file';
+  const tmp = path.join(os.tmpdir(), `escev_${Date.now()}_${hashStr(url)}_${clean.replace(/[^\w.\-]+/g, '_')}`);
+  fs.writeFileSync(tmp, buf);
+  try {
+    const up = await strapi.plugin('upload').service('upload').upload({
+      data: {}, files: { filepath: tmp, originalFilename: clean, mimetype: mimeOf(filename), size: buf.length },
+    });
+    return up?.[0]?.id ?? null;
+  } finally { try { fs.unlinkSync(tmp); } catch {} }
+}
+
+// Парсим секцию DOCUMENTS карточки события → [{url, filename, label, size}].
+function parseEventDocs(htmlText: string): { url: string; filename: string; label: string; size: string }[] {
+  const m = htmlText.match(/<h3[^>]*>\s*DOCUMENTS\s*<\/h3>([\s\S]*?)(?:<h3|<\/section|<footer|Sign up)/);
+  if (!m) return [];
+  const out: any[] = [];
+  for (const row of m[1].split('<tr>').slice(1)) {
+    const a = row.match(/<a href='(\/storage\/[^']+)'[^>]*class='i'[^>]*download='([^']*)'[^>]*>([\s\S]*?)<\/a>/);
+    if (!a) continue;
+    const label = a[3].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#039;/g, "'").trim();
+    const sz = row.match(/file_size'>([^<]+)</);
+    out.push({ url: a[1], filename: a[2].replace(/&amp;/g, '&'), label, size: sz ? sz[1].trim() : '' });
+  }
+  return out;
+}
 
 async function sget(url: string): Promise<string> {
   const c = new AbortController();
@@ -126,5 +171,60 @@ export default factories.createCoreService(UID, ({ strapi }) => ({
     strapi.log.info(`[calendar] sync: ${JSON.stringify(summary)}`);
     if (errorList.length) strapi.log.warn(`[calendar] errors: ${errorList.slice(0, 15).join(' | ')}`);
     return { ...summary, createdList, errorList: errorList.slice(0, 40) };
+  },
+
+  // Импорт документов события (секция DOCUMENTS карточки) в repeatable-компонент event.documents.
+  // Резюмируемо: onlyMissing (по умолч.) пропускает события, где документы уже есть. Батчами maxEvents.
+  async syncEventDocs(opts: { dryRun?: boolean; maxEvents?: number; onlyMissing?: boolean } = {}) {
+    const dryRun = !!opts.dryRun;
+    const maxEvents = opts.maxEvents ?? 30;
+    const onlyMissing = opts.onlyMissing !== false;
+
+    // авторитетные slug'и из sitemap (для точного URL карточки)
+    const sm = await sget(`${SITE}/sitemap.xml/calendar_events`);
+    const slugById = new Map<number, string>();
+    for (const m of sm.matchAll(/\/calendar\/view\/(\d+)-([^<\s]+)/g)) slugById.set(+m[1], m[2]);
+
+    const events: any[] = await strapi.db
+      .query(UID)
+      .findMany({ select: ['id', 'documentId', 'slug', 'docsChecked'], limit: 5000 });
+    const withId = events
+      .map((e) => ({ e, id: +(((e.slug || '').match(/-(\d+)$/) || [])[1] || 0) }))
+      .filter((x) => x.id && slugById.has(x.id));
+    const queue = withId
+      .filter((x) => !(onlyMissing && x.e.docsChecked)) // docsChecked = уже обработано (даже если документов нет)
+      .sort((a, b) => b.id - a.id); // сначала новые (у них чаще есть документы)
+
+    let processed = 0, filled = 0, skipped = 0, filesUp = 0, errors = 0;
+    const done: string[] = [];
+    const errs: string[] = [];
+
+    for (const { e, id } of queue.slice(0, maxEvents)) {
+      processed++;
+      const html = await sget(`${SITE}/calendar/view/${id}-${slugById.get(id)}`);
+      if (!html) { errors++; errs.push(`${id}: fetch failed`); continue; }
+      const files = parseEventDocs(html);
+      if (dryRun) { if (files.length) { filled++; filesUp += files.length; } else skipped++; continue; }
+      if (!files.length) {
+        await strapi.documents(UID).update({ documentId: e.documentId, data: { docsChecked: true }, status: 'published' });
+        skipped++;
+        continue;
+      }
+      const comps: any[] = [];
+      for (const f of files) {
+        try {
+          const fid = await uploadUrl(strapi, f.url, f.filename);
+          if (fid) { comps.push({ name: f.label || f.filename, fileSize: f.size, file: fid }); filesUp++; }
+        } catch (er) { errs.push(`${id}/${f.label}: ${(er as Error).message}`); }
+      }
+      // docsChecked=true в любом случае — событие обработано, не гоняем повторно
+      await strapi.documents(UID).update({ documentId: e.documentId, data: { documents: comps, docsChecked: true }, status: 'published' });
+      if (comps.length) { filled++; done.push(`${id} (${comps.length} docs)`); } else skipped++;
+    }
+
+    const remaining = Math.max(0, queue.length - maxEvents);
+    const summary = { totalEvents: withId.length, queued: queue.length, processed, filled, skipped, filesUploaded: filesUp, errors, remaining };
+    strapi.log.info(`[event-docs] sync: ${JSON.stringify(summary)}`);
+    return { ...summary, done: done.slice(0, 60), errs: errs.slice(0, 20) };
   },
 }));

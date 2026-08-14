@@ -37,6 +37,10 @@
       "type": "boolean",
       "default": false
     },
+    "docsChecked": {
+      "type": "boolean",
+      "default": false
+    },
     "category": {
       "type": "string",
       "default": "SENIOR"
@@ -79,6 +83,11 @@
       "type": "component",
       "repeatable": true,
       "component": "event.schedule-row"
+    },
+    "documents": {
+      "type": "component",
+      "repeatable": true,
+      "component": "document.attachment"
     },
     "seo": {
       "type": "component",

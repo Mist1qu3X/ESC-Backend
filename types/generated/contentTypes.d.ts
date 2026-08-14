@@ -832,6 +832,8 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     date: Schema.Attribute.Date & Schema.Attribute.Required;
     description: Schema.Attribute.Text;
     disciplines: Schema.Attribute.Text;
+    docsChecked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    documents: Schema.Attribute.Component<'document.attachment', true>;
     endDate: Schema.Attribute.Date & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
