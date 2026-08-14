@@ -741,6 +741,7 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
         'Courses',
         'PRESS RELEASES',
         'Records',
+        'Ranking',
         'Competitions',
         'European Championships',
         'European Champions League',
