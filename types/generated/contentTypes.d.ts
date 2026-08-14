@@ -778,6 +778,18 @@ export interface ApiEscPlatformEscPlatform extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    rankingDiscipline: Schema.Attribute.Enumeration<
+      [
+        'Air Rifle 10m',
+        'Air Pistol 10m',
+        'Pistol 25m',
+        'Rapid Fire Pistol 25m',
+        'Rifle 3 Position 50m',
+        'Skeet',
+        'Trap',
+      ]
+    > &
+      Schema.Attribute.DefaultTo<'Air Rifle 10m'>;
     text: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<'Access live results, rankings, and event documents all in one place.'>;
     theme: Schema.Attribute.String & Schema.Attribute.DefaultTo<'ESC PLATFORM'>;
