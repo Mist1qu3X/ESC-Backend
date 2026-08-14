@@ -717,17 +717,6 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
   };
   attributes: {
     attachments: Schema.Attribute.Component<'document.attachment', true>;
-    category: Schema.Attribute.Enumeration<
-      [
-        'All Documents',
-        'Official Documents',
-        'Rules',
-        'Assemblies',
-        'Sustainability',
-        'Newsletters',
-        'Courses',
-      ]
-    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -743,7 +732,25 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
     pinned: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
-    theme: Schema.Attribute.String & Schema.Attribute.Required;
+    theme: Schema.Attribute.Enumeration<
+      [
+        'Official Documents',
+        'Assemblies',
+        'Sustainability',
+        'Courses',
+        'PRESS RELEASES',
+        'Records',
+        'Competitions',
+        'European Championships',
+        'European Champions League',
+        'European Youth League',
+        'European Cup 25m',
+        'European Cup 300m',
+        'European Games',
+        'European Youth Olympic Festival',
+      ]
+    > &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
