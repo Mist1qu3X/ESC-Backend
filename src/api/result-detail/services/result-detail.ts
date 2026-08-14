@@ -68,7 +68,9 @@ function matchEvent(events: any[], compName: string, compDate: string): any | nu
     if (diff > 14) continue;
     const en = normName(e.name || '');
     const hit = tokens.filter((tk) => en.includes(tk)).length;
-    if (hit < 3) continue;
+    // >=3 значимых слова в окне 14 дней, ИЛИ >=2 при почти точной дате (<=3 дня) —
+    // ловит короткие названия вроде "European Games" и "European Championship" (Châteauroux).
+    if (!(hit >= 3 || (hit >= 2 && diff <= 3))) continue;
     const score = hit + (2 - Math.min(2, diff / 7));
     if (score > bestScore) {
       bestScore = score;
