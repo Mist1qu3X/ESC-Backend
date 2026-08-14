@@ -185,9 +185,10 @@ export default factories.createCoreService(UID, ({ strapi }) => ({
     const slugById = new Map<number, string>();
     for (const m of sm.matchAll(/\/calendar\/view\/(\d+)-([^<\s]+)/g)) slugById.set(+m[1], m[2]);
 
+    // Только опубликованные версии (db.query иначе вернёт и draft, и published — двойной счёт).
     const events: any[] = await strapi.db
       .query(UID)
-      .findMany({ select: ['id', 'documentId', 'slug', 'docsChecked'], limit: 5000 });
+      .findMany({ where: { publishedAt: { $notNull: true } }, select: ['id', 'documentId', 'slug', 'docsChecked'], limit: 5000 });
     const withId = events
       .map((e) => ({ e, id: +(((e.slug || '').match(/-(\d+)$/) || [])[1] || 0) }))
       .filter((x) => x.id && slugById.has(x.id));
@@ -203,10 +204,22 @@ export default factories.createCoreService(UID, ({ strapi }) => ({
       processed++;
       const html = await sget(`${SITE}/calendar/view/${id}-${slugById.get(id)}`);
       if (!html) { errors++; errs.push(`${id}: fetch failed`); continue; }
+      // Перепроверка полей события по INFORMATION (Phase D): дисциплина, место, даты — 1:1 с сайтом.
+      const info = parseEvent(html);
+      const dts = (info['date'] || '').split('-').map((s) => s.trim());
+      const di = dmyToIso(dts[0] || '');
+      const ei = dmyToIso(dts[1] || dts[0] || '');
+      const loc = [info['city'], info['country']].filter(Boolean).join(', ');
+      const fieldUpd: any = {};
+      if (info['discipline']) fieldUpd.disciplines = info['discipline'];
+      if (loc) fieldUpd.location = loc;
+      if (di) fieldUpd.date = di;
+      if (ei) fieldUpd.endDate = ei;
+
       const files = parseEventDocs(html);
       if (dryRun) { if (files.length) { filled++; filesUp += files.length; } else skipped++; continue; }
       if (!files.length) {
-        await strapi.documents(UID).update({ documentId: e.documentId, data: { docsChecked: true }, status: 'published' });
+        await strapi.documents(UID).update({ documentId: e.documentId, data: { ...fieldUpd, docsChecked: true }, status: 'published' });
         skipped++;
         continue;
       }
@@ -218,7 +231,7 @@ export default factories.createCoreService(UID, ({ strapi }) => ({
         } catch (er) { errs.push(`${id}/${f.label}: ${(er as Error).message}`); }
       }
       // docsChecked=true в любом случае — событие обработано, не гоняем повторно
-      await strapi.documents(UID).update({ documentId: e.documentId, data: { documents: comps, docsChecked: true }, status: 'published' });
+      await strapi.documents(UID).update({ documentId: e.documentId, data: { ...fieldUpd, documents: comps, docsChecked: true }, status: 'published' });
       if (comps.length) { filled++; done.push(`${id} (${comps.length} docs)`); } else skipped++;
     }
 
