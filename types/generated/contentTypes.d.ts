@@ -1378,6 +1378,7 @@ export interface ApiResultDetailResultDetail
     position: Schema.Attribute.Integer & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     shots: Schema.Attribute.JSON;
+    subDiscipline: Schema.Attribute.String;
     total: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

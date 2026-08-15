@@ -41,6 +41,9 @@
       "type": "string",
       "required": true
     },
+    "subDiscipline": {
+      "type": "string"
+    },
     "category": {
       "type": "enumeration",
       "enum": ["ALL", "MEN", "WOMEN"],

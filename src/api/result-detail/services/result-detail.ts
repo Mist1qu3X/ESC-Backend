@@ -157,6 +157,7 @@ export default factories.createCoreService('api::result-detail.result-detail', (
               federationCode: (r.Nation || '').replace(/\s+\d+$/, '') || '—',
               total: String(r.Result?.Value ?? ''),
               discipline,
+              subDiscipline: (evName || '').replace(/\s+/g, ' ').trim() || discipline,
               category,
               shots: shotsByName[r.DisplayName] || [],
             };
