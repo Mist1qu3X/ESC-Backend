@@ -24,19 +24,30 @@ async function sget(path: string): Promise<any> {
   }
 }
 
-function normDiscipline(name = ''): string {
+// Возвращает каноническую дисциплину ИЛИ null, если по названию не определить
+// (тогда вызывающий пробует название соревнования / под-события как контекст).
+function normDiscipline(name = ''): string | null {
   const n = name.toUpperCase();
   if (/RUNNING TARGET|MOVING/.test(n)) return 'MOVING TARGET';
   if (/SKEET|TRAP|SHOTGUN/.test(n)) return 'SHOTGUN';
   if (/AIR PISTOL/.test(n)) return '10M AIR PISTOL';
   if (/AIR RIFLE/.test(n)) return '10M AIR RIFLE';
   if (/50\s?M.*PISTOL|PISTOL.*50\s?M/.test(n)) return '50M PISTOL';
-  if (/25M|RAPID FIRE/.test(n)) return '25M PISTOL';
-  if (/300\s?M|300\s?METRE|300\s?METER/.test(n)) return '300M RIFLE';
+  if (/25M|RAPID FIRE|STANDARD PISTOL|CENTRE FIRE|CENTER FIRE|SPORT PISTOL/.test(n)) return '25M PISTOL';
+  if (/300\s?M|300\s?METRE|300\s?METER|\bBRANCO\b/.test(n)) return '300M RIFLE';
   if (/50M|RIFLE 3|3X40|3X20|3 POSITION/.test(n)) return '50M RIFLE';
   if (/PISTOL/.test(n)) return '25M PISTOL';
   if (/RIFLE/.test(n)) return '50M RIFLE';
-  return name;
+  return null;
+}
+// Срезаем повторяющийся префикс названия соревнования из ярлыка дисциплины
+// ("EUROPEAN CHAMPIONS LEAGUE SKEET SOLO" -> "SKEET SOLO").
+function stripCompPrefix(s = ''): string {
+  const out = s
+    .replace(/^\s*european\s+champions?\s+league\s+/i, '')
+    .replace(/^\s*european\s+(championships?|cup|games|youth\s+league)\s+/i, '')
+    .trim();
+  return out || s.trim();
 }
 function normCategory(name = ''): 'ALL' | 'MEN' | 'WOMEN' {
   const n = name.toUpperCase();
@@ -128,7 +139,7 @@ export default factories.createCoreService('api::result-detail.result-detail', (
         const evName = e.CompetitionEventType?.Name || '';
         // Пропускаем стартлисты — это не результаты (в них дубли и нет мест).
         if (/start.?list/i.test(evName)) continue;
-        const discipline = normDiscipline(evName);
+        const discEv = normDiscipline(evName);
         const category = normCategory(evName);
         const subs = await sget(`/api/v1/pub/competitions/${enc(cid)}/events/${enc(eid)}/subevents`);
         if (!Array.isArray(subs)) continue;
@@ -139,7 +150,10 @@ export default factories.createCoreService('api::result-detail.result-detail', (
         for (const se of real) {
         const sid = se.RunningId;
         const seName = (se.Name || '').replace(/\s+/g, ' ').trim();
-        const baseDisc = (evName || '').replace(/\s+/g, ' ').trim();
+        // Дисциплина: имя события → имя под-события → название соревнования (контекст) → OTHER.
+        // Ловит и "European Cup BRANCO Final" (300m по comp), и пустые evName (по seName).
+        const discipline = discEv || normDiscipline(seName) || normDiscipline(c.Name || '') || 'OTHER';
+        const baseDisc = stripCompPrefix((evName || '').replace(/\s+/g, ' ').trim());
         const subDisc = (real.length > 1 && seName ? `${baseDisc} — ${seName}` : baseDisc) || discipline;
         // Пол может быть в имени под-события (напр. "Semifinal Women 1"), а не события.
         const cat = category !== 'ALL' ? category : normCategory(seName);
