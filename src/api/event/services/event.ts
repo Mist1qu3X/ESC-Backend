@@ -12,9 +12,11 @@ import fs from 'fs';
 import os from 'os';
 import path from 'path';
 import bundledSchedules from '../schedules.json';
+import bundledResults from '../event-results.json';
 
 const SITE = 'https://esc-shooting.org';
 const UID = 'api::event.event';
+const RB_RE = /result|ranklist|results book/i;
 
 const EXT_MIME: Record<string, string> = {
   pdf: 'application/pdf',
@@ -278,5 +280,40 @@ export default factories.createCoreService(UID, ({ strapi }) => ({
     const summary = { inSchedules: slugs.length, updated, missing, errors, rowsTotal };
     strapi.log.info(`[schedules] sync: ${JSON.stringify(summary)}`);
     return summary;
+  },
+
+  // Привязка result-book PDF (из центральной таблицы /documents/results) к событиям —
+  // добавляет их в event.documents, чтобы результаты события были доступны как PDF.
+  // Резюмируемо: пропускает события, у которых result-book уже есть. Батчами maxEvents.
+  async syncEventResults(opts: { maxEvents?: number; dryRun?: boolean } = {}) {
+    const list = bundledResults as any[];
+    const maxEvents = opts.maxEvents ?? 40;
+    const dryRun = !!opts.dryRun;
+    let processed = 0, added = 0, filesUp = 0, skipped = 0, errors = 0;
+    const done: string[] = [];
+    for (const item of list) {
+      if (processed >= maxEvents) break;
+      const ev = await strapi.db.query(UID).findOne({ where: { slug: item.slug, publishedAt: { $notNull: true } }, populate: { documents: { populate: ['file'] } } });
+      if (!ev) { skipped++; continue; }
+      if ((ev.documents || []).some((d: any) => RB_RE.test(d.name || ''))) { skipped++; continue; }
+      processed++;
+      if (dryRun) { added++; filesUp += (item.results || []).length; continue; }
+      const comps: any[] = (ev.documents || [])
+        .map((d: any) => ({ name: d.name, version: d.version, date: d.date, fileSize: d.fileSize, downloadCount: d.downloadCount, file: d.file?.id }))
+        .filter((c: any) => c.file);
+      let n = 0;
+      for (const url of item.results || []) {
+        n++;
+        try {
+          const fid = await uploadUrl(strapi, url, `Results_Book${(item.results.length > 1) ? '_' + n : ''}.pdf`);
+          if (fid) { comps.push({ name: item.results.length > 1 ? `Results Book ${n}` : 'Results Book', file: fid, fileSize: '' }); filesUp++; }
+        } catch (e) { errors++; }
+      }
+      await strapi.documents(UID).update({ documentId: ev.documentId, data: { documents: comps } as any, status: 'published' });
+      added++; done.push(`${item.slug} (+${(item.results || []).length})`);
+    }
+    const summary = { totalEvents: list.length, processed, added, filesUploaded: filesUp, skipped, errors };
+    strapi.log.info(`[event-results] ${JSON.stringify(summary)}`);
+    return { ...summary, done: done.slice(0, 60) };
   },
 }));
