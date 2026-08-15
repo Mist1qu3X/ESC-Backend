@@ -132,9 +132,15 @@ export default factories.createCoreService('api::result-detail.result-detail', (
         const subs = await sget(`/api/v1/pub/competitions/${enc(cid)}/events/${enc(eid)}/subevents`);
         if (!Array.isArray(subs)) continue;
         const real = subs.filter((s: any) => !/start.?list/i.test(s.Name || ''));
-        const se = real.find((s: any) => /final/i.test(s.Name || '')) || real[real.length - 1];
-        if (!se) continue;
+        // Импортируем ВСЕ стадии (Qualification/Final/Semifinal/Medal Match), а не одну —
+        // иначе теряется полный список участников. subDiscipline различает стадии.
+        for (const se of real) {
         const sid = se.RunningId;
+        const seName = (se.Name || '').replace(/\s+/g, ' ').trim();
+        const baseDisc = (evName || '').replace(/\s+/g, ' ').trim();
+        const subDisc = (real.length > 1 && seName ? `${baseDisc} — ${seName}` : baseDisc) || discipline;
+        // Пол может быть в имени под-события (напр. "Semifinal Women 1"), а не события.
+        const cat = category !== 'ALL' ? category : normCategory(seName);
         const groups = se.ShooterGroups?.length ? se.ShooterGroups : [''];
 
         for (const g of groups) {
@@ -162,8 +168,8 @@ export default factories.createCoreService('api::result-detail.result-detail', (
               federationCode: (r.Nation || '').replace(/\s+\d+$/, '') || '—',
               total: String(r.Result?.Value ?? ''),
               discipline,
-              subDiscipline: (evName || '').replace(/\s+/g, ' ').trim() || discipline,
-              category,
+              subDiscipline: subDisc,
+              category: cat,
               shots: shotsByName[r.DisplayName] || [],
             };
             try {
@@ -185,6 +191,7 @@ export default factories.createCoreService('api::result-detail.result-detail', (
               strapi.log.error(`[sius] upsert failed ${externalId}: ${(e as Error).message}`);
             }
           }
+        }
         }
       }
     }
