@@ -229,6 +229,9 @@ export default factories.createCoreService('api::result-detail.result-detail', (
             const externalId = `sius:${cid}:${eid}:${sid}:${g}:${r.AthletesResults?.[0]?.AthleteIdentifier?.Identifier || r.DisplayName}`;
             // SIUS Result.Value = итог + внутренние десятки одной строкой ("583-24x").
             const rawTotal = String(r.Result?.Value ?? '');
+            // Нет итога → это не результат (пустые Qualification Shoot-Off — только места без очков,
+            // а также DNS/DNF без результата). Порядок перестрелки уже отражён в основной квалификации.
+            if (!rawTotal.trim()) continue;
             const im = rawTotal.match(/^(\d+(?:\.\d+)?)[\s-]+(\d+)\s*x?$/i);
             const members = isTeam ? (r.AthletesResults || []).map((a: any) => a.DisplayName).filter(Boolean) : null;
             const data: any = {
