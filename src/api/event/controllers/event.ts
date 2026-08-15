@@ -33,4 +33,9 @@ export default factories.createCoreController('api::event.event', ({ strapi }) =
     const result = await strapi.service('api::event.event').syncEventResults(body);
     ctx.body = result;
   },
+
+  // Пересчёт флагов hasResults / hasResultBook (для ленивой загрузки страницы Results).
+  async refreshResultFlags(ctx) {
+    ctx.body = await strapi.service('api::event.event').refreshEventResultFlags();
+  },
 }));

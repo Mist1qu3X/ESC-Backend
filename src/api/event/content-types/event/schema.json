@@ -41,6 +41,14 @@
       "type": "boolean",
       "default": false
     },
+    "hasResults": {
+      "type": "boolean",
+      "default": false
+    },
+    "hasResultBook": {
+      "type": "boolean",
+      "default": false
+    },
     "category": {
       "type": "string",
       "default": "SENIOR"
