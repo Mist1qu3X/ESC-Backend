@@ -20,11 +20,13 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Server =>
         },
         options: { rule: '*/3 * * * *' },
       },
-      // Раз в сутки подтягиваем результаты европейских соревнований из SIUS.
+      // Раз в сутки (04:00) — чистое зеркало результатов из SIUS: purge+reimport всех стадий.
+      // purge срабатывает только если SIUS ответил (защита от обнуления при недоступности).
       'sius-results-sync': {
         task: async ({ strapi }: { strapi: Core.Strapi }) => {
           try {
-            await strapi.service('api::result-detail.result-detail').syncFromSius();
+            const r = await strapi.service('api::result-detail.result-detail').syncFromSius({ purge: true });
+            strapi.log.info(`[cron] SIUS daily sync: ${JSON.stringify(r?.competitions ? { matched: r.matched, rows: r.rows } : r)}`);
           } catch (e) {
             strapi.log.error(`[cron] SIUS results sync failed: ${(e as Error).message}`);
           }
