@@ -19,4 +19,11 @@ export default factories.createCoreController('api::event.event', ({ strapi }) =
     const result = await strapi.service('api::event.event').syncEventDocs(body);
     ctx.body = result;
   },
+
+  // Заполнение расписания событий из schedules.json. Тело: { dryRun? }.
+  async syncSchedules(ctx) {
+    const body = (ctx.request?.body as any) || {};
+    const result = await strapi.service('api::event.event').syncSchedules(body);
+    ctx.body = result;
+  },
 }));

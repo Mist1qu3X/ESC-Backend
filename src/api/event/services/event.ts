@@ -11,6 +11,7 @@ import { factories } from '@strapi/strapi';
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
+import bundledSchedules from '../schedules.json';
 
 const SITE = 'https://esc-shooting.org';
 const UID = 'api::event.event';
@@ -250,5 +251,32 @@ export default factories.createCoreService(UID, ({ strapi }) => ({
     const summary = { totalEvents: withId.length, queued: queue.length, processed, filled, skipped, filesUploaded: filesUp, errors, remaining };
     strapi.log.info(`[event-docs] sync: ${JSON.stringify(summary)}`);
     return { ...summary, done: done.slice(0, 60), errs: errs.slice(0, 20) };
+  },
+
+  // Заполнение расписания событий (event.schedule) из подготовленного файла schedules.json.
+  // Реальные строки — распарсенные из PDF; для остальных — по-дневная заглушка. Идемпотентно.
+  async syncSchedules(opts: { dryRun?: boolean } = {}) {
+    const sched = bundledSchedules as Record<string, any[]>;
+    const slugs = Object.keys(sched);
+    const events: any[] = await strapi.db
+      .query(UID)
+      .findMany({ where: { publishedAt: { $notNull: true } }, select: ['id', 'documentId', 'slug'], limit: 5000 });
+    const bySlug = new Map(events.map((e) => [e.slug, e]));
+    let updated = 0, missing = 0, errors = 0, rowsTotal = 0;
+    if (!opts.dryRun) {
+      for (const slug of slugs) {
+        const e = bySlug.get(slug);
+        if (!e) { missing++; continue; }
+        const rows = (sched[slug] || []).map((r) => ({ date: r.date, time: r.time || null, title: String(r.title || '').slice(0, 250), stage: r.stage || 'Competition', order: r.order || 0 }))
+          .filter((r) => r.date && r.title);
+        try {
+          await strapi.documents(UID).update({ documentId: e.documentId, data: { schedule: rows } as any, status: 'published' });
+          updated++; rowsTotal += rows.length;
+        } catch (er) { errors++; }
+      }
+    }
+    const summary = { inSchedules: slugs.length, updated, missing, errors, rowsTotal };
+    strapi.log.info(`[schedules] sync: ${JSON.stringify(summary)}`);
+    return summary;
   },
 }));
