@@ -53,6 +53,16 @@
     "shots": {
       "type": "json"
     },
+    "shotDetail": {
+      "type": "json"
+    },
+    "pdfUrl": {
+      "type": "string"
+    },
+    "isTeam": {
+      "type": "boolean",
+      "default": false
+    },
     "flag": {
       "type": "media",
       "multiple": false,
