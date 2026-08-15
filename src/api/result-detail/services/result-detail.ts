@@ -123,11 +123,14 @@ export default factories.createCoreService('api::result-detail.result-detail', (
       for (const e of evs) {
         const eid = e.RunningId;
         const evName = e.CompetitionEventType?.Name || '';
+        // Пропускаем стартлисты — это не результаты (в них дубли и нет мест).
+        if (/start.?list/i.test(evName)) continue;
         const discipline = normDiscipline(evName);
         const category = normCategory(evName);
         const subs = await sget(`/api/v1/pub/competitions/${enc(cid)}/events/${enc(eid)}/subevents`);
         if (!Array.isArray(subs)) continue;
-        const se = subs.find((s: any) => /final/i.test(s.Name || '')) || subs[subs.length - 1];
+        const real = subs.filter((s: any) => !/start.?list/i.test(s.Name || ''));
+        const se = real.find((s: any) => /final/i.test(s.Name || '')) || real[real.length - 1];
         if (!se) continue;
         const sid = se.RunningId;
         const groups = se.ShooterGroups?.length ? se.ShooterGroups : [''];
