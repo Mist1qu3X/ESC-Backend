@@ -162,13 +162,19 @@ export default factories.createCoreService('api::result-detail.result-detail', (
           for (const r of arr) {
             rows++;
             const externalId = `sius:${cid}:${eid}:${sid}:${g}:${r.AthletesResults?.[0]?.AthleteIdentifier?.Identifier || r.DisplayName}`;
+            // SIUS Result.Value = итог + внутренние десятки одной строкой ("583-24x").
+            // Разделяем: total = «583», inner10s = «24». Прочие форматы (финалы "251.6",
+            // шотган "122+7") оставляем в total как есть.
+            const rawTotal = String(r.Result?.Value ?? '');
+            const im = rawTotal.match(/^(\d+(?:\.\d+)?)[\s-]+(\d+)\s*x?$/i);
             const data: any = {
               externalId,
               eventSlug,
               position: toInt(r.Rank?.DisplayText) ?? 0,
               athleteName: r.DisplayName || '—',
               federationCode: (r.Nation || '').replace(/\s+\d+$/, '') || '—',
-              total: String(r.Result?.Value ?? ''),
+              total: im ? im[1] : rawTotal,
+              inner10s: im ? im[2] : '',
               discipline,
               subDiscipline: subDisc,
               category: cat,
