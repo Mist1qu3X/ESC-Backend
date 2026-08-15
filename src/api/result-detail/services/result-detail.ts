@@ -171,7 +171,16 @@ export default factories.createCoreService('api::result-detail.result-detail', (
         // Ловит и "European Cup BRANCO Final" (300m по comp), и пустые evName (по seName).
         const discipline = discEv || normDiscipline(seName) || normDiscipline(c.Name || '') || 'OTHER';
         const baseDisc = stripCompPrefix((evName || '').replace(/\s+/g, ' ').trim());
-        const subDisc = (real.length > 1 && seName ? `${baseDisc} — ${seName}` : baseDisc) || discipline;
+        // Событие-склейка нескольких этапов (в названии "&"/"and", напр. Lapua Sweden & Eskilstuna):
+        // два соревнования SIUS матчатся в одно наше событие → различаем этап по "хвосту" его названия,
+        // иначе одинаковые дисциплины двух этапов пулятся (дубли атлетов/мест). Обычных событий не трогает.
+        const legTag =
+          / & | and /i.test(ev.name || '')
+            ? (c.Name || '').replace(/^.*european\s+cup\s*/i, '').replace(/^.*european\s+championship[s]?\s*/i, '').trim()
+            : '';
+        const subDisc =
+          ((real.length > 1 && seName ? `${baseDisc} — ${seName}` : baseDisc) || discipline) +
+          (legTag ? ` · ${legTag}` : '');
         // Пол может быть в имени под-события (напр. "Semifinal Women 1"), а не события.
         const cat = category !== 'ALL' ? category : normCategory(seName);
         // Командные события (Team=true) грузим как команды (TeamOfIndividuals): строка = команда
@@ -208,7 +217,7 @@ export default factories.createCoreService('api::result-detail.result-detail', (
             const shd = await sget('/api/v1/pub/shots?' + q);
             for (const x of shd?.[0]?.['Shots-Individual'] || []) {
               shotDetailById[x.AthleteRunningId] = (x.ShotViewDatas || [])
-                .map((s: any) => (s.Miss ? '0' : String(s.Scores?.[0] ?? '')))
+                .map((s: any) => (s.Miss ? '0' : String(s.Scores?.[0] ?? '').trim()))
                 .filter((v: string) => v !== '');
             }
           }
