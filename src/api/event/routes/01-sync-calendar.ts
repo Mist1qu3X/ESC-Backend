@@ -17,5 +17,11 @@ export default {
       handler: 'event.syncEventDocs',
       config: { policies: [] },
     },
+    {
+      method: 'POST',
+      path: '/events/sync-schedules',
+      handler: 'event.syncSchedules',
+      config: { policies: [] },
+    },
   ],
 };
