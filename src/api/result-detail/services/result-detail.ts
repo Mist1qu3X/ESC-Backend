@@ -131,7 +131,8 @@ export default factories.createCoreService('api::result-detail.result-detail', (
         const category = normCategory(evName);
         const subs = await sget(`/api/v1/pub/competitions/${enc(cid)}/events/${enc(eid)}/subevents`);
         if (!Array.isArray(subs)) continue;
-        const real = subs.filter((s: any) => !/start.?list/i.test(s.Name || ''));
+        // Пропускаем стартлисты, отдельные дуэли (2 чел, шум командного формата) и overview-своды.
+        const real = subs.filter((s: any) => !/start.?list|duel|overview/i.test(s.Name || ''));
         // Импортируем ВСЕ стадии (Qualification/Final/Semifinal/Medal Match), а не одну —
         // иначе теряется полный список участников. subDiscipline различает стадии.
         for (const se of real) {
