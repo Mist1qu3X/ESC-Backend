@@ -314,6 +314,30 @@ export default factories.createCoreService(UID, ({ strapi }) => ({
     }
     const summary = { totalEvents: list.length, processed, added, filesUploaded: filesUp, skipped, errors };
     strapi.log.info(`[event-results] ${JSON.stringify(summary)}`);
+    await this.refreshEventResultFlags();
     return { ...summary, done: done.slice(0, 60) };
+  },
+
+  // Пересчёт флагов hasResults (есть структурные SIUS-результаты) и hasResultBook (есть офиц. PDF-ранклист)
+  // по текущему состоянию БД. Нужны для ленивой загрузки: список событий на странице Results строится
+  // по флагам, а строки атлетов/документы тянутся по клику. Идемпотентно; зовём после синков.
+  async refreshEventResultFlags() {
+    const rd: any[] = await strapi.db
+      .query('api::result-detail.result-detail')
+      .findMany({ select: ['eventSlug'], limit: 200000 });
+    const withResults = new Set(rd.map((r) => r.eventSlug).filter(Boolean));
+    const events: any[] = await strapi.db
+      .query(UID)
+      .findMany({ select: ['id', 'slug'], populate: { documents: true }, limit: 3000 });
+    let updated = 0;
+    for (const e of events) {
+      const hasResults = withResults.has(e.slug);
+      const hasResultBook = (e.documents || []).some((d: any) => RB_RE.test(d.name || ''));
+      await strapi.db.query(UID).update({ where: { id: e.id }, data: { hasResults, hasResultBook } });
+      updated++;
+    }
+    const res = { updated, withResults: withResults.size };
+    strapi.log.info(`[event-flags] ${JSON.stringify(res)}`);
+    return res;
   },
 }));

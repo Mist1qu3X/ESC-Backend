@@ -29,5 +29,11 @@ export default {
       handler: 'event.syncEventResults',
       config: { policies: [] },
     },
+    {
+      method: 'POST',
+      path: '/events/refresh-result-flags',
+      handler: 'event.refreshResultFlags',
+      config: { policies: [] },
+    },
   ],
 };

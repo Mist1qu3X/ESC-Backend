@@ -276,7 +276,14 @@ export default factories.createCoreService('api::result-detail.result-detail', (
       }
     }
 
-    const summary = { competitions: comps.length, matched, unmatched: unmatched.length, rows, created, updated, purged };
+    // Обновляем флаги hasResults на событиях (для ленивой загрузки страницы Results).
+    let flags: any = null;
+    try {
+      flags = await strapi.service('api::event.event').refreshEventResultFlags();
+    } catch (e) {
+      strapi.log.error(`[sius] refreshEventResultFlags failed: ${(e as Error).message}`);
+    }
+    const summary = { competitions: comps.length, matched, unmatched: unmatched.length, rows, created, updated, purged, flags };
     strapi.log.info(`[sius] results sync: ${JSON.stringify(summary)}`);
     if (unmatched.length) strapi.log.info(`[sius] unmatched competitions: ${unmatched.slice(0, 20).join(' | ')}`);
     return { ...summary, unmatchedList: unmatched };
