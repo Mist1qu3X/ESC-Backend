@@ -30,6 +30,7 @@ function normDiscipline(name = ''): string {
   if (/SKEET|TRAP|SHOTGUN/.test(n)) return 'SHOTGUN';
   if (/AIR PISTOL/.test(n)) return '10M AIR PISTOL';
   if (/AIR RIFLE/.test(n)) return '10M AIR RIFLE';
+  if (/50\s?M.*PISTOL|PISTOL.*50\s?M/.test(n)) return '50M PISTOL';
   if (/25M|RAPID FIRE/.test(n)) return '25M PISTOL';
   if (/300\s?M|300\s?METRE|300\s?METER/.test(n)) return '300M RIFLE';
   if (/50M|RIFLE 3|3X40|3X20|3 POSITION/.test(n)) return '50M RIFLE';
