@@ -87,16 +87,7 @@ export default factories.createCoreService('api::result-detail.result-detail', (
     const nameFilter = opts.nameFilter ?? '';
     const maxComps = opts.maxCompetitions ?? 200;
 
-    // Полная переиндексация: удалить все ранее импортированные из SIUS строки, чтобы не оставались
-    // результаты от ложных совпадений старого матчера.
     let purged = 0;
-    if (opts.purge) {
-      const del = await strapi.db
-        .query('api::result-detail.result-detail')
-        .deleteMany({ where: { externalId: { $startsWith: 'sius:' } } });
-      purged = del?.count ?? 0;
-      strapi.log.info(`[sius] purged ${purged} existing rows before re-import`);
-    }
 
     const events: any[] = await strapi.db
       .query('api::event.event')
@@ -104,6 +95,16 @@ export default factories.createCoreService('api::result-detail.result-detail', (
 
     const comps =
       (await sget(`/api/v1/pub/competitions?IsPublic=true&Page=1&PageSize=${maxComps}&Name=${enc(nameFilter)}`))?.data || [];
+
+    // Полная переиндексация — ТОЛЬКО если SIUS реально ответил (иначе при недоступности
+    // сотрём всё и не зальём). Удаляем старые sius-строки перед чистым импортом.
+    if (opts.purge && comps.length > 0) {
+      const del = await strapi.db
+        .query('api::result-detail.result-detail')
+        .deleteMany({ where: { externalId: { $startsWith: 'sius:' } } });
+      purged = del?.count ?? 0;
+      strapi.log.info(`[sius] purged ${purged} existing rows before re-import`);
+    }
 
     let matched = 0;
     let rows = 0;
