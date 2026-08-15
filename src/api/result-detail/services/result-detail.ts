@@ -133,6 +133,23 @@ export default factories.createCoreService('api::result-detail.result-detail', (
       matched++;
       const eventSlug = ev.slug;
 
+      // Официальные PDF-ранклисты по стадиям: событие(runningId/eventCode) → {стадия → cloudStorageKey}.
+      // Приоритет статусу "Approved". Ссылка на PDF: `${SIUS}/api/v1/doc/${key}` (отдаёт application/pdf).
+      const ranklist = await sget(`/api/v1/doc/competitions/${enc(cid)}/ranklist`);
+      const pdfByEvent: Record<string, Record<string, string>> = {};
+      if (Array.isArray(ranklist)) {
+        for (const rev of ranklist) {
+          const m: Record<string, string> = {};
+          for (const se of rev.subEvents || []) {
+            const nm = (se.name || '').toLowerCase().trim();
+            if (!nm || !se.cloudStorageKey) continue;
+            if (!(nm in m) || /approved/i.test(se.status || '')) m[nm] = se.cloudStorageKey;
+          }
+          if (rev.runningId) pdfByEvent[rev.runningId] = m;
+          if (rev.eventCode) pdfByEvent[rev.eventCode] = m;
+        }
+      }
+
       const evs = (await sget(`/api/v1/pub/competitions/events?CompetitionId=${enc(cid)}`)) || [];
       for (const e of evs) {
         const eid = e.RunningId;
@@ -157,42 +174,70 @@ export default factories.createCoreService('api::result-detail.result-detail', (
         const subDisc = (real.length > 1 && seName ? `${baseDisc} — ${seName}` : baseDisc) || discipline;
         // Пол может быть в имени под-события (напр. "Semifinal Women 1"), а не события.
         const cat = category !== 'ALL' ? category : normCategory(seName);
-        const groups = se.ShooterGroups?.length ? se.ShooterGroups : [''];
+        // Командные события (Team=true) грузим как команды (TeamOfIndividuals): строка = команда
+        // (страна), total = суммарный, участники → shotDetail. Иначе как индивидуалов.
+        const isTeam = e.Team === true;
+        const kind = isTeam ? 'TeamOfIndividuals' : 'Individual';
+        const resKey = `TotalResults-${kind}`;
+        const serKey = `Series-${kind}`;
+        // Гостевые группы (вне зачёта, со своей нумерацией) пропускаем при наличии основных —
+        // иначе гость с rank 1 и неполным результатом лезет в общий ранкинг (LÖFVANDER 173-6x).
+        const allGroups = se.ShooterGroups?.length ? se.ShooterGroups : [''];
+        const mainGroups = allGroups.filter((gr: string) => !/guest|g[aä]ste|hors/i.test(gr));
+        const useGroups = mainGroups.length ? mainGroups : allGroups;
+        // PDF-ранклист этой стадии (по имени под-события).
+        const evPdf = pdfByEvent[eid] || pdfByEvent[e.CompetitionEventType?.EventCode || ''] || {};
+        const pdfUrl = evPdf[seName.toLowerCase()] ? `${SIUS}/api/v1/doc/${evPdf[seName.toLowerCase()]}` : '';
 
-        for (const g of groups) {
-          let q = `runningCompetitionId=${enc(cid)}&runningCompetitionEventId=${enc(eid)}&subEventId=${enc(sid)}&teamKind=Individual`;
+        for (const g of useGroups) {
+          let q = `runningCompetitionId=${enc(cid)}&runningCompetitionEventId=${enc(eid)}&subEventId=${enc(sid)}&teamKind=${kind}`;
           if (g) q += `&shooterGroup=${enc(g)}`;
           const tr = await sget('/api/v1/pub/totalresults?' + q);
-          const arr = tr?.[0]?.['TotalResults-Individual'];
+          const arr = tr?.[0]?.[resKey];
           if (!arr?.length) continue;
           const sr = await sget('/api/v1/pub/series?' + q);
-          const sArr = sr?.[0]?.['Series-Individual'] || [];
+          const sArr = sr?.[0]?.[serKey] || [];
           const shotsByName: Record<string, string[]> = {};
           for (const x of sArr) {
             const series = (x.AthletesSeries?.[0]?.Series || []).flat();
             shotsByName[x.DisplayName] = series.map((v: any) => v.Value).filter(Boolean);
           }
+          // По-выстрельно (10.8, 10.5… / hit-miss) по AthleteRunningId — только для индивидуалов.
+          const shotDetailById: Record<string, string[]> = {};
+          if (!isTeam) {
+            const shd = await sget('/api/v1/pub/shots?' + q);
+            for (const x of shd?.[0]?.['Shots-Individual'] || []) {
+              shotDetailById[x.AthleteRunningId] = (x.ShotViewDatas || [])
+                .map((s: any) => (s.Miss ? '0' : String(s.Scores?.[0] ?? '')))
+                .filter((v: string) => v !== '');
+            }
+          }
 
           for (const r of arr) {
             rows++;
+            const athRid = r.AthletesResults?.[0]?.AthleteIdentifier?.RunningId;
             const externalId = `sius:${cid}:${eid}:${sid}:${g}:${r.AthletesResults?.[0]?.AthleteIdentifier?.Identifier || r.DisplayName}`;
             // SIUS Result.Value = итог + внутренние десятки одной строкой ("583-24x").
-            // Разделяем: total = «583», inner10s = «24». Прочие форматы (финалы "251.6",
-            // шотган "122+7") оставляем в total как есть.
             const rawTotal = String(r.Result?.Value ?? '');
             const im = rawTotal.match(/^(\d+(?:\.\d+)?)[\s-]+(\d+)\s*x?$/i);
+            const members = isTeam ? (r.AthletesResults || []).map((a: any) => a.DisplayName).filter(Boolean) : null;
             const data: any = {
               externalId,
               eventSlug,
               position: toInt(r.Rank?.DisplayText) ?? 0,
               athleteName: r.DisplayName || '—',
-              federationCode: (r.Nation || '').replace(/\s+\d+$/, '') || '—',
+              federationCode: (r.Nation || '').replace(/\s+\d+$/, '') || (isTeam ? '' : '—'),
               total: im ? im[1] : rawTotal,
               inner10s: im ? im[2] : '',
               discipline,
               subDiscipline: subDisc,
               category: cat,
-              shots: shotsByName[r.DisplayName] || [],
+              isTeam,
+              // Команда: в shots — состав (имена участников, небольшой массив, идёт в общий запрос).
+              // Индивидуал: в shots — суммы серий, в shotDetail — по-выстрельно (тянется по клику).
+              shots: isTeam ? members || [] : shotsByName[r.DisplayName] || [],
+              shotDetail: isTeam ? [] : shotDetailById[athRid] || [],
+              pdfUrl,
             };
             try {
               const existing = await strapi.db
