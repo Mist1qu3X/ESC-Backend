@@ -208,7 +208,13 @@ export default factories.createCoreService('api::result-detail.result-detail', (
         const isTeam = view.isTeam;
         const resKey = `TotalResults-${view.kind}`;
         const serKey = `Series-${view.kind}`;
-        const subDisc = ((`${baseDisc}${view.suffix}` + stagePart) || discipline) + legPart;
+        // Командный зачёт у "Individual"-события: убираем "Individual" и добавляем "Team",
+        // иначе получается противоречивое "Skeet Individual U18 Women Team". Выделенные
+        // командные события (suffix пуст, имя уже с TEAM) и индивидуалов не трогаем.
+        const viewBase = view.suffix
+          ? baseDisc.replace(/\bindividual\b/gi, '').replace(/\s{2,}/g, ' ').trim() + view.suffix
+          : baseDisc;
+        const subDisc = ((viewBase + stagePart) || discipline) + legPart;
 
         for (const g of useGroups) {
           let q = `runningCompetitionId=${enc(cid)}&runningCompetitionEventId=${enc(eid)}&subEventId=${enc(sid)}&teamKind=${view.kind}`;
