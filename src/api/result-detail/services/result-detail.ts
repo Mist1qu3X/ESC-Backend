@@ -193,17 +193,22 @@ export default factories.createCoreService('api::result-detail.result-detail', (
         // PDF-ранклист этой стадии (по имени под-события).
         const evPdf = pdfByEvent[eid] || pdfByEvent[e.CompetitionEventType?.EventCode || ''] || {};
         const pdfUrl = evPdf[seName.toLowerCase()] ? `${SIUS}/api/v1/doc/${evPdf[seName.toLowerCase()]}` : '';
-        // Виды зачёта. Выделенное командное событие ("… Team", Team=true) → только команды (как 300m Team).
-        // Прочие → индивидуальный зачёт + (если Team=true и есть команды) отдельный "… Team". Так
-        // "10m Moving Target Men" (Team=true: 16 индив + 3 команды) НЕ теряет индивидуалов, а юниоры
-        // (Team=true, но команд нет) импортируются (пустой командный запрос просто пропустится).
+        // Виды зачёта:
+        //  • Выделенное командное событие ("… Team" в имени, Team=true) → только команды (как 300m Team).
+        //  • Прочие → индивидуальный зачёт + командный (TeamOfIndividuals) — командный пробуем ВСЕГДА,
+        //    а НЕ по флагу e.Team. SIUS сплошь ставит Team=false даже там, где нация-команда (сумма
+        //    топ-3 квалификаций) реально существует и печатается в официальном result-book — напр.
+        //    «25m Pistol Women» (Team=false) даёт «25m Pistol Women Team» FRA 1748. Пустой командный
+        //    ответ ниже просто пропускается (if !arr.length continue), поэтому лишних строк не будет.
+        //    Суффикс " Team" не добавляем, если "team" уже есть в имени события ("… DUET MIXED TEAM …").
         const nameHasTeam = /\bteam\b/i.test(evName);
+        const teamSuffix = nameHasTeam ? '' : ' Team';
         const views: { kind: string; isTeam: boolean; suffix: string }[] =
           nameHasTeam && e.Team === true
             ? [{ kind: 'TeamOfIndividuals', isTeam: true, suffix: '' }]
             : [
                 { kind: 'Individual', isTeam: false, suffix: '' },
-                ...(e.Team === true ? [{ kind: 'TeamOfIndividuals', isTeam: true, suffix: ' Team' }] : []),
+                { kind: 'TeamOfIndividuals', isTeam: true, suffix: teamSuffix },
               ];
 
         for (const view of views) {
