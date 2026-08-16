@@ -160,9 +160,16 @@ export default factories.createCoreService('api::result-detail.result-detail', (
         const category = normCategory(evName);
         const subs = await sget(`/api/v1/pub/competitions/${enc(cid)}/events/${enc(eid)}/subevents`);
         if (!Array.isArray(subs)) continue;
-        // Пропускаем стартлисты, дуэли (2 чел, шум командного формата), overview-своды
-        // и ТРЕНИРОВКИ (PreEventTraining / Unofficial Training) — это не результаты.
-        const real = subs.filter((s: any) => !/start.?list|duel|overview|training|pre.?event/i.test(s.Name || ''));
+        // Пропускаем стартлисты, overview-своды и ТРЕНИРОВКИ (PreEventTraining / Unofficial Training).
+        // Дуэли (2 чел, шум): скипаем только ИНДИВИДУАЛЬНЫЕ ("SF1 - Duel 01"). КОМАНДНЫЕ дуэли
+        // ("SF1 - Mixed Team Duel") НЕ трогаем — там реальный командный результат (напр. Skeet Team на
+        // Champions League), у него Individual пуст, а TeamOfIndividuals содержит команды.
+        const real = subs.filter((s: any) => {
+          const n = s.Name || '';
+          if (/start.?list|overview|training|pre.?event/i.test(n)) return false;
+          if (/\bduel\b/i.test(n) && !/team/i.test(n)) return false;
+          return true;
+        });
         // Импортируем ВСЕ стадии (Qualification/Final/Semifinal/Medal Match), а не одну —
         // иначе теряется полный список участников. subDiscipline различает стадии.
         for (const se of real) {
