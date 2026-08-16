@@ -181,7 +181,9 @@ export default factories.createCoreService('api::result-detail.result-detail', (
             : '';
         // Пол может быть в имени под-события (напр. "Semifinal Women 1"), а не события.
         const cat = category !== 'ALL' ? category : normCategory(seName);
-        const stagePart = real.length > 1 && seName ? ` — ${seName}` : '';
+        // "Individual" как имя под-события — это заглушка главного зачёта, не настоящая стадия
+        // (иначе у команд выходит "… Team — Individual"). Не добавляем её в название.
+        const stagePart = real.length > 1 && seName && !/^individual$/i.test(seName) ? ` — ${seName}` : '';
         const legPart = legTag ? ` · ${legTag}` : '';
         // Гостевые группы (вне зачёта, со своей нумерацией) пропускаем при наличии основных —
         // иначе гость с rank 1 и неполным результатом лезет в общий ранкинг (LÖFVANDER 173-6x).
