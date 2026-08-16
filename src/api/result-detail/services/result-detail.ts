@@ -245,12 +245,14 @@ export default factories.createCoreService('api::result-detail.result-detail', (
             if (!rawTotal.trim()) continue;
             const im = rawTotal.match(/^(\d+(?:\.\d+)?)[\s-]+(\d+)\s*x?$/i);
             const members = isTeam ? (r.AthletesResults || []).map((a: any) => a.DisplayName).filter(Boolean) : null;
+            // У командной строки SIUS Nation обычно пуст — берём код страны из состава (у участников он есть).
+            const nation = (r.Nation || r.AthletesResults?.[0]?.Nation || '').replace(/\s+\d+$/, '');
             const data: any = {
               externalId,
               eventSlug,
               position: toInt(r.Rank?.DisplayText) ?? 0,
               athleteName: r.DisplayName || '—',
-              federationCode: (r.Nation || '').replace(/\s+\d+$/, '') || (isTeam ? '' : '—'),
+              federationCode: nation || (isTeam ? '' : '—'),
               total: im ? im[1] : rawTotal,
               inner10s: im ? im[2] : '',
               discipline,
