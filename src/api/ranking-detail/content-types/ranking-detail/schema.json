@@ -24,9 +24,11 @@
       "type": "string",
       "required": true
     },
+    "yearOfBirth": {
+      "type": "integer"
+    },
     "points": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "events": {
       "type": "string"
