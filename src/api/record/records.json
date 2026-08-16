@@ -1,0 +1,2992 @@
+[
+ {
+  "type": "ER",
+  "record": "255.0",
+  "athleteName": "SOLLAZZO Danilo Dennis",
+  "federationCode": "ITA",
+  "date": "2025-09-11",
+  "location": "WC Ningbo (CHN)",
+  "discipline": "10m Air Rifle Men",
+  "category": "MEN"
+ },
+ {
+  "type": "QER",
+  "record": "636.2",
+  "athleteName": "PEKLER Zalan",
+  "federationCode": "HUN",
+  "date": "2023-05-12",
+  "location": "WC Baku (AZE)",
+  "discipline": "10m Air Rifle Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1895.4",
+  "athleteName": "HEGG Jon-Hermann / LARSEN Henrik / HALVORSEN Ole Martin",
+  "federationCode": "NOR",
+  "date": "2026-03-02",
+  "location": "ECH Yerevan (ARM)",
+  "discipline": "10m Air Rifle Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "252.0",
+  "athleteName": "NEPEJCHAL Filip",
+  "federationCode": "CZE",
+  "date": "2019-03-18",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "10m Air Rifle Men",
+  "category": "MEN"
+ },
+ {
+  "type": "QERJ",
+  "record": "633.0",
+  "athleteName": "OESTLI Jens",
+  "federationCode": "NOR",
+  "date": "2026-06-21",
+  "location": "JWCH Suhl (GER)",
+  "discipline": "10m Air Rifle Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1881.5",
+  "athleteName": "KALLIN Pontus / JOHANSSON Jesper / LINDGREN Victor",
+  "federationCode": "SWE",
+  "date": "2023-06-05",
+  "location": "JWC Suhl (GER)",
+  "discipline": "10m Air Rifle Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "58",
+  "athleteName": "PENI Istvan Marton",
+  "federationCode": "HUN",
+  "date": "2025-03-12",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "10m Air Rifle Solo Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "58",
+  "athleteName": "ULBRICH Maximilian",
+  "federationCode": "GER",
+  "date": "2026-03-04",
+  "location": "ECH Yerevan (ARM)",
+  "discipline": "10m Air Rifle Solo Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "57",
+  "athleteName": "ASCHER Benedikt",
+  "federationCode": "GER",
+  "date": "2026-02-13",
+  "location": "ECH Burgas (BUL)",
+  "discipline": "10m Air Rifle Solo Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "632.1",
+  "athleteName": "ULBRICH Maximilian / OHLENBURGER Max / DALLINGER Maximilian",
+  "federationCode": "GER",
+  "date": "2026-03-03",
+  "location": "ECH Yerevan (ARM)",
+  "discipline": "10m Air Rifle Trio Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "630.3",
+  "athleteName": "BUHAITSEV Kyrylo / TKALENKO Ivan / VIATCHIN Oleksii",
+  "federationCode": "UKR",
+  "date": "2026-02-14",
+  "location": "ECH Burgas (BUL)",
+  "discipline": "10m Air Rifle Trio Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "361.7",
+  "athleteName": "PENI Istvan Marton",
+  "federationCode": "HUN",
+  "date": "2026-07-26",
+  "location": "WC Hangzhou (CHN)",
+  "discipline": "50m Rifle 3 Positions Men",
+  "category": "MEN"
+ },
+ {
+  "type": "QER",
+  "record": "596",
+  "athleteName": "LOCHBIHLER Jan",
+  "federationCode": "SUI",
+  "date": "2022-03-03",
+  "location": "WC Cairo (EGY)",
+  "discipline": "50m Rifle 3 Positions Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EQER",
+  "record": "596",
+  "athleteName": "HALVORSEN Ole Martin",
+  "federationCode": "NOR",
+  "date": "2025-11-11",
+  "location": "WCH Cairo (EGY)",
+  "discipline": "50m Rifle 3 Positions Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1774",
+  "athleteName": "HEGG Jon-Hermann / LARSEN Henrik / HALVORSEN Ole Martin",
+  "federationCode": "NOR",
+  "date": "2025-07-26",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Rifle 3 Positions Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "360.2",
+  "athleteName": "OESTLI Jens",
+  "federationCode": "NOR",
+  "date": "2026-05-12",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Rifle 3 Positions Men",
+  "category": "MEN"
+ },
+ {
+  "type": "QERJ",
+  "record": "594",
+  "athleteName": "AUFRERE Romain",
+  "federationCode": "FRA",
+  "date": "2025-11-11",
+  "location": "WCH Cairo (EGY)",
+  "discipline": "50m Rifle 3 Positions Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1758",
+  "athleteName": "AUFRERE Romain / LEPAGE Sacha / POMAR Florent",
+  "federationCode": "FRA",
+  "date": "2025-07-31",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Rifle 3 Positions Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "633.0",
+  "athleteName": "KAMENSKIY Sergey",
+  "federationCode": "RUS",
+  "date": "2015-07-21",
+  "location": "ECH Maribor (SLO)",
+  "discipline": "50m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1880.5",
+  "athleteName": "LOCHBIHLER Jan / WYRSCH Fabio Pau / DUERR Christoph",
+  "federationCode": "SUI",
+  "date": "2025-11-14",
+  "location": "WCH Cairo (EGY)",
+  "discipline": "50m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "629.3",
+  "athleteName": "KAULICH Christoph",
+  "federationCode": "GER",
+  "date": "2014-09-16",
+  "location": "WCH Granada (ESP)",
+  "discipline": "50m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1873.3",
+  "athleteName": "LEPAGE Sacha / AUFRERE Romain / POMAR Florent",
+  "federationCode": "FRA",
+  "date": "2025-07-30",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1334",
+  "athleteName": "LARSEN Henrik / HEGG Jon-Hermann / HALVORSEN Ole Martin",
+  "federationCode": "NOR",
+  "date": "2025-07-29",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Rifle 3 Positions Trio Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1319",
+  "athleteName": "JOHNSEN Sebastian Endsjoe / OESTLI Jens / THRONDSEN Even Olai Enger",
+  "federationCode": "NOR",
+  "date": "2025-08-01",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Rifle 3 Positions Trio Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "594",
+  "athleteName": "SIDI Peter",
+  "federationCode": "ROU",
+  "date": "2025-08-02",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "300m Rifle 3 Positions Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "594",
+  "athleteName": "BARTNIK Tomasz",
+  "federationCode": "POL",
+  "date": "2025-11-15",
+  "location": "WCH Cairo (EGY)",
+  "discipline": "300m Rifle 3 Positions Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1770",
+  "athleteName": "BACHMANN Pascal / DUFAUX Gilles Vincent / GREUTER Sandro",
+  "federationCode": "SUI",
+  "date": "2025-08-02",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "300m Rifle 3 Positions Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "600",
+  "athleteName": "STENVAAG Harald",
+  "federationCode": "NOR",
+  "date": "1990-08-15",
+  "location": "WCH Moscow (URS)",
+  "discipline": "300m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "600",
+  "athleteName": "RUECKER Bernd",
+  "federationCode": "GER",
+  "date": "1994-07-31",
+  "location": "WCH Tolmezzo (ITA)",
+  "discipline": "300m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "600",
+  "athleteName": "BERG Vebjoern",
+  "federationCode": "NOR",
+  "date": "2010-08-05",
+  "location": "WCH Munich (GER)",
+  "discipline": "300m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "600",
+  "athleteName": "HENRY Josselin",
+  "federationCode": "FRA",
+  "date": "2010-08-05",
+  "location": "WCH Munich (GER)",
+  "discipline": "300m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "600",
+  "athleteName": "OPELKA Lubos",
+  "federationCode": "CZE",
+  "date": "2010-10-01",
+  "location": "ECF Plzen (CZE)",
+  "discipline": "300m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "600",
+  "athleteName": "GRAFF Cyril",
+  "federationCode": "FRA",
+  "date": "2013-09-27",
+  "location": "ECF St. J. de Marsacq (FRA)",
+  "discipline": "300m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "600",
+  "athleteName": "RASER Stefan",
+  "federationCode": "AUT",
+  "date": "2015-07-27",
+  "location": "ECH Maribor (SLO)",
+  "discipline": "300m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "600",
+  "athleteName": "MORENO FLORES Remi",
+  "federationCode": "FRA",
+  "date": "2019-09-23",
+  "location": "ECH Tolmezzo (ITA)",
+  "discipline": "300m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "600",
+  "athleteName": "OLSSON Karl",
+  "federationCode": "SWE",
+  "date": "2019-09-23",
+  "location": "ECH Tolmezzo (ITA)",
+  "discipline": "300m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "600",
+  "athleteName": "RUMPLER Gernot",
+  "federationCode": "AUT",
+  "date": "2021-06-02",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "300m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "600",
+  "athleteName": "DEBEVEC Rajmond",
+  "federationCode": "SLO",
+  "date": "2023-08-27",
+  "location": "WCH Baku (AZE)",
+  "discipline": "300m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1796",
+  "athleteName": "OLSSON Karl / SANDBERG Per / GUSTAFSSON Johan",
+  "federationCode": "SWE",
+  "date": "2019-09-23",
+  "location": "ECH Tolmezzo (ITA)",
+  "discipline": "300m Rifle Prone Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "593",
+  "athleteName": "LUND Katrine",
+  "federationCode": "NOR",
+  "date": "2025-11-17",
+  "location": "WCH Cairo (EGY)",
+  "discipline": "300m Standard Rifle Open",
+  "category": "ALL"
+ },
+ {
+  "type": "ER",
+  "record": "591",
+  "athleteName": "PICKL Bernhard",
+  "federationCode": "AUT",
+  "date": "2019-09-25",
+  "location": "ECH Tolmezzo (ITA)",
+  "discipline": "300m Standard Rifle Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "591",
+  "athleteName": "BARTNIK Tomasz",
+  "federationCode": "POL",
+  "date": "2021-09-24",
+  "location": "ECF Winterthur (SUI)",
+  "discipline": "300m Standard Rifle Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "591",
+  "athleteName": "OLSEN Steffen",
+  "federationCode": "DEN",
+  "date": "2022-10-25",
+  "location": "WCH Cairo (EGY)",
+  "discipline": "300m Standard Rifle Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1765",
+  "athleteName": "WEAR Hans Kristian / LUND Kim Andre / CLAUSSEN Simon",
+  "federationCode": "NOR",
+  "date": "2019-09-24",
+  "location": "ECH Tolmezzo (ITA)",
+  "discipline": "300m Standard Rifle Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1770",
+  "athleteName": "BACHMANN Pascal / DUFAUX Gilles Vincent / GREUTER Sandro",
+  "federationCode": "SUI",
+  "date": "2025-08-02",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "300m Rifle 3 Positions Trio Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "253.7",
+  "athleteName": "NOR-WOLL Pernille",
+  "federationCode": "NOR",
+  "date": "2026-03-01",
+  "location": "ECH Yerevan (ARM)",
+  "discipline": "10m Air Rifle Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "QER",
+  "record": "636.9",
+  "athleteName": "JANSSEN Anna",
+  "federationCode": "GER",
+  "date": "2024-10-15",
+  "location": "WCF New Delhi (IND)",
+  "discipline": "10m Air Rifle Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1897.3",
+  "athleteName": "DUESTAD Jeanette Hegg / NOR-WOLL Pernille / BERG Synnoeve",
+  "federationCode": "NOR",
+  "date": "2026-03-02",
+  "location": "ECH Yerevan (ARM)",
+  "discipline": "10m Air Rifle Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "253.7",
+  "athleteName": "NOR-WOLL Pernille",
+  "federationCode": "NOR",
+  "date": "2026-03-02",
+  "location": "ECH Yerevan (ARM)",
+  "discipline": "10m Air Rifle Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "QERJ",
+  "record": "634.6",
+  "athleteName": "ALTUN Elif Berfin",
+  "federationCode": "TUR",
+  "date": "2025-06-10",
+  "location": "WC Munich (GER)",
+  "discipline": "10m Air Rifle Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1890.1",
+  "athleteName": "POMES Tifenn / BRACKMAN Anceline / HERBULOT Manon",
+  "federationCode": "FRA",
+  "date": "2026-06-20",
+  "location": "JWCH Suhl (GER)",
+  "discipline": "10m Air Rifle Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "56",
+  "athleteName": "KOSE Damla",
+  "federationCode": "TUR",
+  "date": "2025-03-12",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "10m Air Rifle Solo Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "EER",
+  "record": "56",
+  "athleteName": "KOSE Damla",
+  "federationCode": "TUR",
+  "date": "2026-03-04",
+  "location": "ECH Yerevan (ARM)",
+  "discipline": "10m Air Rifle Solo Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "55",
+  "athleteName": "JAEGGI Vivien Joy",
+  "federationCode": "SUI",
+  "date": "2026-03-04",
+  "location": "ECH Yerevan (ARM)",
+  "discipline": "10m Air Rifle Solo Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "629.7",
+  "athleteName": "DOLUDIZGIN Elif Gulcan ALTUN Elif Berfin CINAR Elife Eda",
+  "federationCode": "TUR",
+  "date": "2026-02-14",
+  "location": "ECH Burgas (BUL)",
+  "discipline": "10m Air Rifle Trio Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "363.3",
+  "athleteName": "STARK Nele",
+  "federationCode": "GER",
+  "date": "2026-05-08",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Rifle 3 Positions Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "QER",
+  "record": "596",
+  "athleteName": "STENE Jenny",
+  "federationCode": "NOR",
+  "date": "2022-09-15",
+  "location": "ECH Wroclaw (POL)",
+  "discipline": "50m Rifle 3 Positions Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "QER",
+  "record": "596",
+  "athleteName": "JAEGGI Emely",
+  "federationCode": "SUI",
+  "date": "2024-06-05",
+  "location": "WC Munich (GER)",
+  "discipline": "50m Rifle 3 Positions Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1773",
+  "athleteName": "LEONE Chiara / JAEGGI Emely / CHRISTEN Nina",
+  "federationCode": "SUI",
+  "date": "2024-05-28",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Rifle 3 Positions Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "358.7",
+  "athleteName": "GAWENDA Maja Magdalena",
+  "federationCode": "POL",
+  "date": "2026-05-12",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Rifle 3 Positions Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "QERJ",
+  "record": "596",
+  "athleteName": "JAEGGI Emely",
+  "federationCode": "SUI",
+  "date": "2024-06-05",
+  "location": "WC Munich (GER)",
+  "discipline": "50m Rifle 3 Positions Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "EQERJ",
+  "record": "596",
+  "athleteName": "JAEGGI Vivien Joy",
+  "federationCode": "SUI",
+  "date": "2025-07-31",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Rifle 3 Positions Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1773",
+  "athleteName": "JAEGGI Vivien Joy / CHENIKOVA Ekaterina / JAEGGI Emely",
+  "federationCode": "SUI",
+  "date": "2025-07-31",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Rifle 3 Positions Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "630.7",
+  "athleteName": "GRUB Lisa",
+  "federationCode": "GER",
+  "date": "2026-05-10",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Rifle Prone Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1881.4",
+  "athleteName": "KARASOVA Sara / BLAZICKOVA Veronika / STEFANKOVA Katerina",
+  "federationCode": "CZE",
+  "date": "2024-05-30",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Rifle Prone Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "628.8",
+  "athleteName": "CHUPRYS Darya",
+  "federationCode": "AIN",
+  "date": "2024-05-30",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Rifle Prone Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1874",
+  "athleteName": "JAEGGI Emely / CHENIKOVA Ekaterina / JAEGGI Vivien Joy",
+  "federationCode": "SUI",
+  "date": "2025-07-30",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Rifle Prone Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1329",
+  "athleteName": "LOEVSETH Mari Baardseng / DUESTAD Jeanette Hegg / HAUGEN Milda Marina",
+  "federationCode": "NOR",
+  "date": "2025-07-28",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Rifle 3 Positions Trio Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1331",
+  "athleteName": "JAEGGI Emely / JAEGGI Vivien Joy / CHENIKOVA Ekaterina",
+  "federationCode": "SUI",
+  "date": "2025-08-01",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Rifle 3 Positions Trio Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "593",
+  "athleteName": "ROMANCZYK Karolina",
+  "federationCode": "POL",
+  "date": "2023-10-12",
+  "location": "ECF Zagreb (CRO)",
+  "discipline": "300m Rifle 3 Positions Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1759",
+  "athleteName": "DUESTAD Jeanette Hegg / VATNE Jenny / FLIKKERUD Oda",
+  "federationCode": "NOR",
+  "date": "2025-08-02",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "300m Rifle 3 Positions Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "586",
+  "athleteName": "KOWALCZYK Karolina",
+  "federationCode": "POL",
+  "date": "2022-10-25",
+  "location": "WCH Cairo (EGY)",
+  "discipline": "300m Standard Rifle Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "600",
+  "athleteName": "SENTI Anja",
+  "federationCode": "SUI",
+  "date": "2022-09-30",
+  "location": "ECF Zagreb (CRO)",
+  "discipline": "300m Rifle Prone Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1789",
+  "athleteName": "SENTI Anja / HITZ Sarina / GUIGNARD SCHNYDER Silvia",
+  "federationCode": "SUI",
+  "date": "2022-10-26",
+  "location": "WCH Cairo (EGY)",
+  "discipline": "300m Rifle Prone Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1759",
+  "athleteName": "DUESTAD Jeanette Hegg / VATNE Jenny / FLIKKERUD Oda",
+  "federationCode": "NOR",
+  "date": "2025-08-02",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "300m Rifle 3 Positions Trio Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "QERT",
+  "record": "636",
+  "athleteName": "DUESTAD Jeanette Hegg / HEGG Jon-Hermann",
+  "federationCode": "NOR",
+  "date": "2026-04-07",
+  "location": "WC Granada (ESP)",
+  "discipline": "10m Air Rifle Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJT",
+  "record": "499.0",
+  "athleteName": "LOTTER A. / ASCHER Benedikt",
+  "federationCode": "GER",
+  "date": "2026-06-24",
+  "location": "JWCH Suhl (GER)",
+  "discipline": "10m Air Rifle Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QERJT",
+  "record": "632.4",
+  "athleteName": "MULLER Oceanne / AUFRERE Romain",
+  "federationCode": "FRA",
+  "date": "2023-07-17",
+  "location": "WCH Changwon (KOR)",
+  "discipline": "10m Air Rifle Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERT",
+  "record": "1249.7",
+  "athleteName": "LEONE Chiara / LOCHBIHLER Jan",
+  "federationCode": "SUI",
+  "date": "2023-08-23",
+  "location": "WCH Baku (AZE)",
+  "discipline": "50m Rifle Prone Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERT",
+  "record": "889",
+  "athleteName": "WAIBEL Sheileen / RUMPLER Gerno",
+  "federationCode": "AUT",
+  "date": "2021-05-31",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Rifle 3 Positions Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EERT",
+  "record": "889",
+  "athleteName": "DUESTAD Jeanette Hegg / HEGG Jon-Hermann",
+  "federationCode": "NOR",
+  "date": "2022-04-17",
+  "location": "WC Rio de Janeiro (BRA)",
+  "discipline": "50m Rifle 3 Positions Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJT",
+  "record": "884",
+  "athleteName": "WEINDORF Larissa / FRIEDMANN Nils",
+  "federationCode": "GER",
+  "date": "2022-05-17",
+  "location": "JWC Suhl (GER)",
+  "discipline": "50m Rifle 3 Positions Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERT",
+  "record": "895",
+  "athleteName": "DUESTAD Jeanette Hegg / HEGG Jon-Hermann",
+  "federationCode": "NOR",
+  "date": "2026-05-09",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Rifle 3 Positions Duet",
+  "category": "ALL"
+ },
+ {
+  "type": "ERJT",
+  "record": "886",
+  "athleteName": "LUND Caroline Finnestad / OESTLI Jens",
+  "federationCode": "NOR",
+  "date": "2025-08-02",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Rifle 3 Positions Duet",
+  "category": "ALL"
+ },
+ {
+  "type": "ERT",
+  "record": "387",
+  "athleteName": "AHLIN Elin / OLSSON Karl",
+  "federationCode": "SWE",
+  "date": "2019-09-23",
+  "location": "ECH Tolmezzo (ITA)",
+  "discipline": "300m Rifle Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERT",
+  "record": "387",
+  "athleteName": "GUIGNARD SCHNYDER Silvia / LOCHBIHLER Jan",
+  "federationCode": "SUI",
+  "date": "2019-09-23",
+  "location": "ECH Tolmezzo (ITA)",
+  "discipline": "300m Rifle Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ER",
+  "record": "243.8",
+  "athleteName": "CHERNOUSOV Artem",
+  "federationCode": "RUS",
+  "date": "2019-05-27",
+  "location": "WC Munich (GER)",
+  "discipline": "10m Air Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "QER",
+  "record": "593",
+  "athleteName": "PYZHIANOV Sergei",
+  "federationCode": "URS",
+  "date": "1989-10-13",
+  "location": "WCF Munich (FRG)",
+  "discipline": "10m Air Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1759",
+  "athleteName": "EKIMOV Leonid / ISAKOV Vladimir / NESTRUEV Mikhail",
+  "federationCode": "RUS",
+  "date": "2007-03-16",
+  "location": "ECH Deauville (FRA)",
+  "discipline": "10m Air Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "243.1",
+  "athleteName": "JOLDEA Luca",
+  "federationCode": "ROU",
+  "date": "2024-09-28",
+  "location": "WCHJ Lima (PER)",
+  "discipline": "10m Air Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "QERJ",
+  "record": "589",
+  "athleteName": "JOLDEA Luca",
+  "federationCode": "ROU",
+  "date": "2024-09-28",
+  "location": "WCHJ Lima (PER)",
+  "discipline": "10m Air Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1726",
+  "athleteName": "CHUDAK Oleksandr / KUDRIYA Serhiy / RYBOVALOV Ivan",
+  "federationCode": "UKR",
+  "date": "2001-03-15",
+  "location": "ECH Pontevedra (ESP)",
+  "discipline": "10m Air Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EERJT",
+  "record": "1726",
+  "athleteName": "EKIMOV Leonid / LEVICHEV Vasiliy / CHERVYAKOVSKIY Sergey",
+  "federationCode": "RUS",
+  "date": "2006-03-02",
+  "location": "ECH Moscow (RUS)",
+  "discipline": "10m Air Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "54",
+  "athleteName": "ARISTARKHOV Anton",
+  "federationCode": "AIN",
+  "date": "2025-03-11",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "10m Air Pistol Solo Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "48",
+  "athleteName": "JOLDEA Luca",
+  "federationCode": "ROU",
+  "date": "2025-03-06",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "10m Air Pistol Solo Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "580",
+  "athleteName": "FROEHLICH Paul / REITZ Christian / GRIMM Philipp",
+  "federationCode": "GER",
+  "date": "2025-03-12",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "10m Air Pistol Trio Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "580",
+  "athleteName": "OMELCHUK Oleh / KOROSTYLOV Pavlo / BANKIN Viktor",
+  "federationCode": "UKR",
+  "date": "2025-03-12",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "10m Air Pistol Trio Men",
+  "category": "MEN"
+ },
+ {
+  "type": "QER",
+  "record": "594",
+  "athleteName": "BESSAGUET Clement",
+  "federationCode": "FRA",
+  "date": "2026-05-08",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "25m Rapid Fire Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1756",
+  "athleteName": "PETER Florian / MUELLER Emanuel / GEIS Oliver",
+  "federationCode": "GER",
+  "date": "2026-05-08",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "25m Rapid Fire Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "30",
+  "athleteName": "GAMALERI Arnaud",
+  "federationCode": "FRA",
+  "date": "2026-05-17",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "25m Rapid Fire Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "QERJ",
+  "record": "589",
+  "athleteName": "QUIQUAMPOIX Jean",
+  "federationCode": "FRA",
+  "date": "2015-07-26",
+  "location": "ECH Maribor (SLO)",
+  "discipline": "25m Rapid Fire Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EQERJ",
+  "record": "589",
+  "athleteName": "PETER Florian",
+  "federationCode": "GER",
+  "date": "2019-09-15",
+  "location": "ECH Bologna (ITA)",
+  "discipline": "25m Rapid Fire Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EQERJ",
+  "record": "589",
+  "athleteName": "GAMALERI Arnaud",
+  "federationCode": "FRA",
+  "date": "2026-04-24",
+  "location": "JWC Cairo (EGY)",
+  "discipline": "25m Rapid Fire Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1730",
+  "athleteName": "CHINOURS Thomas Clement / GAMALERI Arnaud / LE GUILLOU Simon",
+  "federationCode": "FRA",
+  "date": "2026-05-16",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "25m Rapid Fire Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "583",
+  "athleteName": "BOLEK Martin",
+  "federationCode": "SVK",
+  "date": "2024-06-02",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "25m Center Fire Pistol Open",
+  "category": "ALL"
+ },
+ {
+  "type": "EER",
+  "record": "583",
+  "athleteName": "CHAPON Kevin",
+  "federationCode": "FRA",
+  "date": "2024-10-05",
+  "location": "ECF Thun (SUI)",
+  "discipline": "25m Center Fire Pistol Open",
+  "category": "ALL"
+ },
+ {
+  "type": "ER",
+  "record": "595",
+  "athleteName": "REITZ Christian",
+  "federationCode": "GER",
+  "date": "2015-07-31",
+  "location": "ECH Maribor (SLO)",
+  "discipline": "25m Center Fire Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1762",
+  "athleteName": "PYZHIANOV Sergei / IGNATIUK Miroslav / KUZMIN Afanasij",
+  "federationCode": "URS",
+  "date": "1990-08-15",
+  "location": "WCH Moscow (URS)",
+  "discipline": "25m Center Fire Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "578",
+  "athleteName": "CHAPON Kevin",
+  "federationCode": "FRA",
+  "date": "2024-05-31",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "25m Standard Pistol Open",
+  "category": "ALL"
+ },
+ {
+  "type": "ERJ",
+  "record": "559",
+  "athleteName": "MOCZKO Theo",
+  "federationCode": "FRA",
+  "date": "2024-05-31",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "25m Standard Pistol Open",
+  "category": "ALL"
+ },
+ {
+  "type": "EERJ",
+  "record": "559",
+  "athleteName": "CUNDA Martin",
+  "federationCode": "CZE",
+  "date": "2024-05-31",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "25m Standard Pistol Open",
+  "category": "ALL"
+ },
+ {
+  "type": "ER",
+  "record": "583",
+  "athleteName": "SKANAKER Ragnar",
+  "federationCode": "SWE",
+  "date": "1978-10-04",
+  "location": "WCH Seoul (KOR)",
+  "discipline": "25m Standard Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "583",
+  "athleteName": "TURLA Vladas",
+  "federationCode": "URS",
+  "date": "1982-10-20",
+  "location": "WCH Caracas (VEN)",
+  "discipline": "25m Standard Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "583",
+  "athleteName": "NESTRUEV Mikhail",
+  "federationCode": "RUS",
+  "date": "2003-07-23",
+  "location": "ECH Plzen (CZE)",
+  "discipline": "25m Standard Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "583",
+  "athleteName": "POLIAKOV Sergei",
+  "federationCode": "RUS",
+  "date": "2003-07-23",
+  "location": "ECH Plzen (CZE)",
+  "discipline": "25m Standard Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EER",
+  "record": "583",
+  "athleteName": "STRAUTMANIS Lauris",
+  "federationCode": "LAT",
+  "date": "2025-07-29",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "25m Standard Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1725",
+  "athleteName": "KUZMIN Afanasij / TURLA Vladas / MELENTIEV Alexsander",
+  "federationCode": "URS",
+  "date": "1985-09-10",
+  "location": "ECH Osijek (YUG)",
+  "discipline": "25m Standard Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "EERT",
+  "record": "1725",
+  "athleteName": "KUZMIN Afanasij / BASINSKI Igor / PYZHIANOV Sergei",
+  "federationCode": "URS",
+  "date": "1986-09-08",
+  "location": "WCH Suhl (GDR)",
+  "discipline": "25m Standard Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "581",
+  "athleteName": "KOROSTYLOV Pavlo",
+  "federationCode": "UKR",
+  "date": "2017-07-30",
+  "location": "ECH Baku (AZE)",
+  "discipline": "25m Standard Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1701",
+  "athleteName": "TSION Oleksii / MEDUSHEVSKYI Vladyslav / MARTYNOV Ivan",
+  "federationCode": "UKR",
+  "date": "2026-06-24",
+  "location": "JWCH Suhl (GER)",
+  "discipline": "25m Standard Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "867",
+  "athleteName": "OLESK Peeter / RAUKAS Fred / TABUR Nemo",
+  "federationCode": "EST",
+  "date": "2025-07-28",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "25m Rapid Fire Pistol Trio Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "851",
+  "athleteName": "TSION Oleksii / MEDUSHEVSKYI Vladyslav / MARTYNOV Ivan",
+  "federationCode": "UKR",
+  "date": "2025-08-04",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "25m Rapid Fire Pistol Trio Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "590",
+  "athleteName": "KOROSTYLOV Pavlo",
+  "federationCode": "UKR",
+  "date": "2013-07-31",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "25m Pistol Men Junior",
+  "category": "MEN"
+ },
+ {
+  "type": "EERJ",
+  "record": "590",
+  "athleteName": "PETROV Alexander",
+  "federationCode": "RUS",
+  "date": "2016-06-14",
+  "location": "ECH Tallinn (EST)",
+  "discipline": "25m Pistol Men Junior",
+  "category": "MEN"
+ },
+ {
+  "type": "EERJ",
+  "record": "590",
+  "athleteName": "KOROSTYLOV Pavlo",
+  "federationCode": "UKR",
+  "date": "2017-06-27",
+  "location": "WCH Suhl (GER)",
+  "discipline": "25m Pistol Men Junior",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1745",
+  "athleteName": "ONIPKO Igor / KLIMOV Alexei / FEDORINOV Alexander",
+  "federationCode": "RUS",
+  "date": "1994-09-04",
+  "location": "ECH Wroclaw (POL)",
+  "discipline": "25m Pistol Men Junior",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "565",
+  "athleteName": "VASERMANIS Emils",
+  "federationCode": "LAT",
+  "date": "2024-05-31",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Pistol Open",
+  "category": "ALL"
+ },
+ {
+  "type": "ERJ",
+  "record": "551",
+  "athleteName": "MASTROVALERIO Matteo",
+  "federationCode": "ITA",
+  "date": "2024-05-31",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Pistol Open",
+  "category": "ALL"
+ },
+ {
+  "type": "ER",
+  "record": "581",
+  "athleteName": "MELENTIEV Alexsander",
+  "federationCode": "URS",
+  "date": "1980-07-20",
+  "location": "OG Moscow (URS)",
+  "discipline": "50m Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1719",
+  "athleteName": "STAN Liviu / BABII Sorin / ILIE Petru",
+  "federationCode": "ROU",
+  "date": "1985-09-07",
+  "location": "ECH Osijek (YUG)",
+  "discipline": "50m Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "577",
+  "athleteName": "KOPRINKOV Spas",
+  "federationCode": "BUL",
+  "date": "1990-08-09",
+  "location": "WCH Moscow (URS)",
+  "discipline": "50m Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1666",
+  "athleteName": "IVANOV Ivan / SIMEONOV Simeon / GEORGIEV Spas",
+  "federationCode": "BUL",
+  "date": "1988-08-04",
+  "location": "ECH Joensuu (FIN)",
+  "discipline": "50m Pistol Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "246.9",
+  "athleteName": "ARUNOVIC Zorana",
+  "federationCode": "SRB",
+  "date": "2017-03-11",
+  "location": "ECH Maribor (SLO)",
+  "discipline": "10m Air Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "QER",
+  "record": "590",
+  "athleteName": "ARUNOVIC Zorana",
+  "federationCode": "SRB",
+  "date": "2022-10-15",
+  "location": "WCH Cairo (EGY)",
+  "discipline": "10m Air Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1729",
+  "athleteName": "GROZDEVA Maria / BONEVA Antoaneta / MINCHEVA Miroslava",
+  "federationCode": "BUL",
+  "date": "2020-02-28",
+  "location": "ECH Wroclaw (POL)",
+  "discipline": "10m Air Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "242.2",
+  "athleteName": "PRODIASHVILI Mariami",
+  "federationCode": "GEO",
+  "date": "2024-02-27",
+  "location": "ECH Gyor (HUN)",
+  "discipline": "10m Air Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "QERJ",
+  "record": "580",
+  "athleteName": "JEDRZEJEWSKI Camille",
+  "federationCode": "FRA",
+  "date": "2021-09-29",
+  "location": "WCH Lima (PER)",
+  "discipline": "10m Air Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "EQERJ",
+  "record": "580",
+  "athleteName": "JEDRZEJEWSKI Camille",
+  "federationCode": "FRA",
+  "date": "2023-11-21",
+  "location": "WCF Doha (QAT)",
+  "discipline": "10m Air Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1711",
+  "athleteName": "ABRAMISHVILI Mariam / MARSHAVA Mariami / PRODIASHVILI Mariami",
+  "federationCode": "GEO",
+  "date": "2025-03-03",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "10m Air Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "49",
+  "athleteName": "MAJOR Veronika",
+  "federationCode": "HUN",
+  "date": "2026-03-03",
+  "location": "ECH Yerevan (ARM)",
+  "discipline": "10m Air Pistol Solo Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "51",
+  "athleteName": "PIATROVA Aliaksandra",
+  "federationCode": "AIN",
+  "date": "2025-03-06",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "10m Air Pistol Solo Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "573",
+  "athleteName": "PRODIASHVILI Mariami / PRODIASHVILI Salome / MARSHAVA Mariami",
+  "federationCode": "GEO",
+  "date": "2026-03-04",
+  "location": "ECH Yerevan (ARM)",
+  "discipline": "10m Air Pistol Trio Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "573",
+  "athleteName": "KRUMINA Liva / RASMANE Agate / AGULE Kristiana",
+  "federationCode": "LAT",
+  "date": "2026-03-04",
+  "location": "ECH Yerevan (ARM)",
+  "discipline": "10m Air Pistol Trio Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "573",
+  "athleteName": "FABIAN Sara Rahel / MAJOR Veronika / JAKO Miriam",
+  "federationCode": "HUN",
+  "date": "2026-03-04",
+  "location": "ECH Yerevan (ARM)",
+  "discipline": "10m Air Pistol Trio Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "570",
+  "athleteName": "TICHACKOVA Klara / SINDLEROVA Viktorie / MIREJOVSKA Anna",
+  "federationCode": "CZE",
+  "date": "2026-02-13",
+  "location": "ECH Burgas (BUL)",
+  "discipline": "10m Air Pistol Trio Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "40",
+  "athleteName": "MAJOR Veronika",
+  "federationCode": "HUN",
+  "date": "2019-02-24",
+  "location": "WC New Delhi (IND)",
+  "discipline": "25m Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "EER",
+  "record": "40",
+  "athleteName": "VENNEKAMP Doreen",
+  "federationCode": "GER",
+  "date": "2023-08-20",
+  "location": "WCH Baku (AZE)",
+  "discipline": "25m Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "EER",
+  "record": "40",
+  "athleteName": "JEDRZEJEWSKI Camille",
+  "federationCode": "FRA",
+  "date": "2024-06-04",
+  "location": "WC Munich (GER)",
+  "discipline": "25m Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "EER",
+  "record": "40",
+  "athleteName": "VENNEKAMP Doreen",
+  "federationCode": "GER",
+  "date": "2024-06-04",
+  "location": "WC Munich (GER)",
+  "discipline": "25m Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "QER",
+  "record": "594",
+  "athleteName": "IORGOVA Diana",
+  "federationCode": "BUL",
+  "date": "1994-05-31",
+  "location": "WC Milan (ITA)",
+  "discipline": "25m Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "EQER",
+  "record": "594",
+  "athleteName": "VENNEKAMP Doreen",
+  "federationCode": "GER",
+  "date": "2023-03-25",
+  "location": "WC Bhopal (IND)",
+  "discipline": "25m Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1764",
+  "athleteName": "SALUKVADZE Nino / SMIRNOVA Svetlana / TSVETKOVA Lalita",
+  "federationCode": "URS",
+  "date": "1989-07-13",
+  "location": "ECH Zagreb (YUG)",
+  "discipline": "25m Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "39",
+  "athleteName": "KORAKAKI Anna",
+  "federationCode": "GRE",
+  "date": "2016-10-07",
+  "location": "WCF Bologna (ITA)",
+  "discipline": "25m Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "QERJ",
+  "record": "593",
+  "athleteName": "SALUKVADZE Nino",
+  "federationCode": "URS",
+  "date": "1989-07-13",
+  "location": "ECH Zagreb (YUG)",
+  "discipline": "25m Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1729",
+  "athleteName": "PIOCH Annabelle / JEDRZEJEWSKI Camille / NICOLAS Kateline",
+  "federationCode": "FRA",
+  "date": "2019-07-16",
+  "location": "JWC Suhl (GER)",
+  "discipline": "25m Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "EERJT",
+  "record": "1729",
+  "athleteName": "SINDLEROVA Viktorie / MIREJOVSKA Anna / TICHACKOVA Klara",
+  "federationCode": "CZE",
+  "date": "2026-05-15",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "25m Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "569",
+  "athleteName": "KARSCH Monika",
+  "federationCode": "GER",
+  "date": "2022-10-19",
+  "location": "WCH Cairo (EGY)",
+  "discipline": "25m Standard Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "EER",
+  "record": "569",
+  "athleteName": "TARHAN Sevval Ilayda",
+  "federationCode": "TUR",
+  "date": "2025-11-15",
+  "location": "WCH Cairo (EGY)",
+  "discipline": "25m Standard Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "566",
+  "athleteName": "JEDRZEJEWSKI Camille",
+  "federationCode": "FRA",
+  "date": "2022-10-19",
+  "location": "WCH Cairo (EGY)",
+  "discipline": "25m Standard Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1662",
+  "athleteName": "MAJOR Veronika / FABIAN Sara Rahel / DOMSITS Olivia Ditta",
+  "federationCode": "HUN",
+  "date": "2026-05-11",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "25m Standard Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "873",
+  "athleteName": "FABIAN Sara Rahel / CSONKA Zsofia / SIKE Renata",
+  "federationCode": "HUN",
+  "date": "2025-07-28",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "25m Pistol Trio Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "EERT",
+  "record": "873",
+  "athleteName": "KOSTEVYCH Olena / KOROSTYLOVA Yuliya / NIMETS Anastasiia",
+  "federationCode": "UKR",
+  "date": "2026-05-10",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "25m Pistol Trio Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "867",
+  "athleteName": "GANAKOVA Valeriia / SMETANKINA Sofiia / PADERINA Evgeniia",
+  "federationCode": "AIN",
+  "date": "2026-05-17",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "25m Pistol Trio Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "555",
+  "athleteName": "STEINER Sylvia",
+  "federationCode": "AUT",
+  "date": "2021-05-27",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJ",
+  "record": "546",
+  "athleteName": "JAKO Miriam",
+  "federationCode": "HUN",
+  "date": "2024-10-06",
+  "location": "JWCH Lima (PER)",
+  "discipline": "50m Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERJT",
+  "record": "1559",
+  "athleteName": "KOLODA Nadezhda / BEVZ Albina / SHCHEMELININA Olga",
+  "federationCode": "RUS",
+  "date": "2019-07-14",
+  "location": "JWC Suhl (GER)",
+  "discipline": "50m Pistol Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "QERT",
+  "record": "586",
+  "athleteName": "BATSARASHKINA Vitalina / CHERNOUSOV Artem",
+  "federationCode": "RUS",
+  "date": "2021-06-26",
+  "location": "WC Osijek (CRO)",
+  "discipline": "10m Air Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJT",
+  "record": "471.9",
+  "athleteName": "DABROWSKA M. / RAKITSKI Ivan",
+  "federationCode": "POL",
+  "date": "2026-06-23",
+  "location": "JWCH Suhl (GER)",
+  "discipline": "10m Air Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QERJT",
+  "record": "578",
+  "athleteName": "FAIT Alessandra / MASTROVALERIO Matteo",
+  "federationCode": "ITA",
+  "date": "2022-03-21",
+  "location": "ECH Hamar (NOR)",
+  "discipline": "10m Air Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QERJT",
+  "record": "578",
+  "athleteName": "TARHAN Gulsunar / ER Fahrettincan",
+  "federationCode": "TUR",
+  "date": "2026-06-23",
+  "location": "JWCH Suhl (GER)",
+  "discipline": "10m Air Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERT",
+  "record": "574",
+  "athleteName": "MEDVEDEVA Svetlana / EKIMOV Leonid",
+  "federationCode": "RUS",
+  "date": "2021-06-30",
+  "location": "WC Osijek (CRO)",
+  "discipline": "25m Rapid Fire Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJT",
+  "record": "549",
+  "athleteName": "TORGERSEN Ane Bjorkas / NOESTVOLD Hans Wang",
+  "federationCode": "NOR",
+  "date": "2022-10-18",
+  "location": "WCH Cairo (EGY)",
+  "discipline": "25m Rapid Fire Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERT",
+  "record": "574",
+  "athleteName": "KARSCH Monika / REITZ Christian",
+  "federationCode": "GER",
+  "date": "2019-09-22",
+  "location": "ECH Bologna (ITA)",
+  "discipline": "25m Standard Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJT",
+  "record": "568",
+  "athleteName": "SEEGER Vanessa / PETER Florian",
+  "federationCode": "GER",
+  "date": "2019-09-17",
+  "location": "ECH Bologna (ITA)",
+  "discipline": "25m Standard Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERT",
+  "record": "582",
+  "athleteName": "KOROSTYLOVA Yuliya / KOROSTYLOV Pavlo",
+  "federationCode": "UKR",
+  "date": "2026-05-11",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "25m Pistol Duet",
+  "category": "ALL"
+ },
+ {
+  "type": "ERJT",
+  "record": "580",
+  "athleteName": "GANAKOVA Valeriia / KOVALEV Aleksandr",
+  "federationCode": "AIN",
+  "date": "2026-05-14",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "25m Pistol Duet",
+  "category": "ALL"
+ },
+ {
+  "type": "ERT",
+  "record": "523",
+  "athleteName": "KOVALCHUK Oksana / OMELCHUK Oleh",
+  "federationCode": "UKR",
+  "date": "2022-10-24",
+  "location": "WCH Cairo (EGY)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ER",
+  "record": "30",
+  "athleteName": "FRASCA Erminio",
+  "federationCode": "ITA",
+  "date": "2026-07-11",
+  "location": "WC Lonato (ITA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QER",
+  "record": "125",
+  "athleteName": "PELLIELO Giovanni",
+  "federationCode": "ITA",
+  "date": "1994-04-01",
+  "location": "WC Nicosia (CYP)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "TITTARELLI Marcello",
+  "federationCode": "ITA",
+  "date": "1996-06-11",
+  "location": "WC Suhl (GER)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "GURKIN Pavel",
+  "federationCode": "RUS",
+  "date": "2005-08-10",
+  "location": "WC Americana (BRA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "KOSTELECKY David",
+  "federationCode": "CZE",
+  "date": "2006-10-05",
+  "location": "WCF Granada (ESP)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "FABBRIZI Massimo",
+  "federationCode": "ITA",
+  "date": "2009-05-15",
+  "location": "WC Munich (GER)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "FABBRIZI Massimo",
+  "federationCode": "ITA",
+  "date": "2011-09-06",
+  "location": "WCH Belgrade (SRB)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "PELLIELO Giovanni",
+  "federationCode": "ITA",
+  "date": "2013-04-18",
+  "location": "WC Al Ain (UAE)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "GLASNOVIC Josip",
+  "federationCode": "CRO",
+  "date": "2019-04-09",
+  "location": "WC Al Ain (UAE)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "LIPTAK Jiri",
+  "federationCode": "CZE",
+  "date": "2021-06-02",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "GUERRERO Sebastien",
+  "federationCode": "FRA",
+  "date": "2023-09-24",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "GLASNOVIC Anton",
+  "federationCode": "CRO",
+  "date": "2025-10-15",
+  "location": "WCH Athens (GRE)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERT",
+  "record": "371",
+  "athleteName": "FABBRIZI Massimo / PELLIELO Giovanni / DE FILIPPIS Mauro",
+  "federationCode": "ITA",
+  "date": "2023-09-26",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJ",
+  "record": "28",
+  "athleteName": "AGEZ Thomas",
+  "federationCode": "FRA",
+  "date": "2026-04-25",
+  "location": "JWC Cairo (EGY)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EERJ",
+  "record": "28",
+  "athleteName": "TANFOGLIO Francesco",
+  "federationCode": "ITA",
+  "date": "2026-06-24",
+  "location": "JWCH Suhl (GER)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QERJ",
+  "record": "124",
+  "athleteName": "VINOGRADOV Ilya",
+  "federationCode": "RUS",
+  "date": "2011-08-05",
+  "location": "ECH Belgrade (SRB)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QERJ",
+  "record": "124",
+  "athleteName": "DAMBROSI Matteo",
+  "federationCode": "ITA",
+  "date": "2022-05-12",
+  "location": "JWC Suhl (GER)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJT",
+  "record": "364",
+  "athleteName": "GRAZINI Valerio / MANCARELLA Carlo / FIORAVANTI Giulio",
+  "federationCode": "ITA",
+  "date": "2011-08-05",
+  "location": "ECH Belgrade (SRB)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ER",
+  "record": "35",
+  "athleteName": "ROSSETTI Gabriele",
+  "federationCode": "ITA",
+  "date": "2026-05-05",
+  "location": "WC Almaty (KAZ)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QER",
+  "record": "125",
+  "athleteName": "LUCHINI Valerio",
+  "federationCode": "ITA",
+  "date": "2014-07-09",
+  "location": "WC Beijing (CHN)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "ACHILLEOS Georgios",
+  "federationCode": "CYP",
+  "date": "2015-04-27",
+  "location": "WC Larnaka (CYP)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "TERRAS Anthony",
+  "federationCode": "FRA",
+  "date": "2015-09-17",
+  "location": "WCH Lonato (ITA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "CASSANDRO Tammaro",
+  "federationCode": "ITA",
+  "date": "2016-06-10",
+  "location": "WC San Marino (SMR)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "BUCHHEIM Ralf",
+  "federationCode": "GER",
+  "date": "2016-07-10",
+  "location": "ECH Lonato (ITA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "FILIPPELLI Riccardo",
+  "federationCode": "ITA",
+  "date": "2016-07-10",
+  "location": "ECH Lonato (ITA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "LODDE Luigi",
+  "federationCode": "ITA",
+  "date": "2019-08-22",
+  "location": "WC Lahti (FIN)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "PETIT Emmanuel",
+  "federationCode": "FRA",
+  "date": "2019-09-14",
+  "location": "ECH Lonato (ITA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "CASSANDRO Tammaro",
+  "federationCode": "ITA",
+  "date": "2021-05-10",
+  "location": "WC Lonato (ITA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "LODDE Luigi",
+  "federationCode": "ITA",
+  "date": "2022-04-27",
+  "location": "WC Lonato (ITA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "NILSSON Stefan",
+  "federationCode": "SWE",
+  "date": "2022-10-09",
+  "location": "WCH Osijek (CRO)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "HANSEN Jesper",
+  "federationCode": "DEN",
+  "date": "2023-07-12",
+  "location": "WC Lonato (ITA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "LLEWELLIN Ben",
+  "federationCode": "GBR",
+  "date": "2025-07-25",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQER",
+  "record": "125",
+  "athleteName": "CASSANDRO Tammaro",
+  "federationCode": "ITA",
+  "date": "2025-07-25",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERT",
+  "record": "371",
+  "athleteName": "FILIPPELLI Riccardo / LODDE Luigi / ROSSETTI Gabriele",
+  "federationCode": "ITA",
+  "date": "2016-07-10",
+  "location": "ECH Lonato (ITA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJ",
+  "record": "34",
+  "athleteName": "COCO Marco",
+  "federationCode": "ITA",
+  "date": "2026-06-20",
+  "location": "JWCH Suhl (GER)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EERJ",
+  "record": "57",
+  "athleteName": "KAUPPINEN Lassi Akseli Matias",
+  "federationCode": "FIN",
+  "date": "2025-05-22",
+  "location": "JWC Suhl (GER)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QERJ",
+  "record": "125",
+  "athleteName": "COCO Marco",
+  "federationCode": "ITA",
+  "date": "2025-05-21",
+  "location": "JWC Suhl (GER)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJT",
+  "record": "363",
+  "athleteName": "CASSANDRO Tammaro / SIMEONE Domenico / ROSSETTI Gabriele",
+  "federationCode": "ITA",
+  "date": "2013-08-07",
+  "location": "ECH Suhl (GER)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERT",
+  "record": "145",
+  "athleteName": "LLEWELLIN Ben / ECCLESTON Arran / BROOKER-SMITH Mitchell",
+  "federationCode": "GBR",
+  "date": "2025-07-30",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJT",
+  "record": "142",
+  "athleteName": "KAYA Muhammet Seyhun / ARABACI Ali Can / BARAN Ahmet",
+  "federationCode": "TUR",
+  "date": "2025-07-30",
+  "location": "ECH Chateauroux (FRA)*1",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERT",
+  "record": "143",
+  "athleteName": "HALES Nathan / HEADING Aaron / COWARD-HOLLEY Matthew",
+  "federationCode": "GBR",
+  "date": "2025-08-06",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJT",
+  "record": "141",
+  "athleteName": "ZEGNAL Leon / GUDELJ Toni / ZRINSKI Mateo",
+  "federationCode": "CRO",
+  "date": "2025-08-06",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QER",
+  "record": "125",
+  "athleteName": "REHAK STEFECEKOVA Zuzana",
+  "federationCode": "SVK",
+  "date": "2021-07-29",
+  "location": "OG Tokyo (JPN)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERT",
+  "record": "355",
+  "athleteName": "CAPORUSCIO Federica / PALMITESSA Maria Lucia / ROSSI Jessica",
+  "federationCode": "ITA",
+  "date": "2018-08-04",
+  "location": "ECH Leobersdorf (AUT)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EERT",
+  "record": "355",
+  "athleteName": "MOLNE MAGRINA Mar / GALVEZ Fatima / MARTINEZ Beatriz",
+  "federationCode": "ESP",
+  "date": "2025-10-15",
+  "location": "WCH Athens (GRE)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJ",
+  "record": "28",
+  "athleteName": "ARCHETTI Valentina",
+  "federationCode": "ITA",
+  "date": "2026-06-24",
+  "location": "JWCH Suhl (GER)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QERJ",
+  "record": "121",
+  "athleteName": "PALMITESSA Maria Lucia",
+  "federationCode": "ITA",
+  "date": "2018-09-03",
+  "location": "WCH Changwon (KOR)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQERJ",
+  "record": "121",
+  "athleteName": "STEPINA Ksenia",
+  "federationCode": "AIN",
+  "date": "2025-05-24",
+  "location": "JWC Suhl (GER)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJT",
+  "record": "352",
+  "athleteName": "PALMITESSA Maria Lucia / SESSA Erica / LITTAME Sofia",
+  "federationCode": "ITA",
+  "date": "2018-09-03",
+  "location": "WCH Changwon (KOR)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ER",
+  "record": "35",
+  "athleteName": "BONGINI Sara",
+  "federationCode": "ITA",
+  "date": "2026-07-07",
+  "location": "WC Lonato (ITA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ER",
+  "record": "35",
+  "athleteName": "LARSSON Victoria",
+  "federationCode": "SWE",
+  "date": "2026-07-07",
+  "location": "WC Lonato (ITA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QER",
+  "record": "125",
+  "athleteName": "BARTEKOVA Danka",
+  "federationCode": "SVK",
+  "date": "2023-03-07",
+  "location": "WC Doha (QAT)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERT",
+  "record": "360",
+  "athleteName": "BARTOLOMEI Martina / BACOSI Diana / SCOCCHETTI Simona",
+  "federationCode": "ITA",
+  "date": "2023-08-18",
+  "location": "WCH Baku (AZE)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJ",
+  "record": "34",
+  "athleteName": "NORTON Bethany Lilian",
+  "federationCode": "GBR",
+  "date": "2026-06-20",
+  "location": "JWCH Suhl (GER)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QERJ",
+  "record": "119",
+  "athleteName": "PAOLACCI Damiana",
+  "federationCode": "ITA",
+  "date": "2023-06-04",
+  "location": "JWC Suhl (GER)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQERJ",
+  "record": "119",
+  "athleteName": "TURULO Daria",
+  "federationCode": "AIN",
+  "date": "2024-05-24",
+  "location": "ECH Lonato (ITA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQERJ",
+  "record": "119",
+  "athleteName": "RUSSELL Madeleine Zarina",
+  "federationCode": "GBR",
+  "date": "2025-05-21",
+  "location": "JWC Suhl (GER)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQERJ",
+  "record": "119",
+  "athleteName": "BODLEY-SCOTT Phoebe",
+  "federationCode": "GBR",
+  "date": "2025-07-08",
+  "location": "WC Lonato (ITA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQERJ",
+  "record": "119",
+  "athleteName": "NORTON Bethany Lilian",
+  "federationCode": "GBR",
+  "date": "2026-03-28",
+  "location": "WC Tangier (MAR)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQERJ",
+  "record": "119",
+  "athleteName": "USMANOVA Anastasiia",
+  "federationCode": "AIN",
+  "date": "2025-07-25",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EQERJ",
+  "record": "119",
+  "athleteName": "RUSSELL Madeleine Zarina",
+  "federationCode": "GBR",
+  "date": "2025-07-25",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJT",
+  "record": "350",
+  "athleteName": "RUSSELL Madeleine Zarina / BODLEY-SCOTT Phoebe / NORTON Bethany",
+  "federationCode": "GBR",
+  "date": "2025-07-25",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJT",
+  "record": "139",
+  "athleteName": "NORTON Bethany Lilian / RUSSELL Madeleine Zarina / HERRMANN Sophie",
+  "federationCode": "GBR",
+  "date": "2025-07-30",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERT",
+  "record": "133",
+  "athleteName": "HRDLICKOVA Zina / MATEJKOVA Martina / MRNOVA Adela",
+  "federationCode": "CZE",
+  "date": "2025-08-06",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJT",
+  "record": "129",
+  "athleteName": "HONCHARUK Kateryna / BERESNOVA Tamara / KHILCHENKO Kristina",
+  "federationCode": "UKR",
+  "date": "2025-08-06",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERT",
+  "record": "148",
+  "athleteName": "ANASTASSIOU Lucie / DELAUNAY Eric",
+  "federationCode": "FRA",
+  "date": "2023-03-08",
+  "location": "WC Doha (QAT)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EERT",
+  "record": "148",
+  "athleteName": "ELEFTHERIOU Anastasia / CHASIKOS Andreas",
+  "federationCode": "CYP",
+  "date": "2023-06-26",
+  "location": "EUG Wroclaw (POL)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EERT",
+  "record": "148",
+  "athleteName": "ANASTASSIOU Lucie / DELAUNAY Eric",
+  "federationCode": "FRA",
+  "date": "2024-01-31",
+  "location": "WC Cairo (EGY)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EERT",
+  "record": "148",
+  "athleteName": "BOIARSHINOVA Elizaveta / STARTSEV Yaroslav",
+  "federationCode": "GEO",
+  "date": "2024-02-12",
+  "location": "WC Rabat (MAR)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJT",
+  "record": "145",
+  "athleteName": "BONGINI Sara / GALARDINI Andrea",
+  "federationCode": "ITA",
+  "date": "2023-09-17",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "EERT",
+  "record": "35",
+  "athleteName": "SEWARD Ellie / HALES Nathan",
+  "federationCode": "GBR",
+  "date": "2026-07-12",
+  "location": "WC Lonato (ITA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QERT",
+  "record": "149",
+  "athleteName": "SARITURK Safiye / TUNCER N. Tolga",
+  "federationCode": "TUR",
+  "date": "2019-03-20",
+  "location": "WC Acapulco (MEX)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ERJT",
+  "record": "35",
+  "athleteName": "IOVINELLA Maria / TANFOGLIO F.",
+  "federationCode": "ITA",
+  "date": "2026-06-25",
+  "location": "JWCH Suhl (GER)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QERJT",
+  "record": "145",
+  "athleteName": "LITTAME Sofia / FAUSTINELLI Samuele",
+  "federationCode": "ITA",
+  "date": "2021-10-07",
+  "location": "WCH Lima (PER)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QER",
+  "record": "148",
+  "athleteName": "KUZNETSOVA Arina / SEMENENKO Anatolii",
+  "federationCode": "AIN",
+  "date": "2025-07-28",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "QERJ",
+  "record": "141",
+  "athleteName": "PYVOVAROVA Ielyzaveta / HAVRYLENKO Tymofii",
+  "federationCode": "UKR",
+  "date": "2025-07-28",
+  "location": "ECH Chateauroux (FRA)",
+  "discipline": "50m Pistol Mixed Team",
+  "category": "MIXED"
+ },
+ {
+  "type": "ER",
+  "record": "414.7",
+  "athleteName": "KHACHATRYAN Davit",
+  "federationCode": "ARM",
+  "date": "2026-02-05",
+  "location": "ECH U16/U18 Burgas (BUL)",
+  "discipline": "10m Air Rifle U16 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1226.7",
+  "athleteName": "SZABADOS Koppany / SULE Nimrod / LEOPOLD Zoltan",
+  "federationCode": "HUN",
+  "date": "2025-02-11",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Rifle U16 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "418.6",
+  "athleteName": "DANAIEV Danylo",
+  "federationCode": "UKR",
+  "date": "2026-02-05",
+  "location": "ECH U16/U18 Burgas (BUL)",
+  "discipline": "10m Air Rifle U18 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1245.8",
+  "athleteName": "LONARDI Alessandro / STREPAROLA Leone / GSCHNELL Fabian",
+  "federationCode": "ITA",
+  "date": "2026-02-05",
+  "location": "ECH U16/U18 Burgas (BUL)",
+  "discipline": "10m Air Rifle U18 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "33",
+  "athleteName": "HOFFELNER Johannes",
+  "federationCode": "AUT",
+  "date": "2025-02-12",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Rifle Solo U16 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "420.7",
+  "athleteName": "CAMPOBASSO Lucrezia",
+  "federationCode": "ITA",
+  "date": "2026-02-05",
+  "location": "ECH U16/U18 Burgas (BUL)",
+  "discipline": "10m Air Rifle U16 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "421.2",
+  "athleteName": "ALTUN Elif Berfin",
+  "federationCode": "TUR",
+  "date": "2025-07-21",
+  "location": "EYOF, Skopje(MKD)",
+  "discipline": "10m Air Rifle U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1248.0",
+  "athleteName": "ZIVKOVIC Anastasija / STEVANOVIC Andjelija / ARANDJELOVIC Sma",
+  "federationCode": "SRB",
+  "date": "2025-02-11",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Rifle U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "43",
+  "athleteName": "ZIVKOVIC Anastasija",
+  "federationCode": "SRB",
+  "date": "2025-02-12",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Rifle Solo U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "621.7",
+  "athleteName": "BITSANI Anna / SARANTAKIS Angelos-Stylianos",
+  "federationCode": "GRE",
+  "date": "2025-02-14",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Rifle Duet U16",
+  "category": "ALL"
+ },
+ {
+  "type": "ERT",
+  "record": "624.9",
+  "athleteName": "PUSINA Zakira / MEMISEVIC Amir",
+  "federationCode": "BIH",
+  "date": "2026-02-08",
+  "location": "ECH U16/U18 Burgas (BUL)",
+  "discipline": "10m Air Rifle Duet U18",
+  "category": "ALL"
+ },
+ {
+  "type": "ERT",
+  "record": "921.3",
+  "athleteName": "SZABADOS Koppany / SULE Nimrod / LEOPOLD Zoltan",
+  "federationCode": "HUN",
+  "date": "2025-02-13",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Rifle Trio U16 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "937.9",
+  "athleteName": "BAKSICS Daniel / LEVAI Csongor / MARTA Akos",
+  "federationCode": "HUN",
+  "date": "2025-02-13",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Rifle Trio U18 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "945.2",
+  "athleteName": "ZIVKOVIC Anastasija / STEVANOVIC Andjelija / ADAMOVIC Sofija",
+  "federationCode": "SRB",
+  "date": "2025-02-13",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Rifle Trio U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "384",
+  "athleteName": "PIZZI Marco",
+  "federationCode": "ITA",
+  "date": "2026-02-06",
+  "location": "ECH U16/U18 Burgas (BUL)",
+  "discipline": "10m Air Pistol U16 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1117.0",
+  "athleteName": "DIMITROV Boris / DELCHEVSKI Daniel / PETKOV Kaloyan",
+  "federationCode": "BUL",
+  "date": "2026-02-06",
+  "location": "ECH U16/U18 Burgas (BUL)",
+  "discipline": "10m Air Pistol U16 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "384",
+  "athleteName": "URSU Climentii",
+  "federationCode": "MDA",
+  "date": "2025-07-22",
+  "location": "EYOF, Skopje(MKD)",
+  "discipline": "10m Air Pistol U18 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1126.0",
+  "athleteName": "KONUŞ Durdu Ahmet / ÖZDEMİR Muhammed Can / KALFA Eren",
+  "federationCode": "TUR",
+  "date": "2026-02-06",
+  "location": "ECH U16/U18 Burgas (BUL)",
+  "discipline": "10m Air Pistol U18 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "33",
+  "athleteName": "SAYAR Ahmet Oğuz",
+  "federationCode": "TUR",
+  "date": "2026-02-05",
+  "location": "ECH U16/U18 Burgas (BUL)",
+  "discipline": "10m Air Pistol Solo U16 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "33",
+  "athleteName": "THOMSSON Ture",
+  "federationCode": "SWE",
+  "date": "2026-02-05",
+  "location": "ECH U16/U18 Burgas (BUL)",
+  "discipline": "10m Air Pistol Solo U16 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "33",
+  "athleteName": "PIZZI Marco",
+  "federationCode": "ITA",
+  "date": "2026-02-05",
+  "location": "ECH U16/U18 Burgas (BUL)",
+  "discipline": "10m Air Pistol Solo U16 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "36",
+  "athleteName": "GOLIK Oleg",
+  "federationCode": "AIN",
+  "date": "2025-02-11",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Pistol Solo U18 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "36",
+  "athleteName": "AHOKANGAS Otso-Aadolf",
+  "federationCode": "FIN",
+  "date": "2025-02-11",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Pistol Solo U18 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "380",
+  "athleteName": "AGULE Kristiana",
+  "federationCode": "LAT",
+  "date": "2025-02-12",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Pistol U16 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1117.0",
+  "athleteName": "KOTSECHKO Zlata / AVRAMOVA Anna / TUTKA Anastasiia",
+  "federationCode": "UKR",
+  "date": "2026-02-06",
+  "location": "ECH U16/U18 Burgas (BUL)",
+  "discipline": "10m Air Pistol U16 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "387",
+  "athleteName": "ISACHENKO Yuliia",
+  "federationCode": "UKR",
+  "date": "2025-02-12",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Pistol U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "1130.0",
+  "athleteName": "ISACHENKO Yuliia / LEPSKA Olha / ZAICHENKO Polina",
+  "federationCode": "UKR",
+  "date": "2025-02-12",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Pistol U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "32",
+  "athleteName": "AGULE Kristiana",
+  "federationCode": "LAT",
+  "date": "2025-02-11",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Pistol Solo U16 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "36",
+  "athleteName": "KRUMINA Liva",
+  "federationCode": "LAT",
+  "date": "2025-02-11",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Pistol Solo U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "588.4",
+  "athleteName": "ZAICHENKO Karina / KLYMCHUK Viacheslav",
+  "federationCode": "UKR",
+  "date": "2025-02-13",
+  "location": "ECH U16/U18 Tallinn (EST)",
+  "discipline": "10m Air Pistol Duet U16",
+  "category": "ALL"
+ },
+ {
+  "type": "ERT",
+  "record": "597.5",
+  "athleteName": "ISACHENKO Yuliia / LASCH Illia",
+  "federationCode": "UKR",
+  "date": "2026-02-07",
+  "location": "ECH U16/U18 Burgas (BUL)",
+  "discipline": "10m Air Pistol Duet U18",
+  "category": "ALL"
+ },
+ {
+  "type": "ERT",
+  "record": "884.4",
+  "athleteName": "PETKOV Kaloyan / DIMITROV Boris / DELCHEVSKI Daniel",
+  "federationCode": "BUL",
+  "date": "2026-02-08",
+  "location": "ECH U16/U18 Burgas (BUL)",
+  "discipline": "10m Air Pistol Trio U16 Men",
+  "category": "MEN"
+ },
+ {
+  "type": "ER",
+  "record": "70",
+  "athleteName": "SOLTYS Antoni",
+  "federationCode": "POL",
+  "date": "2026-05-16",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "10m Air Pistol Trio U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "202",
+  "athleteName": "BEDNAR Kamil / CHMELIK Jakub / VOJKUVKA Tomas",
+  "federationCode": "CRO",
+  "date": "2026-05-16",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "10m Air Pistol Trio U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "71",
+  "athleteName": "ILIEV Ilia",
+  "federationCode": "BUL",
+  "date": "2026-05-16",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "10m Air Pistol Trio U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "203",
+  "athleteName": "PERICLEOUS Stylianos / KLEANTHOUS Kleanthis / MICHAEL Andreas",
+  "federationCode": "CYP",
+  "date": "2025-06-29",
+  "location": "ECH U18, Athens (GRE)",
+  "discipline": "10m Air Pistol Trio U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "71",
+  "athleteName": "DEL REY irene",
+  "federationCode": "ESP",
+  "date": "2025-06-29",
+  "location": "ECH U18, Athens (GRE)",
+  "discipline": "10m Air Pistol Trio U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "195",
+  "athleteName": "CHUPINA Dara / PAPINA Kira / SAMOFALOVA Kseniia",
+  "federationCode": "AIN",
+  "date": "2026-05-16",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "10m Air Pistol Trio U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ER",
+  "record": "71",
+  "athleteName": "MARKANTONAKI Anna Maria",
+  "federationCode": "GRE",
+  "date": "2025-06-29",
+  "location": "ECH U18, Athens (GRE)",
+  "discipline": "10m Air Pistol Trio U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "145",
+  "athleteName": "MARKANTONAKI Anna Maria / STAMOU Styliani-Agapi / ZOULEMIDOU Anastasia",
+  "federationCode": "GRE",
+  "date": "2026-06-29",
+  "location": "ECH U18, Athens (GRE)",
+  "discipline": "10m Air Pistol Trio U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "136",
+  "athleteName": "DEL REY irene / CABRE Joan",
+  "federationCode": "ESP",
+  "date": "2025-07-01",
+  "location": "ECH U18, Athens (GRE)",
+  "discipline": "10m Air Pistol Trio U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "138",
+  "athleteName": "GOLUBEV Pavel / TONKIKH Diana",
+  "federationCode": "AIN",
+  "date": "2025-07-01",
+  "location": "ECH U18, Athens (GRE)",
+  "discipline": "10m Air Pistol Trio U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "138",
+  "athleteName": "HULA Adam / CHMELIK Jakub / BEDNAR Kamil",
+  "federationCode": "CZE",
+  "date": "2025-07-02",
+  "location": "ECH U18, Athens (GRE)",
+  "discipline": "10m Air Pistol Trio U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "137",
+  "athleteName": "SIMONS Oliver / REVELER Harry / COX Oliver",
+  "federationCode": "GBR",
+  "date": "2025-07-02",
+  "location": "ECH U18, Athens (GRE)",
+  "discipline": "10m Air Pistol Trio U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "EERT",
+  "record": "137",
+  "athleteName": "ILIEV Ilia / VARBANOV Zdravko / TODOROV Dimitar",
+  "federationCode": "BUL",
+  "date": "2026-05-19",
+  "location": "ECH Osijek (CRO)",
+  "discipline": "10m Air Pistol Trio U18 Women",
+  "category": "WOMEN"
+ },
+ {
+  "type": "ERT",
+  "record": "101",
+  "athleteName": "PYVOVAROVA Ielyzaveta / LOBODINA Sofiia / ILIUKHINA Daryna",
+  "federationCode": "UKR",
+  "date": "2025-07-02",
+  "location": "ECH U18, Athens (GRE)",
+  "discipline": "10m Air Pistol Trio U18 Women",
+  "category": "WOMEN"
+ }
+]
