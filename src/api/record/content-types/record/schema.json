@@ -12,12 +12,7 @@
   "pluginOptions": {},
   "attributes": {
     "type": {
-      "type": "enumeration",
-      "enum": [
-        "WR",
-        "ER",
-        "OR"
-      ]
+      "type": "string"
     },
     "athleteName": {
       "type": "string"
