@@ -179,17 +179,10 @@ export default factories.createCoreService('api::result-detail.result-detail', (
           / & | and /i.test(ev.name || '')
             ? (c.Name || '').replace(/^.*european\s+cup\s*/i, '').replace(/^.*european\s+championship[s]?\s*/i, '').trim()
             : '';
-        const subDisc =
-          ((real.length > 1 && seName ? `${baseDisc} — ${seName}` : baseDisc) || discipline) +
-          (legTag ? ` · ${legTag}` : '');
         // Пол может быть в имени под-события (напр. "Semifinal Women 1"), а не события.
         const cat = category !== 'ALL' ? category : normCategory(seName);
-        // Командные события (Team=true) грузим как команды (TeamOfIndividuals): строка = команда
-        // (страна), total = суммарный, участники → shotDetail. Иначе как индивидуалов.
-        const isTeam = e.Team === true;
-        const kind = isTeam ? 'TeamOfIndividuals' : 'Individual';
-        const resKey = `TotalResults-${kind}`;
-        const serKey = `Series-${kind}`;
+        const stagePart = real.length > 1 && seName ? ` — ${seName}` : '';
+        const legPart = legTag ? ` · ${legTag}` : '';
         // Гостевые группы (вне зачёта, со своей нумерацией) пропускаем при наличии основных —
         // иначе гость с rank 1 и неполным результатом лезет в общий ранкинг (LÖFVANDER 173-6x).
         const allGroups = se.ShooterGroups?.length ? se.ShooterGroups : [''];
@@ -198,9 +191,27 @@ export default factories.createCoreService('api::result-detail.result-detail', (
         // PDF-ранклист этой стадии (по имени под-события).
         const evPdf = pdfByEvent[eid] || pdfByEvent[e.CompetitionEventType?.EventCode || ''] || {};
         const pdfUrl = evPdf[seName.toLowerCase()] ? `${SIUS}/api/v1/doc/${evPdf[seName.toLowerCase()]}` : '';
+        // Виды зачёта. Выделенное командное событие ("… Team", Team=true) → только команды (как 300m Team).
+        // Прочие → индивидуальный зачёт + (если Team=true и есть команды) отдельный "… Team". Так
+        // "10m Moving Target Men" (Team=true: 16 индив + 3 команды) НЕ теряет индивидуалов, а юниоры
+        // (Team=true, но команд нет) импортируются (пустой командный запрос просто пропустится).
+        const nameHasTeam = /\bteam\b/i.test(evName);
+        const views: { kind: string; isTeam: boolean; suffix: string }[] =
+          nameHasTeam && e.Team === true
+            ? [{ kind: 'TeamOfIndividuals', isTeam: true, suffix: '' }]
+            : [
+                { kind: 'Individual', isTeam: false, suffix: '' },
+                ...(e.Team === true ? [{ kind: 'TeamOfIndividuals', isTeam: true, suffix: ' Team' }] : []),
+              ];
+
+        for (const view of views) {
+        const isTeam = view.isTeam;
+        const resKey = `TotalResults-${view.kind}`;
+        const serKey = `Series-${view.kind}`;
+        const subDisc = ((`${baseDisc}${view.suffix}` + stagePart) || discipline) + legPart;
 
         for (const g of useGroups) {
-          let q = `runningCompetitionId=${enc(cid)}&runningCompetitionEventId=${enc(eid)}&subEventId=${enc(sid)}&teamKind=${kind}`;
+          let q = `runningCompetitionId=${enc(cid)}&runningCompetitionEventId=${enc(eid)}&subEventId=${enc(sid)}&teamKind=${view.kind}`;
           if (g) q += `&shooterGroup=${enc(g)}`;
           const tr = await sget('/api/v1/pub/totalresults?' + q);
           const arr = tr?.[0]?.[resKey];
@@ -226,7 +237,7 @@ export default factories.createCoreService('api::result-detail.result-detail', (
           for (const r of arr) {
             rows++;
             const athRid = r.AthletesResults?.[0]?.AthleteIdentifier?.RunningId;
-            const externalId = `sius:${cid}:${eid}:${sid}:${g}:${r.AthletesResults?.[0]?.AthleteIdentifier?.Identifier || r.DisplayName}`;
+            const externalId = `sius:${cid}:${eid}:${sid}:${view.kind}:${g}:${r.AthletesResults?.[0]?.AthleteIdentifier?.Identifier || r.DisplayName}`;
             // SIUS Result.Value = итог + внутренние десятки одной строкой ("583-24x").
             const rawTotal = String(r.Result?.Value ?? '');
             // Нет итога → это не результат (пустые Qualification Shoot-Off — только места без очков,
@@ -271,6 +282,7 @@ export default factories.createCoreService('api::result-detail.result-detail', (
               strapi.log.error(`[sius] upsert failed ${externalId}: ${(e as Error).message}`);
             }
           }
+        }
         }
         }
       }
