@@ -1,0 +1,6298 @@
+[
+ {
+  "position": 1,
+  "athleteName": "SOLARI Jason",
+  "country": "SUI",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 2,
+  "athleteName": "ARISTARKHOV Anton",
+  "country": "AIN",
+  "yearOfBirth": 1999,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 3,
+  "athleteName": "REITZ Christian",
+  "country": "GER",
+  "yearOfBirth": 1987,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 4,
+  "athleteName": "MALDINI Federico Nilo",
+  "country": "ITA",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 5,
+  "athleteName": "SCHEJBAL Pavel",
+  "country": "CZE",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 6,
+  "athleteName": "DUBOVY Jindrich",
+  "country": "CZE",
+  "yearOfBirth": 1993,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 7,
+  "athleteName": "ZECHMEISTER Richard",
+  "country": "AUT",
+  "yearOfBirth": 1975,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 8,
+  "athleteName": "TUZINSKY Juraj",
+  "country": "SVK",
+  "yearOfBirth": 1984,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 9,
+  "athleteName": "MONNA Paolo",
+  "country": "ITA",
+  "yearOfBirth": 1998,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 10,
+  "athleteName": "JOLDEA Luca",
+  "country": "ROU",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 11,
+  "athleteName": "KHLGHATYAN Benik",
+  "country": "ARM",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 12,
+  "athleteName": "FREIJE TORNEIRO Martin",
+  "country": "ESP",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 13,
+  "athleteName": "LUNEV Ruslan",
+  "country": "AZE",
+  "yearOfBirth": 1989,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 14,
+  "athleteName": "INAN Mustafa",
+  "country": "TUR",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 15,
+  "athleteName": "FOUQUET Florian",
+  "country": "FRA",
+  "yearOfBirth": 1992,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 16,
+  "athleteName": "MIKEC Damir",
+  "country": "SRB",
+  "yearOfBirth": 1984,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 17,
+  "athleteName": "NAGY Akos Karoly",
+  "country": "HUN",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 18,
+  "athleteName": "SELIMZADE Bugra",
+  "country": "TUR",
+  "yearOfBirth": 1988,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 19,
+  "athleteName": "OMELCHUK Oleh",
+  "country": "UKR",
+  "yearOfBirth": 1983,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 20,
+  "athleteName": "SCODES Mattia",
+  "country": "ITA",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 21,
+  "athleteName": "KOROSTYLOV Pavlo",
+  "country": "UKR",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 22,
+  "athleteName": "SANCHEZ TOME Lucas",
+  "country": "ESP",
+  "yearOfBirth": 2006,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 23,
+  "athleteName": "VOUTILAINEN Sampo",
+  "country": "FIN",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 24,
+  "athleteName": "AAS Ole-Harald",
+  "country": "NOR",
+  "yearOfBirth": 1994,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 25,
+  "athleteName": "SHAMSUTDINOV Islam",
+  "country": "AIN",
+  "yearOfBirth": 2006,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 26,
+  "athleteName": "COSTA Joao",
+  "country": "POR",
+  "yearOfBirth": 1964,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 27,
+  "athleteName": "COLACO FERREIRA Fernando",
+  "country": "POR",
+  "yearOfBirth": 1971,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 28,
+  "athleteName": "KRAUTSOU Yury",
+  "country": "AIN",
+  "yearOfBirth": 2007,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 29,
+  "athleteName": "GRIMM Philipp",
+  "country": "GER",
+  "yearOfBirth": 1992,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 30,
+  "athleteName": "FROEHLICH Paul",
+  "country": "GER",
+  "yearOfBirth": 1998,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 31,
+  "athleteName": "KRAL Daniel",
+  "country": "AUT",
+  "yearOfBirth": 1998,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 32,
+  "athleteName": "DIKEC Yusuf",
+  "country": "TUR",
+  "yearOfBirth": 1973,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 33,
+  "athleteName": "REDECSI Mate",
+  "country": "HUN",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 34,
+  "athleteName": "MILLER James",
+  "country": "GBR",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 35,
+  "athleteName": "BANKIN Viktor",
+  "country": "UKR",
+  "yearOfBirth": 1990,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 36,
+  "athleteName": "STRAUTMANIS Lauris",
+  "country": "LAT",
+  "yearOfBirth": 1995,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 37,
+  "athleteName": "DONKOV Samuil",
+  "country": "BUL",
+  "yearOfBirth": 1983,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 38,
+  "athleteName": "KELES Ismail",
+  "country": "TUR",
+  "yearOfBirth": 1988,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 39,
+  "athleteName": "BALIUK Vadim",
+  "country": "AIN",
+  "yearOfBirth": 2007,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 40,
+  "athleteName": "RAMPULA Matej",
+  "country": "CZE",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 41,
+  "athleteName": "KALMIKOV Vladislav",
+  "country": "AZE",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 42,
+  "athleteName": "KIROV Kiril",
+  "country": "BUL",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 43,
+  "athleteName": "GRISONI Cedric",
+  "country": "SUI",
+  "yearOfBirth": 1991,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 44,
+  "athleteName": "STEPANOFF Tom Richard",
+  "country": "FRA",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 45,
+  "athleteName": "FRAGA CORREDOIRA Nicolas",
+  "country": "ESP",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 46,
+  "athleteName": "COPAK Marek",
+  "country": "SVK",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 47,
+  "athleteName": "HIMON Maksym",
+  "country": "UKR",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 48,
+  "athleteName": "DZEMESH Uladzislau",
+  "country": "AIN",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 49,
+  "athleteName": "SOLOVEI Ihor",
+  "country": "UKR",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 50,
+  "athleteName": "GRGIC Dimitrije",
+  "country": "SRB",
+  "yearOfBirth": 1984,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 51,
+  "athleteName": "MASTROVALERIO Matteo",
+  "country": "ITA",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 52,
+  "athleteName": "MAKAROV Vladislav",
+  "country": "AIN",
+  "yearOfBirth": 2007,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 53,
+  "athleteName": "GAMPIERAKIS Georgios",
+  "country": "GRE",
+  "yearOfBirth": 1995,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 54,
+  "athleteName": "SVETLIK Pavel",
+  "country": "CZE",
+  "yearOfBirth": 1985,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 55,
+  "athleteName": "MUMLADZE Giorgi",
+  "country": "GEO",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 56,
+  "athleteName": "KAZAK Ivan",
+  "country": "AIN",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 57,
+  "athleteName": "LIEBENS Bart",
+  "country": "BEL",
+  "yearOfBirth": 1978,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 58,
+  "athleteName": "KOSTUR Marek",
+  "country": "SVK",
+  "yearOfBirth": 1998,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 59,
+  "athleteName": "HEMBRE Mattis",
+  "country": "NOR",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 60,
+  "athleteName": "ANISOV Artem",
+  "country": "AIN",
+  "yearOfBirth": 2007,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 61,
+  "athleteName": "AHLQVIST Isac Linus Alex",
+  "country": "SWE",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 62,
+  "athleteName": "RRUFA Henri",
+  "country": "ALB",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 63,
+  "athleteName": "SEMENIKHIN Ivan",
+  "country": "AIN",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 64,
+  "athleteName": "BALAZ Peter",
+  "country": "SVK",
+  "yearOfBirth": 1995,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 65,
+  "athleteName": "SAHITI Nexhat",
+  "country": "KOS",
+  "yearOfBirth": 1996,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 66,
+  "athleteName": "TOTH Gabor",
+  "country": "HUN",
+  "yearOfBirth": 1973,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 67,
+  "athleteName": "MOSULISHVILI Kako",
+  "country": "GEO",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 68,
+  "athleteName": "STOJAK Saso",
+  "country": "SLO",
+  "yearOfBirth": 1995,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 69,
+  "athleteName": "CARAPINHA Tiago Miguel",
+  "country": "POR",
+  "yearOfBirth": 1994,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 70,
+  "athleteName": "UCAR Adnan Efe",
+  "country": "TUR",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 71,
+  "athleteName": "KADAGIDZE Levan",
+  "country": "GEO",
+  "yearOfBirth": 1984,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 72,
+  "athleteName": "CARRERA Pablo",
+  "country": "ESP",
+  "yearOfBirth": 1986,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 73,
+  "athleteName": "CEPER Joze",
+  "country": "SLO",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 1,
+  "athleteName": "JEDRZEJEWSKI Camille",
+  "country": "FRA",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 2,
+  "athleteName": "TARHAN Sevval Ilayda",
+  "country": "TUR",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 3,
+  "athleteName": "MARRACHO Filipa",
+  "country": "POR",
+  "yearOfBirth": 1994,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 4,
+  "athleteName": "ARUNOVIC Zorana",
+  "country": "SRB",
+  "yearOfBirth": 1986,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 5,
+  "athleteName": "MAJOR Veronika",
+  "country": "HUN",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 6,
+  "athleteName": "KARAPETYAN Elmira",
+  "country": "ARM",
+  "yearOfBirth": 1994,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 7,
+  "athleteName": "FABIAN Sara Rahel",
+  "country": "HUN",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 8,
+  "athleteName": "MINCHEVA Miroslava",
+  "country": "BUL",
+  "yearOfBirth": 1999,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 9,
+  "athleteName": "BERGE Svenja",
+  "country": "GER",
+  "yearOfBirth": 1995,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 10,
+  "athleteName": "YASKEVICH Liubov",
+  "country": "AIN",
+  "yearOfBirth": 1985,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 11,
+  "athleteName": "CASTELAO Joana",
+  "country": "POR",
+  "yearOfBirth": 1984,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 12,
+  "athleteName": "KOSTEVYCH Olena",
+  "country": "UKR",
+  "yearOfBirth": 1985,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 13,
+  "athleteName": "VENNEKAMP Doreen",
+  "country": "GER",
+  "yearOfBirth": 1995,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 14,
+  "athleteName": "GOBERVILLE Celine",
+  "country": "FRA",
+  "yearOfBirth": 1986,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 15,
+  "athleteName": "PRODIASHVILI Mariami",
+  "country": "GEO",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 16,
+  "athleteName": "KOSTADINOVA Antoaneta",
+  "country": "BUL",
+  "yearOfBirth": 1986,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 17,
+  "athleteName": "ALIYEVA Leyli",
+  "country": "AZE",
+  "yearOfBirth": 2007,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 18,
+  "athleteName": "GOTOVTSEVA Alina",
+  "country": "AIN",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 19,
+  "athleteName": "SINDLEROVA Viktorie",
+  "country": "CZE",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 20,
+  "athleteName": "SLAK Manja",
+  "country": "SLO",
+  "yearOfBirth": 2006,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 21,
+  "athleteName": "RASMANE Agate",
+  "country": "LAT",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 22,
+  "athleteName": "NENCHEVA Lidia",
+  "country": "BUL",
+  "yearOfBirth": 1996,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 23,
+  "athleteName": "PIATROVA Aliaksandra",
+  "country": "AIN",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 24,
+  "athleteName": "PIOCH Annabelle",
+  "country": "FRA",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 25,
+  "athleteName": "TICHACKOVA Klara",
+  "country": "CZE",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 26,
+  "athleteName": "OMAZIC Matea",
+  "country": "CRO",
+  "yearOfBirth": 1994,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 27,
+  "athleteName": "PRODIASHVILI Salome",
+  "country": "GEO",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 28,
+  "athleteName": "SCHEJBALOVA Veronika",
+  "country": "CZE",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 29,
+  "athleteName": "NASIROVA Nigar",
+  "country": "AZE",
+  "yearOfBirth": 1987,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 30,
+  "athleteName": "PELMENEVA Anna",
+  "country": "AIN",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 31,
+  "athleteName": "ORTEGA CASTRO Ines",
+  "country": "ESP",
+  "yearOfBirth": 2006,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 32,
+  "athleteName": "KOROSTYLOVA Yuliya",
+  "country": "UKR",
+  "yearOfBirth": 1984,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 33,
+  "athleteName": "NEISINGER Susanne",
+  "country": "GER",
+  "yearOfBirth": 1996,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 34,
+  "athleteName": "TOFFALINI Vittoria",
+  "country": "ITA",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 35,
+  "athleteName": "ENINA Iana",
+  "country": "AIN",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 36,
+  "athleteName": "SPIRELJA Lana",
+  "country": "CRO",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 37,
+  "athleteName": "BEVZ Viliena",
+  "country": "UKR",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 38,
+  "athleteName": "ABRAMISHVILI Mariam",
+  "country": "GEO",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 39,
+  "athleteName": "DULCE Anna",
+  "country": "MDA",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 40,
+  "athleteName": "KARSCH Monika",
+  "country": "GER",
+  "yearOfBirth": 1982,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 41,
+  "athleteName": "KILADZE Lizi",
+  "country": "GEO",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 42,
+  "athleteName": "YILMAZ Simal",
+  "country": "TUR",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 43,
+  "athleteName": "HICKS Charlotte",
+  "country": "GBR",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 44,
+  "athleteName": "STEINER Sylvia",
+  "country": "AUT",
+  "yearOfBirth": 1982,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 45,
+  "athleteName": "DASKO Zoya",
+  "country": "AIN",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 46,
+  "athleteName": "ISACHENKO Yuliia",
+  "country": "UKR",
+  "yearOfBirth": 2008,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 47,
+  "athleteName": "SKERIES Michelle",
+  "country": "GER",
+  "yearOfBirth": 1996,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 48,
+  "athleteName": "BARKHALOVA Sofiya",
+  "country": "AZE",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 49,
+  "athleteName": "SKELEDZIJA Lana",
+  "country": "CRO",
+  "yearOfBirth": 1982,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 50,
+  "athleteName": "BOZABALI Esra",
+  "country": "TUR",
+  "yearOfBirth": 1991,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 51,
+  "athleteName": "MOSCHI Christina",
+  "country": "GRE",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 52,
+  "athleteName": "KIRSS Marja",
+  "country": "EST",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 53,
+  "athleteName": "HARISTIADE Daria-Olimpia",
+  "country": "ROU",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 54,
+  "athleteName": "ILIEVA Adiel Radoslavova",
+  "country": "BUL",
+  "yearOfBirth": 1998,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 55,
+  "athleteName": "PREZELJ Anja",
+  "country": "SLO",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 56,
+  "athleteName": "KOLMAN Mojca",
+  "country": "SLO",
+  "yearOfBirth": 1991,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 57,
+  "athleteName": "MARSHAVA Mariami",
+  "country": "GEO",
+  "yearOfBirth": 2006,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 58,
+  "athleteName": "ALIYEVA Khanna",
+  "country": "AZE",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 59,
+  "athleteName": "SULTANOVA Zeynab",
+  "country": "AZE",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 60,
+  "athleteName": "BOLA UJCIC Denis",
+  "country": "SLO",
+  "yearOfBirth": 1968,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 61,
+  "athleteName": "DVARISKE Alise",
+  "country": "LAT",
+  "yearOfBirth": 2008,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 62,
+  "athleteName": "SOTO Maria Mercedes",
+  "country": "ESP",
+  "yearOfBirth": 1992,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 63,
+  "athleteName": "SARANOVIC Nevena",
+  "country": "MNE",
+  "yearOfBirth": 1995,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 64,
+  "athleteName": "MICHELAKI Eftychia-Vasiliki",
+  "country": "GRE",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 65,
+  "athleteName": "WIMMER Carina",
+  "country": "GER",
+  "yearOfBirth": 1995,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 66,
+  "athleteName": "CABALLERO FERNANDEZ Carla",
+  "country": "ESP",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 1,
+  "athleteName": "PENI Istvan",
+  "country": "HUN",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 2,
+  "athleteName": "MARSOV Ilia",
+  "country": "AIN",
+  "yearOfBirth": 1998,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 3,
+  "athleteName": "HEGG Jon-Hermann",
+  "country": "NOR",
+  "yearOfBirth": 1999,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 4,
+  "athleteName": "LINDGREN Victor",
+  "country": "SWE",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 5,
+  "athleteName": "SOLLAZZO Danilo Dennis",
+  "country": "ITA",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 6,
+  "athleteName": "RAKONJAC Aleksa",
+  "country": "SRB",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 7,
+  "athleteName": "GORSA Petar",
+  "country": "CRO",
+  "yearOfBirth": 1988,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 8,
+  "athleteName": "KRYZS Lucas Bernard Denis",
+  "country": "FRA",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 9,
+  "athleteName": "ULBRICH Maximilian",
+  "country": "GER",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 10,
+  "athleteName": "JANY Patrik",
+  "country": "SVK",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 11,
+  "athleteName": "STREMPFL Martin",
+  "country": "AUT",
+  "yearOfBirth": 1984,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 12,
+  "athleteName": "PRIVRATSKY Jiri",
+  "country": "CZE",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 13,
+  "athleteName": "ENTRICHEL Ales",
+  "country": "CZE",
+  "yearOfBirth": 1995,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 14,
+  "athleteName": "LOCHBIHLER Jan",
+  "country": "SUI",
+  "yearOfBirth": 1992,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 15,
+  "athleteName": "HALVORSEN Ole Martin",
+  "country": "NOR",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 16,
+  "athleteName": "DALLINGER Maximilian",
+  "country": "GER",
+  "yearOfBirth": 1996,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 17,
+  "athleteName": "LEPPA Aleksi",
+  "country": "FIN",
+  "yearOfBirth": 1994,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 18,
+  "athleteName": "LARSEN Henrik",
+  "country": "NOR",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 19,
+  "athleteName": "KOVACEVIC Lazar",
+  "country": "SRB",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 20,
+  "athleteName": "NEPEJCHAL Filip",
+  "country": "CZE",
+  "yearOfBirth": 1999,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 21,
+  "athleteName": "KOENDERS David",
+  "country": "GER",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 22,
+  "athleteName": "KULISH Serhiy",
+  "country": "UKR",
+  "yearOfBirth": 1993,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 23,
+  "athleteName": "BONAZZI Edoardo",
+  "country": "ITA",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 24,
+  "athleteName": "PEKLER Zalan",
+  "country": "HUN",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 25,
+  "athleteName": "MADSEN Marcus",
+  "country": "SWE",
+  "yearOfBirth": 1994,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 26,
+  "athleteName": "NYMBURSKY Petr",
+  "country": "CZE",
+  "yearOfBirth": 1995,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 27,
+  "athleteName": "MARICIC Miran",
+  "country": "CRO",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 28,
+  "athleteName": "DIEM Patrick",
+  "country": "AUT",
+  "yearOfBirth": 1999,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 29,
+  "athleteName": "WYRSCH Fabio Paul",
+  "country": "SUI",
+  "yearOfBirth": 1998,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 30,
+  "athleteName": "DUERR Christoph",
+  "country": "SUI",
+  "yearOfBirth": 1996,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 31,
+  "athleteName": "DUTENDAS Dimitri",
+  "country": "FRA",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 32,
+  "athleteName": "RICHTER Sergey",
+  "country": "ISR",
+  "yearOfBirth": 1989,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 33,
+  "athleteName": "OESTLI Jens",
+  "country": "NOR",
+  "yearOfBirth": 2006,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 34,
+  "athleteName": "SIDI Peter",
+  "country": "ROU",
+  "yearOfBirth": 1978,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 35,
+  "athleteName": "MAIR Tobias",
+  "country": "AUT",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 36,
+  "athleteName": "KOWALEWICZ Maciej",
+  "country": "POL",
+  "yearOfBirth": 1999,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 37,
+  "athleteName": "BAUDOUIN Brian",
+  "country": "FRA",
+  "yearOfBirth": 1994,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 38,
+  "athleteName": "BERNARDI Michele",
+  "country": "ITA",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 39,
+  "athleteName": "RIZOV Anton",
+  "country": "BUL",
+  "yearOfBirth": 1987,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 40,
+  "athleteName": "NURIAKHMETOV Kamil",
+  "country": "AIN",
+  "yearOfBirth": 2007,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 41,
+  "athleteName": "BUEHLMEYER Daniel",
+  "country": "GER",
+  "yearOfBirth": 1996,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 42,
+  "athleteName": "ARMIRAGLIO Riccardo",
+  "country": "ITA",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 43,
+  "athleteName": "OVIEDO Jesus",
+  "country": "ESP",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 44,
+  "athleteName": "TICHY Radek",
+  "country": "CZE",
+  "yearOfBirth": 1999,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 45,
+  "athleteName": "SIKAVICA Josip",
+  "country": "CRO",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 46,
+  "athleteName": "NALBANT Mert",
+  "country": "TUR",
+  "yearOfBirth": 1989,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 47,
+  "athleteName": "PIMENOV Dmitrii",
+  "country": "AIN",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 48,
+  "athleteName": "TOMASEVIC Darko",
+  "country": "CRO",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 49,
+  "athleteName": "NOVOSELOV Sergei",
+  "country": "AIN",
+  "yearOfBirth": 2006,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 50,
+  "athleteName": "MATHIS Thomas",
+  "country": "AUT",
+  "yearOfBirth": 1990,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 51,
+  "athleteName": "SOMOGYI Peter",
+  "country": "HUN",
+  "yearOfBirth": 1983,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 52,
+  "athleteName": "SCHMIRL Alexander",
+  "country": "AUT",
+  "yearOfBirth": 1989,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 53,
+  "athleteName": "SYRJAE Lauri Eemil",
+  "country": "FIN",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 54,
+  "athleteName": "AUFRERE Romain",
+  "country": "FRA",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 55,
+  "athleteName": "HRCKULAK David",
+  "country": "CZE",
+  "yearOfBirth": 1992,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 56,
+  "athleteName": "OHLENBURGER Max",
+  "country": "GER",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 57,
+  "athleteName": "BALE Dean",
+  "country": "GBR",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 58,
+  "athleteName": "THUM Andreas",
+  "country": "AUT",
+  "yearOfBirth": 1999,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 59,
+  "athleteName": "KNAPIK Rafael",
+  "country": "SVK",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 60,
+  "athleteName": "BARTNIK Tomasz",
+  "country": "POL",
+  "yearOfBirth": 1990,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 61,
+  "athleteName": "LUKIC Luka",
+  "country": "SLO",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 62,
+  "athleteName": "PANCHENKO Evgenii",
+  "country": "AIN",
+  "yearOfBirth": 1994,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 63,
+  "athleteName": "BACCI Lorenzo",
+  "country": "ITA",
+  "yearOfBirth": 1994,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 64,
+  "athleteName": "HUDZYI Sviatoslav",
+  "country": "UKR",
+  "yearOfBirth": 1999,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 65,
+  "athleteName": "SOCIC Jure",
+  "country": "SLO",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 66,
+  "athleteName": "GRIGORYAN Artyom",
+  "country": "ARM",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 67,
+  "athleteName": "MIKULJAN Andrija",
+  "country": "CRO",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 68,
+  "athleteName": "WEITHALER Simon",
+  "country": "ITA",
+  "yearOfBirth": 1993,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 69,
+  "athleteName": "IVANOVIC Marko",
+  "country": "SRB",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 70,
+  "athleteName": "SULEK Stefan",
+  "country": "SVK",
+  "yearOfBirth": 1998,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 71,
+  "athleteName": "DUESTEFANIS Bastien Louis Noel",
+  "country": "FRA",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 72,
+  "athleteName": "CHOJNOWSKI Michal",
+  "country": "POL",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 73,
+  "athleteName": "ZARIC Maksimilijan",
+  "country": "SLO",
+  "yearOfBirth": 2007,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 74,
+  "athleteName": "BLOS Bastian",
+  "country": "GER",
+  "yearOfBirth": 1999,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 75,
+  "athleteName": "OGOREK Maciej",
+  "country": "POL",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "MEN"
+ },
+ {
+  "position": 1,
+  "athleteName": "DUESTAD Jeanette Hegg",
+  "country": "NOR",
+  "yearOfBirth": 1999,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 2,
+  "athleteName": "GOGNIAT Audrey",
+  "country": "SUI",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 3,
+  "athleteName": "VASILEVA Mariia",
+  "country": "AIN",
+  "yearOfBirth": 1998,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 4,
+  "athleteName": "HAVRAN Aleksandra",
+  "country": "SRB",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 5,
+  "athleteName": "EVENSEN Amalie",
+  "country": "NOR",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 6,
+  "athleteName": "MULLER Oceanne",
+  "country": "FRA",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 7,
+  "athleteName": "OSMANOVA Anzhelika",
+  "country": "AIN",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 8,
+  "athleteName": "PIOTROWSKA Julia Ewa",
+  "country": "POL",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 9,
+  "athleteName": "ILIE Laura-Georgeta",
+  "country": "ROU",
+  "yearOfBirth": 1993,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 10,
+  "athleteName": "JANSSEN Anna",
+  "country": "GER",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 11,
+  "athleteName": "CHRISTEN Nina",
+  "country": "SUI",
+  "yearOfBirth": 1994,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 12,
+  "athleteName": "LEONE Chiara",
+  "country": "SUI",
+  "yearOfBirth": 1998,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 13,
+  "athleteName": "ARIAS CASALS Helena",
+  "country": "ESP",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 14,
+  "athleteName": "PRIBITZER Marlene",
+  "country": "AUT",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 15,
+  "athleteName": "DUBSKA Barbora",
+  "country": "CZE",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 16,
+  "athleteName": "HOFMANN Olivia",
+  "country": "AUT",
+  "yearOfBirth": 1992,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 17,
+  "athleteName": "KITZBICHLER Jasmin",
+  "country": "AUT",
+  "yearOfBirth": 1999,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 18,
+  "athleteName": "TASHTCHIEV Olga",
+  "country": "ISR",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 19,
+  "athleteName": "DENES Eszter",
+  "country": "HUN",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 20,
+  "athleteName": "WAIBEL Sheileen",
+  "country": "AUT",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 21,
+  "athleteName": "LOEVSETH Mari Baardseng",
+  "country": "NOR",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 22,
+  "athleteName": "MARTINON Ines",
+  "country": "ESP",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 23,
+  "athleteName": "NOR-WOLL Pernille",
+  "country": "NOR",
+  "yearOfBirth": 2006,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 24,
+  "athleteName": "SALAFIA Carlotta",
+  "country": "ITA",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 25,
+  "athleteName": "KOECK Rebecca",
+  "country": "AUT",
+  "yearOfBirth": 1999,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 26,
+  "athleteName": "ALTUN Elif Berfin",
+  "country": "TUR",
+  "yearOfBirth": 2007,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 27,
+  "athleteName": "BLAZICKOVA Veronika",
+  "country": "CZE",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 28,
+  "athleteName": "DUDEK Izabella Kinga",
+  "country": "POL",
+  "yearOfBirth": 1996,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 29,
+  "athleteName": "KOSE Damla",
+  "country": "TUR",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 30,
+  "athleteName": "LAMBRECHTS Tessa",
+  "country": "BEL",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 31,
+  "athleteName": "PALO Marianne",
+  "country": "FIN",
+  "yearOfBirth": 1998,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 32,
+  "athleteName": "BUEHLMEYER Hanna",
+  "country": "GER",
+  "yearOfBirth": 1996,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 33,
+  "athleteName": "KOCHANSKA Natalia",
+  "country": "POL",
+  "yearOfBirth": 1996,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 34,
+  "athleteName": "ZRUSTOVA Adela",
+  "country": "CZE",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 35,
+  "athleteName": "MANGOLD Anita",
+  "country": "GER",
+  "yearOfBirth": 1989,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 36,
+  "athleteName": "BULATOVA Vitaliia",
+  "country": "AIN",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 37,
+  "athleteName": "GAWENDA Maja Magdalena",
+  "country": "POL",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 38,
+  "athleteName": "IBSEN Rikke Maeng",
+  "country": "DEN",
+  "yearOfBirth": 1990,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 39,
+  "athleteName": "CECCARELLO Sofia",
+  "country": "ITA",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 40,
+  "athleteName": "ZELJKOVIC Marta",
+  "country": "CRO",
+  "yearOfBirth": 1995,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 41,
+  "athleteName": "KOVALENKO Valentina",
+  "country": "AIN",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 42,
+  "athleteName": "ZUEGER Muriel",
+  "country": "SUI",
+  "yearOfBirth": 1998,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 43,
+  "athleteName": "STEFFEN Hannah",
+  "country": "GER",
+  "yearOfBirth": 1998,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 44,
+  "athleteName": "HERBULOT Manon",
+  "country": "FRA",
+  "yearOfBirth": 2007,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 45,
+  "athleteName": "PIETRUK Aleksandra Anna",
+  "country": "POL",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 46,
+  "athleteName": "JAEGGI Emely",
+  "country": "SUI",
+  "yearOfBirth": 2008,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 47,
+  "athleteName": "GRUNDSOEE Stephanie Laura Scurrah",
+  "country": "DEN",
+  "yearOfBirth": 2000,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 48,
+  "athleteName": "KAPS Jessie",
+  "country": "BEL",
+  "yearOfBirth": 1998,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 49,
+  "athleteName": "BENETTI Sofia",
+  "country": "ITA",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 50,
+  "athleteName": "MIRONOVA Victoriia",
+  "country": "AIN",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 51,
+  "athleteName": "NAGYBANYAI-NAGY Anna",
+  "country": "HUN",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 52,
+  "athleteName": "TURK Anamarija",
+  "country": "CRO",
+  "yearOfBirth": 2004,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 53,
+  "athleteName": "STARK Nele",
+  "country": "GER",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 54,
+  "athleteName": "SIDI Roxana",
+  "country": "ROU",
+  "yearOfBirth": 1992,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 55,
+  "athleteName": "HRASOVEC Urska",
+  "country": "SLO",
+  "yearOfBirth": 1999,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 56,
+  "athleteName": "KATZ Klaudie",
+  "country": "CZE",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 57,
+  "athleteName": "KARLSSON Amanda Josefine",
+  "country": "SWE",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 58,
+  "athleteName": "KUHARIC Urska",
+  "country": "SLO",
+  "yearOfBirth": 1994,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 59,
+  "athleteName": "GRUB Lisa",
+  "country": "GER",
+  "yearOfBirth": 1992,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 60,
+  "athleteName": "WEHREN Hannah",
+  "country": "GER",
+  "yearOfBirth": 2005,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 61,
+  "athleteName": "MESZAROS Eszter",
+  "country": "HUN",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 62,
+  "athleteName": "GUSTIN SIPEK Valentina",
+  "country": "CRO",
+  "yearOfBirth": 1996,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 63,
+  "athleteName": "ZIVKOVIC Anastasija",
+  "country": "SRB",
+  "yearOfBirth": 2008,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 64,
+  "athleteName": "ANTUNES Sara",
+  "country": "POR",
+  "yearOfBirth": 1975,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 65,
+  "athleteName": "RUPPEL Lea",
+  "country": "GER",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 66,
+  "athleteName": "TEKELI Sule Nur",
+  "country": "TUR",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 67,
+  "athleteName": "DUDKA Daria",
+  "country": "UKR",
+  "yearOfBirth": 1986,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 68,
+  "athleteName": "KARASOVA Sara",
+  "country": "CZE",
+  "yearOfBirth": 2001,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 69,
+  "athleteName": "STASHKO Mariia",
+  "country": "UKR",
+  "yearOfBirth": 2006,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 70,
+  "athleteName": "CHUPRYS Darya",
+  "country": "AIN",
+  "yearOfBirth": 2007,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 71,
+  "athleteName": "BAJOS Gitta",
+  "country": "HUN",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 72,
+  "athleteName": "DEMJEN PESKOVA Daniela",
+  "country": "SVK",
+  "yearOfBirth": 1984,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 73,
+  "athleteName": "SPENNARE OLSSON Victoria",
+  "country": "SWE",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 74,
+  "athleteName": "MIKOLOWSKA Julia",
+  "country": "POL",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 75,
+  "athleteName": "JEROVSEK Klavdija",
+  "country": "SLO",
+  "yearOfBirth": 1996,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 76,
+  "athleteName": "SUKHORUKOVA Viktoriya",
+  "country": "UKR",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 77,
+  "athleteName": "DVORSAK Ziva",
+  "country": "SLO",
+  "yearOfBirth": 1991,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 78,
+  "athleteName": "MOJSOVSKA Anastasija",
+  "country": "MKD",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 79,
+  "athleteName": "SHAKHOVA Elizaveta",
+  "country": "AIN",
+  "yearOfBirth": 2002,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 80,
+  "athleteName": "BANJAC Tatjana",
+  "country": "CRO",
+  "yearOfBirth": 1997,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 81,
+  "athleteName": "PONJAVIC Emilija",
+  "country": "SRB",
+  "yearOfBirth": 2003,
+  "discipline": "10m Air Rifle",
+  "category": "WOMEN"
+ },
+ {
+  "position": 1,
+  "athleteName": "QUIQUAMPOIX Jean",
+  "country": "FRA",
+  "yearOfBirth": 1995,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 2,
+  "athleteName": "PETER Florian",
+  "country": "GER",
+  "yearOfBirth": 2000,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 3,
+  "athleteName": "MUELLER Emanuel",
+  "country": "GER",
+  "yearOfBirth": 1992,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 4,
+  "athleteName": "BESSAGUET Clement",
+  "country": "FRA",
+  "yearOfBirth": 1991,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 5,
+  "athleteName": "REITZ Christian",
+  "country": "GER",
+  "yearOfBirth": 1987,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 6,
+  "athleteName": "RAMPULA Matej",
+  "country": "CZE",
+  "yearOfBirth": 2000,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 7,
+  "athleteName": "MAZZETTI Riccardo",
+  "country": "ITA",
+  "yearOfBirth": 1984,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 8,
+  "athleteName": "GEIS Oliver",
+  "country": "GER",
+  "yearOfBirth": 1991,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 9,
+  "athleteName": "SPINELLA Massimo",
+  "country": "ITA",
+  "yearOfBirth": 1999,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 10,
+  "athleteName": "OTTO Fabian",
+  "country": "GER",
+  "yearOfBirth": 2001,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 11,
+  "athleteName": "LUNEV Ruslan",
+  "country": "AZE",
+  "yearOfBirth": 1989,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 12,
+  "athleteName": "TUPY Antonin",
+  "country": "CZE",
+  "yearOfBirth": 1999,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 13,
+  "athleteName": "KOROSTYLOV Pavlo",
+  "country": "UKR",
+  "yearOfBirth": 1997,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 14,
+  "athleteName": "SEMENIKHIN Ivan",
+  "country": "AIN",
+  "yearOfBirth": 2005,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 15,
+  "athleteName": "GOWIN Sam",
+  "country": "GBR",
+  "yearOfBirth": 1989,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 16,
+  "athleteName": "CHESNEL Yan",
+  "country": "FRA",
+  "yearOfBirth": 2003,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 17,
+  "athleteName": "HORODYNETS Maksym",
+  "country": "UKR",
+  "yearOfBirth": 1998,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 18,
+  "athleteName": "REDECSI Mate",
+  "country": "HUN",
+  "yearOfBirth": 2004,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 19,
+  "athleteName": "PASTERNAK Volodymyr",
+  "country": "UKR",
+  "yearOfBirth": 1989,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 20,
+  "athleteName": "GAMALERI Arnaud",
+  "country": "FRA",
+  "yearOfBirth": 2005,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 21,
+  "athleteName": "TEHAN Tomas",
+  "country": "CZE",
+  "yearOfBirth": 1989,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 22,
+  "athleteName": "ZECHMEISTER Richard",
+  "country": "AUT",
+  "yearOfBirth": 1975,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 23,
+  "athleteName": "CHINOURS Thomas Clement",
+  "country": "FRA",
+  "yearOfBirth": 2007,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 24,
+  "athleteName": "KRAL Daniel",
+  "country": "AUT",
+  "yearOfBirth": 1998,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 25,
+  "athleteName": "KUSHNIROV Denys",
+  "country": "UKR",
+  "yearOfBirth": 1992,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 26,
+  "athleteName": "NAGY Akos Karoly",
+  "country": "HUN",
+  "yearOfBirth": 2005,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 27,
+  "athleteName": "OLESK Peeter",
+  "country": "EST",
+  "yearOfBirth": 1993,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 28,
+  "athleteName": "FIEDLER Jan",
+  "country": "CZE",
+  "yearOfBirth": 2009,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 29,
+  "athleteName": "KORINEK Jan",
+  "country": "SVK",
+  "yearOfBirth": 1992,
+  "discipline": "25m Rapid Fire Pistol",
+  "category": "MEN"
+ },
+ {
+  "position": 1,
+  "athleteName": "VENNEKAMP Doreen",
+  "country": "GER",
+  "yearOfBirth": 1995,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 2,
+  "athleteName": "FABIAN Sara Rahel",
+  "country": "HUN",
+  "yearOfBirth": 2002,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 3,
+  "athleteName": "MINCHEVA Miroslava",
+  "country": "BUL",
+  "yearOfBirth": 1999,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 4,
+  "athleteName": "CASTELAO Joana",
+  "country": "POR",
+  "yearOfBirth": 1984,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 5,
+  "athleteName": "LAMOLLE Mathilde",
+  "country": "FRA",
+  "yearOfBirth": 1997,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 6,
+  "athleteName": "MAJOR Veronika",
+  "country": "HUN",
+  "yearOfBirth": 1997,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 7,
+  "athleteName": "JEDRZEJEWSKI Camille",
+  "country": "FRA",
+  "yearOfBirth": 2002,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 8,
+  "athleteName": "DASKO Zoya",
+  "country": "AIN",
+  "yearOfBirth": 2002,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 9,
+  "athleteName": "STEINER Sylvia",
+  "country": "AUT",
+  "yearOfBirth": 1982,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 10,
+  "athleteName": "PIOCH Annabelle",
+  "country": "FRA",
+  "yearOfBirth": 2002,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 11,
+  "athleteName": "SOTO Maria Mercedes",
+  "country": "ESP",
+  "yearOfBirth": 1992,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 12,
+  "athleteName": "KARSCH Monika",
+  "country": "GER",
+  "yearOfBirth": 1982,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 13,
+  "athleteName": "MAGNANI Cristina",
+  "country": "ITA",
+  "yearOfBirth": 2003,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 14,
+  "athleteName": "FOURRE Heloise",
+  "country": "FRA",
+  "yearOfBirth": 2003,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 15,
+  "athleteName": "KOSTEVYCH Olena",
+  "country": "UKR",
+  "yearOfBirth": 1985,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 16,
+  "athleteName": "PIATROVA Aliaksandra",
+  "country": "AIN",
+  "yearOfBirth": 2005,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 17,
+  "athleteName": "SKERIES Michelle",
+  "country": "GER",
+  "yearOfBirth": 1996,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 18,
+  "athleteName": "KORAKAKI Anna",
+  "country": "GRE",
+  "yearOfBirth": 1996,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 19,
+  "athleteName": "NIMETS Anastasiia",
+  "country": "UKR",
+  "yearOfBirth": 1993,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 20,
+  "athleteName": "SIKE Renata",
+  "country": "HUN",
+  "yearOfBirth": 1978,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 21,
+  "athleteName": "VECCARO Margherita Brigida",
+  "country": "ITA",
+  "yearOfBirth": 2001,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 22,
+  "athleteName": "LITAU Daria",
+  "country": "AIN",
+  "yearOfBirth": 2002,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 23,
+  "athleteName": "KOSTADINOVA Antoaneta",
+  "country": "BUL",
+  "yearOfBirth": 1986,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 24,
+  "athleteName": "ENINA Iana",
+  "country": "AIN",
+  "yearOfBirth": 2000,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 25,
+  "athleteName": "RASMANE Agate",
+  "country": "LAT",
+  "yearOfBirth": 1997,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 26,
+  "athleteName": "PELMENEVA Anna",
+  "country": "AIN",
+  "yearOfBirth": 2004,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 27,
+  "athleteName": "TARHAN Sevval Ilayda",
+  "country": "TUR",
+  "yearOfBirth": 2000,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 28,
+  "athleteName": "KLAILOVA Helena",
+  "country": "CZE",
+  "yearOfBirth": 2001,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 29,
+  "athleteName": "GANAKOVA Valeriia",
+  "country": "AIN",
+  "yearOfBirth": 2005,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 30,
+  "athleteName": "TODOROVIC Jovana",
+  "country": "SRB",
+  "yearOfBirth": 2002,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 31,
+  "athleteName": "BOREK Julita",
+  "country": "POL",
+  "yearOfBirth": 1995,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 32,
+  "athleteName": "ILIEVA Adiel Radoslavova",
+  "country": "BUL",
+  "yearOfBirth": 1998,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 33,
+  "athleteName": "NENCHEVA Lidia",
+  "country": "BUL",
+  "yearOfBirth": 1996,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 34,
+  "athleteName": "ALIYEVA Khanna",
+  "country": "AZE",
+  "yearOfBirth": 2002,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 35,
+  "athleteName": "OMAZIC Matea",
+  "country": "CRO",
+  "yearOfBirth": 1994,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 36,
+  "athleteName": "SCHEJBALOVA Veronika",
+  "country": "CZE",
+  "yearOfBirth": 2000,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 37,
+  "athleteName": "GAJANOVA Lenka",
+  "country": "SVK",
+  "yearOfBirth": 1982,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 38,
+  "athleteName": "TIKHONOVA Aleksandra",
+  "country": "AIN",
+  "yearOfBirth": 2007,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 39,
+  "athleteName": "VAICKELIONYTE Ugne",
+  "country": "LTU",
+  "yearOfBirth": 2002,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 40,
+  "athleteName": "LAWNER Stina",
+  "country": "SWE",
+  "yearOfBirth": 1988,
+  "discipline": "25m Pistol",
+  "category": "WOMEN"
+ },
+ {
+  "position": 1,
+  "athleteName": "PRIVRATSKY Jiri",
+  "country": "CZE",
+  "yearOfBirth": 2001,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 2,
+  "athleteName": "HEGG Jon-Hermann",
+  "country": "NOR",
+  "yearOfBirth": 1999,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 3,
+  "athleteName": "PENI Istvan",
+  "country": "HUN",
+  "yearOfBirth": 1997,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 4,
+  "athleteName": "MARSOV Ilia",
+  "country": "AIN",
+  "yearOfBirth": 1998,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 5,
+  "athleteName": "KRYZS Lucas Bernard Denis",
+  "country": "FRA",
+  "yearOfBirth": 2001,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 6,
+  "athleteName": "LARSEN Henrik",
+  "country": "NOR",
+  "yearOfBirth": 1997,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 7,
+  "athleteName": "PIMENOV Dmitrii",
+  "country": "AIN",
+  "yearOfBirth": 2005,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 8,
+  "athleteName": "SCHMIRL Alexander",
+  "country": "AUT",
+  "yearOfBirth": 1989,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 9,
+  "athleteName": "MADSEN Marcus",
+  "country": "SWE",
+  "yearOfBirth": 1994,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 10,
+  "athleteName": "JANY Patrik",
+  "country": "SVK",
+  "yearOfBirth": 1997,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 11,
+  "athleteName": "HRCKULAK David",
+  "country": "CZE",
+  "yearOfBirth": 1992,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 12,
+  "athleteName": "ENTRICHEL Ales",
+  "country": "CZE",
+  "yearOfBirth": 1995,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 13,
+  "athleteName": "BAUDOUIN Brian",
+  "country": "FRA",
+  "yearOfBirth": 1994,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 14,
+  "athleteName": "LEPPA Aleksi",
+  "country": "FIN",
+  "yearOfBirth": 1994,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 15,
+  "athleteName": "DALLINGER Maximilian",
+  "country": "GER",
+  "yearOfBirth": 1996,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 16,
+  "athleteName": "WYRSCH Fabio Paul",
+  "country": "SUI",
+  "yearOfBirth": 1998,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 17,
+  "athleteName": "KOWALEWICZ Maciej",
+  "country": "POL",
+  "yearOfBirth": 1999,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 18,
+  "athleteName": "IVANOVIC Marko",
+  "country": "SRB",
+  "yearOfBirth": 2002,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 19,
+  "athleteName": "HALVORSEN Ole Martin",
+  "country": "NOR",
+  "yearOfBirth": 2000,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 20,
+  "athleteName": "LOCHBIHLER Jan",
+  "country": "SUI",
+  "yearOfBirth": 1992,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 21,
+  "athleteName": "DUTENDAS Dimitri",
+  "country": "FRA",
+  "yearOfBirth": 2000,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 22,
+  "athleteName": "KOVACEVIC Lazar",
+  "country": "SRB",
+  "yearOfBirth": 1997,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 23,
+  "athleteName": "BONAZZI Edoardo",
+  "country": "ITA",
+  "yearOfBirth": 2002,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 24,
+  "athleteName": "GORSA Petar",
+  "country": "CRO",
+  "yearOfBirth": 1988,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 25,
+  "athleteName": "OHLENBURGER Max",
+  "country": "GER",
+  "yearOfBirth": 2001,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 26,
+  "athleteName": "AUFRERE Romain",
+  "country": "FRA",
+  "yearOfBirth": 2004,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 27,
+  "athleteName": "NEPEJCHAL Filip",
+  "country": "CZE",
+  "yearOfBirth": 1999,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 28,
+  "athleteName": "PEKLER Zalan",
+  "country": "HUN",
+  "yearOfBirth": 2000,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 29,
+  "athleteName": "MARICIC Miran",
+  "country": "CRO",
+  "yearOfBirth": 1997,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 30,
+  "athleteName": "OESTLI Jens",
+  "country": "NOR",
+  "yearOfBirth": 2006,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 31,
+  "athleteName": "ULBRICH Maximilian",
+  "country": "GER",
+  "yearOfBirth": 2000,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 32,
+  "athleteName": "BRAUN Max",
+  "country": "GER",
+  "yearOfBirth": 2000,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 33,
+  "athleteName": "NYMBURSKY Petr",
+  "country": "CZE",
+  "yearOfBirth": 1995,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 34,
+  "athleteName": "BARTNIK Tomasz",
+  "country": "POL",
+  "yearOfBirth": 1990,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 35,
+  "athleteName": "DIEM Patrick",
+  "country": "AUT",
+  "yearOfBirth": 1999,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 36,
+  "athleteName": "KOENDERS David",
+  "country": "GER",
+  "yearOfBirth": 1997,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 37,
+  "athleteName": "SOLLAZZO Danilo Dennis",
+  "country": "ITA",
+  "yearOfBirth": 2002,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 38,
+  "athleteName": "KULISH Serhii",
+  "country": "UKR",
+  "yearOfBirth": 1993,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 39,
+  "athleteName": "JOHANSSON Jesper",
+  "country": "SWE",
+  "yearOfBirth": 2005,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 40,
+  "athleteName": "DUERR Christoph",
+  "country": "SUI",
+  "yearOfBirth": 1996,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 41,
+  "athleteName": "RIZOV Anton",
+  "country": "BUL",
+  "yearOfBirth": 1987,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 42,
+  "athleteName": "SULEK Stefan",
+  "country": "SVK",
+  "yearOfBirth": 1998,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 43,
+  "athleteName": "LINDGREN Victor",
+  "country": "SWE",
+  "yearOfBirth": 2003,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 44,
+  "athleteName": "WEITHALER Simon",
+  "country": "ITA",
+  "yearOfBirth": 1993,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 45,
+  "athleteName": "BERNARDI Michele",
+  "country": "ITA",
+  "yearOfBirth": 2002,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 46,
+  "athleteName": "ENTNER Patrick",
+  "country": "AUT",
+  "yearOfBirth": 2005,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 47,
+  "athleteName": "GIRULIS Karolis",
+  "country": "LTU",
+  "yearOfBirth": 1986,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 48,
+  "athleteName": "THUM Andreas",
+  "country": "AUT",
+  "yearOfBirth": 1999,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 49,
+  "athleteName": "SAJDAK Wiktor",
+  "country": "POL",
+  "yearOfBirth": 2004,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 50,
+  "athleteName": "BUEHLMEYER Daniel",
+  "country": "GER",
+  "yearOfBirth": 1996,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 51,
+  "athleteName": "BLOS Bastian",
+  "country": "GER",
+  "yearOfBirth": 1999,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 52,
+  "athleteName": "SIDI Peter",
+  "country": "ROU",
+  "yearOfBirth": 1978,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 53,
+  "athleteName": "BACCI Lorenzo",
+  "country": "ITA",
+  "yearOfBirth": 1994,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 54,
+  "athleteName": "OVIEDO Jesus",
+  "country": "ESP",
+  "yearOfBirth": 2001,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 55,
+  "athleteName": "HAMMERL Soma Richard",
+  "country": "HUN",
+  "yearOfBirth": 2001,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 56,
+  "athleteName": "SEBIC Milenko",
+  "country": "SRB",
+  "yearOfBirth": 1984,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 57,
+  "athleteName": "HUDZYI Sviatoslav",
+  "country": "UKR",
+  "yearOfBirth": 1999,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 58,
+  "athleteName": "BALE Dean",
+  "country": "GBR",
+  "yearOfBirth": 1997,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 59,
+  "athleteName": "KIISK Meelis",
+  "country": "EST",
+  "yearOfBirth": 1991,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 60,
+  "athleteName": "EINWALLER Dominic",
+  "country": "AUT",
+  "yearOfBirth": 2003,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 61,
+  "athleteName": "NALBANT Mert",
+  "country": "TUR",
+  "yearOfBirth": 1989,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 62,
+  "athleteName": "SYRJAE Lauri Eemil",
+  "country": "FIN",
+  "yearOfBirth": 2003,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 63,
+  "athleteName": "MIKULJAN Andrija",
+  "country": "CRO",
+  "yearOfBirth": 1997,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 64,
+  "athleteName": "WASSMAN Ludwig",
+  "country": "SWE",
+  "yearOfBirth": 1996,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 65,
+  "athleteName": "MAIR Tobias",
+  "country": "AUT",
+  "yearOfBirth": 2000,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 66,
+  "athleteName": "AFONSO Pedro",
+  "country": "POR",
+  "yearOfBirth": 1983,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 67,
+  "athleteName": "OLSEN Steffen",
+  "country": "DEN",
+  "yearOfBirth": 1983,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 68,
+  "athleteName": "HOLKO Ondrej",
+  "country": "SVK",
+  "yearOfBirth": 1996,
+  "discipline": "50m Rifle 3 Position",
+  "category": "MEN"
+ },
+ {
+  "position": 1,
+  "athleteName": "DUESTAD Jeanette Hegg",
+  "country": "NOR",
+  "yearOfBirth": 1999,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 2,
+  "athleteName": "IBSEN Rikke Maeng",
+  "country": "DEN",
+  "yearOfBirth": 1990,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 3,
+  "athleteName": "JAEGGI Emely",
+  "country": "SUI",
+  "yearOfBirth": 2008,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 4,
+  "athleteName": "JANSSEN Anna",
+  "country": "GER",
+  "yearOfBirth": 2001,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 5,
+  "athleteName": "GIRARD Agathe Cecile Camille",
+  "country": "FRA",
+  "yearOfBirth": 2001,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 6,
+  "athleteName": "STEFANKOVA Katerina",
+  "country": "CZE",
+  "yearOfBirth": 2001,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 7,
+  "athleteName": "CHRISTEN Nina",
+  "country": "SUI",
+  "yearOfBirth": 1994,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 8,
+  "athleteName": "LEONE Chiara",
+  "country": "SUI",
+  "yearOfBirth": 1998,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 9,
+  "athleteName": "BLAZICKOVA Veronika",
+  "country": "CZE",
+  "yearOfBirth": 2003,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 10,
+  "athleteName": "DUBSKA Barbora",
+  "country": "CZE",
+  "yearOfBirth": 2004,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 11,
+  "athleteName": "KARASOVA Sara",
+  "country": "CZE",
+  "yearOfBirth": 2001,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 12,
+  "athleteName": "ZELJKOVIC Marta",
+  "country": "CRO",
+  "yearOfBirth": 1995,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 13,
+  "athleteName": "HAVRAN Aleksandra",
+  "country": "SRB",
+  "yearOfBirth": 2004,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 14,
+  "athleteName": "LOEVSETH Mari Baardseng",
+  "country": "NOR",
+  "yearOfBirth": 2000,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 15,
+  "athleteName": "KOCHANSKA Natalia",
+  "country": "POL",
+  "yearOfBirth": 1996,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 16,
+  "athleteName": "STARK Franziska",
+  "country": "SUI",
+  "yearOfBirth": 1999,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 17,
+  "athleteName": "HOFMANN Olivia",
+  "country": "AUT",
+  "yearOfBirth": 1992,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 18,
+  "athleteName": "EVENSEN Amalie",
+  "country": "NOR",
+  "yearOfBirth": 2000,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 19,
+  "athleteName": "WAIBEL Sheileen",
+  "country": "AUT",
+  "yearOfBirth": 2001,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 20,
+  "athleteName": "CECCARELLO Sofia",
+  "country": "ITA",
+  "yearOfBirth": 2002,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 21,
+  "athleteName": "STARK Nele",
+  "country": "GER",
+  "yearOfBirth": 2003,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 22,
+  "athleteName": "MANGOLD Anita",
+  "country": "GER",
+  "yearOfBirth": 1989,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 23,
+  "athleteName": "PALO Marianne",
+  "country": "FIN",
+  "yearOfBirth": 1998,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 24,
+  "athleteName": "ARIAS CASALS Helena",
+  "country": "ESP",
+  "yearOfBirth": 2001,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 25,
+  "athleteName": "ZRUSTOVA Adela",
+  "country": "CZE",
+  "yearOfBirth": 2003,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 26,
+  "athleteName": "PIOTROWSKA Julia Ewa",
+  "country": "POL",
+  "yearOfBirth": 2001,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 27,
+  "athleteName": "PIETRUK Aleksandra Anna",
+  "country": "POL",
+  "yearOfBirth": 2000,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 28,
+  "athleteName": "GOGNIAT Audrey",
+  "country": "SUI",
+  "yearOfBirth": 2002,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 29,
+  "athleteName": "NOR-WOLL Pernille",
+  "country": "NOR",
+  "yearOfBirth": 2006,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 30,
+  "athleteName": "NAGYBANYAI-NAGY Anna",
+  "country": "HUN",
+  "yearOfBirth": 2002,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 31,
+  "athleteName": "KOVALENKO Valentina",
+  "country": "AIN",
+  "yearOfBirth": 2003,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 32,
+  "athleteName": "OSMANOVA Anzhelika",
+  "country": "AIN",
+  "yearOfBirth": 2004,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 33,
+  "athleteName": "KATZ Klaudie",
+  "country": "CZE",
+  "yearOfBirth": 2005,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 34,
+  "athleteName": "BENETTI Sofia",
+  "country": "ITA",
+  "yearOfBirth": 2002,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 35,
+  "athleteName": "GAWENDA Maja Magdalena",
+  "country": "POL",
+  "yearOfBirth": 2005,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 36,
+  "athleteName": "KOECK Rebecca",
+  "country": "AUT",
+  "yearOfBirth": 1999,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 37,
+  "athleteName": "STEFFEN Hannah",
+  "country": "GER",
+  "yearOfBirth": 1998,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 38,
+  "athleteName": "GRUB Lisa",
+  "country": "GER",
+  "yearOfBirth": 1992,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 39,
+  "athleteName": "ZIVIANI Martina",
+  "country": "ITA",
+  "yearOfBirth": 1996,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 40,
+  "athleteName": "SHAKHOVA Elizaveta",
+  "country": "AIN",
+  "yearOfBirth": 2002,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 41,
+  "athleteName": "SULE Susanna",
+  "country": "EST",
+  "yearOfBirth": 2004,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 42,
+  "athleteName": "BERG Synnoeve",
+  "country": "NOR",
+  "yearOfBirth": 2007,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 43,
+  "athleteName": "DUDKA Daria",
+  "country": "UKR",
+  "yearOfBirth": 1986,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 44,
+  "athleteName": "SIDI Roxana",
+  "country": "ROU",
+  "yearOfBirth": 1992,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 45,
+  "athleteName": "CHUPRYS Darya",
+  "country": "AIN",
+  "yearOfBirth": 2007,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 46,
+  "athleteName": "ANTUNES Sara",
+  "country": "POR",
+  "yearOfBirth": 1975,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 47,
+  "athleteName": "DENES Eszter",
+  "country": "HUN",
+  "yearOfBirth": 2001,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 48,
+  "athleteName": "LUND Caroline Finnestad",
+  "country": "NOR",
+  "yearOfBirth": 2004,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 49,
+  "athleteName": "UNGERANK Nadine",
+  "country": "AUT",
+  "yearOfBirth": 1996,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 50,
+  "athleteName": "WEHREN Hannah",
+  "country": "GER",
+  "yearOfBirth": 2005,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 51,
+  "athleteName": "AVERKINA Olga",
+  "country": "AIN",
+  "yearOfBirth": 2002,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 52,
+  "athleteName": "SUKHORUKOVA Viktoriya",
+  "country": "UKR",
+  "yearOfBirth": 1997,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 53,
+  "athleteName": "SALAFIA Carlotta",
+  "country": "ITA",
+  "yearOfBirth": 2004,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 54,
+  "athleteName": "GRUNDSOEE Stephanie Laura Scurrah",
+  "country": "DEN",
+  "yearOfBirth": 2000,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 55,
+  "athleteName": "WEGNER Larissa",
+  "country": "GER",
+  "yearOfBirth": 2002,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 56,
+  "athleteName": "BRABCOVA Karolina",
+  "country": "CZE",
+  "yearOfBirth": 2000,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 57,
+  "athleteName": "BRABCOVA Aneta",
+  "country": "CZE",
+  "yearOfBirth": 1992,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 58,
+  "athleteName": "ZUEGER Muriel",
+  "country": "SUI",
+  "yearOfBirth": 1998,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 59,
+  "athleteName": "MULLER Oceanne",
+  "country": "FRA",
+  "yearOfBirth": 2003,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 60,
+  "athleteName": "KUHARIC Urska",
+  "country": "SLO",
+  "yearOfBirth": 1994,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 61,
+  "athleteName": "ROMANCZYK Karolina",
+  "country": "POL",
+  "yearOfBirth": 1983,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 62,
+  "athleteName": "EREN Elif Duygu",
+  "country": "TUR",
+  "yearOfBirth": 1988,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 63,
+  "athleteName": "KITZBICHLER Jasmin",
+  "country": "AUT",
+  "yearOfBirth": 1999,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 64,
+  "athleteName": "TOMASCHETT Annina",
+  "country": "SUI",
+  "yearOfBirth": 2000,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 65,
+  "athleteName": "ROSENLEW Alexandra",
+  "country": "FIN",
+  "yearOfBirth": 2005,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 66,
+  "athleteName": "NOVOTNA Kamila",
+  "country": "SVK",
+  "yearOfBirth": 2005,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 67,
+  "athleteName": "RIISAAR Marleen",
+  "country": "EST",
+  "yearOfBirth": 2003,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 68,
+  "athleteName": "BENSON Anna",
+  "country": "SWE",
+  "yearOfBirth": 1984,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 69,
+  "athleteName": "HAUGEN Milda Marina",
+  "country": "NOR",
+  "yearOfBirth": 2000,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 70,
+  "athleteName": "PRIBITZER Marlene",
+  "country": "AUT",
+  "yearOfBirth": 1997,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 71,
+  "athleteName": "OLEWICZ Anastassia",
+  "country": "EST",
+  "yearOfBirth": 2004,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 72,
+  "athleteName": "BENIKOVA Diana",
+  "country": "SVK",
+  "yearOfBirth": 1998,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 73,
+  "athleteName": "BUEHLMEYER Hanna",
+  "country": "GER",
+  "yearOfBirth": 1996,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 74,
+  "athleteName": "KARDAKOVA Varvara",
+  "country": "AIN",
+  "yearOfBirth": 2007,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 75,
+  "athleteName": "HERCEG Estera",
+  "country": "CRO",
+  "yearOfBirth": 2002,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 76,
+  "athleteName": "VUKOJEVIC Teodora",
+  "country": "SRB",
+  "yearOfBirth": 2003,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 77,
+  "athleteName": "DVORSAK Ziva",
+  "country": "SLO",
+  "yearOfBirth": 1991,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 78,
+  "athleteName": "DEMJEN PESKOVA Daniela",
+  "country": "SVK",
+  "yearOfBirth": 1984,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 79,
+  "athleteName": "BAJOS Gitta",
+  "country": "HUN",
+  "yearOfBirth": 2002,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 80,
+  "athleteName": "GOERANSON Amanda",
+  "country": "SWE",
+  "yearOfBirth": 2000,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 81,
+  "athleteName": "KAPS Jessie",
+  "country": "BEL",
+  "yearOfBirth": 1998,
+  "discipline": "50m Rifle 3 Position",
+  "category": "WOMEN"
+ },
+ {
+  "position": 1,
+  "athleteName": "DE FILIPPIS Mauro",
+  "country": "ITA",
+  "yearOfBirth": 1980,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 2,
+  "athleteName": "GARCIA Andres",
+  "country": "ESP",
+  "yearOfBirth": 2004,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 3,
+  "athleteName": "GLASNOVIC Josip",
+  "country": "CRO",
+  "yearOfBirth": 1983,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 4,
+  "athleteName": "CERNOGORAZ Giovanni",
+  "country": "CRO",
+  "yearOfBirth": 1982,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 5,
+  "athleteName": "FABBRIZI Massimo",
+  "country": "ITA",
+  "yearOfBirth": 1977,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 6,
+  "athleteName": "PELLIELO Giovanni",
+  "country": "ITA",
+  "yearOfBirth": 1970,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 7,
+  "athleteName": "HEADING Aaron",
+  "country": "GBR",
+  "yearOfBirth": 1987,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 8,
+  "athleteName": "DESERT Antonin",
+  "country": "FRA",
+  "yearOfBirth": 1978,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 9,
+  "athleteName": "COWARD-HOLLEY Matthew",
+  "country": "GBR",
+  "yearOfBirth": 1994,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 10,
+  "athleteName": "PALACKY Jan",
+  "country": "CZE",
+  "yearOfBirth": 2000,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 11,
+  "athleteName": "GLASNOVIC Anton",
+  "country": "CRO",
+  "yearOfBirth": 1981,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 12,
+  "athleteName": "MURCIA Manuel",
+  "country": "ESP",
+  "yearOfBirth": 1979,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 13,
+  "athleteName": "LIPTAK Jiri",
+  "country": "CZE",
+  "yearOfBirth": 1982,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 14,
+  "athleteName": "KOSTELECKY David",
+  "country": "CZE",
+  "yearOfBirth": 1975,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 15,
+  "athleteName": "PEETERS Yannick",
+  "country": "BEL",
+  "yearOfBirth": 1985,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 16,
+  "athleteName": "MARINOV Filip",
+  "country": "SVK",
+  "yearOfBirth": 1994,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 17,
+  "athleteName": "MARTINEZ TORRES Adria",
+  "country": "ESP",
+  "yearOfBirth": 1999,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 18,
+  "athleteName": "PASIERBSKI Tomasz",
+  "country": "POL",
+  "yearOfBirth": 1995,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 19,
+  "athleteName": "FERRARI Lorenzo",
+  "country": "ITA",
+  "yearOfBirth": 1999,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 20,
+  "athleteName": "MAEKELAE Juho Johannes",
+  "country": "FIN",
+  "yearOfBirth": 2001,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 21,
+  "athleteName": "VARGA Erik",
+  "country": "SVK",
+  "yearOfBirth": 1976,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 22,
+  "athleteName": "FERNANDEZ Alberto",
+  "country": "ESP",
+  "yearOfBirth": 1983,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 23,
+  "athleteName": "VALERI Diego",
+  "country": "ITA",
+  "yearOfBirth": 1996,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 24,
+  "athleteName": "LEVIN ANDERSSON Rickard",
+  "country": "SWE",
+  "yearOfBirth": 1991,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 25,
+  "athleteName": "KOVACOCY Marian",
+  "country": "SVK",
+  "yearOfBirth": 1984,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 26,
+  "athleteName": "ILNAM Yavuz",
+  "country": "TUR",
+  "yearOfBirth": 1987,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 27,
+  "athleteName": "O SULLIVAN Ian",
+  "country": "IRL",
+  "yearOfBirth": 1996,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 28,
+  "athleteName": "GULIYEV Alimirza",
+  "country": "AZE",
+  "yearOfBirth": 1996,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 29,
+  "athleteName": "KYRIAKOU Nikolas",
+  "country": "CYP",
+  "yearOfBirth": 1984,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 30,
+  "athleteName": "AGEZ Thomas",
+  "country": "FRA",
+  "yearOfBirth": 2005,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 31,
+  "athleteName": "BOURGUE Clement",
+  "country": "FRA",
+  "yearOfBirth": 1999,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 32,
+  "athleteName": "TUNCER N Tolga",
+  "country": "TUR",
+  "yearOfBirth": 1993,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 33,
+  "athleteName": "FARIA Jose",
+  "country": "POR",
+  "yearOfBirth": 1985,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 34,
+  "athleteName": "PIRTTISALO Eemil",
+  "country": "FIN",
+  "yearOfBirth": 1996,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 35,
+  "athleteName": "SOLLAMI Fabio",
+  "country": "ITA",
+  "yearOfBirth": 1978,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 36,
+  "athleteName": "RESCA Daniele",
+  "country": "ITA",
+  "yearOfBirth": 1986,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 37,
+  "athleteName": "BECCARI Fabio",
+  "country": "CZE",
+  "yearOfBirth": 2000,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 38,
+  "athleteName": "NIKOLAEV Ramir",
+  "country": "AIN",
+  "yearOfBirth": 2005,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 39,
+  "athleteName": "MAKRI Andreas",
+  "country": "CYP",
+  "yearOfBirth": 1991,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 40,
+  "athleteName": "LILLERUD Ruben Groenbeck",
+  "country": "NOR",
+  "yearOfBirth": 2001,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 41,
+  "athleteName": "SHLYUZ Oleksandr Oles",
+  "country": "UKR",
+  "yearOfBirth": 1995,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 42,
+  "athleteName": "HALES Nathan",
+  "country": "GBR",
+  "yearOfBirth": 1996,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 43,
+  "athleteName": "GARCIA Joan",
+  "country": "ESP",
+  "yearOfBirth": 1978,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 44,
+  "athleteName": "MACEK Bostjan",
+  "country": "SLO",
+  "yearOfBirth": 1972,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 45,
+  "athleteName": "BARETTA Victor",
+  "country": "SRB",
+  "yearOfBirth": 1995,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 46,
+  "athleteName": "SOLYOM Laszlo",
+  "country": "AUT",
+  "yearOfBirth": 1992,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 47,
+  "athleteName": "KIRILOV Marin",
+  "country": "BUL",
+  "yearOfBirth": 1996,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 48,
+  "athleteName": "ZHUKOV Lev",
+  "country": "AIN",
+  "yearOfBirth": 2007,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 49,
+  "athleteName": "SMILJANIC Nemanja",
+  "country": "SRB",
+  "yearOfBirth": 1994,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 50,
+  "athleteName": "KROSS Marco",
+  "country": "GER",
+  "yearOfBirth": 1992,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 51,
+  "athleteName": "JOHN Marius Josef Erik",
+  "country": "GER",
+  "yearOfBirth": 2004,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 52,
+  "athleteName": "LAAKSO Jukka",
+  "country": "FIN",
+  "yearOfBirth": 1978,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 53,
+  "athleteName": "RIGONI Simone",
+  "country": "SMR",
+  "yearOfBirth": 2003,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 54,
+  "athleteName": "OLEJNIK Hubert Andrzej",
+  "country": "SVK",
+  "yearOfBirth": 1982,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 55,
+  "athleteName": "BUCCOLIERI Emanuele",
+  "country": "ITA",
+  "yearOfBirth": 1997,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 56,
+  "athleteName": "CHATZITSAKIROGLOU Ioannis",
+  "country": "GRE",
+  "yearOfBirth": 1999,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 57,
+  "athleteName": "HUSEYNLI Ali",
+  "country": "AZE",
+  "yearOfBirth": 1994,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 58,
+  "athleteName": "GUERRERO Sebastien",
+  "country": "FRA",
+  "yearOfBirth": 1987,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 59,
+  "athleteName": "ILBILGI Murat",
+  "country": "TUR",
+  "yearOfBirth": 1999,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 60,
+  "athleteName": "KANCELAR Kristijan",
+  "country": "CRO",
+  "yearOfBirth": 1977,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 61,
+  "athleteName": "NORLEN Andreas",
+  "country": "SWE",
+  "yearOfBirth": 1989,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 62,
+  "athleteName": "GERMIN Marko",
+  "country": "CRO",
+  "yearOfBirth": 1978,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 63,
+  "athleteName": "CHETCUTI Gianluca",
+  "country": "MLT",
+  "yearOfBirth": 1997,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 64,
+  "athleteName": "DOS SANTOS CUNHA Nuno",
+  "country": "SUI",
+  "yearOfBirth": 1980,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 65,
+  "athleteName": "RAVALICO Francesco",
+  "country": "CRO",
+  "yearOfBirth": 1994,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 66,
+  "athleteName": "LECANDA ALCIBAR Jon",
+  "country": "ESP",
+  "yearOfBirth": 2003,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 67,
+  "athleteName": "MICHAUX Michael",
+  "country": "SUI",
+  "yearOfBirth": 1981,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 68,
+  "athleteName": "TRZEBINSKI Jakub",
+  "country": "POL",
+  "yearOfBirth": 1985,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 69,
+  "athleteName": "SOSA Lyndon",
+  "country": "LUX",
+  "yearOfBirth": 1992,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 70,
+  "athleteName": "LEPEN Matjaz",
+  "country": "SLO",
+  "yearOfBirth": 1992,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 71,
+  "athleteName": "VATOVEC Denis",
+  "country": "SLO",
+  "yearOfBirth": 1971,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 72,
+  "athleteName": "LOEW Andreas",
+  "country": "GER",
+  "yearOfBirth": 1982,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 73,
+  "athleteName": "TILMANT Jean-Marc Alain M",
+  "country": "BEL",
+  "yearOfBirth": 1966,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 74,
+  "athleteName": "CHRISTODOULAKIS Xenofon",
+  "country": "GRE",
+  "yearOfBirth": 1982,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 75,
+  "athleteName": "STEPAN Vladimir",
+  "country": "CZE",
+  "yearOfBirth": 1995,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 76,
+  "athleteName": "BERTI Gian Marco",
+  "country": "SMR",
+  "yearOfBirth": 1982,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 77,
+  "athleteName": "DE KEPPER Steven",
+  "country": "BEL",
+  "yearOfBirth": 1973,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 78,
+  "athleteName": "AGHAZADA Mirmomin",
+  "country": "AZE",
+  "yearOfBirth": 1998,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 79,
+  "athleteName": "MROZEK Daniel Krzysztof",
+  "country": "POL",
+  "yearOfBirth": 2003,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 80,
+  "athleteName": "BETTS Thomas William",
+  "country": "GBR",
+  "yearOfBirth": 2005,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 81,
+  "athleteName": "VIEIRA DA SILVA Manuel",
+  "country": "POR",
+  "yearOfBirth": 2000,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 82,
+  "athleteName": "BILKO Oleksandr",
+  "country": "UKR",
+  "yearOfBirth": 1982,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 83,
+  "athleteName": "AZEVEDO Joao",
+  "country": "POR",
+  "yearOfBirth": 1984,
+  "discipline": "Trap",
+  "category": "MEN"
+ },
+ {
+  "position": 1,
+  "athleteName": "STANCO Silvana",
+  "country": "ITA",
+  "yearOfBirth": 1993,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 2,
+  "athleteName": "DENISOVA Lada",
+  "country": "AIN",
+  "yearOfBirth": 2002,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 3,
+  "athleteName": "MOLNE MAGRINA Mar",
+  "country": "ESP",
+  "yearOfBirth": 2001,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 4,
+  "athleteName": "PERILLI Alessandra",
+  "country": "SMR",
+  "yearOfBirth": 1988,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 5,
+  "athleteName": "BERNAL Sandra",
+  "country": "POL",
+  "yearOfBirth": 1999,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 6,
+  "athleteName": "KAYA Rumeysa Pelin",
+  "country": "TUR",
+  "yearOfBirth": 2000,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 7,
+  "athleteName": "GALVEZ Fatima",
+  "country": "ESP",
+  "yearOfBirth": 1987,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 8,
+  "athleteName": "REHAK STEFECEKOVA Zuzana",
+  "country": "SVK",
+  "yearOfBirth": 1984,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 9,
+  "athleteName": "IEZZI Alessia",
+  "country": "ITA",
+  "yearOfBirth": 1996,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 10,
+  "athleteName": "NUMMELA Sara Silja Patricia",
+  "country": "FIN",
+  "yearOfBirth": 2002,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 11,
+  "athleteName": "MURCHE Kathrin",
+  "country": "GER",
+  "yearOfBirth": 1999,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 12,
+  "athleteName": "DE BARROS Ines",
+  "country": "POR",
+  "yearOfBirth": 2001,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 13,
+  "athleteName": "MAEKELAE-NUMMELA Satu",
+  "country": "FIN",
+  "yearOfBirth": 1970,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 14,
+  "athleteName": "MARTINEZ Beatriz",
+  "country": "ESP",
+  "yearOfBirth": 1986,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 15,
+  "athleteName": "HRDLICKOVA Zina",
+  "country": "CZE",
+  "yearOfBirth": 2003,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 16,
+  "athleteName": "SESSA Erica",
+  "country": "ITA",
+  "yearOfBirth": 1998,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 17,
+  "athleteName": "STEPINA Kseniia",
+  "country": "AIN",
+  "yearOfBirth": 2005,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 18,
+  "athleteName": "SEWARD Ellie",
+  "country": "GBR",
+  "yearOfBirth": 1997,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 19,
+  "athleteName": "POPP Aili",
+  "country": "EST",
+  "yearOfBirth": 1983,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 20,
+  "athleteName": "CORMENIER Carole",
+  "country": "FRA",
+  "yearOfBirth": 1990,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 21,
+  "athleteName": "PURSER Madeleine Louise",
+  "country": "GBR",
+  "yearOfBirth": 2003,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 22,
+  "athleteName": "ANTIKAINEN Noora",
+  "country": "FIN",
+  "yearOfBirth": 1981,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 23,
+  "athleteName": "KOSMINA Aleksandra",
+  "country": "AIN",
+  "yearOfBirth": 2007,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 24,
+  "athleteName": "ALI Selin",
+  "country": "BUL",
+  "yearOfBirth": 2002,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 25,
+  "athleteName": "SPOTAKOVA Jana",
+  "country": "SVK",
+  "yearOfBirth": 1985,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 26,
+  "athleteName": "BIDOLI Lena",
+  "country": "LUX",
+  "yearOfBirth": 1993,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 27,
+  "athleteName": "SEMIANOVA Daria",
+  "country": "AIN",
+  "yearOfBirth": 2002,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 28,
+  "athleteName": "SOUTHALL Leah",
+  "country": "GBR",
+  "yearOfBirth": 2003,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 29,
+  "athleteName": "MACEK Jasmina",
+  "country": "SLO",
+  "yearOfBirth": 1980,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 30,
+  "athleteName": "BOIKO Polina",
+  "country": "AIN",
+  "yearOfBirth": 2002,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 31,
+  "athleteName": "BULHAKOVA Nadiia",
+  "country": "UKR",
+  "yearOfBirth": 1999,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 32,
+  "athleteName": "PANZA Valentina",
+  "country": "ITA",
+  "yearOfBirth": 2001,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 33,
+  "athleteName": "TEMIZDEMIR Safiye",
+  "country": "TUR",
+  "yearOfBirth": 1995,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 34,
+  "athleteName": "VEROMAA Mopsi",
+  "country": "FIN",
+  "yearOfBirth": 1981,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 35,
+  "athleteName": "LING Abbey",
+  "country": "GBR",
+  "yearOfBirth": 1987,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 36,
+  "athleteName": "LITTAME Sofia",
+  "country": "ITA",
+  "yearOfBirth": 2002,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 37,
+  "athleteName": "MATEJKOVA Martina",
+  "country": "CZE",
+  "yearOfBirth": 2003,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 38,
+  "athleteName": "HALWAX Nadine",
+  "country": "GER",
+  "yearOfBirth": 2001,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 39,
+  "athleteName": "NYITRAI Anna",
+  "country": "HUN",
+  "yearOfBirth": 2005,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 40,
+  "athleteName": "RAGAZZINI Gaia",
+  "country": "ITA",
+  "yearOfBirth": 2001,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 41,
+  "athleteName": "MOLNAROVA Nikola",
+  "country": "SVK",
+  "yearOfBirth": 2001,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 42,
+  "athleteName": "KOUNADINI Angeliki",
+  "country": "GRE",
+  "yearOfBirth": 2006,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 43,
+  "athleteName": "PALMITESSA Marialucia",
+  "country": "ITA",
+  "yearOfBirth": 1998,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 44,
+  "athleteName": "KONSTANTINIDOU Georgia",
+  "country": "CYP",
+  "yearOfBirth": 1984,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 45,
+  "athleteName": "DELLA VALLE Alessandra",
+  "country": "ITA",
+  "yearOfBirth": 1998,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 46,
+  "athleteName": "RIEHMANN Karla",
+  "country": "GER",
+  "yearOfBirth": 2009,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 47,
+  "athleteName": "EYVAZOVA Ulviyya",
+  "country": "AZE",
+  "yearOfBirth": 2000,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 48,
+  "athleteName": "GRIONI Martina",
+  "country": "ITA",
+  "yearOfBirth": 1999,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 49,
+  "athleteName": "JAMALOVA Aydan",
+  "country": "AZE",
+  "yearOfBirth": 1998,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 50,
+  "athleteName": "PAPINA Kira",
+  "country": "AIN",
+  "yearOfBirth": 2009,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 51,
+  "athleteName": "MRNOVA Adela",
+  "country": "CZE",
+  "yearOfBirth": 2002,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 52,
+  "athleteName": "KIZILSU Dilara Bedia",
+  "country": "TUR",
+  "yearOfBirth": 1965,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 53,
+  "athleteName": "CRISTIANI Isabella",
+  "country": "ITA",
+  "yearOfBirth": 1996,
+  "discipline": "Trap",
+  "category": "WOMEN"
+ },
+ {
+  "position": 1,
+  "athleteName": "KORCAK Daniel",
+  "country": "CZE",
+  "yearOfBirth": 2000,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 2,
+  "athleteName": "TOMECEK Jakub",
+  "country": "CZE",
+  "yearOfBirth": 1991,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 3,
+  "athleteName": "SDRUCCIOLI Elia",
+  "country": "ITA",
+  "yearOfBirth": 1998,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 4,
+  "athleteName": "JANSSON Henrik",
+  "country": "SWE",
+  "yearOfBirth": 1986,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 5,
+  "athleteName": "ROSSETTI Gabriele",
+  "country": "ITA",
+  "yearOfBirth": 1995,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 6,
+  "athleteName": "MILCHEV Mikola",
+  "country": "UKR",
+  "yearOfBirth": 1967,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 7,
+  "athleteName": "PETERSEN Emil Kjeldgaard",
+  "country": "DEN",
+  "yearOfBirth": 1998,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 8,
+  "athleteName": "HANSEN Jesper",
+  "country": "DEN",
+  "yearOfBirth": 1980,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 9,
+  "athleteName": "KALLIOINEN Eetu",
+  "country": "FIN",
+  "yearOfBirth": 1998,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 10,
+  "athleteName": "KORTE Sven",
+  "country": "GER",
+  "yearOfBirth": 1990,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 11,
+  "athleteName": "PITTINI Erik",
+  "country": "ITA",
+  "yearOfBirth": 1997,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 12,
+  "athleteName": "CHALKIADAKIS Charalambos",
+  "country": "GRE",
+  "yearOfBirth": 1997,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 13,
+  "athleteName": "LLEWELLIN Ben",
+  "country": "GBR",
+  "yearOfBirth": 1994,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 14,
+  "athleteName": "FAIRCLOUGH Jack",
+  "country": "IRL",
+  "yearOfBirth": 1997,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 15,
+  "athleteName": "VALLIONIEMI Timi",
+  "country": "FIN",
+  "yearOfBirth": 1996,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 16,
+  "athleteName": "DELAUNAY Eric",
+  "country": "FRA",
+  "yearOfBirth": 1987,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 17,
+  "athleteName": "WATNDAL Erik",
+  "country": "NOR",
+  "yearOfBirth": 1979,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 18,
+  "athleteName": "KUNTSCHIK Sebastian",
+  "country": "AUT",
+  "yearOfBirth": 1988,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 19,
+  "athleteName": "NILSSON SCHOEN Stefan",
+  "country": "SWE",
+  "yearOfBirth": 1990,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 20,
+  "athleteName": "UPELNIEKS Dainis",
+  "country": "LAT",
+  "yearOfBirth": 1982,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 21,
+  "athleteName": "MAVROMMATIS Nikolaos",
+  "country": "GRE",
+  "yearOfBirth": 1980,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 22,
+  "athleteName": "BAKSALARY Kacper Jerzy",
+  "country": "POL",
+  "yearOfBirth": 2001,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 23,
+  "athleteName": "CLOITRE Remi",
+  "country": "FRA",
+  "yearOfBirth": 1997,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 24,
+  "athleteName": "PALMUCCI Valerio",
+  "country": "ITA",
+  "yearOfBirth": 1997,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 25,
+  "athleteName": "AGHAZADA Niyaz",
+  "country": "AZE",
+  "yearOfBirth": 1996,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 26,
+  "athleteName": "CASSANDRO Tammaro",
+  "country": "ITA",
+  "yearOfBirth": 1993,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 27,
+  "athleteName": "SEMENENKO Anatolii",
+  "country": "AIN",
+  "yearOfBirth": 1996,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 28,
+  "athleteName": "ENGEN Joergen",
+  "country": "NOR",
+  "yearOfBirth": 1997,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 29,
+  "athleteName": "CASSAR Andre",
+  "country": "MLT",
+  "yearOfBirth": 2004,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 30,
+  "athleteName": "ACHILLEOS Georgios",
+  "country": "CYP",
+  "yearOfBirth": 1980,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 31,
+  "athleteName": "MIELGO MONEO Jose Maria",
+  "country": "ESP",
+  "yearOfBirth": 1998,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 32,
+  "athleteName": "LE JEUNE Nicolas",
+  "country": "FRA",
+  "yearOfBirth": 1998,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 33,
+  "athleteName": "TAKANEN Tommi",
+  "country": "FIN",
+  "yearOfBirth": 1989,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 34,
+  "athleteName": "KOBZARUK Andriy",
+  "country": "UKR",
+  "yearOfBirth": 1988,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 35,
+  "athleteName": "ECCLESTON Arran",
+  "country": "GBR",
+  "yearOfBirth": 2001,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 36,
+  "athleteName": "HONKOMP Christopher Robin",
+  "country": "GER",
+  "yearOfBirth": 2000,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 37,
+  "athleteName": "NYDRLE Tomas",
+  "country": "CZE",
+  "yearOfBirth": 1988,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 38,
+  "athleteName": "SABLONE Marco",
+  "country": "ITA",
+  "yearOfBirth": 1988,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 39,
+  "athleteName": "GEROCHRISTOS Panagiotis",
+  "country": "GRE",
+  "yearOfBirth": 2003,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 40,
+  "athleteName": "MAKAROV Kirill",
+  "country": "AIN",
+  "yearOfBirth": 2005,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 41,
+  "athleteName": "COCO Marco",
+  "country": "ITA",
+  "yearOfBirth": 2005,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 42,
+  "athleteName": "RENNER Balint",
+  "country": "HUN",
+  "yearOfBirth": 2006,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 43,
+  "athleteName": "MAEKINEN Ukko-Pekka",
+  "country": "FIN",
+  "yearOfBirth": 2002,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 44,
+  "athleteName": "PETIT Emmanuel",
+  "country": "FRA",
+  "yearOfBirth": 1972,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 45,
+  "athleteName": "KVATADZE Givi",
+  "country": "GEO",
+  "yearOfBirth": 1987,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 46,
+  "athleteName": "SIMEONE Domenico",
+  "country": "ITA",
+  "yearOfBirth": 1994,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 47,
+  "athleteName": "CICCOTTI Cristian",
+  "country": "ITA",
+  "yearOfBirth": 1997,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 48,
+  "athleteName": "BUMIN Cemre",
+  "country": "TUR",
+  "yearOfBirth": 1995,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 49,
+  "athleteName": "JUERISSON Peeter",
+  "country": "EST",
+  "yearOfBirth": 2002,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 50,
+  "athleteName": "ATTARD Marlon",
+  "country": "MLT",
+  "yearOfBirth": 1999,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 51,
+  "athleteName": "POUMAILLOU Edouard",
+  "country": "FRA",
+  "yearOfBirth": 1984,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 52,
+  "athleteName": "SODI Niccolo",
+  "country": "ITA",
+  "yearOfBirth": 1998,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 53,
+  "athleteName": "HASANOV Javid",
+  "country": "AZE",
+  "yearOfBirth": 2001,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 54,
+  "athleteName": "ENGLEZOUDIS Petros",
+  "country": "CYP",
+  "yearOfBirth": 2001,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 55,
+  "athleteName": "SCHREIER Tilo",
+  "country": "GER",
+  "yearOfBirth": 1995,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 56,
+  "athleteName": "SLAVICEK Milos",
+  "country": "CZE",
+  "yearOfBirth": 1993,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 57,
+  "athleteName": "TAZZA Giancarlo",
+  "country": "ITA",
+  "yearOfBirth": 1988,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 58,
+  "athleteName": "SVENSSON Marcus",
+  "country": "SWE",
+  "yearOfBirth": 1990,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 59,
+  "athleteName": "VARNAVIDES Kleanthis",
+  "country": "CYP",
+  "yearOfBirth": 2002,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 60,
+  "athleteName": "KAYA Muhammet Seyhun",
+  "country": "TUR",
+  "yearOfBirth": 2004,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 61,
+  "athleteName": "NIKOLAIDIS Stefanos",
+  "country": "CYP",
+  "yearOfBirth": 1996,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 62,
+  "athleteName": "BROOKER-SMITH Mitchell",
+  "country": "GBR",
+  "yearOfBirth": 2003,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 63,
+  "athleteName": "VAITEKUNAS Tomas",
+  "country": "LTU",
+  "yearOfBirth": 2003,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 64,
+  "athleteName": "KONSTANTINOU Dimitris",
+  "country": "CYP",
+  "yearOfBirth": 1988,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 65,
+  "athleteName": "ZAIMOGLU Salahi",
+  "country": "TUR",
+  "yearOfBirth": 1993,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 66,
+  "athleteName": "MADENCIOGLU Kemal",
+  "country": "TUR",
+  "yearOfBirth": 1998,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 67,
+  "athleteName": "SVAVARSSON Hakon",
+  "country": "ISL",
+  "yearOfBirth": 1978,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 68,
+  "athleteName": "PROKOP Radek",
+  "country": "CZE",
+  "yearOfBirth": 1999,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 69,
+  "athleteName": "LEHTIMAEKI Oskari Aatos Juhani",
+  "country": "FIN",
+  "yearOfBirth": 2001,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 70,
+  "athleteName": "FARRUGIA Clive",
+  "country": "MLT",
+  "yearOfBirth": 1991,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 71,
+  "athleteName": "VELLESTE Reino",
+  "country": "EST",
+  "yearOfBirth": 1996,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 72,
+  "athleteName": "VASILIOU Nicolas",
+  "country": "CYP",
+  "yearOfBirth": 1997,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 73,
+  "athleteName": "RACINSKAS Ronaldas",
+  "country": "LTU",
+  "yearOfBirth": 1968,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 74,
+  "athleteName": "VOBR Bohumil",
+  "country": "CZE",
+  "yearOfBirth": 2002,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 75,
+  "athleteName": "MUSTAFAYEV Ali",
+  "country": "AZE",
+  "yearOfBirth": 1995,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 76,
+  "athleteName": "GOGOLADZE Roman",
+  "country": "GEO",
+  "yearOfBirth": 1985,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 77,
+  "athleteName": "NEZHDANOV Marat",
+  "country": "AIN",
+  "yearOfBirth": 2004,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 78,
+  "athleteName": "KRAUSE Tim Maurice",
+  "country": "GER",
+  "yearOfBirth": 2003,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 79,
+  "athleteName": "STARTSEV Yaroslav",
+  "country": "GEO",
+  "yearOfBirth": 1988,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 80,
+  "athleteName": "GURBANOV Fuad",
+  "country": "AZE",
+  "yearOfBirth": 1994,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 81,
+  "athleteName": "LOIK Ivan",
+  "country": "UKR",
+  "yearOfBirth": 1986,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 82,
+  "athleteName": "VAN DER GREEF Cornelis Huig Jan",
+  "country": "NED",
+  "yearOfBirth": 1983,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 83,
+  "athleteName": "LEIFSSON Jakob Thor",
+  "country": "ISL",
+  "yearOfBirth": 1978,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 84,
+  "athleteName": "JOENSEN Marius Fridalvur",
+  "country": "FRO",
+  "yearOfBirth": 1976,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 85,
+  "athleteName": "MITAS Efthimios",
+  "country": "GRE",
+  "yearOfBirth": 1985,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 86,
+  "athleteName": "KAPANADZE Levan",
+  "country": "GEO",
+  "yearOfBirth": 2003,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 87,
+  "athleteName": "KIRILOV Iliya",
+  "country": "BUL",
+  "yearOfBirth": 1968,
+  "discipline": "Skeet",
+  "category": "MEN"
+ },
+ {
+  "position": 1,
+  "athleteName": "KUZNETSOVA Arina",
+  "country": "AIN",
+  "yearOfBirth": 2001,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 2,
+  "athleteName": "KATZOURAKI Emmanouela",
+  "country": "GRE",
+  "yearOfBirth": 2001,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 3,
+  "athleteName": "LARSSON Victoria",
+  "country": "SWE",
+  "yearOfBirth": 1995,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 4,
+  "athleteName": "NIKOLAOU Konstantia",
+  "country": "CYP",
+  "yearOfBirth": 1984,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 5,
+  "athleteName": "HOCKOVA Vanesa",
+  "country": "SVK",
+  "yearOfBirth": 2000,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 6,
+  "athleteName": "ANASTASSIOU Lucie",
+  "country": "FRA",
+  "yearOfBirth": 1993,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 7,
+  "athleteName": "HEINONEN Marjut",
+  "country": "FIN",
+  "yearOfBirth": 1976,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 8,
+  "athleteName": "SUMOVA Barbora",
+  "country": "CZE",
+  "yearOfBirth": 1995,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 9,
+  "athleteName": "STIBRAVA Monika",
+  "country": "SVK",
+  "yearOfBirth": 1988,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 10,
+  "athleteName": "OZYAMAN OZENIR Cigdem",
+  "country": "TUR",
+  "yearOfBirth": 1985,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 11,
+  "athleteName": "HRBEKOVA Danka",
+  "country": "SVK",
+  "yearOfBirth": 1984,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 12,
+  "athleteName": "RUSSELL Madeleine Zarina",
+  "country": "GBR",
+  "yearOfBirth": 2004,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 13,
+  "athleteName": "DI MARZIANTONIO Chiara",
+  "country": "ITA",
+  "yearOfBirth": 1995,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 14,
+  "athleteName": "TURULO Daria",
+  "country": "AIN",
+  "yearOfBirth": 2003,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 15,
+  "athleteName": "SCOCCHETTI Simona",
+  "country": "ITA",
+  "yearOfBirth": 1985,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 16,
+  "athleteName": "ELEFTHERIOU Anastasia",
+  "country": "CYP",
+  "yearOfBirth": 2001,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 17,
+  "athleteName": "UMHOEFER Valentina",
+  "country": "GER",
+  "yearOfBirth": 1998,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 18,
+  "athleteName": "BONGINI Sara",
+  "country": "ITA",
+  "yearOfBirth": 2002,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 19,
+  "athleteName": "BOIARSHINOVA Elizaveta",
+  "country": "GEO",
+  "yearOfBirth": 2003,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 20,
+  "athleteName": "BODLEY-SCOTT Phoebe",
+  "country": "GBR",
+  "yearOfBirth": 2005,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 21,
+  "athleteName": "ANDREOU Panagiota",
+  "country": "CYP",
+  "yearOfBirth": 1995,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 22,
+  "athleteName": "BACOSI Diana",
+  "country": "ITA",
+  "yearOfBirth": 1983,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 23,
+  "athleteName": "KOPCANOVA Lucia",
+  "country": "SVK",
+  "yearOfBirth": 1996,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 24,
+  "athleteName": "SINDELAROVA Anna",
+  "country": "CZE",
+  "yearOfBirth": 1998,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 25,
+  "athleteName": "ADAMKOVA Hana",
+  "country": "CZE",
+  "yearOfBirth": 1997,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 26,
+  "athleteName": "HOCKOVA Miroslava",
+  "country": "SVK",
+  "yearOfBirth": 2003,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 27,
+  "athleteName": "MARUZZO Martina",
+  "country": "ITA",
+  "yearOfBirth": 1993,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 28,
+  "athleteName": "ZAITSEVA Varvara",
+  "country": "AIN",
+  "yearOfBirth": 2005,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 29,
+  "athleteName": "HAYMAN-JOYCE Alexandra Anne",
+  "country": "IRL",
+  "yearOfBirth": 1982,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 30,
+  "athleteName": "NAUMENKO Viktoriia",
+  "country": "UKR",
+  "yearOfBirth": 1986,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 31,
+  "athleteName": "BARTOLOMEI Martina",
+  "country": "ITA",
+  "yearOfBirth": 1990,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 32,
+  "athleteName": "SHARAPOVA Arina",
+  "country": "AIN",
+  "yearOfBirth": 2003,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 33,
+  "athleteName": "SHULIAK Kseniia",
+  "country": "AIN",
+  "yearOfBirth": 2006,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 34,
+  "athleteName": "MALOVICHKO Iryna",
+  "country": "UKR",
+  "yearOfBirth": 1993,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 35,
+  "athleteName": "BUTTERER Katrin",
+  "country": "GER",
+  "yearOfBirth": 1995,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 36,
+  "athleteName": "AREKEEVA Nadezhda",
+  "country": "AIN",
+  "yearOfBirth": 2002,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 37,
+  "athleteName": "WLODARCZYK Wiktoria Anna",
+  "country": "POL",
+  "yearOfBirth": 2004,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 38,
+  "athleteName": "HIBBS Emily Jane",
+  "country": "GBR",
+  "yearOfBirth": 1998,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 39,
+  "athleteName": "RUTTER Amber Jo",
+  "country": "GBR",
+  "yearOfBirth": 1997,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 40,
+  "athleteName": "LONGHI Giada",
+  "country": "ITA",
+  "yearOfBirth": 2001,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 41,
+  "athleteName": "PAOLACCI Damiana",
+  "country": "ITA",
+  "yearOfBirth": 2002,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 42,
+  "athleteName": "SUPEKOVA Adela",
+  "country": "SVK",
+  "yearOfBirth": 2002,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 43,
+  "athleteName": "CAN Sena",
+  "country": "TUR",
+  "yearOfBirth": 2001,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 44,
+  "athleteName": "WISSMER Nele",
+  "country": "GER",
+  "yearOfBirth": 1996,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 45,
+  "athleteName": "VALLIONIEMI Nea Josefine",
+  "country": "FIN",
+  "yearOfBirth": 2003,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 46,
+  "athleteName": "VAN DER VEEN Esmee",
+  "country": "NED",
+  "yearOfBirth": 1999,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 47,
+  "athleteName": "BATTAULT Noemie",
+  "country": "FRA",
+  "yearOfBirth": 1997,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 48,
+  "athleteName": "NEMBER Arianna",
+  "country": "ITA",
+  "yearOfBirth": 2005,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 49,
+  "athleteName": "MEFTAKHETDINOVA Rigina",
+  "country": "AZE",
+  "yearOfBirth": 1990,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 50,
+  "athleteName": "WASSING Isabel",
+  "country": "GER",
+  "yearOfBirth": 2002,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ },
+ {
+  "position": 51,
+  "athleteName": "JAFAROVA Nurlana",
+  "country": "AZE",
+  "yearOfBirth": 1982,
+  "discipline": "Skeet",
+  "category": "WOMEN"
+ }
+]
