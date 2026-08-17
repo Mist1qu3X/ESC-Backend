@@ -731,6 +731,7 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::doc.doc'> &
       Schema.Attribute.Private;
     pinned: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    previousVersions: Schema.Attribute.Component<'document.attachment', true>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
     theme: Schema.Attribute.Enumeration<
@@ -835,6 +836,8 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     docsChecked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     documents: Schema.Attribute.Component<'document.attachment', true>;
     endDate: Schema.Attribute.Date & Schema.Attribute.Required;
+    hasResultBook: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    hasResults: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     image: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::event.event'> &
@@ -1298,12 +1301,13 @@ export interface ApiRankingDetailRankingDetail
       'api::ranking-detail.ranking-detail'
     > &
       Schema.Attribute.Private;
-    points: Schema.Attribute.String & Schema.Attribute.Required;
+    points: Schema.Attribute.String;
     position: Schema.Attribute.Integer & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    yearOfBirth: Schema.Attribute.Integer;
   };
 }
 
@@ -1336,7 +1340,7 @@ export interface ApiRecordRecord extends Struct.CollectionTypeSchema {
     location: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     record: Schema.Attribute.String;
-    type: Schema.Attribute.Enumeration<['WR', 'ER', 'OR']>;
+    type: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1369,14 +1373,17 @@ export interface ApiResultDetailResultDetail
     federationCode: Schema.Attribute.String & Schema.Attribute.Required;
     flag: Schema.Attribute.Media<'images'>;
     inner10s: Schema.Attribute.String;
+    isTeam: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::result-detail.result-detail'
     > &
       Schema.Attribute.Private;
+    pdfUrl: Schema.Attribute.String;
     position: Schema.Attribute.Integer & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    shotDetail: Schema.Attribute.JSON;
     shots: Schema.Attribute.JSON;
     subDiscipline: Schema.Attribute.String;
     total: Schema.Attribute.String & Schema.Attribute.Required;
