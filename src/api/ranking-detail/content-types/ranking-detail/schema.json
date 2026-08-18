@@ -27,15 +27,6 @@
     "yearOfBirth": {
       "type": "integer"
     },
-    "points": {
-      "type": "string"
-    },
-    "events": {
-      "type": "string"
-    },
-    "best": {
-      "type": "string"
-    },
     "category": {
       "type": "enumeration",
       "enum": ["ALL", "MEN", "WOMEN"],
