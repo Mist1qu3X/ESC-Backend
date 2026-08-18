@@ -56,9 +56,6 @@
     "shotDetail": {
       "type": "json"
     },
-    "pdfUrl": {
-      "type": "string"
-    },
     "isTeam": {
       "type": "boolean",
       "default": false

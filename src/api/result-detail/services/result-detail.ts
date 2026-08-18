@@ -133,23 +133,6 @@ export default factories.createCoreService('api::result-detail.result-detail', (
       matched++;
       const eventSlug = ev.slug;
 
-      // Официальные PDF-ранклисты по стадиям: событие(runningId/eventCode) → {стадия → cloudStorageKey}.
-      // Приоритет статусу "Approved". Ссылка на PDF: `${SIUS}/api/v1/doc/${key}` (отдаёт application/pdf).
-      const ranklist = await sget(`/api/v1/doc/competitions/${enc(cid)}/ranklist`);
-      const pdfByEvent: Record<string, Record<string, string>> = {};
-      if (Array.isArray(ranklist)) {
-        for (const rev of ranklist) {
-          const m: Record<string, string> = {};
-          for (const se of rev.subEvents || []) {
-            const nm = (se.name || '').toLowerCase().trim();
-            if (!nm || !se.cloudStorageKey) continue;
-            if (!(nm in m) || /approved/i.test(se.status || '')) m[nm] = se.cloudStorageKey;
-          }
-          if (rev.runningId) pdfByEvent[rev.runningId] = m;
-          if (rev.eventCode) pdfByEvent[rev.eventCode] = m;
-        }
-      }
-
       const evs = (await sget(`/api/v1/pub/competitions/events?CompetitionId=${enc(cid)}`)) || [];
       for (const e of evs) {
         const eid = e.RunningId;
@@ -197,9 +180,6 @@ export default factories.createCoreService('api::result-detail.result-detail', (
         const allGroups = se.ShooterGroups?.length ? se.ShooterGroups : [''];
         const mainGroups = allGroups.filter((gr: string) => !/guest|g[aä]ste|hors/i.test(gr));
         const useGroups = mainGroups.length ? mainGroups : allGroups;
-        // PDF-ранклист этой стадии (по имени под-события).
-        const evPdf = pdfByEvent[eid] || pdfByEvent[e.CompetitionEventType?.EventCode || ''] || {};
-        const pdfUrl = evPdf[seName.toLowerCase()] ? `${SIUS}/api/v1/doc/${evPdf[seName.toLowerCase()]}` : '';
         // Виды зачёта:
         //  • Выделенное командное событие ("… Team" в имени, Team=true) → только команды (как 300m Team).
         //  • Прочие → индивидуальный зачёт + командный (TeamOfIndividuals) — командный пробуем ВСЕГДА,
@@ -283,7 +263,6 @@ export default factories.createCoreService('api::result-detail.result-detail', (
               // Индивидуал: в shots — суммы серий, в shotDetail — по-выстрельно (тянется по клику).
               shots: isTeam ? members || [] : shotsByName[r.DisplayName] || [],
               shotDetail: isTeam ? [] : shotDetailById[athRid] || [],
-              pdfUrl,
             };
             try {
               const existing = await strapi.db
