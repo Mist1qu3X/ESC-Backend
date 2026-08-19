@@ -32,7 +32,7 @@
     },
     "region": {
       "type": "enumeration",
-      "enum": ["W.EUROPE", "SCANDINAVIA", "C.EUROPE", "E.EUROPE", "S.EUROPE", "CAUCASUS"],
+      "enum": ["W.EUROPE", "SCANDINAVIA", "C.EUROPE", "E.EUROPE", "S.EUROPE"],
       "required": true
     },
     "president": {
