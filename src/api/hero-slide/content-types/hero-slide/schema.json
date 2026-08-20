@@ -35,6 +35,9 @@
       "multiple": false,
       "allowedTypes": ["images"]
     },
+    "link": {
+      "type": "string"
+    },
     "order": {
       "type": "integer",
       "default": 0

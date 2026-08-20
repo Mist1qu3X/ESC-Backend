@@ -996,6 +996,7 @@ export interface ApiHeroSlideHeroSlide extends Struct.CollectionTypeSchema {
     dateText: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
     kicker: Schema.Attribute.String;
+    link: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
