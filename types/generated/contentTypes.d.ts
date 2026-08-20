@@ -902,14 +902,7 @@ export interface ApiFederationFederation extends Struct.CollectionTypeSchema {
     president: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     region: Schema.Attribute.Enumeration<
-      [
-        'W.EUROPE',
-        'SCANDINAVIA',
-        'C.EUROPE',
-        'E.EUROPE',
-        'S.EUROPE',
-        'CAUCASUS',
-      ]
+      ['W.EUROPE', 'SCANDINAVIA', 'C.EUROPE', 'E.EUROPE', 'S.EUROPE']
     > &
       Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -982,6 +975,45 @@ export interface ApiHeritageMilestoneHeritageMilestone
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     year: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ApiHeroSlideHeroSlide extends Struct.CollectionTypeSchema {
+  collectionName: 'hero_slides';
+  info: {
+    description: '\u0421\u043B\u0430\u0439\u0434\u044B \u0433\u043B\u0430\u0432\u043D\u043E\u0433\u043E \u0431\u0430\u043D\u043D\u0435\u0440\u0430: \u0441\u043E\u0431\u044B\u0442\u0438\u0435, \u043D\u043E\u0432\u043E\u0441\u0442\u044C \u0438\u043B\u0438 \u0432\u0438\u0434\u0435\u043E';
+    displayName: 'Hero Slide';
+    pluralName: 'hero-slides';
+    singularName: 'hero-slide';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    buttonLabel: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    dateText: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    kicker: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::hero-slide.hero-slide'
+    > &
+      Schema.Attribute.Private;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.Text & Schema.Attribute.Required;
+    type: Schema.Attribute.Enumeration<['event', 'news', 'video']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'event'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1284,7 +1316,6 @@ export interface ApiRankingDetailRankingDetail
   };
   attributes: {
     athleteName: Schema.Attribute.String & Schema.Attribute.Required;
-    best: Schema.Attribute.String;
     category: Schema.Attribute.Enumeration<['ALL', 'MEN', 'WOMEN']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'ALL'>;
@@ -1293,7 +1324,6 @@ export interface ApiRankingDetailRankingDetail
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     discipline: Schema.Attribute.String;
-    events: Schema.Attribute.String;
     flag: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -1301,7 +1331,6 @@ export interface ApiRankingDetailRankingDetail
       'api::ranking-detail.ranking-detail'
     > &
       Schema.Attribute.Private;
-    points: Schema.Attribute.String;
     position: Schema.Attribute.Integer & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -1323,7 +1352,7 @@ export interface ApiRecordRecord extends Struct.CollectionTypeSchema {
   };
   attributes: {
     athleteName: Schema.Attribute.String;
-    category: Schema.Attribute.String;
+    category: Schema.Attribute.Enumeration<['ALL', 'MEN', 'WOMEN', 'MIXED']>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1380,7 +1409,6 @@ export interface ApiResultDetailResultDetail
       'api::result-detail.result-detail'
     > &
       Schema.Attribute.Private;
-    pdfUrl: Schema.Attribute.String;
     position: Schema.Attribute.Integer & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     shotDetail: Schema.Attribute.JSON;
@@ -1982,6 +2010,7 @@ declare module '@strapi/strapi' {
       'api::federation.federation': ApiFederationFederation;
       'api::governance.governance': ApiGovernanceGovernance;
       'api::heritage-milestone.heritage-milestone': ApiHeritageMilestoneHeritageMilestone;
+      'api::hero-slide.hero-slide': ApiHeroSlideHeroSlide;
       'api::leader.leader': ApiLeaderLeader;
       'api::live-stream.live-stream': ApiLiveStreamLiveStream;
       'api::member-stat.member-stat': ApiMemberStatMemberStat;
