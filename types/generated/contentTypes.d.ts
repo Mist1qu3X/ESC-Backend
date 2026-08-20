@@ -990,14 +990,12 @@ export interface ApiHeroSlideHeroSlide extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    buttonLabel: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     dateText: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
     kicker: Schema.Attribute.String;
-    link: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1007,7 +1005,7 @@ export interface ApiHeroSlideHeroSlide extends Struct.CollectionTypeSchema {
     order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
     subtitle: Schema.Attribute.String;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.Text;
     type: Schema.Attribute.Enumeration<['event', 'news', 'video']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'event'>;
