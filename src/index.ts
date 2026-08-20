@@ -9,6 +9,7 @@ const PUBLIC_READ_APIS = [
   'api::core-value.core-value',
   'api::committee.committee',
   'api::record.record',
+  'api::hero-slide.hero-slide',
 ];
 
 // Content-types, чей create должен быть открыт для роли Public (публичные формы).
