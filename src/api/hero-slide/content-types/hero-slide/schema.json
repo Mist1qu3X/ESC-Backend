@@ -22,8 +22,7 @@
       "type": "string"
     },
     "title": {
-      "type": "text",
-      "required": true
+      "type": "text"
     },
     "subtitle": {
       "type": "string"
@@ -35,12 +34,6 @@
       "type": "media",
       "multiple": false,
       "allowedTypes": ["images"]
-    },
-    "buttonLabel": {
-      "type": "string"
-    },
-    "link": {
-      "type": "string"
     },
     "order": {
       "type": "integer",
