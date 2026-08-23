@@ -94,7 +94,7 @@ function matchEvent(events: any[], compName: string, compDate: string): any | nu
 }
 
 export default factories.createCoreService('api::result-detail.result-detail', ({ strapi }) => ({
-  async syncFromSius(opts: { nameFilter?: string; maxCompetitions?: number; purge?: boolean } = {}) {
+  async syncFromSius(opts: { nameFilter?: string; maxCompetitions?: number; purge?: boolean; activeOnly?: boolean } = {}) {
     const nameFilter = opts.nameFilter ?? '';
     const maxComps = opts.maxCompetitions ?? 200;
 
@@ -107,9 +107,25 @@ export default factories.createCoreService('api::result-detail.result-detail', (
     const comps =
       (await sget(`/api/v1/pub/competitions?IsPublic=true&Page=1&PageSize=${maxComps}&Name=${enc(nameFilter)}`))?.data || [];
 
+    // Режим «только активные» (частый live-поллинг): берём соревнования, которые идут сейчас
+    // (началось и ещё не закончилось) + сутки после конца, чтобы поймать финальные результаты
+    // до ночного синка. Без purge — только upsert, поэтому страница не пустеет во время синка.
+    let compsToProcess = comps;
+    if (opts.activeOnly) {
+      const now = Date.now();
+      const DAY = 86400000;
+      compsToProcess = comps.filter((c: any) => {
+        const s = c.StartDate ? new Date(c.StartDate).getTime() : NaN;
+        const e = c.EndDate ? new Date(c.EndDate).getTime() : s;
+        return !isNaN(s) && s <= now && (isNaN(e) ? s : e) + DAY >= now;
+      });
+      strapi.log.info(`[sius] live sync: ${compsToProcess.length} active competition(s) of ${comps.length}`);
+    }
+
     // Полная переиндексация — ТОЛЬКО если SIUS реально ответил (иначе при недоступности
     // сотрём всё и не зальём). Удаляем старые sius-строки перед чистым импортом.
-    if (opts.purge && comps.length > 0) {
+    // При activeOnly purge НЕ делаем (это лёгкий upsert идущих событий).
+    if (opts.purge && !opts.activeOnly && comps.length > 0) {
       const del = await strapi.db
         .query('api::result-detail.result-detail')
         .deleteMany({ where: { externalId: { $startsWith: 'sius:' } } });
@@ -123,7 +139,7 @@ export default factories.createCoreService('api::result-detail.result-detail', (
     let updated = 0;
     const unmatched: string[] = [];
 
-    for (const c of comps) {
+    for (const c of compsToProcess) {
       const cid = c.RunningId;
       const ev = matchEvent(events, c.Name || '', c.StartDate || '');
       if (!ev?.slug) {
