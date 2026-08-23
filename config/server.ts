@@ -33,6 +33,20 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Server =>
         },
         options: { rule: '0 4 * * *' },
       },
+      // Каждые 30 минут — лёгкий live-синк идущих сейчас событий (activeOnly, без purge:
+      // только upsert, страница не пустеет). Даёт свежие результаты турнира в течение дня,
+      // не дожидаясь ночного полного зеркала.
+      'sius-live-sync': {
+        task: async ({ strapi }: { strapi: Core.Strapi }) => {
+          try {
+            const r = await strapi.service('api::result-detail.result-detail').syncFromSius({ activeOnly: true });
+            strapi.log.info(`[cron] SIUS live sync: ${JSON.stringify({ matched: r?.matched, rows: r?.rows, created: r?.created, updated: r?.updated })}`);
+          } catch (e) {
+            strapi.log.error(`[cron] SIUS live sync failed: ${(e as Error).message}`);
+          }
+        },
+        options: { rule: '*/30 * * * *' },
+      },
     },
   },
 });
