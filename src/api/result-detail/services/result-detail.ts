@@ -11,6 +11,10 @@ import { factories } from '@strapi/strapi';
 const SIUS = 'https://shootingsportscloud.com:8594';
 const enc = encodeURIComponent;
 
+// Гард от параллельных прогонов синка (один Node-процесс Strapi). Не даёт ночному
+// purge+reimport и получасовому live-синку (или двум live подряд) пересекаться и плодить дубли.
+let syncInProgress = false;
+
 async function sget(path: string): Promise<any> {
   const c = new AbortController();
   const t = setTimeout(() => c.abort(), 15000);
@@ -95,6 +99,12 @@ function matchEvent(events: any[], compName: string, compDate: string): any | nu
 
 export default factories.createCoreService('api::result-detail.result-detail', ({ strapi }) => ({
   async syncFromSius(opts: { nameFilter?: string; maxCompetitions?: number; purge?: boolean; activeOnly?: boolean } = {}) {
+    if (syncInProgress) {
+      strapi.log.warn('[sius] sync already in progress — skipping this run');
+      return { skipped: true };
+    }
+    syncInProgress = true;
+    try {
     const nameFilter = opts.nameFilter ?? '';
     const maxComps = opts.maxCompetitions ?? 200;
 
@@ -316,5 +326,8 @@ export default factories.createCoreService('api::result-detail.result-detail', (
     strapi.log.info(`[sius] results sync: ${JSON.stringify(summary)}`);
     if (unmatched.length) strapi.log.info(`[sius] unmatched competitions: ${unmatched.slice(0, 20).join(' | ')}`);
     return { ...summary, unmatchedList: unmatched };
+    } finally {
+      syncInProgress = false;
+    }
   },
 }));

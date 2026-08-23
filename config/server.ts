@@ -33,19 +33,20 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Server =>
         },
         options: { rule: '0 4 * * *' },
       },
-      // Каждые 30 минут — лёгкий live-синк идущих сейчас событий (activeOnly, без purge:
-      // только upsert, страница не пустеет). Даёт свежие результаты турнира в течение дня,
-      // не дожидаясь ночного полного зеркала.
+      // Каждые 30 минут (в :15 и :45) — лёгкий live-синк идущих сейчас событий (activeOnly,
+      // без purge: только upsert, страница не пустеет). Смещён с :00, чтобы не пересекаться с
+      // ночным полным зеркалом в 04:00 (purge+reimport). Плюс guard syncInProgress не даёт
+      // прогонам накладываться друг на друга.
       'sius-live-sync': {
         task: async ({ strapi }: { strapi: Core.Strapi }) => {
           try {
             const r = await strapi.service('api::result-detail.result-detail').syncFromSius({ activeOnly: true });
-            strapi.log.info(`[cron] SIUS live sync: ${JSON.stringify({ matched: r?.matched, rows: r?.rows, created: r?.created, updated: r?.updated })}`);
+            strapi.log.info(`[cron] SIUS live sync: ${JSON.stringify({ matched: r?.matched, rows: r?.rows, created: r?.created, updated: r?.updated, skipped: r?.skipped })}`);
           } catch (e) {
             strapi.log.error(`[cron] SIUS live sync failed: ${(e as Error).message}`);
           }
         },
-        options: { rule: '*/30 * * * *' },
+        options: { rule: '15,45 * * * *' },
       },
     },
   },
