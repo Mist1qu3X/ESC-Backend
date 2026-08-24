@@ -10,6 +10,7 @@ const PUBLIC_READ_APIS = [
   'api::committee.committee',
   'api::record.record',
   'api::hero-slide.hero-slide',
+  'api::contact-info.contact-info',
 ];
 
 // Content-types, чей create должен быть открыт для роли Public (публичные формы).
@@ -43,6 +44,21 @@ async function seedCommittees(strapi: Core.Strapi) {
     strapi.log.info(`[bootstrap] Seeded ${DEFAULT_COMMITTEES.length} default committees`);
   } catch (e) {
     strapi.log.error(`[bootstrap] seedCommittees failed: ${(e as Error).message}`);
+  }
+}
+
+// Единый глобальный контакт (технический email на страницах событий).
+// Single-type: создаём запись с дефолтом, если её ещё нет, — дальше меняется в админке.
+async function seedContactInfo(strapi: Core.Strapi) {
+  try {
+    const existing = await strapi.db.query('api::contact-info.contact-info').findOne({});
+    if (existing) return;
+    await strapi.documents('api::contact-info.contact-info').create({
+      data: { technicalEmail: 'technical@esc-shooting.eu' },
+    });
+    strapi.log.info('[bootstrap] Seeded default contact-info');
+  } catch (e) {
+    strapi.log.error(`[bootstrap] seedContactInfo failed: ${(e as Error).message}`);
   }
 }
 
@@ -139,5 +155,6 @@ export default {
     await enablePublicCreate(strapi);
     await backfillAutoSync(strapi);
     await seedCommittees(strapi);
+    await seedContactInfo(strapi);
   },
 };

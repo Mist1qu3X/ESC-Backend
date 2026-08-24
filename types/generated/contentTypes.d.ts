@@ -628,6 +628,36 @@ export interface ApiCommitteeCommittee extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiContactInfoContactInfo extends Struct.SingleTypeSchema {
+  collectionName: 'contact_info';
+  info: {
+    description: 'Global contact settings (e.g. technical email shown on event pages)';
+    displayName: 'Contact Info';
+    pluralName: 'contact-infos';
+    singularName: 'contact-info';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-info.contact-info'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    technicalEmail: Schema.Attribute.Email &
+      Schema.Attribute.DefaultTo<'technical@esc-shooting.eu'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiContactMessageContactMessage
   extends Struct.CollectionTypeSchema {
   collectionName: 'contact_messages';
@@ -851,6 +881,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
       Schema.Attribute.DefaultTo<false>;
     schedule: Schema.Attribute.Component<'event.schedule-row', true>;
     seo: Schema.Attribute.Component<'shared.seo', false>;
+    showStreams: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
     statusEvent: Schema.Attribute.Enumeration<['UPCOMING', 'FINISHED']> &
       Schema.Attribute.Required &
@@ -2001,6 +2032,7 @@ declare module '@strapi/strapi' {
       'api::championship.championship': ApiChampionshipChampionship;
       'api::committee-member.committee-member': ApiCommitteeMemberCommitteeMember;
       'api::committee.committee': ApiCommitteeCommittee;
+      'api::contact-info.contact-info': ApiContactInfoContactInfo;
       'api::contact-message.contact-message': ApiContactMessageContactMessage;
       'api::core-value.core-value': ApiCoreValueCoreValue;
       'api::doc.doc': ApiDocDoc;
