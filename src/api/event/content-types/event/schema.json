@@ -75,6 +75,10 @@
     "description": {
       "type": "text"
     },
+    "contactEmail": {
+      "type": "email",
+      "default": "technical@esc-shooting.eu"
+    },
     "athletes": {
       "type": "string",
       "default": "480+"

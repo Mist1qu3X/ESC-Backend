@@ -857,6 +857,8 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
   attributes: {
     athletes: Schema.Attribute.String & Schema.Attribute.DefaultTo<'480+'>;
     category: Schema.Attribute.String & Schema.Attribute.DefaultTo<'SENIOR'>;
+    contactEmail: Schema.Attribute.Email &
+      Schema.Attribute.DefaultTo<'technical@esc-shooting.eu'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
