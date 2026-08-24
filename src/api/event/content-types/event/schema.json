@@ -49,6 +49,10 @@
       "type": "boolean",
       "default": false
     },
+    "showStreams": {
+      "type": "boolean",
+      "default": true
+    },
     "category": {
       "type": "string",
       "default": "SENIOR"
