@@ -81,13 +81,17 @@
     },
     "attachments": {
       "type": "component",
-      "repeatable": true,
-      "component": "document.attachment"
+      "component": "document.attachment",
+      "repeatable": true
     },
     "previousVersions": {
       "type": "component",
-      "repeatable": true,
-      "component": "document.attachment"
+      "component": "document.attachment",
+      "repeatable": true
+    },
+    "ShowOnHome": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
