@@ -59,4 +59,35 @@ export default factories.createCoreController('api::federation.federation', ({ s
 
     return { ok: true, flag: uploaded[0] };
   },
+
+  /**
+   * Массовая установка Secretary General (только по admin/full-access токену).
+   * Body: { items: [{ documentId, secretaryGeneral }] }. Кастомный роут без
+   * is-own-federation, пишем напрямую в published. Для импорта/тестовых данных.
+   */
+  async bulkSetSecretaries(ctx) {
+    const body = (ctx.request?.body as any) || {};
+    const items = Array.isArray(body.items) ? body.items : [];
+    let updated = 0;
+    const errors: string[] = [];
+    for (const it of items) {
+      const documentId = it?.documentId;
+      const secretaryGeneral = it?.secretaryGeneral;
+      if (!documentId || typeof secretaryGeneral !== 'string') {
+        errors.push(`bad item: ${JSON.stringify(it).slice(0, 60)}`);
+        continue;
+      }
+      try {
+        await strapi.documents('api::federation.federation').update({
+          documentId,
+          data: { secretaryGeneral },
+          status: 'published',
+        });
+        updated++;
+      } catch (e) {
+        errors.push(`${documentId}: ${(e as Error).message}`);
+      }
+    }
+    ctx.body = { updated, total: items.length, errors: errors.slice(0, 20) };
+  },
 }));

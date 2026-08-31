@@ -11,7 +11,7 @@
  */
 
 // Поля, которые администратору федерации разрешено менять с фронта
-const EDITABLE_FIELDS = ['name', 'president', 'email', 'phone', 'website', 'flag'];
+const EDITABLE_FIELDS = ['name', 'president', 'secretaryGeneral', 'email', 'phone', 'website', 'flag'];
 
 export default async (policyContext, config, { strapi }) => {
   const user = policyContext.state.user;
