@@ -92,6 +92,10 @@
     "ShowOnHome": {
       "type": "boolean",
       "default": false
+    },
+    "homeOrder": {
+      "type": "integer",
+      "default": 0
     }
   }
 }
