@@ -18,6 +18,9 @@
     "eventName": {
       "type": "string"
     },
+    "eventSlug": {
+      "type": "string"
+    },
     "platform": {
       "type": "enumeration",
       "enum": ["youtube", "facebook"],
