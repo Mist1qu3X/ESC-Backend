@@ -38,6 +38,9 @@
     "president": {
       "type": "string"
     },
+    "secretaryGeneral": {
+      "type": "string"
+    },
     "email": {
       "type": "email"
     },
