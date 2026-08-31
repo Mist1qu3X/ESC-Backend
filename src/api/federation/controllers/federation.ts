@@ -80,7 +80,9 @@ export default factories.createCoreController('api::federation.federation', ({ s
       try {
         await strapi.documents('api::federation.federation').update({
           documentId,
-          data: { secretaryGeneral },
+          // secretaryGeneral есть в схеме, но сгенерированные типы в репо могут отставать —
+          // приведение к any, чтобы strapi build (строгий tsc) не падал.
+          data: { secretaryGeneral } as any,
           status: 'published',
         });
         updated++;
