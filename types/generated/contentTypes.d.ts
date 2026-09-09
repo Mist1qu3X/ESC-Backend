@@ -500,6 +500,39 @@ export interface ApiAboutPageAboutPage extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
+  collectionName: 'categories';
+  info: {
+    description: 'Document categories (admin-managed: add/rename/delete)';
+    displayName: 'Category';
+    pluralName: 'categories';
+    singularName: 'category';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    docs: Schema.Attribute.Relation<'oneToMany', 'api::doc.doc'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category.category'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiChampionshipChampionship
   extends Struct.CollectionTypeSchema {
   collectionName: 'championships';
@@ -628,36 +661,6 @@ export interface ApiCommitteeCommittee extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiContactInfoContactInfo extends Struct.SingleTypeSchema {
-  collectionName: 'contact_info';
-  info: {
-    description: 'Global contact settings (e.g. technical email shown on event pages)';
-    displayName: 'Contact Info';
-    pluralName: 'contact-infos';
-    singularName: 'contact-info';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::contact-info.contact-info'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    technicalEmail: Schema.Attribute.Email &
-      Schema.Attribute.DefaultTo<'technical@esc-shooting.eu'>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiContactMessageContactMessage
   extends Struct.CollectionTypeSchema {
   collectionName: 'contact_messages';
@@ -747,6 +750,7 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
   };
   attributes: {
     attachments: Schema.Attribute.Component<'document.attachment', true>;
+    category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -757,12 +761,14 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
     externalId: Schema.Attribute.String;
     file: Schema.Attribute.Media<'files'>;
     fileSize: Schema.Attribute.String & Schema.Attribute.DefaultTo<'1.0 MB'>;
+    homeOrder: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::doc.doc'> &
       Schema.Attribute.Private;
     pinned: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     previousVersions: Schema.Attribute.Component<'document.attachment', true>;
     publishedAt: Schema.Attribute.DateTime;
+    ShowOnHome: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     slug: Schema.Attribute.UID<'title'>;
     theme: Schema.Attribute.Enumeration<
       [
@@ -938,6 +944,7 @@ export interface ApiFederationFederation extends Struct.CollectionTypeSchema {
       ['W.EUROPE', 'SCANDINAVIA', 'C.EUROPE', 'E.EUROPE', 'S.EUROPE']
     > &
       Schema.Attribute.Required;
+    secretaryGeneral: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1094,10 +1101,12 @@ export interface ApiLiveStreamLiveStream extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    autoSync: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     eventName: Schema.Attribute.String;
+    eventSlug: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -2031,10 +2040,10 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-page.about-page': ApiAboutPageAboutPage;
+      'api::category.category': ApiCategoryCategory;
       'api::championship.championship': ApiChampionshipChampionship;
       'api::committee-member.committee-member': ApiCommitteeMemberCommitteeMember;
       'api::committee.committee': ApiCommitteeCommittee;
-      'api::contact-info.contact-info': ApiContactInfoContactInfo;
       'api::contact-message.contact-message': ApiContactMessageContactMessage;
       'api::core-value.core-value': ApiCoreValueCoreValue;
       'api::doc.doc': ApiDocDoc;
