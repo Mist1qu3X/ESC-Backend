@@ -6,6 +6,14 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Server =>
   app: {
     keys: env.array('APP_KEYS'),
   },
+  // Опции уходят напрямую в http.createServer. Дефолт Node — requestTimeout 5 мин:
+  // загрузка пачки фото в админку идёт ОДНИМ запросом и на большой пачке в него не
+  // укладывалась — соединение рвалось, часть файлов терялась. Поднимаем до 30 минут.
+  http: {
+    serverOptions: {
+      requestTimeout: env.int('HTTP_REQUEST_TIMEOUT', 30 * 60 * 1000),
+    },
+  },
   cron: {
     enabled: true,
     tasks: {
