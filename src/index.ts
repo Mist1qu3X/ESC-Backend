@@ -1,4 +1,5 @@
 import type { Core } from '@strapi/strapi';
+import { subscribeJpegFormats } from './utils/jpeg-formats';
 
 // Content-types, чей find/findOne должен быть открыт для роли Public.
 // Добавлять сюда новые API, к которым фронт ходит без авторизации.
@@ -140,5 +141,6 @@ export default {
     await enablePublicCreate(strapi);
     await backfillAutoSync(strapi);
     await seedCommittees(strapi);
+    subscribeJpegFormats(strapi);
   },
 };
