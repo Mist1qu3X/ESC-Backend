@@ -45,6 +45,18 @@ export async function convertPngFormatsToJpeg(strapi: Core.Strapi, file: any) {
     };
   }
 
+  // Фото ≤1920px не получает xlarge (Strapi делает форматы только меньше оригинала), и десктопный
+  // герой брал бы PNG-оригинал в ~800 КБ. Делаем xlarge-JPEG в размере оригинала.
+  const { width = 0, height = 0 } = file;
+  if (!formats.xlarge && width <= BREAKPOINTS.xlarge && height <= BREAKPOINTS.xlarge && (width > BREAKPOINTS.large || height > BREAKPOINTS.large)) {
+    const hash = `xlarge_${file.hash}`;
+    const info = await sharp(src).jpeg({ quality: 80 }).toFile(path.join(dir, `${hash}.jpg`));
+    formats.xlarge = {
+      name: `xlarge_${String(file.name).replace(/\.png$/i, '.jpg')}`, hash, ext: '.jpg', mime: 'image/jpeg', path: null,
+      width: info.width, height: info.height, size: kb(info.size), sizeInBytes: info.size, url: `/uploads/${hash}.jpg`,
+    };
+  }
+
   // Напрямую в таблицу, минуя query engine — иначе снова сработает afterUpdate.
   await strapi.db.connection.raw('update files set formats = ?::jsonb where id = ?', [JSON.stringify(formats), file.id]);
   setTimeout(() => { for (const p of old) fs.rm(p, { force: true }, () => {}); }, DELETE_OLD_AFTER_MS);
