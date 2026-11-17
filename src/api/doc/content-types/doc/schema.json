@@ -26,9 +26,14 @@
       "type": "uid",
       "targetField": "title"
     },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "docs"
+    },
     "theme": {
       "type": "enumeration",
-      "required": true,
       "enum": [
         "Official Documents",
         "Assemblies",
@@ -96,12 +101,13 @@
     "homeOrder": {
       "type": "integer",
       "default": 0
-    },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "docs"
+    }
+  },
+  "config": {
+    "attributes": {
+      "theme": {
+        "hidden": true
+      }
     }
   }
 }

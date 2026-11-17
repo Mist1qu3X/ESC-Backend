@@ -790,8 +790,7 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
         'European Youth Olympic Festival',
         'Olympic Games',
       ]
-    > &
-      Schema.Attribute.Required;
+    >;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
