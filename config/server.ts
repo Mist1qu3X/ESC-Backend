@@ -28,8 +28,9 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Server =>
         },
         options: { rule: '*/3 * * * *' },
       },
-      // Раз в сутки (04:00) — чистое зеркало результатов из SIUS: purge+reimport всех стадий.
-      // purge срабатывает только если SIUS ответил (защита от обнуления при недоступности).
+      // Раз в сутки (04:00) — полное зеркало результатов из SIUS: upsert всех стадий, затем удаление
+      // строк, которых SIUS больше не отдаёт, — только у событий, прочитанных без ошибок (при
+      // недоступности SIUS или смене его API прежние данные остаются, страница не пустеет).
       'sius-results-sync': {
         task: async ({ strapi }: { strapi: Core.Strapi }) => {
           try {
@@ -42,9 +43,8 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Server =>
         options: { rule: '0 4 * * *' },
       },
       // Каждые 30 минут (в :15 и :45) — лёгкий live-синк идущих сейчас событий (activeOnly,
-      // без purge: только upsert, страница не пустеет). Смещён с :00, чтобы не пересекаться с
-      // ночным полным зеркалом в 04:00 (purge+reimport). Плюс guard syncInProgress не даёт
-      // прогонам накладываться друг на друга.
+      // без purge: только upsert). Смещён с :00, чтобы не пересекаться с ночным полным синком
+      // в 04:00. Плюс guard syncInProgress не даёт прогонам накладываться друг на друга.
       'sius-live-sync': {
         task: async ({ strapi }: { strapi: Core.Strapi }) => {
           try {
