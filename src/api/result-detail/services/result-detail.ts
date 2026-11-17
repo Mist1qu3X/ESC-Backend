@@ -9,15 +9,16 @@
 import { factories } from '@strapi/strapi';
 
 const SIUS = 'https://shootingsportscloud.com:8594';
+const RD = 'api::result-detail.result-detail';
 const enc = encodeURIComponent;
 
-// Гард от параллельных прогонов синка (один Node-процесс Strapi). Не даёт ночному
-// purge+reimport и получасовому live-синку (или двум live подряд) пересекаться и плодить дубли.
+// Гард от параллельных прогонов синка (один Node-процесс Strapi). Не даёт ночному полному
+// синку и получасовому live-синку (или двум live подряд) пересекаться и плодить дубли.
 let syncInProgress = false;
 
-async function sget(path: string): Promise<any> {
+async function sget(path: string, timeoutMs = 15000): Promise<any> {
   const c = new AbortController();
-  const t = setTimeout(() => c.abort(), 15000);
+  const t = setTimeout(() => c.abort(), timeoutMs);
   try {
     const r = await fetch(SIUS + path, { signal: c.signal });
     return r.ok ? await r.json() : null;
@@ -64,6 +65,34 @@ const toInt = (s: any): number | null => {
   return m ? parseInt(m[0], 10) : null;
 };
 const normName = (s = ''): string => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+
+// Группы стрелков вне основного зачёта: гости, RPO (Ranking Points Only — у них «виртуальные»
+// места, совпадающие с местами основного зачёта), OOC (out of competition). Берём их, только
+// если других групп у стадии нет — иначе гость/RPO со своим местом лезет в общий ранкинг
+// (LÖFVANDER 173-6x с rank 1).
+const OFF_GROUP_RE = /guest|g[aä]ste|hors|\brpo\b|\booc\b|out.?of.?comp/i;
+
+// Стадии события из /subevents. Сейчас SIUS отдаёт по строке на каждую пару (TeamKind,
+// ShooterGroup) одной стадии — RunningId повторяется, а teamKind и shooterGroup стали
+// ОБЯЗАТЕЛЬНЫМИ параметрами /totalresults, /series и /shots (без них — HTTP 400). В августе 2026
+// была одна строка на стадию со списком ShooterGroups; после смены формата синк не импортировал
+// ничего. Собираем строки обратно: стадия → { вид зачёта → группы }. Скрытые (Hidden) стадии —
+// тренировки, перестрелки, отдельные смены квалификации — не берём.
+type Stage = { sid: string; name: string; groups: Record<string, string[]> };
+function collectStages(subs: any[]): Stage[] {
+  const byId = new Map<string, Stage>();
+  for (const s of subs) {
+    if (!s?.RunningId || s.Hidden === true || !s.TeamKind || !s.ShooterGroup) continue;
+    let st = byId.get(s.RunningId);
+    if (!st) {
+      st = { sid: s.RunningId, name: String(s.Name || '').replace(/\s+/g, ' ').trim(), groups: {} };
+      byId.set(s.RunningId, st);
+    }
+    const gs = st.groups[s.TeamKind] || (st.groups[s.TeamKind] = []);
+    if (!gs.includes(s.ShooterGroup)) gs.push(s.ShooterGroup);
+  }
+  return [...byId.values()];
+}
 
 // Только явно европейские ESC-соревнования (SIUS содержит и мировые World Cup / нац. первенства — их не берём).
 const EU_RE = /european|champions league|european cup|european games|youth league|eyof|\besc\b/i;
@@ -119,7 +148,7 @@ export default factories.createCoreService('api::result-detail.result-detail', (
 
     // Режим «только активные» (частый live-поллинг): берём соревнования, которые идут сейчас
     // (началось и ещё не закончилось) + сутки после конца, чтобы поймать финальные результаты
-    // до ночного синка. Без purge — только upsert, поэтому страница не пустеет во время синка.
+    // до ночного синка. Без purge — только upsert.
     let compsToProcess = comps;
     if (opts.activeOnly) {
       const now = Date.now();
@@ -132,16 +161,13 @@ export default factories.createCoreService('api::result-detail.result-detail', (
       strapi.log.info(`[sius] live sync: ${compsToProcess.length} active competition(s) of ${comps.length}`);
     }
 
-    // Полная переиндексация — ТОЛЬКО если SIUS реально ответил (иначе при недоступности
-    // сотрём всё и не зальём). Удаляем старые sius-строки перед чистым импортом.
-    // При activeOnly purge НЕ делаем (это лёгкий upsert идущих событий).
-    if (opts.purge && !opts.activeOnly && comps.length > 0) {
-      const del = await strapi.db
-        .query('api::result-detail.result-detail')
-        .deleteMany({ where: { externalId: { $startsWith: 'sius:' } } });
-      purged = del?.count ?? 0;
-      strapi.log.info(`[sius] purged ${purged} existing rows before re-import`);
-    }
+    // purge = зеркалирование: строки, которых SIUS больше не отдаёт, удаляем ПОСЛЕ импорта и только
+    // у событий SIUS (cid:eid), прочитанных в этом прогоне целиком, без единой ошибки запроса/записи.
+    // Раньше purge стирал все sius-строки ДО импорта, если ответил хотя бы список соревнований, —
+    // и когда SIUS сменил формат API, импорт не дал ни строки, а страница Results осталась пустой
+    // (у всех событий hasResults=false → только PDF). Теперь сбой SIUS оставляет прежние данные.
+    const seen = new Set<string>();       // externalId, записанные в этом прогоне
+    const cleanPrefixes: string[] = [];   // `sius:${cid}:${eid}:` событий, прочитанных без ошибок
 
     let matched = 0;
     let rows = 0;
@@ -169,21 +195,33 @@ export default factories.createCoreService('api::result-detail.result-detail', (
         const category = normCategory(evName);
         const subs = await sget(`/api/v1/pub/competitions/${enc(cid)}/events/${enc(eid)}/subevents`);
         if (!Array.isArray(subs)) continue;
+        // Событие прочитано целиком (все запросы к SIUS ответили, все строки записались) —
+        // только тогда purge может удалить его устаревшие строки.
+        let complete = true;
         // Пропускаем стартлисты, overview-своды и ТРЕНИРОВКИ (PreEventTraining / Unofficial Training).
         // Дуэли (2 чел, шум): скипаем только ИНДИВИДУАЛЬНЫЕ ("SF1 - Duel 01"). КОМАНДНЫЕ дуэли
         // ("SF1 - Mixed Team Duel") НЕ трогаем — там реальный командный результат (напр. Skeet Team на
         // Champions League), у него Individual пуст, а TeamOfIndividuals содержит команды.
-        const real = subs.filter((s: any) => {
-          const n = s.Name || '';
+        const real = collectStages(subs).filter((s) => {
+          const n = s.name;
           if (/start.?list|overview|training|pre.?event/i.test(n)) return false;
           if (/\bduel\b/i.test(n) && !/team/i.test(n)) return false;
           return true;
         });
+        // Виды зачёта берём из самих стадий (SIUS перечисляет, какие есть). Выделенное командное
+        // событие ("… Team" в имени, Team=true) → только команды (как 300m Team), его Individual —
+        // это те же стрелки внутри команд. Командный зачёт обычного события (TeamOfIndividuals)
+        // берём независимо от флага e.Team: SIUS ставит Team=false даже там, где нация-команда реально
+        // есть в официальном result-book — напр. «25m Pistol Women» даёт «25m Pistol Women Team» FRA 1748.
+        // Суффикс " Team" не добавляем, если "team" уже есть в имени события ("… DUET MIXED TEAM …").
+        const nameHasTeam = /\bteam\b/i.test(evName);
+        const teamOnly = nameHasTeam && e.Team === true;
+        const teamSuffix = nameHasTeam ? '' : ' Team';
         // Импортируем ВСЕ стадии (Qualification/Final/Semifinal/Medal Match), а не одну —
         // иначе теряется полный список участников. subDiscipline различает стадии.
         for (const se of real) {
-        const sid = se.RunningId;
-        const seName = (se.Name || '').replace(/\s+/g, ' ').trim();
+        const sid = se.sid;
+        const seName = se.name;
         // Дисциплина: имя события → имя под-события → название соревнования (контекст) → OTHER.
         // Ловит и "European Cup BRANCO Final" (300m по comp), и пустые evName (по seName).
         const discipline = discEv || normDiscipline(seName) || normDiscipline(c.Name || '') || 'OTHER';
@@ -201,58 +239,55 @@ export default factories.createCoreService('api::result-detail.result-detail', (
         // (иначе у команд выходит "… Team — Individual"). Не добавляем её в название.
         const stagePart = real.length > 1 && seName && !/^individual$/i.test(seName) ? ` — ${seName}` : '';
         const legPart = legTag ? ` · ${legTag}` : '';
-        // Гостевые группы (вне зачёта, со своей нумерацией) пропускаем при наличии основных —
-        // иначе гость с rank 1 и неполным результатом лезет в общий ранкинг (LÖFVANDER 173-6x).
-        const allGroups = se.ShooterGroups?.length ? se.ShooterGroups : [''];
-        const mainGroups = allGroups.filter((gr: string) => !/guest|g[aä]ste|hors/i.test(gr));
-        const useGroups = mainGroups.length ? mainGroups : allGroups;
-        // Виды зачёта:
-        //  • Выделенное командное событие ("… Team" в имени, Team=true) → только команды (как 300m Team).
-        //  • Прочие → индивидуальный зачёт + командный (TeamOfIndividuals) — командный пробуем ВСЕГДА,
-        //    а НЕ по флагу e.Team. SIUS сплошь ставит Team=false даже там, где нация-команда (сумма
-        //    топ-3 квалификаций) реально существует и печатается в официальном result-book — напр.
-        //    «25m Pistol Women» (Team=false) даёт «25m Pistol Women Team» FRA 1748. Пустой командный
-        //    ответ ниже просто пропускается (if !arr.length continue), поэтому лишних строк не будет.
-        //    Суффикс " Team" не добавляем, если "team" уже есть в имени события ("… DUET MIXED TEAM …").
-        const nameHasTeam = /\bteam\b/i.test(evName);
-        const teamSuffix = nameHasTeam ? '' : ' Team';
-        const views: { kind: string; isTeam: boolean; suffix: string }[] =
-          nameHasTeam && e.Team === true
-            ? [{ kind: 'TeamOfIndividuals', isTeam: true, suffix: '' }]
-            : [
-                { kind: 'Individual', isTeam: false, suffix: '' },
-                { kind: 'TeamOfIndividuals', isTeam: true, suffix: teamSuffix },
-              ];
 
-        for (const view of views) {
-        const isTeam = view.isTeam;
-        const resKey = `TotalResults-${view.kind}`;
-        const serKey = `Series-${view.kind}`;
+        for (const [kind, groups] of Object.entries(se.groups)) {
+        const isTeam = kind !== 'Individual';
+        if (teamOnly && !isTeam) continue;
+        const resKey = `TotalResults-${kind}`;
+        const serKey = `Series-${kind}`;
         // Командный зачёт у "Individual"-события: убираем "Individual" и добавляем "Team",
         // иначе получается противоречивое "Skeet Individual U18 Women Team". Выделенные
-        // командные события (suffix пуст, имя уже с TEAM) и индивидуалов не трогаем.
-        const viewBase = view.suffix
-          ? baseDisc.replace(/\bindividual\b/gi, '').replace(/\s{2,}/g, ' ').trim() + view.suffix
+        // командные события (суффикс пуст, имя уже с TEAM) и индивидуалов не трогаем.
+        const suffix = isTeam ? teamSuffix : '';
+        const viewBase = suffix
+          ? baseDisc.replace(/\bindividual\b/gi, '').replace(/\s{2,}/g, ' ').trim() + suffix
           : baseDisc;
         const subDisc = ((viewBase + stagePart) || discipline) + legPart;
+        // Группы вне зачёта (гости, RPO, OOC) пропускаем при наличии основных; основную (Regulars) — первой.
+        const mainGroups = groups.filter((gr) => !OFF_GROUP_RE.test(gr));
+        const useGroups = (mainGroups.length ? mainGroups : groups)
+          .slice()
+          .sort((a, b) => Number(b === 'Regulars') - Number(a === 'Regulars'));
+        // Один стрелок/команда — одна строка на стадию: у юниорских событий SIUS отдаёт один и тот же
+        // список и в группе Junior, и в Regulars.
+        const taken = new Set<string>();
 
         for (const g of useGroups) {
-          let q = `runningCompetitionId=${enc(cid)}&runningCompetitionEventId=${enc(eid)}&subEventId=${enc(sid)}&teamKind=${view.kind}`;
-          if (g) q += `&shooterGroup=${enc(g)}`;
+          const q = `runningCompetitionId=${enc(cid)}&runningCompetitionEventId=${enc(eid)}&subEventId=${enc(sid)}&teamKind=${enc(kind)}&shooterGroup=${enc(g)}`;
           const tr = await sget('/api/v1/pub/totalresults?' + q);
-          const arr = tr?.[0]?.[resKey];
-          if (!arr?.length) continue;
-          const sr = await sget('/api/v1/pub/series?' + q);
-          const sArr = sr?.[0]?.[serKey] || [];
-          const shotsByName: Record<string, string[]> = {};
-          for (const x of sArr) {
-            const series = (x.AthletesSeries?.[0]?.Series || []).flat();
-            shotsByName[x.DisplayName] = series.map((v: any) => v.Value).filter(Boolean);
+          if (!Array.isArray(tr)) {
+            complete = false;
+            continue;
           }
-          // По-выстрельно (10.8, 10.5… / hit-miss) по AthleteRunningId — только для индивидуалов.
+          const arr = tr[0]?.[resKey];
+          if (!arr?.length) continue;
+          // Суммы серий и по-выстрельно (10.8, 10.5… / hit-miss) — только для индивидуалов
+          // (у команды в shots пишется состав). /shots тяжёлый: на квалификацию из ~80 человек
+          // ~3 МБ без gzip, ~30 с — поэтому свой таймаут, иначе по-выстрельно у больших стадий теряется.
+          const shotsByName: Record<string, string[]> = {};
           const shotDetailById: Record<string, string[]> = {};
+          // Не ответили /series или /shots — не затираем уже сохранённые серии/выстрелы пустыми.
+          let seriesOk = true;
+          let shotsOk = true;
           if (!isTeam) {
-            const shd = await sget('/api/v1/pub/shots?' + q);
+            const sr = await sget('/api/v1/pub/series?' + q);
+            seriesOk = Array.isArray(sr);
+            for (const x of sr?.[0]?.[serKey] || []) {
+              const series = (x.AthletesSeries?.[0]?.Series || []).flat();
+              shotsByName[x.DisplayName] = series.map((v: any) => v.Value).filter(Boolean);
+            }
+            const shd = await sget('/api/v1/pub/shots?' + q, 90000);
+            shotsOk = Array.isArray(shd);
             for (const x of shd?.[0]?.['Shots-Individual'] || []) {
               shotDetailById[x.AthleteRunningId] = (x.ShotViewDatas || [])
                 .map((s: any) => (s.Miss ? '0' : String(s.Scores?.[0] ?? '').trim()))
@@ -261,9 +296,12 @@ export default factories.createCoreService('api::result-detail.result-detail', (
           }
 
           for (const r of arr) {
+            const ident = r.AthletesResults?.[0]?.AthleteIdentifier?.Identifier || r.DisplayName;
+            if (taken.has(ident)) continue;
+            taken.add(ident);
             rows++;
             const athRid = r.AthletesResults?.[0]?.AthleteIdentifier?.RunningId;
-            const externalId = `sius:${cid}:${eid}:${sid}:${view.kind}:${g}:${r.AthletesResults?.[0]?.AthleteIdentifier?.Identifier || r.DisplayName}`;
+            const externalId = `sius:${cid}:${eid}:${sid}:${kind}:${g}:${ident}`;
             // SIUS Result.Value = итог + внутренние десятки одной строкой ("583-24x").
             const rawTotal = String(r.Result?.Value ?? '');
             // Нет итога → это не результат (пустые Qualification Shoot-Off — только места без очков,
@@ -290,29 +328,44 @@ export default factories.createCoreService('api::result-detail.result-detail', (
               shots: isTeam ? members || [] : shotsByName[r.DisplayName] || [],
               shotDetail: isTeam ? [] : shotDetailById[athRid] || [],
             };
+            if (!seriesOk) delete data.shots;
+            if (!shotsOk) delete data.shotDetail;
             try {
-              const existing = await strapi.db
-                .query('api::result-detail.result-detail')
-                .findOne({ where: { externalId } });
+              const existing = await strapi.db.query(RD).findOne({ where: { externalId } });
               if (existing) {
-                await strapi.db
-                  .query('api::result-detail.result-detail')
-                  .update({ where: { id: existing.id }, data });
+                await strapi.db.query(RD).update({ where: { id: existing.id }, data });
                 updated++;
               } else {
-                await strapi.db
-                  .query('api::result-detail.result-detail')
-                  .create({ data });
+                await strapi.db.query(RD).create({ data });
                 created++;
               }
+              seen.add(externalId);
             } catch (e) {
+              complete = false;
               strapi.log.error(`[sius] upsert failed ${externalId}: ${(e as Error).message}`);
             }
           }
         }
         }
         }
+        if (complete) cleanPrefixes.push(`sius:${cid}:${eid}:`);
       }
+    }
+
+    // Зеркалирование (см. выше): у событий, прочитанных целиком, удаляем строки, которых SIUS
+    // больше не отдаёт (исправленные/снятые результаты, стадии старого формата и т.п.).
+    if (opts.purge && !opts.activeOnly) {
+      for (const prefix of cleanPrefixes) {
+        const existing: any[] = await strapi.db
+          .query(RD)
+          .findMany({ where: { externalId: { $startsWith: prefix } }, select: ['id', 'externalId'], limit: 100000 });
+        const staleIds = existing.filter((r) => !seen.has(r.externalId)).map((r) => r.id);
+        for (let i = 0; i < staleIds.length; i += 500) {
+          const del = await strapi.db.query(RD).deleteMany({ where: { id: { $in: staleIds.slice(i, i + 500) } } });
+          purged += del?.count ?? 0;
+        }
+      }
+      if (purged) strapi.log.info(`[sius] removed ${purged} stale rows`);
     }
 
     // Обновляем флаги hasResults на событиях (для ленивой загрузки страницы Results).
